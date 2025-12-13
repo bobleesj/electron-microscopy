@@ -70,19 +70,17 @@ def compress_image(
 
 
 def compress_all_images(
-    root_dir: Path,
+    target_dir: Path,
     quality: int = 85,
     max_width: int | None = None,
     dry_run: bool = False,
 ) -> None:
     """Compress all JPG images in directory tree."""
-    img_dir = root_dir / "img"
-    
-    if not img_dir.exists():
-        print(f"Error: {img_dir} does not exist")
+    if not target_dir.exists():
+        print(f"Error: {target_dir} does not exist")
         return
     
-    jpg_files = list(img_dir.rglob("*.jpg")) + list(img_dir.rglob("*.jpeg"))
+    jpg_files = list(target_dir.rglob("*.jpg")) + list(target_dir.rglob("*.jpeg"))
     
     if not jpg_files:
         print("No JPG files found.")
@@ -96,7 +94,7 @@ def compress_all_images(
     total_new = 0.0
     
     for jpg_path in sorted(jpg_files):
-        rel_path = jpg_path.relative_to(root_dir)
+        rel_path = jpg_path.relative_to(target_dir)
         original, new = compress_image(jpg_path, quality, max_width, dry_run)
         total_original += original
         total_new += new
@@ -112,13 +110,19 @@ def compress_all_images(
 def main():
     parser = argparse.ArgumentParser(description="Compress JPG images")
     parser.add_argument(
+        "folder",
+        nargs="?",
+        default=None,
+        help="Folder to compress (default: img/ in repo root)",
+    )
+    parser.add_argument(
         "--quality",
         type=int,
         default=85,
         help="JPEG quality 1-100 (default: 85)",
     )
     parser.add_argument(
-        "--resize",
+        "--max-width",
         type=int,
         default=None,
         help="Max width in pixels (default: keep original)",
@@ -131,12 +135,16 @@ def main():
     
     args = parser.parse_args()
     
-    # Find repo root (where this script is in scripts/)
-    script_dir = Path(__file__).parent
-    root_dir = script_dir.parent
+    # Determine folder to compress
+    if args.folder:
+        root_dir = Path(args.folder).resolve()
+    else:
+        # Default to repo root
+        script_dir = Path(__file__).parent
+        root_dir = script_dir.parent
     
     print(f"Compressing images in: {root_dir}")
-    compress_all_images(root_dir, args.quality, args.resize, args.dry_run)
+    compress_all_images(root_dir, args.quality, args.max_width, args.dry_run)
 
 
 if __name__ == "__main__":

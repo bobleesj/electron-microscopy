@@ -76,11 +76,13 @@ are looking for quick visual references.
 - Close column valves in TEMUI.
 - Pull the holder straight out, turn clockwise, pull the rest out continuously.
 
-## Checklist for the human
+## For maintainers and authors
 
-- [ ] Is this the most clear, yet concise way possible?
+### Checklist for the human
 
-## Writing conventions
+- [ ] Is our writing the most clear, yet concise for making decision?
+
+### Writing conventions
 
 For consistency, use the following style (feed to LLM)
 
@@ -93,9 +95,9 @@ For consistency, use the following style (feed to LLM)
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
 - Keep a `## Changelog` section at the bottom with dated entries
 
-## Scripts
+### Scripts
 
-### Image compression
+#### Image compression
 
 Compress JPG images without losing quality:
 
