@@ -53,24 +53,28 @@ are looking for quick visual references.
 
 <img src="img/sample-loading/double-tilt/02-holder-insertion.jpg" alt="Holder insertion" width="500">
 
-**Unload sample:**
-
-- Close column valves
-- Reset holder
-- Pull the holder straight out, turn clockwise, pull the rest out continuously.
+**Upload sample**
 
 <img src="img/sample-loading/double-tilt/03-holder-locked.jpg" alt="Holder locked" width="500">
 
 <img src="img/sample-loading/double-tilt/05-holder-removal.jpg" alt="Holder removal" width="500">
 
-### Insert holder to microscope
+## How to remove and insert holder
 
-- Push in, feel resistance. This will start the turbo pump immediately.
-- Turn counterclockwise.
-- Guide the holder to get pushed in.
+**Insert holder**
+
+- Push the holder in, feel resistance. This will start the turbo pump immediately.
+- Wait 2 minutes, turn counter-clockwise.
+- Guide the holder to push in.
 - On TEMUI, turn off turbo pump.
 
 <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+
+**Remove holder**
+
+- Reset holder in TEMUI.
+- Close column valves in TEMUI.
+- Pull the holder straight out, turn clockwise, pull the rest out continuously.
 
 ## Writing conventions
 
