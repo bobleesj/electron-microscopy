@@ -1,5 +1,11 @@
 # Electron Microscopy Training (WIP)
 
+WIP:
+
+- [ ] Use real screenshots instead of pictures
+- [ ] Better pictures: proportion, focus, FOV
+- [ ] More visuals added to each session when needed
+
 The content is meant to be used as a step-by-step tutorial focused on practice
 sitting in front of the microscope with a focus on visual elements.
 
