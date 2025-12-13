@@ -81,6 +81,8 @@ are looking for quick visual references.
 ### Checklist for the human
 
 - [ ] Is our writing the most clear, yet concise for making decision?
+- [ ] Added concise changelog for each document? Ex) `Dec 13, 2025 - add 4D-STEM tutorial draft by @bobleesj`
+- [ ] New images added? Did you run `python scripts/compress_images.py img/`
 
 ### Writing conventions
 
