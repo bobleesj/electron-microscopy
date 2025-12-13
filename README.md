@@ -1,6 +1,5 @@
 # Electron Microscopy Training (WIP)
 
-Unofficial Stanford SNSF Spectra STEM training guide maintained by @bobleesj.
 The content is meant to be used as a step-by-step tutorial focused on practice
 sitting in front of the microscope with a focus on visual elements.
 
