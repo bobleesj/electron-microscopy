@@ -67,10 +67,7 @@ are looking for quick visual references.
 
 - Push in, feel resistance. This will start the turbo pump immediately.
 - Turn counterclockwise.
-- Push in completely.
-- Rotate the holder counterclockwise. Without using much force, just gently
-  guide the holder to get pushed in.
-- Wait 2 minutes (no need to press any button).
+- Guide the holder to get pushed in.
 - On TEMUI, turn off turbo pump.
 
 <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
