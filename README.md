@@ -18,7 +18,7 @@ are looking for quick visual references.
 | [EDS](EDS.md)                   | Energy Dispersive X-ray Spectroscopy      | 🚧 Coming soon |
 | [Tomography](tomography.md)     | Electron tomography                       | 🚧 Coming soon |
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
-| PES                             | -                                         | 🚧 Coming soon |
+| PED                             | -                                         | 🚧 Coming soon |
 
 ## How to load sample
 
