@@ -20,7 +20,7 @@ are looking for quick visual references.
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
 | PES                             | -                                         | 🚧 Coming soon |
 
-## Sample loading
+## How to load sample
 
 > Disclaimer: This guide is written for those who have already used single-tilt
 > and double-tilt before. If you are using this documentation for the first
@@ -76,9 +76,13 @@ are looking for quick visual references.
 - Close column valves in TEMUI.
 - Pull the holder straight out, turn clockwise, pull the rest out continuously.
 
+## Checklist for the human
+
+- [ ] Is this the most clear, yet concise way possible?
+
 ## Writing conventions
 
-For consistency, use the following style:
+For consistency, use the following style (feed to LLM)
 
 - Use `##` for main sections, `###` for numbered steps
 - Use sub-bullets (`-`) for details under each step
@@ -88,3 +92,26 @@ For consistency, use the following style:
 - Do not use horizontal lines (`---`)
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
 - Keep a `## Changelog` section at the bottom with dated entries
+
+## Scripts
+
+### Image compression
+
+Compress JPG images without losing quality:
+
+```bash
+# Install dependencies
+pip install Pillow
+
+# Compress all images in a folder
+python scripts/compress_images.py img/
+
+# Preview changes without modifying files
+python scripts/compress_images.py img/ --dry-run
+
+# Adjust quality (default: 85, lower = smaller file)
+python scripts/compress_images.py img/ --quality 70
+
+# Resize large images to max width
+python scripts/compress_images.py img/ --max-width 1200
+```

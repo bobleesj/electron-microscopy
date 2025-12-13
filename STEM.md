@@ -1,7 +1,6 @@
 # STEM
 
 > TODO: Add image for mono
-> TODO: focus
 
 The process is divided into three parts. TEM alignment sets up the "highway"
 (column optics), STEM alignment fine-tunes the "car" (focused probe), and then
@@ -185,7 +184,7 @@ column and turn the turbo pump on.
 
 Underfocus or overfocus?
 
-<img src="img/STEM/underfocus.jpg" wdith="500">
+<img src="img/STEM/underfocus.jpg" width="500">
 
 Underfocus → features appear with dark cores and bright Fresnel fringes on their edges.
 
@@ -195,7 +194,7 @@ Overfocus → the contrast inverts: bright cores with dark edge fringes.
 
 <details>
 <summary>What do Tableau and C1A1 do in STEM?</summary>
-Tableau provides a quick visual assessment of aberrations. C1A1 is the first-order aberration correction routine that corrects for astigmatism and coma.
+Tableau provides a quick visual assessment of aberrations. ßÂC1A1 is the first-order aberration correction routine that corrects for astigmatism and coma.
 </details>
 
 <details>
@@ -370,4 +369,5 @@ few hours.
 
 ## Changelog
 
+- Dec 12, 2025 - add STEM training images by Guoliang Hu
 - Dec 8, 2025 - First draft of SNSF Spectra training by @bobleesj

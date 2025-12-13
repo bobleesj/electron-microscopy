@@ -3,6 +3,12 @@
 This guide covers the setup and operation of 4D-STEM data acquisition using the
 Arina detector.
 
+Here is the Dectris Arina hardware within Spectra.
+
+<img src="img/4D-STEM/spectra.jpg" alt="Spectra instrument main" width="500">
+
+<img src="img/4D-STEM/arina-hardware.jpg" alt="Dectris hardware" width="500">
+
 ## Part 1: Detector setup
 
 1. **Open the detector**
