@@ -6,12 +6,12 @@ WIP:
 - [ ] Better pictures: proportion, focus, FOV
 - [ ] More visuals added to each session when needed
 
-The content is meant to be used as a step-by-step tutorial focused on practice
-sitting in front of the microscope with a focus on visual elements.
-
 Disclaimer: Always follow https://barnum.su.domains/ for correctness. Only use
 this documentation if you are working with the authors of the document and you
 are looking for quick visual references.
+
+The content is meant to be used as a step-by-step tutorial focused on practice
+sitting in front of the microscope with a focus on visual elements.
 
 ## Available guides
 
