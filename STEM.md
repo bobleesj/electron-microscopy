@@ -114,6 +114,7 @@ C1A1, aim for A1 < 5 nm, A2/B2 < 5 µm, then go to "Tableau" tab → "Fast".
 
 <img src="img/STEM/01-tem-sample-view.jpg" alt="TEM sample view showing gold and carbon areas" width="500">
 
+
 ## Part 2: Probe alignment in STEM mode
 
 Go to `STEM` mode in Velox.
