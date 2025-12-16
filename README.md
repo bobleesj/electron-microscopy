@@ -35,6 +35,8 @@ sitting in front of the microscope with a focus on visual elements.
 
 **Load sample:**
 
+> FIXME: use technical terms for these objects... "pin" or "clip"?
+
 1. Push the pin inside the tiny hole shown below:
 
    <img src="img/sample-loading/single-tilt/01-holder-overview.jpg" alt="Single-tilt holder overview" width="500">
