@@ -35,15 +35,19 @@ sitting in front of the microscope with a focus on visual elements.
 
 **Load sample:**
 
-<img src="img/sample-loading/single-tilt/01-holder-overview.jpg" alt="Single-tilt holder overview" width="500">
+1. Push the pin inside the tiny hole shown below:
+   <img src="img/sample-loading/single-tilt/01-holder-overview.jpg" alt="Single-tilt holder overview" width="500">
 
-<img src="img/sample-loading/single-tilt/02-sample-placement.jpg" alt="Sample placement" width="500">
+2. Lift the clip gently:
+   <img src="img/sample-loading/single-tilt/02-sample-placement.jpg" alt="Sample placement" width="500">
 
-**Holder ready:**
+3. If using a copper grid, pinch the tip of the copper grid
 
-<img src="img/sample-loading/single-tilt/03-holder-ready.jpg" alt="Holder ready" width="500">
+   <img src="img/sample-loading/single-tilt/03-holder-ready.jpg" alt="Holder ready" width="500">
 
-<img src="img/sample-loading/single-tilt/04-holder-inserted.jpg" alt="Holder inserted" width="500">
+4. Place the sample, shiny side up for the standard sample
+
+   <img src="img/sample-loading/single-tilt/04-holder-inserted.jpg" alt="Holder inserted" width="500">
 
 ### Double-tilt holder
 
@@ -51,35 +55,38 @@ sitting in front of the microscope with a focus on visual elements.
 
 1. Load the sample and washer (gold donut):
 
-<img src="img/sample-loading/double-tilt/01-holder-preparation.jpg" alt="Holder preparation" width="500">
+   <img src="img/sample-loading/double-tilt/01-holder-preparation.jpg" alt="Holder preparation" width="500">
 
 2. Add the cap and rotate the holder about the long axis to ensure the sample is
    secure:
 
-<img src="img/sample-loading/double-tilt/02-holder-insertion.jpg" alt="Holder insertion" width="500">
+   <img src="img/sample-loading/double-tilt/02-holder-insertion.jpg" alt="Holder insertion" width="500">
 
-**Upload sample**
+**Unload sample:**
 
-<img src="img/sample-loading/double-tilt/03-holder-locked.jpg" alt="Holder locked" width="500">
+1. Press down the very small hole gently as shown below:
+   <img src="img/sample-loading/double-tilt/03-holder-locked.jpg" alt="Holder locked" width="500">
 
-<img src="img/sample-loading/double-tilt/05-holder-removal.jpg" alt="Holder removal" width="500">
+2. The three parts should all be disassembled and placed on the bottom:
+
+   <img src="img/sample-loading/double-tilt/05-holder-removal.jpg" alt="Holder removal" width="500">
 
 ## How to remove and insert holder
 
 **Insert holder**
 
 - Push the holder in, feel resistance. This will start the turbo pump immediately.
-- Wait 2 minutes, turn counter-clockwise.
-- Guide the holder to push in.
-- On TEMUI, turn off turbo pump.
+   <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
 
-<img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+- Wait 2 minutes, turn counter-clockwise.
+- Guide the holder to push in. Expect the holder wants to move in. 
+- On TEMUI, turn off turbo pump.
 
 **Remove holder**
 
-- Reset holder in TEMUI.
+- Press `Reset holder` in TEMUI.
 - Close column valves in TEMUI.
-- Pull the holder straight out, turn clockwise, pull the rest out continuously.
+- Pull the holder straight out up to the point shown above, turn clockwise, pull the rest out continuously.
 
 ## For maintainers and authors
 
