@@ -104,23 +104,32 @@ For consistency, use the following style (feed to LLM)
 
 ### Scripts
 
+#### Convert HEIC to JPG
+
+Convert HEIC images (from iPhone) to compressed JPG:
+
+```bash
+# Install dependencies
+pip install Pillow pillow-heif
+
+# Convert all HEIC files in images/ folder
+python scripts/convert_heic_to_jpg.py
+
+# Convert and delete original HEIC files
+python scripts/convert_heic_to_jpg.py --delete-originals
+
+# Convert with resizing and custom quality
+python scripts/convert_heic_to_jpg.py --max-width 1600 --quality 80 --delete-originals
+```
+
 #### Image compression
 
-Compress JPG images without losing quality:
+Compress JPG images:
 
 ```bash
 # Install dependencies
 pip install Pillow
 
-# Compress all images in a folder
-python scripts/compress_images.py img/
-
-# Preview changes without modifying files
-python scripts/compress_images.py img/ --dry-run
-
-# Adjust quality (default: 85, lower = smaller file)
-python scripts/compress_images.py img/ --quality 70
-
-# Resize large images to max width
-python scripts/compress_images.py img/ --max-width 1200
+# Compress and resize images
+python scripts/compress_images.py img/ --max-width 1600 --quality 80
 ```
