@@ -109,13 +109,21 @@ Go to `STEM` mode in Velox.
 
 2. **Reset aberrations**
    - Set magnification to ~225 kx, find area with particle size distribution
-    - `TEMUI` → `STEM autotuning` → `Settings` → `Reset`
+   - `TEMUI` → `STEM autotuning` → `Settings` → `Reset`
+
+3. **Fine-tune probe alignment**
+   - Press `Diffraction Mode` on hand panel
+    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
+    - Click `Center C2 aperture`, adjust with Multifunction X/Y
+    - Press `Diffraction Mode` again to exit
+
+      <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
 
       <img src="img/STEM/use-stem-auto-tuning-reset-click.jpg" alt="use stem auto tuning reset click" width="500">
 
       <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="probe corrector reset aberration" width="500">
 
-3. **Run probe corrector**
+4. **Run probe corrector**
    - In `Probe Corrector` software, set probe diameter 20 nm, semi-aperture 30 mrad
 
       <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="probe corrector edit probe semi aperture to 30" width="500">
@@ -126,13 +134,6 @@ Go to `STEM` mode in Velox.
 
       <img src="img/STEM/probe-corrector-tableau.jpg" alt="probe corrector tableau" width="500">
 
-4. **Fine-tune probe alignment** (optional)
-   - Press `Diffraction Mode` on hand panel
-    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
-    - Click `Center C2 aperture`, adjust with Multifunction X/Y
-    - Press `Diffraction Mode` again to exit
-
-      <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
 
 ## Part 3: Image your sample
 
