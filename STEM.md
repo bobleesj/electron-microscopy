@@ -4,6 +4,10 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 > **Prerequisite:** Complete the [Sample loading](README.md#sample-loading) procedure before starting.
 
+Acronyms
+
+- `mulfXY` - Multifunction X/Y knobs on hand panel
+
 <img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
 
 ## Part 1: Column optics alignment in TEM mode
@@ -32,27 +36,27 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
 
      <img src="img/STEM/two-lens-mode.jpg" alt="two lens mode" width="500">
 
-   - Click `Adjust` under `Center C2`, center beam with Multifunction X/Y
+   - Click `Adjust` under `Center C2`, center beam with ``mulfXY``
    - If beam is far off: lower intensity to shrink beam, use hand panel ball to move to center
-   - Click `TEM` under `Beam Settings` to return to three-lens mode
+   - Click `TEM` → `Beam Settings` to return to three-lens mode
 
 4. **Fix monochromator** (skip if no jagged area visible)
    - Set magnification to ~5,700x
-   - Go to `Mono` tab, use `Shift` with multifunction knobs to move the jagged area
+   - Go to `Mono` tab, use `Shift` with ``mulfkobs`` to move the jagged area
 
 5. **Fix condenser stigmation**
    - Go to `Direct Alignment` → `Beam Shift`
-   - Center beam with Multifunction X/Y
+   - Center beam with ``mulfXY``
    - Go to ~200kx magnification
 
      <img src="img/STEM/zoom-in.jpg" alt="zoom in" width="500">
 
    - Make beam baseball-size on fluorescent screen
-   - If not concentric: `Stigmator` → `Condenser`, adjust with multifunction knobs
+   - Not concentric? `Stigmator` → `Condenser`, adjust with ``mulfXY``
 
 6. **Fix beam tilt**
    - Click `Beam tilt pp X/Y` under `Direct Alignment`
-   - Adjust multifunction X/Y to minimize jiggle
+   - Adjust ``mulfXY`` to minimize jiggle
 
 7. **Fix rotation center**
    - Spread beam across entire fluorescent screen
@@ -62,7 +66,7 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
 
      <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
 
-   - Adjust multifunction X/Y until image pulses symmetrically in/out
+   - Adjust ``mulfXY`` until image pulses symmetrically in/out
 
 8. **Run image corrector**
    - Press Z-axis down until you see 4-5 rings in FFT (slight underfocus)
@@ -100,26 +104,33 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
 Go to `STEM` mode in Velox.
 
 1. **Switch to STEM**
-    - Click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
-    - Adjust z-axis to get sharpest features
-    - Center beam on HAADF detector using `Direct Alignment` tab
-    - Set convergence angle to 30 mrad, camera length 91 mm, current ~100 pA
+    - `Velox` → `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
+    - Adjust z-axis on hand panel until sharpest features:
 
       <img src="img/STEM/08-temui-settings.jpg" alt="TEMUI settings showing C1, C2, C3 values" width="500">
 
+    - Set convergence angle to 30 mrad, camera length 91 mm, current ~100 pA
+    - Center beam on HAADF detector using `Direct Alignment` tab `TEMUI`
+    
 2. **Reset aberrations**
    - Set magnification to ~225 kx, find area with particle size distribution
    - `TEMUI` → `STEM autotuning` → `Settings` → `Reset`
+   
+      <img src="img/STEM/use-stem-auto-tuning-reset-click.jpg" alt="use stem auto tuning reset click" width="500">
 
 3. **Fine-tune probe alignment**
+
+Ensure probe is alignde along the optical axis.
+
    - Press `Diffraction Mode` on hand panel
-    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
-    - Click `Center C2 aperture`, adjust with Multifunction X/Y
-    - Press `Diffraction Mode` again to exit
+   - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
+   - Click `Center C2 aperture`, adjust with ``mulfXY``
+   - Press `Diffraction Mode` again to exit
+   - Get FOD, camera length, probe convergence angle from `Velox` `Detector Layout`
 
       <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
-
-      <img src="img/STEM/use-stem-auto-tuning-reset-click.jpg" alt="use stem auto tuning reset click" width="500">
+   
+   - `STEM Auto tune` in TEMUI so that Probe Corrector's aberration values are all removed.
 
       <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="probe corrector reset aberration" width="500">
 
@@ -134,54 +145,66 @@ Go to `STEM` mode in Velox.
 
       <img src="img/STEM/probe-corrector-tableau.jpg" alt="probe corrector tableau" width="500">
 
+5. **Verify aberration corrected image**
+   - `Velox` - Click `Play button`
 
 ## Part 3: Image your sample
 
-1. **After probe correction**
-    - If aberrations persist: `Stigmator` → `Probe A1`, adjust focus
-    - Alternative: `Stigmator` → `Probe B2`, uncheck focus
+1. **Upload standard sample**
+2. **Load your sample**
+3. **After probe correction**
+    - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
+    - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
     - Target resolution: D < 60 pm (spec is 50 pm)
 
       <img src="img/STEM/stem-probe-corrector-final-result.jpg" alt="stem probe corrector final result" width="500">
 
-2. **Find zone-axis**
+4. **Find zone-axis**
    - `Quick` tab → `Sample Piezo`, fine-tune z-axis
-    - Unblank beam
-    - In Velox, drag the red dot to move probe position
-    - `Quick` tab → `Smart Tilt` for automatic alpha/beta adjustment
+    - Unblank beam on Velox
+    - In `Velox`, drag the red dot to move probe position
+    - `Quick` → `Smart Tilt` for automatic alpha/beta adjustment
     - After tilting, verify C1A1 is still good
 
 ## Part 4: End session
 
 1. **Finish**
-    - Close the column on TEMUI
-    - Turn the turbo pump on
+    - `TEMUI` -> press `Column volume closed` -> press `Turbo pump on`
     - Follow unload procedure in [README.md](README.md#how-to-remove-and-insert-holder)
 
 ## Appendix
 
 **Underfocus vs overfocus:**
 
-<img src="img/STEM/underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
-
 - Underfocus: dark cores with bright Fresnel fringes on edges
 - Overfocus: bright cores with dark edge fringes
 
-**Gray colors during correction:**
+Here is an example of underfocus image:
 
-Go to Velox `Auto-tune` and increase signal until it touches the red and blue dotted lines.
+   <img src="img/STEM/underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
 
-<img src="img/STEM/09-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+
+**Gray colors during C1A1 probe correction:**
+
+Grey colors shown below?
+
+   <img src="img/STEM/09-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+
+`Velox`, click `Auto-tune`. Increase signals touching the red and blue dotted lines:
+
+   <img src="img/STEM/velox-auto-tune.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
 
 ## FAQs
 
-- **Convergence angle:** `Beam Setting` → `Probe`, use Multifunction Y to adjust.
+### Software
+
+- **Convergence angle:** `Beam Setting` → `Probe`, use ``mulfYto`` adjust.
 
 - **Tableau and C1A1:** Tableau shows aberrations visually. C1A1 corrects first-order aberrations (astigmatism and coma).
 
 - **Underfocus direction:** Counterclockwise on hand panel, Z-axis down.
 
-- **Eucentric height:** The z-position where tilting doesn't shift the sample. Defocus = 0.
+- **Eucentric height:** The z-position where tilting doesn't shift the sample. Defocus = 0. Probe size smallest relative to the sample.
 
 - **Beam Shift vs hand panel ball:** Beam Shift stores the center position internally, so the beam stays centered when changing magnification.
 
@@ -198,6 +221,15 @@ Go to Velox `Auto-tune` and increase signal until it touches the red and blue do
 - **Major zone axis:** Thick bends tend to form.
 
 - **Nanoparticle area for correction:** Focus on "size gradient" region between dark film and bulk. Better for aberration algorithms.
+
+
+### Aberration correction
+
+- TODO: **Image Correction vs. Probe Corrector:**
+- TODO: 
+
+> Simulate ronchigram for each aberration term: https://bobleesj.github.io/electron-microscopy-website/ronchigram.
+
 
 ### Lens system
 
