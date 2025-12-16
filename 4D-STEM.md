@@ -87,7 +87,7 @@ Here is the Dectris Arina hardware within Spectra.
     - Click on "Rebin", "Reprocess" – you can use the software to do a simple
       analysis.
 
-## Part 4: Finish
+## Part 4: End session
 
 13. **Finish**
     - Retract the detector: Press "Retract"

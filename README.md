@@ -25,6 +25,13 @@ sitting in front of the microscope with a focus on visual elements.
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
 | PED                             | -                                         | 🚧 Coming soon |
 
+
+## Immediate TODO:
+
+- [ ] `README.md` - how to open/close TITAN holder box
+- [ ] `STEM.md` - better probe correction process
+- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera?
+
 ## How to load sample
 
 > Disclaimer: This guide is written for those who have already used single-tilt
