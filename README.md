@@ -36,16 +36,18 @@ sitting in front of the microscope with a focus on visual elements.
 **Load sample:**
 
 1. Push the pin inside the tiny hole shown below:
+
    <img src="img/sample-loading/single-tilt/01-holder-overview.jpg" alt="Single-tilt holder overview" width="500">
 
-2. Lift the clip gently:
+3. Lift the clip gently:
+
    <img src="img/sample-loading/single-tilt/02-sample-placement.jpg" alt="Sample placement" width="500">
 
-3. If using a copper grid, pinch the tip of the copper grid
+5. If using a copper grid, pinch the tip of the copper grid
 
    <img src="img/sample-loading/single-tilt/03-holder-ready.jpg" alt="Holder ready" width="500">
 
-4. Place the sample, shiny side up for the standard sample
+6. Place the sample, shiny side up for the standard sample
 
    <img src="img/sample-loading/single-tilt/04-holder-inserted.jpg" alt="Holder inserted" width="500">
 
