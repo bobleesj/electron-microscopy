@@ -22,9 +22,13 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
 | [PED](ped.md)                   | -                                         | 🚧 Coming soon |
 
+Other resources:
+
+- Simulate ronchigram: https://bobleesj.github.io/electron-microscopy-website/ronchigram
+
 ## Immediate TODO
 
-- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera
+- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera, generally better images/documentaiton needed
 
 ## Sample loading
 

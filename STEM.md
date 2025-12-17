@@ -209,14 +209,20 @@ Acronyms
 
    - Press `Diffraction Mode` on hand panel
    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
-   - Click `Center C2 aperture`, adjust with `mulXY`
-   - Press `Diffraction Mode` again to exit
 
-     <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
+     <img src="img/STEM/diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment for preprobe correction" width="500">
+
+   - Click `Center C2 aperture`, adjust with `mulXY`
+   - Press `Diffraction Mode` on hand panel again to exit
+
 
 4. **Run probe corrector** FIXME: which buttons to click?
 
-   - In `Probe Corrector` software, set probe diameter 20 nm, semi-aperture 30 mrad
+   - Open `Probe Corrector` software, ensure all aberation values are reset under `Channels` → `Exported elements`.
+
+     <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
+   
+   - Set probe diameter 20 nm, semi-aperture 30 mrad
 
      <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="Probe corrector edit probe semi aperture to 30" width="500">
 
@@ -261,7 +267,7 @@ Acronyms
 
      <img src="img/STEM/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
 
-3. **Verify aberration corrected image**
+5. **Verify aberration corrected image**
 
    - In `Velox`, click the `Play` button
    - Done! You are now ready to image your sample
@@ -366,6 +372,14 @@ Hand panel R1, R2, R3 values
 
 <img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
 
+**Stage position and coordinates:**
+
+<img src="img/STEM/stage-position.jpg" alt="TEMUI stage position showing X, Y, Z coordinates" width="500">
+
+**Dose rate and TEM mode display:**
+
+<img src="img/STEM/dose-rate-tem.jpg" alt="TEM interface showing dose rate and imaging mode information" width="500">
+
 ## FAQs
 
 ### Software
@@ -393,13 +407,6 @@ Hand panel R1, R2, R3 values
 - **Major zone axis:** Thick bends tend to form.
 
 - **Nanoparticle area for correction:** Focus on "size gradient" region between dark film and bulk. Better for aberration algorithms.
-
-
-### Aberration correction
-
-- TODO: **Image Correction vs. Probe Corrector:**
-
-> Simulate ronchigram for each aberration term: https://bobleesj.github.io/electron-microscopy-website/ronchigram.
 
 
 ### Lens system
