@@ -6,7 +6,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 Acronyms
 
-- `mulfXY` - Multifunction X/Y knobs on hand panel
+- `mulXY` - Multifunction X/Y knobs on hand panel
 
 <img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
 
@@ -17,58 +17,73 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
 1. **Find beam**
    - Click `Col Valves Open` on `TEMUI`
    - Set C1 to 2000, C2 to 70, C3 to 1,000 µm
-
      <img src="img/STEM/aperture-condenser.jpg" alt="aperture condenser" width="500">
 
    - At 700x, locate the gold (dark) and carbon boundary
-
      <img src="img/STEM/14-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary region" width="500">
 
 2. **Adjust eucentric height**
    - Increase magnification to ~7,500x
-   - Press z-axis up or down on the hand panel
-   - At eucentric height, the image shows minimal contrast when tilting
+   - Press `Eucentric Focus` on hand panel
+     <img src="img/STEM-new/IMG_6956.jpg" alt="IMG_6956" width="500">
+   - Converge the beam to a tiny dot with intensity knob.
+     <img src="img/STEM-new/IMG_6957.jpg" alt="IMG_6956" width="500">
+   - Notice diffraction pattern. Roll mouse scoller to see greater sensitivty on TEMUI. 
+     <img src="img/STEM-new/IMG_6958.jpg" alt="IMG_6958" width="500">  
+   - Image shows approximately minimal contrast.
+     <img src="img/STEM-new/IMG_6959.jpg" alt="IMG_6959" width="500">
+   - Press z-axis to reduce constrast even further.
+     <img src="img/STEM-new/IMG_6960.jpg" alt="IMG_6960" width="500">
+   - Done!
 
-     <img src="img/STEM/13-minimal-contrast.jpg" alt="Minimal contrast at eucentric height" width="500">
+3. **Align monochromator** 
+   - Jagged area visible? Skip otherwise. (Visible in the image right above)
+   - `Mono` tab, click `Shift`, use ``mulXY``.
 
-3. **Center C2 aperture**
-   - `Tune` tab → click `Two lens` (switches to two-lens mode)
-
+4. **Align C2 aperture**
+   - `Tune` tab, click `Twolens`
      <img src="img/STEM/two-lens-mode.jpg" alt="two lens mode" width="500">
+   - Notice beam shifted from center.
+   - Make beam tiny by varying intensity knob.
+   - Center beam with with hand panel ball.
+   - Increase beam about baseball size. Vary intensity. Notice not concentric.
+   - `Apertures` section, click `Adjust` next to `Condenser 2`, use ``mulXY`` to center beam.
+     <img src="img/STEM-new/IMG_6961.jpg" alt="IMG_6961" width="500">
+   -  `Beam Settings` tab, click `TEM` to return to three-lens mode.
+   -  Ensure beam centered, concentric.
+      <img src="img/STEM-new/IMG_6962.jpg" alt="IMG_6962" width="500">
+   -  Done!
 
-   - Click `Adjust` under `Center C2`, center beam with ``mulfXY``
-   - If beam is far off: lower intensity to shrink beam, use hand panel ball to move to center
-   - Click `TEM` → `Beam Settings` to return to three-lens mode
-
-4. **Fix monochromator** (skip if no jagged area visible)
-   - Set magnification to ~5,700x
-   - Go to `Mono` tab, use `Shift` with ``mulfkobs`` to move the jagged area
-
-5. **Fix condenser stigmation**
+5. **Fix condenser lens stigmation**
+   - Go to ~200kx magnification using `Magnification` knob
    - Go to `Direct Alignment` → `Beam Shift`
-   - Center beam with ``mulfXY``
-   - Go to ~200kx magnification
+   - Center beam with ``mulXY``
 
      <img src="img/STEM/zoom-in.jpg" alt="zoom in" width="500">
 
    - Make beam baseball-size on fluorescent screen
-   - Not concentric? `Stigmator` → `Condenser`, adjust with ``mulfXY``
+   - Not concentric? `Stigmator` → `Condenser`, adjust with ``mulXY``
 
 6. **Fix beam tilt**
-   - Click `Beam tilt pp X/Y` under `Direct Alignment`
-   - Adjust ``mulfXY`` to minimize jiggle
+   - Click `Beam tilt pp X` under `Direct Alignment` section
+   - Adjust ``mulXY`` to minimize jiggle
+   - Repeat for `Beam tilt pp Y`.
+   - Notice beam center shfited again.
+   - Click `Beam shift`, `mulXY` to center.
 
 7. **Fix rotation center**
-   - Spread beam across entire fluorescent screen
-   - Click `Rotation center` under `Direct Alignment`
+   - Spread beam across entire fluorescent screen.
+   - Click `Rotation center` under `Direct Alignment` section
+     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
+   - Adjust ``mulXY`` until image pulses symmetrically in/out
+
+8. **Check iamge**
    - Press `R1` to lift fluorescent screen
    - In Velox, click play to start imaging
+   - Notice images are being shown on Velox
+   - ATTACH IMAGE OF OVER, ON, UNDER-FOCUS
 
-     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
-
-   - Adjust ``mulfXY`` until image pulses symmetrically in/out
-
-8. **Run image corrector**
+9. **Run image corrector**
    - Press Z-axis down until you see 4-5 rings in FFT (slight underfocus)
 
      <img src="img/STEM/4-5-rings.jpg" alt="4-5 rings" width="500">
@@ -76,11 +91,11 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
    - Stop Velox recording
    - Open `ImageCorrector` software
    - Find a flat area with distribution of particle sizes
-   - Click `Reset` for Objective, Diffraction, and Image C1A1
-   - Press `C1A1`, aim for A1 < 5 nm, A2/B2 < 5 µm
+   - `Stigmator` tab Reset `Objective`, `Image A1` only.
+   - (FIXME) Press `C1A1`, aim for A1 < 5 nm. Is C1 high? Z-axis to adjust slightly. Intensity abour 800-900 by adjusting Intensity knob. C1 should be close to to the suggested number Ex) here, case ~-600 nm. 
+     - ATTACH IMAGE HERE
    - Go to `Tableau` → `Fast`
-
-     <img src="img/STEM/07-c1a1-result.jpg" alt="C1A1 correction result showing aberration values" width="500">
+   - Click `Accept`, press the A1, C1, etc. buttons in order to (as shown in the image)
 
    **Target values (TEM Image Corrector):**
 
@@ -93,29 +108,37 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
    | A3        | < 5 μm                        | < 1.5 μm                       |
    | S3        | < 5 μm                        | < 1 μm                         |
 
-9. **Save optics settings**
+> We do want to resolve to 5th order in TEM? Yes, in STEM but no in TEM.
+
+1.  **Save optics settings**
+
+  <img src="img/STEM/save-settings.jpg" alt="save settings" width="500">
+
    - `TEMUI` → `Files` → `SBL FEG Registers`
    - Add name `300KV-TEM-<NAME>` and click `Add`
 
-     <img src="img/STEM/save-settings.jpg" alt="save settings" width="500">
 
 ## Part 2: Probe alignment in STEM mode
 
 Go to `STEM` mode in Velox.
 
 1. **Switch to STEM**
-    - `Velox` → `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
+    - `Velox` → click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
+    - Ensure convergence angle of 30 mrad, camera length 91 mm
+    - Current ~100 pA. Too low? (ATTACH IMAGE MONO) `Monochromotaore Tune Expert` -> `Shift`, `Focus`, use `intensity` know to adjust Screen (it should be 0.100 nA)
+      - ATTACH IMAGE
+    - Center beam on HAADF detector. Click the button shown below to see. `Direct Alignment`, `Diffraction Shfit and Focus alignment` -> `mulXY` to cneter the beam 
+      - ATTACH IMAGE
+    - Drive around, good distribution of feature sizes.
     - Adjust z-axis on hand panel until sharpest features:
 
       <img src="img/STEM/08-temui-settings.jpg" alt="TEMUI settings showing C1, C2, C3 values" width="500">
 
-    - Set convergence angle to 30 mrad, camera length 91 mm, current ~100 pA
-    - Center beam on HAADF detector using `Direct Alignment` tab `TEMUI`
-    
 2. **Reset aberrations**
+   - 
    - Set magnification to ~225 kx, find area with particle size distribution
    - `TEMUI` → `STEM autotuning` → `Settings` → `Reset`
-   
+   `Sitgmator` -> 
       <img src="img/STEM/use-stem-auto-tuning-reset-click.jpg" alt="use stem auto tuning reset click" width="500">
 
 3. **Fine-tune probe alignment**
@@ -124,9 +147,10 @@ Ensure probe is alignde along the optical axis.
 
    - Press `Diffraction Mode` on hand panel
    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
-   - Click `Center C2 aperture`, adjust with ``mulfXY``
+   - Click `Center C2 aperture`, adjust with ``mulXY``
    - Press `Diffraction Mode` again to exit
-   - Get FOD, camera length, probe convergence angle from `Velox` `Detector Layout`
+    camera length of 91 mm, probe convergence angle from `Velox` `Detector Layout`
+   - FOV is dynamic and fixed.
 
       <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
    
@@ -134,7 +158,7 @@ Ensure probe is alignde along the optical axis.
 
       <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="probe corrector reset aberration" width="500">
 
-4. **Run probe corrector**
+1. **Run probe corrector**
    - In `Probe Corrector` software, set probe diameter 20 nm, semi-aperture 30 mrad
 
       <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="probe corrector edit probe semi aperture to 30" width="500">
@@ -145,7 +169,21 @@ Ensure probe is alignde along the optical axis.
 
       <img src="img/STEM/probe-corrector-tableau.jpg" alt="probe corrector tableau" width="500">
 
-5. **Verify aberration corrected image**
+
+   **Target values (STEM Probe Corrector):**
+
+> More or less identical as TEM
+
+   | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
+   |-----------|-------------------------------|--------------------------------|
+   | A1        | < 5 nm                        | < 5 nm                         |
+   | A2        | < 100 nm                      | < 50 nm                        |
+   | B2        | < 100 nm                      | < 50 nm                        |
+   | C3        | ~ -8 μm                       | ~ -8 μm                        |
+   | A3        | < 5 μm                        | < 1.5 μm                       |
+   | S3        | < 5 μm                        | < 1 μm                         |
+
+2. **Verify aberration corrected image**
    - `Velox` - Click `Play button`
 
 ## Part 3: Image your sample
@@ -292,3 +330,8 @@ Grey colors shown below?
 - Dec 15, 2025 - Add advanced pre-probe corrector with STEM Direct Alignment steps by @bobleesj
 - Dec 12, 2025 - Add STEM training images by Guoliang Hu
 - Dec 8, 2025 - First draft of SNSF Spectra training by @bobleesj
+
+
+
+
+     <img src="img/STEM/07-c1a1-result.jpg" alt="C1A1 correction result showing aberration values" width="500">

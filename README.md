@@ -101,20 +101,26 @@ sitting in front of the microscope with a focus on visual elements.
 
 ## For maintainers and authors
 
-### Checklist for the human
+### Checklist
 
-- [ ] Is our writing the most clear, yet concise for making decision?
-- [ ] Added concise changelog for each document? Ex) `Dec 13, 2025 - add 4D-STEM tutorial draft by @bobleesj`
-- [ ] New images added? Did you run `python scripts/compress_images.py img/`
+- [ ] Is our writing the most clear, yet concise for making decision for a complete beginner and for those who haven't used the instrument for months and years?
+- [ ] Have we added concise changelog for each document? Ex) `Dec 13, 2025 - add 4D-STEM tutorial draft by @bobleesj`
+- [ ] Did you run `python scripts/process_new_images.py --max-width 1200 --delete-originals` for new images added?
 
-### Writing conventions
+### Writing conventions and principles
 
-For consistency, use the following style (feed to LLM)
+Writing guides for authors and quality control:
 
-- Use `##` for main sections, `###` for numbered steps
+- We want to make correct decisions with the least amount of cognitive overload for the reader.
+- We want this guide to be "IKEA manual" of microscopes. 
+- This guide should be also followed by someone with minimal supervision with for beginners.
+- Use the least amount writing required yet deliver the intended, ambinguous results. The old "A picture worth thouands words" can be judiicously applied.
+
+Formatting consistency designed for LLM:
+
 - Use sub-bullets (`-`) for details under each step
-- Use `<details>` and `<summary>` for collapsible FAQs
 - Place images after relevant steps with `alt` text and `width="500"`
+- Place `<img>` with an intention when it is presented after a bullet point
 - Use `.jpg` format for images (not `.png`)
 - Do not use horizontal lines (`---`)
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
@@ -122,32 +128,20 @@ For consistency, use the following style (feed to LLM)
 
 ### Scripts
 
-#### Convert HEIC to JPG
-
-Convert HEIC images (from iPhone) to compressed JPG:
+Process new images (HEIC/PNG → JPG, compress, normalize extensions):
 
 ```bash
-# Install dependencies
 pip install Pillow pillow-heif
-
-# Convert all HEIC files in images/ folder
-python scripts/convert_heic_to_jpg.py
-
-# Convert and delete original HEIC files
-python scripts/convert_heic_to_jpg.py --delete-originals
-
-# Convert with resizing and custom quality
-python scripts/convert_heic_to_jpg.py --max-width 1600 --quality 80 --delete-originals
+python scripts/process_new_images.py --max-width 1200 --delete-originals
 ```
 
-#### Image compression
+## Acknolwedmgents
 
-Compress JPG images:
+Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF. 
 
-```bash
-# Install dependencies
-pip install Pillow
+## Changelog
 
-# Compress and resize images
-python scripts/compress_images.py img/ --max-width 1600 --quality 80
-```
+- Dec 17, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
+- Dec 14, 205 - Begin Electron Microscopy training documentation, led by @bobleesj.
+
+> Separate changelog is provided for each tutorial page.
