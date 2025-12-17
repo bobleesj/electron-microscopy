@@ -12,7 +12,7 @@ Here is the Dectris Arina hardware within Spectra.
 
 1. **Open the detector**
 
-   - Open the column and go to the Arina detector
+   -  to the Arina detector
    - Press the button (with blue light) for 10 seconds, then it will open
 
 2. **Remote computer connect**
