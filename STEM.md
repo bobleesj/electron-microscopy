@@ -193,11 +193,13 @@ Acronyms
 
 2. **Reset aberrations**
 
-   - `TEMUI` → `STEM Autotuning` → `Settings` → `Reset` → `Stigmator`
+> Why reset? The probe corrector software (Sherpa) measures the actual probe shape/ronchigram to calculate what corrections are needed. If manual stigmator corrections are already applied, the software can't distinguish between real aberrations from the optics and artificial corrections added.
+
+   - `TEMUI` → `STEM Auto Tune` click `Reset`.
 
      <img src="img/STEM/STEM-alignment-stigmator-reset.jpg" alt="Reset stigmator in TEMUI" width="500">
 
-   - Reset `Probe A1` and `Condenser` to zero
+   - `TEMUI` → `Stigmator` Reset `Probe A1` and `Condenser` to zero (right click)
 
      <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
 
@@ -209,12 +211,10 @@ Acronyms
    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
    - Click `Center C2 aperture`, adjust with `mulXY`
    - Press `Diffraction Mode` again to exit
-   - Verify camera length of 91 mm, probe convergence angle from `Velox` → `Detector Layout`
-   - Run `STEM Auto Tune` in `TEMUI` so that Probe Corrector's aberration values are all removed
 
      <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
 
-4. **Run probe corrector**
+4. **Run probe corrector** FIXME: which buttons to click?
 
    - In `Probe Corrector` software, set probe diameter 20 nm, semi-aperture 30 mrad
 
@@ -261,7 +261,7 @@ Acronyms
 
      <img src="img/STEM/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
 
-5. **Verify aberration corrected image**
+3. **Verify aberration corrected image**
 
    - In `Velox`, click the `Play` button
    - Done! You are now ready to image your sample
