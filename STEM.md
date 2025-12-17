@@ -271,24 +271,67 @@ Acronyms
 1. **Load your sample**
 
    - Follow load procedure in [README.md](README.md#how-to-remove-and-insert-holder)
+   - Ensure Column is open
+   - Ensure pressure values are correct on Spectra instrument and TEMUI:
 
-2. **After probe correction**
+     <img src="img/STEM/EXP-velox-tem-mode.jpg" alt="Velox TEM mode" width="500">
 
-   - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
-   - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
+     <img src="img/STEM/EXP-velox-tem-view.jpg" alt="Velox TEM view" width="500">
 
+   - Ensure you have the filename and folder setup in `Velox`
 
-3. **Find zone-axis**
+     <img src="img/STEM/EXP-velox-filename-setup.jpg" alt="Velox filename and folder setup" width="500">
 
-   - Unblank beam on Velox
-   - `Quick` tab → `Sample Piezo`, fine-tune z-axis
+2. **Find sample region of interest**
+
+   - Enter `TEM` mode in `Velox
+   - Go to lower magnification, below 1,000x to identify scan and region of interest
+
+     <img src="img/STEM/EXP-low-mag-overview.jpg" alt="Low magnification overview" width="500">
+
+   - Use diffraction pattern to find high contrast areas. Use HDR to see diffraction pattern.
+
+     <img src="img/STEM/EXP-diffraction-pattern-hdr.jpg" alt="Diffraction pattern in HDR mode" width="500">
+
+   - Go back to `STEM` and `HAADF` mode and click "play" button in Velox
+
+     <img src="img/STEM/EXP-stem-haadf-view.jpg" alt="STEM HAADF view" width="500">
+
+3. **Fine-tune focus with piezo**
+
+   - Once you've found a good region of interest, `TEMUI` → `Sample Piezo`
+   - Use `mulXY` to focus z-axis more precisely
 
      <img src="img/STEM/STEM-alignment-zone-axis.jpg" alt="Zone axis alignment" width="500">
 
-   - In `Velox`, drag the red dot to move probe position
-   - `Quick` → `Smart Tilt` for automatic alpha/beta adjustment
-   - After tilting, verify C1A1 is still good using the Sherpa software.
+4. **Run probe correction on sample**
 
+   - Run `Sherpa` software, run `A1B1` then `B2/A2`
+   - If you see the following error,
+
+     <img src="img/STEM/EXP-sherpa-error.jpg" alt="Sherpa error" width="500">
+
+     In `Velox`, click `Auto-tune` and ensure the signal touches the dotted `blue` and `red` lines
+
+     <img src="img/STEM/EXP-velox-autotune.jpg" alt="Velox auto-tune signal adjustment" width="500">
+
+   - Now it should work. Run `B2/A2`, this will take a few minutes.
+
+     <img src="img/STEM/EXP-sherpa-b2a2-running.jpg" alt="Sherpa B2/A2 running" width="500">
+
+1. **After probe correction**
+
+   - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
+   - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
+   - Zoom in to verify correction
+
+     <img src="img/STEM/EXP-zoomed-view.jpg" alt="Zoomed view after correction" width="500">
+
+2. **Find zone-axis (optional)**
+
+   - In `Velox`, drag the red dot to move probe position
+   - `TEMUI` → `Quick` tab → `Smart Tilt` for automatic alpha/beta adjustment
+   - After tilting, verify C1A1 is still good using the Sherpa software
 
 ## Part 4: End session
 
