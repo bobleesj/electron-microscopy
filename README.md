@@ -6,12 +6,9 @@ WIP:
 - [ ] Better pictures: proportion, focus, FOV
 - [ ] More visuals added to each session when needed
 
-Disclaimer: Always follow https://barnum.su.domains/ for correctness. Only use
-this documentation if you are working with the authors of the document and you
-are looking for quick visual references.
+Disclaimer: Always follow [https://barnum.su.domains/](https://barnum.su.domains/) for correctness. Only use this documentation if you are working with the authors of the document and you are looking for quick visual references.
 
-The content is meant to be used as a step-by-step tutorial focused on practice
-sitting in front of the microscope with a focus on visual elements.
+The content is meant to be used as a step-by-step tutorial focused on practice sitting in front of the microscope with a focus on visual elements.
 
 ## Available guides
 
@@ -23,20 +20,17 @@ sitting in front of the microscope with a focus on visual elements.
 | [EDS](EDS.md)                   | Energy Dispersive X-ray Spectroscopy      | 🚧 Coming soon |
 | [Tomography](tomography.md)     | Electron tomography                       | 🚧 Coming soon |
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
-| PED                             | -                                         | 🚧 Coming soon |
+| [PED](ped.md)                   | -                                         | 🚧 Coming soon |
 
-
-## Immediate TODO:
+## Immediate TODO
 
 - [ ] `README.md` - how to open/close TITAN holder box
 - [ ] `STEM.md` - better probe correction process
-- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera?
+- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera
 
 ## How to load sample
 
-> Disclaimer: This guide is written for those who have already used single-tilt
-> and double-tilt before. If you are using this documentation for the first
-> time, you should work with a supervisor.
+> Disclaimer: This guide is written for those who have already used single-tilt and double-tilt holders before. If you are using this documentation for the first time, you should work with a supervisor.
 
 ### Single-tilt holder
 
@@ -48,15 +42,15 @@ sitting in front of the microscope with a focus on visual elements.
 
    <img src="img/sample-loading/single-tilt/01-holder-overview.jpg" alt="Single-tilt holder overview" width="500">
 
-3. Lift the clip gently:
+2. Lift the clip gently:
 
    <img src="img/sample-loading/single-tilt/02-sample-placement.jpg" alt="Sample placement" width="500">
 
-5. If using a copper grid, pinch the tip of the copper grid
+3. If using a copper grid, pinch the tip of the copper grid
 
    <img src="img/sample-loading/single-tilt/03-holder-ready.jpg" alt="Holder ready" width="500">
 
-6. Place the sample, shiny side up for the standard sample
+4. Place the sample, shiny side up for the standard sample
 
    <img src="img/sample-loading/single-tilt/04-holder-inserted.jpg" alt="Holder inserted" width="500">
 
@@ -68,14 +62,14 @@ sitting in front of the microscope with a focus on visual elements.
 
    <img src="img/sample-loading/double-tilt/01-holder-preparation.jpg" alt="Holder preparation" width="500">
 
-2. Add the cap and rotate the holder about the long axis to ensure the sample is
-   secure:
+2. Add the cap and rotate the holder about the long axis to ensure the sample is secure:
 
    <img src="img/sample-loading/double-tilt/02-holder-insertion.jpg" alt="Holder insertion" width="500">
 
 **Unload sample:**
 
 1. Press down the very small hole gently as shown below:
+
    <img src="img/sample-loading/double-tilt/03-holder-locked.jpg" alt="Holder locked" width="500">
 
 2. The three parts should all be disassembled and placed on the bottom:
@@ -88,10 +82,10 @@ sitting in front of the microscope with a focus on visual elements.
 
 - Push the holder in, feel resistance. This will start the turbo pump immediately.
 
-   <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+  <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
 
-- Wait 2 minutes, turn counter-clockwise, until you feel gently stuck
-- Guide the holder to push in. Expect the holder wants to move in.
+- Wait 2 minutes, turn counter-clockwise until you feel gently stuck
+- Guide the holder to push in. Expect the holder to move in.
 - On TEMUI, turn off turbo pump
 
 **Remove holder**
@@ -104,18 +98,17 @@ sitting in front of the microscope with a focus on visual elements.
 
 ### Checklist
 
-- [ ] Is our writing the most clear, yet concise for making decision for a complete beginner and for those who haven't used the instrument for months and years?
-- [ ] Have we added concise changelog for each document? Ex) `Dec 13, 2025 - add 4D-STEM tutorial draft by @bobleesj`
-- [ ] Did you run `python scripts/process_new_images.py --max-width 1200 --delete-originals` for new images added?
+- [ ] Is our writing the clearest yet most concise for decision-making for complete beginners and those who haven't used the instrument in months or years?
+- [ ] Have we added a concise changelog for each document? Example: `Dec 13, 2025 - add 4D-STEM tutorial draft by @bobleesj`
+- [ ] Did you run `python scripts/process_new_images.py --max-width 1200 --delete-originals` for new images?
 
 ### Writing conventions and principles
 
 Writing guides for humans and quality control:
 
-- We want to make correct decisions with the least amount of cognitive overload for the reader.
-- We want this guide to be "IKEA manual" of microscopes. 
-- This guide should be also followed by someone with minimal supervision with for beginners.
-- Use the least amount writing required yet deliver the intended, ambinguous results. The old "A picture worth thouands words" can be judiicously applied.
+- We want to make correct decisions with the least cognitive overload for the reader.
+- We want to serve "IKEA manual" of microscopes.
+- The adage "A picture is worth a thousand words" should be judiciously applied. Balance richness vs. cognitive overload.
 
 Formatting consistency designed for LLM:
 
@@ -128,7 +121,7 @@ Formatting consistency designed for LLM:
   - Uppercase: A1, A2, B2, C1, C2, C3, S3 (aberration parameters)
   - Lowercase: beam, aperture, intensity, magnification, etc.
 - Place images after relevant steps with `alt` text and `width="500"`
-- Place `<img>` with an intention when it is presented after a bullet point
+- Use `<img src="..." alt="..." width="500">` for all images
 - Use `.jpg` format for images (not `.png`)
 - Do not use horizontal lines (`---`)
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
@@ -144,15 +137,13 @@ pip install Pillow pillow-heif
 python scripts/process_new_images.py --max-width 1200 --delete-originals
 ```
 
-## Acknolwedmgents
+## Acknowledgments
 
-Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF. 
+Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF.
 
 ## Changelog
 
 - Dec 17, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
-- Dec 14, 205 - Begin Electron Microscopy training documentation, led by @bobleesj.
+- Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj.
 
-> Separate changelog is provided for each tutorial page.
-
-[def]: mg/sample-loading/holder-insert/01-holder-insertion.jp
+Separate changelog is provided for each tutorial page.
