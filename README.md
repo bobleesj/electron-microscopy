@@ -109,7 +109,7 @@ sitting in front of the microscope with a focus on visual elements.
 
 ### Writing conventions and principles
 
-Writing guides for authors and quality control:
+Writing guides for humans and quality control:
 
 - We want to make correct decisions with the least amount of cognitive overload for the reader.
 - We want this guide to be "IKEA manual" of microscopes. 
@@ -132,6 +132,7 @@ Formatting consistency designed for LLM:
 - Do not use horizontal lines (`---`)
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
 - Keep a `## Changelog` section at the bottom with dated entries
+- Use `STEM.md` as the main reference document for formatting.
 
 ### Scripts
 

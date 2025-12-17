@@ -56,24 +56,24 @@ Acronyms
 5. **Fix condenser lens stigmation**
    - Go to ~200kx magnification using `Magnification` knob
    - Go to `Direct Alignment` → `Beam Shift`
-   - Center beam with ``mulXY``
+   - Center beam with `mulXY`
 
      <img src="img/STEM/zoom-in.jpg" alt="zoom in" width="500">
 
    - Make beam baseball-size on fluorescent screen
-   - Not concentric? `Stigmator` → `Condenser`, adjust with ``mulXY``
+   - Not concentric? `Stigmator` → `Condenser`, adjust with `mulXY`
 
 6. **Fix beam tilt**
    - Go to `Direct Alignment` section
-   - Click `Beam tilt pp X`, adjust ``mulXY`` to minimize jiggle
+   - Click `Beam tilt pp X`, adjust `mulXY` to minimize jiggle
    - Repeat for `Beam tilt pp Y`
-   - Notice beam center shifted again
-   - Click `Beam shift`, `mulXY` to center
+   - Notice beam center shifted again.
+   - Click `Beam Shift`, use `mulXY` to center
 
 7. **Fix rotation center**
    - Spread beam across entire fluorescent screen
-   - Click `Rotation center`
-   - Notice the image is pulsing in and out
+   - Click `Rotation Center`
+   - Notice the image is pulsing in and out.
    - Adjust `mulXY` to minimize pulsing until image moves symmetrically in/out
 
 8. **Capture image**
@@ -126,7 +126,7 @@ Acronyms
       | A3        | < 5 μm                        | < 1.5 μm                       |
       | S3        | < 5 μm                        | < 1 μm                         |
 
-   - In Velox, click on the "camera" button to take the picture.
+   - In `Velox`, click on the `Camera` button to take the picture
 
 10. **Save optics settings**
 
@@ -139,92 +139,125 @@ Acronyms
 
 1. **Switch to STEM**
 
-    - In `Velox`,  click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
-    - Check convergence angle of 30 mrad, camera length 91 mm
-    - Current ~100 pA. Too low? (ATTACH IMAGE MONO) `Monochromotaore Tune Expert` -> `Shift`, `Focus`, use `intensity` know to adjust Screen (it should be 0.100 nA)
-      - ATTACH IMAGE
-    - Center beam on HAADF detector. Click the button shown below to see. `Direct Alignment`, `Diffraction Shfit and Focus alignment` -> `mulXY` to cneter the beam 
-      - ATTACH IMAGE
-    - Drive around, good distribution of feature sizes.
-    - Adjust z-axis on hand panel until sharpest features:
+   - In `Velox`, click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
+   - Drive around, set magnification to ~225 kx, find area with good distribution of feature sizes
 
       <img src="img/STEM/08-temui-settings.jpg" alt="TEMUI settings showing C1, C2, C3 values" width="500">
 
+   - Adjust z-axis on hand panel until sharpest features
+   - Verify convergence angle of 30 mrad, camera length 91 mm
+
+      <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
+
+   - Current should be ~0.100 nA. Too low? `Monochromator Tune (Expert)` → `Shift`, `Focus`, use `Intensity` knob to adjust
+
+      <img src="img/STEM/STEM-alignment-monochromator-tune.jpg" alt="Modify intensity using Monochromator Tune" width="500">
+
+   - Center beam on HAADF detector by clicking the HAADF button on TEMUI
+
 2. **Reset aberrations**
-   - 
-   - Set magnification to ~225 kx, find area with particle size distribution
-   - `TEMUI` → `STEM autotuning` → `Settings` → `Reset`
-   `Sitgmator` -> 
-      <img src="img/STEM/use-stem-auto-tuning-reset-click.jpg" alt="use stem auto tuning reset click" width="500">
+
+   - `TEMUI` → `STEM Autotuning` → `Settings` → `Reset` → `Stigmator`
+
+      <img src="img/STEM/STEM-alignment-stigmator-reset.jpg" alt="Reset stigmator in TEMUI" width="500">
+
+   - Reset `Probe A1` and `Condenser` to zero
+
+      <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
 
 3. **Fine-tune probe alignment**
 
-Ensure probe is alignde along the optical axis.
+   Ensure probe is aligned along the optical axis.
 
    - Press `Diffraction Mode` on hand panel
    - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
-   - Click `Center C2 aperture`, adjust with ``mulXY``
+   - Click `Center C2 aperture`, adjust with `mulXY`
    - Press `Diffraction Mode` again to exit
-    camera length of 91 mm, probe convergence angle from `Velox` `Detector Layout`
-   - FOV is dynamic and fixed.
+   - Verify camera length of 91 mm, probe convergence angle from `Velox` → `Detector Layout`
+   - Run `STEM Auto Tune` in `TEMUI` so that Probe Corrector's aberration values are all removed
 
-      <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
-   
-   - `STEM Auto tune` in TEMUI so that Probe Corrector's aberration values are all removed.
+      <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
 
-      <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="probe corrector reset aberration" width="500">
+4. **Run probe corrector**
 
-1. **Run probe corrector**
    - In `Probe Corrector` software, set probe diameter 20 nm, semi-aperture 30 mrad
 
-      <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="probe corrector edit probe semi aperture to 30" width="500">
+      <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="Probe corrector edit probe semi aperture to 30" width="500">
 
-    - Click `C1A1` → `Start`
-    - Aim for A1 < 5 nm, A2/B2 < 100 nm, A3/C3/S6 < 5 µm
-    - Go to `Tableau` → `Standard` → `Start`, adjust C2/S2 until you see A4
+   - Run `C1A1`, try to make values close to zero
 
-      <img src="img/STEM/probe-corrector-tableau.jpg" alt="probe corrector tableau" width="500">
+      <img src="img/STEM/STEM-alignment-c1a1-zero.jpg" alt="C1A1 values close to zero" width="500">
 
+   - Click `0th-2nd`, set `Auto correct` to 50%
 
-   **Target values (STEM Probe Corrector):**
+      <img src="img/STEM/STEM-alignment-0th-2nd-autocorrect.jpg" alt="0th-2nd autocorrect settings" width="500">
 
-> More or less identical as TEM
+   - Go to `Tableau` → `Standard` → `Start`
+   - Notice the aberration surface image. The aberration value in purple (e.g., C3) is the limiting aberration that needs correction.
+   - Press the button with aberration C2, etc. sequentially until you see A4 
 
-   | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
-   |-----------|-------------------------------|--------------------------------|
-   | A1        | < 5 nm                        | < 5 nm                         |
-   | A2        | < 100 nm                      | < 50 nm                        |
-   | B2        | < 100 nm                      | < 50 nm                        |
-   | C3        | ~ -8 μm                       | ~ -8 μm                        |
-   | A3        | < 5 μm                        | < 1.5 μm                       |
-   | S3        | < 5 μm                        | < 1 μm                         |
+      <img src="img/STEM/STEM-alignment-tableau-aberration-surface.jpg" alt="Tableau aberration surface" width="500">
 
-2. **Verify aberration corrected image**
-   - `Velox` - Click `Play button`
+   - Go to `C1A1` tab again
+   - Adjust `C1` and `A1` again since adjusting higher-order aberrations may affect these
+   - Run `C1A1` to ensure both values below 5 nm
+   - Go back to `Tableau` tab
+   - Select `A5` under Tableau options and click `Reevaluate`
+
+      <img src="img/STEM/STEM-alignment-a5-reevaluate.jpg" alt="A5 reevaluate in Tableau" width="500">
+   
+   - Start `Tableau`, ensure to run `C1A1` again until you satisfy the target values below
+
+      **Target values (STEM Probe Corrector):**
+
+      > More or less identical as TEM
+
+      | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
+      |-----------|-------------------------------|--------------------------------|
+      | A1        | < 5 nm                        | < 5 nm                         |
+      | A2        | < 100 nm                      | < 50 nm                        |
+      | B2        | < 100 nm                      | < 50 nm                        |
+      | C3        | ~ -8 μm                       | ~ -8 μm                        |
+      | A3        | < 5 μm                        | < 1.5 μm                       |
+      | S3        | < 5 μm                        | < 1 μm                         |
+
+   The Spectra microscope has reached about 48 pm. 49.9 pm is on the good side.
+
+      <img src="img/STEM/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
+
+5. **Verify aberration corrected image**
+
+   - In `Velox`, click the `Play` button
+   - Done! You are now ready to image your sample
 
 ## Part 3: Image your sample
 
-1. **Upload standard sample**
-2. **Load your sample**
-3. **After probe correction**
-    - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
-    - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
-    - Target resolution: D < 60 pm (spec is 50 pm)
+1. **Load your sample**
 
-      <img src="img/STEM/stem-probe-corrector-final-result.jpg" alt="stem probe corrector final result" width="500">
+   - Follow load procedure in [README.md](README.md#how-to-remove-and-insert-holder)
 
-4. **Find zone-axis**
+2. **After probe correction**
+
+   - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
+   - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
+
+
+3. **Find zone-axis**
+
+   - Unblank beam on Velox
    - `Quick` tab → `Sample Piezo`, fine-tune z-axis
-    - Unblank beam on Velox
-    - In `Velox`, drag the red dot to move probe position
-    - `Quick` → `Smart Tilt` for automatic alpha/beta adjustment
-    - After tilting, verify C1A1 is still good
+      <img src="img/STEM/STEM-alignment-zone-axis.jpg" alt="Zone axis alignment" width="500">
+   - In `Velox`, drag the red dot to move probe position
+   - `Quick` → `Smart Tilt` for automatic alpha/beta adjustment
+   - After tilting, verify C1A1 is still good using the Sherpa software.
+
 
 ## Part 4: End session
 
 1. **Finish**
-    - `TEMUI` -> press `Column volume closed` -> press `Turbo pump on`
-    - Follow unload procedure in [README.md](README.md#how-to-remove-and-insert-holder)
+
+   - `TEMUI` → press `Column Valves Closed` → press `Turbo Pump On`
+   - Follow unload procedure in [README.md](README.md#how-to-remove-and-insert-holder)
 
 ## Appendix
 
