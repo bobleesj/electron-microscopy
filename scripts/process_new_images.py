@@ -31,6 +31,7 @@ Options:
     --delete-originals  Delete original HEIC/PNG files after successful conversion
     --dry-run           Preview changes without modifying any files
     --include-staged    Also process staged (git add) files, not just untracked
+    --all               Process ALL images, including already committed files
 
 Requirements:
     Python 3.10+ (uses modern type hints)
@@ -71,6 +72,24 @@ def get_repo_root() -> Path:
         check=True,
     )
     return Path(result.stdout.strip())
+
+
+def get_all_image_files(target_dir: Path) -> list[Path]:
+    """
+    Get all image files in the target directory (recursive).
+    
+    Args:
+        target_dir: Directory to scan for images
+    
+    Returns:
+        List of Path objects for all image files
+    """
+    extensions = (".heic", ".heif", ".png", ".jpg", ".jpeg")
+    files = []
+    for ext in extensions:
+        files.extend(target_dir.rglob(f"*{ext}"))
+        files.extend(target_dir.rglob(f"*{ext.upper()}"))
+    return [f for f in files if f.is_file()]
 
 
 def get_new_files(target_dir: Path, include_staged: bool = False) -> list[Path]:
@@ -271,21 +290,31 @@ def process_new_images(
     delete_originals: bool = False,
     dry_run: bool = False,
     include_staged: bool = False,
+    process_all: bool = False,
 ) -> None:
-    """Process all new (untracked) images in the target directory."""
+    """Process images in the target directory."""
     
     if not target_dir.exists():
         print(f"Error: {target_dir} does not exist")
         return
 
-    print(f"🔍 Scanning for new files in: {target_dir}")
+    if process_all:
+        print(f"🔍 Scanning for ALL image files in: {target_dir}")
+    else:
+        print(f"🔍 Scanning for new files in: {target_dir}")
     print(f"   Quality: {quality}, Max width: {max_width or 'unchanged'}")
     print("-" * 60)
 
-    new_files = get_new_files(target_dir, include_staged)
+    if process_all:
+        new_files = get_all_image_files(target_dir)
+    else:
+        new_files = get_new_files(target_dir, include_staged)
     
     if not new_files:
-        print("✅ No new files found. Everything is already tracked by git.")
+        if process_all:
+            print("✅ No image files found in the directory.")
+        else:
+            print("✅ No new files found. Everything is already tracked by git.")
         return
 
     # Categorize files
@@ -393,6 +422,12 @@ def main():
         action="store_true",
         help="Also process staged (git add) files, not just untracked",
     )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        dest="process_all",
+        help="Process ALL images, including already committed files",
+    )
 
     args = parser.parse_args()
 
@@ -407,6 +442,7 @@ def main():
         delete_originals=args.delete_originals,
         dry_run=args.dry_run,
         include_staged=args.include_staged,
+        process_all=args.process_all,
     )
 
 

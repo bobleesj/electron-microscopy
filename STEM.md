@@ -398,7 +398,6 @@ Hand panel R1, R2, R3 values
 ### Aberration correction
 
 - TODO: **Image Correction vs. Probe Corrector:**
-- TODO: 
 
 > Simulate ronchigram for each aberration term: https://bobleesj.github.io/electron-microscopy-website/ronchigram.
 

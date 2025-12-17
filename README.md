@@ -24,13 +24,17 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 
 ## Immediate TODO
 
-- [ ] `README.md` - how to open/close TITAN holder box
-- [ ] `STEM.md` - better probe correction process
 - [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera
 
-## How to load sample
+## Sample loading
 
-> Disclaimer: This guide is written for those who have already used single-tilt and double-tilt holders before. If you are using this documentation for the first time, you should work with a supervisor.
+**Contents:**
+- [Single-tilt holder](#single-tilt-holder)
+- [Double-tilt holder](#double-tilt-holder)
+- [Tomography holder](#tomography-holder)
+- [How to remove and insert holder](#how-to-remove-and-insert-holder)
+
+> Disclaimer: This guide is written for those who have already used single-tilt and double-tilt, tomography holders. If you are using this documentation for the first time, you should work with a supervisor.
 
 ### Single-tilt holder
 
@@ -75,6 +79,37 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 2. The three parts should all be disassembled and placed on the bottom:
 
    <img src="img/sample-loading/double-tilt/05-holder-removal.jpg" alt="Holder removal" width="500">
+
+
+### Tomography holder
+
+**Unload sample**
+
+1. The sample grid is held between the two "arms" of the metal strips.
+
+     <img src="img/sample-loading/tomography/01-sample-loaded.jpg" alt="Sample grid held by metal strips" width="500">
+
+2. Rotate the screw counterclockwise about 90 degrees. Repeat for the other "arm".
+
+     <img src="img/sample-loading/tomography/02-rotate-screw.jpg" alt="Rotating screw counterclockwise" width="500">
+
+3. Move the two strips away from each other to free the sample
+
+     From:
+
+     <img src="img/sample-loading/tomography/03-strips-closed.jpg" alt="Strips close together" width="500">
+
+     To:
+
+     <img src="img/sample-loading/tomography/04-strips-open.jpg" alt="Strips moved apart" width="500">
+
+4. Remove the sample
+
+     <img src="img/sample-loading/tomography/05-sample-removed.jpg" alt="Sample removed" width="500">
+
+**Load sample**
+
+Follow the process in reverse: load a new sample, pull the two strips closer together, and rotate the screws clockwise.
 
 ## How to remove and insert holder
 
