@@ -8,11 +8,12 @@ Acronyms
 
 - `mulXY` - Multifunction X/Y knobs on hand panel
 
-<img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
+## Part 0: Safety check
+
+- [ ] Standard sample is loaded
+- [ ] Turbo pump is off, verified on TEMUI
 
 ## Part 1: Column optics alignment in TEM mode
-
-Turn the turbo pump off if working with a standard sample. Go to TEM mode in Velox.
 
 1. **Find beam**
    - Click `Col Valves Open` on `TEMUI`
@@ -25,34 +26,32 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
 2. **Adjust eucentric height**
    - Increase magnification to ~7,500x
    - Press `Eucentric Focus` on hand panel
-     <img src="img/STEM-new/IMG_6956.jpg" alt="IMG_6956" width="500">
-   - Converge the beam to a tiny dot with intensity knob.
-     <img src="img/STEM-new/IMG_6957.jpg" alt="IMG_6956" width="500">
-   - Notice diffraction pattern. Roll mouse scoller to see greater sensitivty on TEMUI. 
-     <img src="img/STEM-new/IMG_6958.jpg" alt="IMG_6958" width="500">  
-   - Image shows approximately minimal contrast.
-     <img src="img/STEM-new/IMG_6959.jpg" alt="IMG_6959" width="500">
-   - Press z-axis to reduce constrast even further.
-     <img src="img/STEM-new/IMG_6960.jpg" alt="IMG_6960" width="500">
-   - Done!
+     <img src="img/STEM/TEM-alignment-eucentric-focus-handpanel.jpg" alt="Eucentric Focus on hand panel" width="500">
+   - Notice diffraction pattern. Roll mouse scroller to see greater contrast
+     <img src="img/STEM/TEM-alignment-diffraction-pattern.jpg" alt="Diffraction pattern with greater contrast" width="500">  
+   - Converge the beam to a tiny dot with intensity knob
+     <img src="img/STEM/TEM-alignment-beam-tiny-dot.jpg" alt="Beam converged to tiny dot" width="500">
+   - Increase intensity. Image shows approximately minimal contrast
+     <img src="img/STEM/TEM-alignment-minimal-contrast.jpg" alt="Minimal contrast image" width="500">
+   - Press `z-axis` on hand panel to reduce contrast even further
+     <img src="img/STEM/TEM-alignment-reduced-contrast.jpg" alt="Reduced contrast" width="500">
 
 3. **Align monochromator** 
-   - Jagged area visible? Skip otherwise. (Visible in the image right above)
-   - `Mono` tab, click `Shift`, use ``mulXY``.
+   - Jagged area visible? Skip otherwise
+   - `Mono` tab → click `Shift`, use `mulXY`
 
 4. **Align C2 aperture**
-   - `Tune` tab, click `Twolens`
+   - `Tune` tab → click `Twolens`
      <img src="img/STEM/two-lens-mode.jpg" alt="two lens mode" width="500">
-   - Notice beam shifted from center.
-   - Make beam tiny by varying intensity knob.
-   - Center beam with with hand panel ball.
-   - Increase beam about baseball size. Vary intensity. Notice not concentric.
-   - `Apertures` section, click `Adjust` next to `Condenser 2`, use ``mulXY`` to center beam.
-     <img src="img/STEM-new/IMG_6961.jpg" alt="IMG_6961" width="500">
-   -  `Beam Settings` tab, click `TEM` to return to three-lens mode.
-   -  Ensure beam centered, concentric.
-      <img src="img/STEM-new/IMG_6962.jpg" alt="IMG_6962" width="500">
-   -  Done!
+   - Notice beam shifted from center
+   - Make beam tiny by varying intensity knob
+   - Center beam with hand panel ball
+   - Increase beam to baseball size, vary intensity. Notice not concentric
+   - `Apertures` section → click `Adjust` next to `Condenser 2`, use `mulXY` to center beam
+     <img src="img/STEM/TEM-alignment-c2-aperture-adjust.jpg" alt="C2 aperture adjustment" width="500">
+   - `Beam Settings` tab → click `TEM` to return to three-lens mode
+   - Ensure beam centered and concentric
+      <img src="img/STEM/TEM-alignment-beam-centered-concentric.jpg" alt="Beam centered and concentric" width="500">
 
 5. **Fix condenser lens stigmation**
    - Go to ~200kx magnification using `Magnification` knob
@@ -65,66 +64,83 @@ Turn the turbo pump off if working with a standard sample. Go to TEM mode in Vel
    - Not concentric? `Stigmator` → `Condenser`, adjust with ``mulXY``
 
 6. **Fix beam tilt**
-   - Click `Beam tilt pp X` under `Direct Alignment` section
-   - Adjust ``mulXY`` to minimize jiggle
-   - Repeat for `Beam tilt pp Y`.
-   - Notice beam center shfited again.
-   - Click `Beam shift`, `mulXY` to center.
+   - Go to `Direct Alignment` section
+   - Click `Beam tilt pp X`, adjust ``mulXY`` to minimize jiggle
+   - Repeat for `Beam tilt pp Y`
+   - Notice beam center shifted again
+   - Click `Beam shift`, `mulXY` to center
 
 7. **Fix rotation center**
-   - Spread beam across entire fluorescent screen.
-   - Click `Rotation center` under `Direct Alignment` section
-     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
-   - Adjust ``mulXY`` until image pulses symmetrically in/out
+   - Spread beam across entire fluorescent screen
+   - Click `Rotation center`
+   - Notice the image is pulsing in and out
+   - Adjust `mulXY` to minimize pulsing until image moves symmetrically in/out
 
-8. **Check iamge**
-   - Press `R1` to lift fluorescent screen
-   - In Velox, click play to start imaging
-   - Notice images are being shown on Velox
-   - ATTACH IMAGE OF OVER, ON, UNDER-FOCUS
+8. **Capture image**
+   - Find a flat area with distribution of particle sizes, ensure no holes
+   - Press `R1` to lift fluorescent screen. This enables beam to be detected by detector
+   - In Velox, click play to start seeing the image
+      <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
+   - (Optional) Press `z-axis` buttons to see how focus can change image:
 
-9. **Run image corrector**
-   - Press Z-axis down until you see 4-5 rings in FFT (slight underfocus)
+      - Under focus
+         <img src="img/STEM/TEM-alignment-under-focus.jpg" alt="Under focus" width="500">
 
+      - On focus
+         <img src="img/STEM/TEM-alignment-on-focus.jpg" alt="On focus" width="500">
+
+      - Over focus
+         <img src="img/STEM/TEM-alignment-over-focus.jpg" alt="Over focus" width="500">
+
+9.  **Run image corrector**
+   - Press `Z-axis` down until you see 4-5 rings in FFT (slight underfocus)
      <img src="img/STEM/4-5-rings.jpg" alt="4-5 rings" width="500">
-
-   - Stop Velox recording
+   - Stop recording. In `Velox`, click play button again
+   - Reset `Objective`, `Image A1` in `TEMUI/Stigmator`. Right-click each button to reset
+      <img src="img/STEM/TEM-alignment-stigmator-reset.jpg" alt="Stigmator reset" width="500">
    - Open `ImageCorrector` software
-   - Find a flat area with distribution of particle sizes
-   - `Stigmator` tab Reset `Objective`, `Image A1` only.
-   - (FIXME) Press `C1A1`, aim for A1 < 5 nm. Is C1 high? Z-axis to adjust slightly. Intensity abour 800-900 by adjusting Intensity knob. C1 should be close to to the suggested number Ex) here, case ~-600 nm. 
-     - ATTACH IMAGE HERE
+   - Click `C1A1` tab → `Start`
+   - Aim for A1 < 5 nm. If `C1` shows orange, manually adjust Z-axis during iteration
+   - Set intensity to 800-900 counts by adjusting Intensity knob
+   - `C1` should be close to the suggested number. Below, software suggests C1 ~-599.3 nm
+      <img src="img/STEM/TEM-alignment-c1a1-result.jpg" alt="C1A1 result" width="500">
+
+   - Go to `Tableau` tab → choose `Standard` under `Tableau type` → click `Start`
+   
+      <img src="img/STEM/TEM-alignment-tableau-standard.jpg" alt="Tableau standard" width="500">
+
+   - Click `Accept` after the iteration
    - Go to `Tableau` → `Fast`
-   - Click `Accept`, press the A1, C1, etc. buttons in order to (as shown in the image)
+   - Click `Accept`
+   - Press the A1, C1, etc. buttons in order
+   - Check values meet the table below
 
-   **Target values (TEM Image Corrector):**
+      **Target values (TEM Image Corrector):**
 
-   | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
-   |-----------|-------------------------------|--------------------------------|
-   | A1        | < 5 nm                        | < 5 nm                         |
-   | A2        | < 100 nm                      | < 50 nm                        |
-   | B2        | < 100 nm                      | < 50 nm                        |
-   | C3        | ~ -8 μm                       | ~ -8 μm                        |
-   | A3        | < 5 μm                        | < 1.5 μm                       |
-   | S3        | < 5 μm                        | < 1 μm                         |
+      | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
+      |-----------|-------------------------------|--------------------------------|
+      | A1        | < 5 nm                        | < 5 nm                         |
+      | A2        | < 100 nm                      | < 50 nm                        |
+      | B2        | < 100 nm                      | < 50 nm                        |
+      | C3        | ~ -8 μm                       | ~ -8 μm                        |
+      | A3        | < 5 μm                        | < 1.5 μm                       |
+      | S3        | < 5 μm                        | < 1 μm                         |
 
-> We do want to resolve to 5th order in TEM? Yes, in STEM but no in TEM.
+   - In Velox, click on the "camera" button to take the picture.
 
-1.  **Save optics settings**
-
-  <img src="img/STEM/save-settings.jpg" alt="save settings" width="500">
+10. **Save optics settings**
 
    - `TEMUI` → `Files` → `SBL FEG Registers`
    - Add name `300KV-TEM-<NAME>` and click `Add`
-
-
+     <img src="img/STEM/save-settings.jpg" alt="save settings" width="500">
+   - Done! You are now ready for STEM probe alignment next.
+    
 ## Part 2: Probe alignment in STEM mode
 
-Go to `STEM` mode in Velox.
-
 1. **Switch to STEM**
-    - `Velox` → click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
-    - Ensure convergence angle of 30 mrad, camera length 91 mm
+
+    - In `Velox`,  click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
+    - Check convergence angle of 30 mrad, camera length 91 mm
     - Current ~100 pA. Too low? (ATTACH IMAGE MONO) `Monochromotaore Tune Expert` -> `Shift`, `Focus`, use `intensity` know to adjust Screen (it should be 0.100 nA)
       - ATTACH IMAGE
     - Center beam on HAADF detector. Click the button shown below to see. `Direct Alignment`, `Diffraction Shfit and Focus alignment` -> `mulXY` to cneter the beam 
@@ -231,6 +247,9 @@ Grey colors shown below?
 `Velox`, click `Auto-tune`. Increase signals touching the red and blue dotted lines:
 
    <img src="img/STEM/velox-auto-tune.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+
+Hand panel R1, R2, R3 values
+   <img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
 
 ## FAQs
 

@@ -87,7 +87,7 @@ sitting in front of the microscope with a focus on visual elements.
 **Insert holder**
 
 - Push the holder in, feel resistance. This will start the turbo pump immediately.
-   <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+   <img src="[def]" alt="Holder insertion to microscope" width="500">
 
 - Wait 2 minutes, turn counter-clockwise.
 - Guide the holder to push in. Expect the holder wants to move in. 
@@ -119,6 +119,13 @@ Writing guides for authors and quality control:
 Formatting consistency designed for LLM:
 
 - Use sub-bullets (`-`) for details under each step
+- No periods for action commands (e.g., `Click Col Valves Open on TEMUI`)
+- Use periods for observations/explanations (e.g., `Notice the image is pulsing in and out.`)
+- Lowercase for general text, uppercase only for acronyms:
+  - Uppercase: TEM, STEM, 4D-STEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV, LLM
+  - Uppercase: TEMUI, Velox (software names)
+  - Uppercase: A1, A2, B2, C1, C2, C3, S3 (aberration parameters)
+  - Lowercase: beam, aperture, intensity, magnification, etc.
 - Place images after relevant steps with `alt` text and `width="500"`
 - Place `<img>` with an intention when it is presented after a bullet point
 - Use `.jpg` format for images (not `.png`)
@@ -145,3 +152,5 @@ Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Sta
 - Dec 14, 205 - Begin Electron Microscopy training documentation, led by @bobleesj.
 
 > Separate changelog is provided for each tutorial page.
+
+[def]: mg/sample-loading/holder-insert/01-holder-insertion.jp
