@@ -2,6 +2,25 @@
 
 > Disclaimer: This guide is written for those who have already used single-tilt and double-tilt, tomography holders. If you are using this documentation for the first time, you should work with a supervisor.
 
+## Location
+
+**TITAN:**
+
+Sample loading is done outside of the room where Titan is hosted:
+
+<img src="img/sample-loading/SAMPLE-titan-stage.jpg" alt="Titan stage for single-tilt holder" width="500">
+
+**Spectra 300:**
+
+Sample loading can be done inside the Spectra room:
+
+<img src="img/sample-loading/SAMPLE-spectra-room.jpg" alt="Spectra room for sample loading" width="500">
+
+Sample holders are stored here at room temperature:
+
+<img src="img/sample-loading/SAMPLE-holder-storage.jpg" alt="Sample holder storage" width="500">
+
+
 ## Single-tilt holder
 
 **Load sample:**

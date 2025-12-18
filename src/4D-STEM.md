@@ -12,11 +12,11 @@ Here is the Dectris Arina hardware within Spectra.
    -  Open the instrument box
       -  FIXME: attach image of opening the instrument box
 
-      <img src="img/4D-STEM/spectra.jpg" alt="Spectra instrument main" width="500">
+      <img src="img/4D-STEM/4D-STEM-spectra.jpg" alt="Spectra instrument" width="500">
 
    -  Spot the Arina detector
 
-      <img src="img/4D-STEM/arina-hardware.jpg" alt="Dectris hardware" width="500">
+      <img src="img/4D-STEM/4D-STEM-arina-hardware.jpg" alt="Dectris Arina hardware" width="500">
 
    - Press the button below the Arina detector (with blue light) for 10 seconds
 
@@ -24,7 +24,7 @@ Here is the Dectris Arina hardware within Spectra.
 
    - Click remote connection icon
 
-     <img src="img/4D-STEM/01-remote-connection.jpg" alt="Remote connection" width="500">
+     <img src="img/4D-STEM/4D-STEM-remote-connection.jpg" alt="Remote connection" width="500">
    
    - Enter `192.168.12.73`
 
@@ -35,13 +35,13 @@ Here is the Dectris Arina hardware within Spectra.
    - FIXME: Better resolutiion image
    - Click on the CETA icon to remove CETA
 
-     <img src="img/4D-STEM/02-detector-initialization.jpg" alt="Detector initialization" width="500">
+     <img src="img/4D-STEM/4D-STEM-detector-initialization.jpg" alt="Detector initialization" width="500">
 
 4. **How to save file**
 
    - Open NOVENA detector software
    - Click on `Save Images` and choose folder
-      <img src="img/4D-STEM/03-save-images-dialog.jpg" alt="Save images dialog" width="500">
+      <img src="img/4D-STEM/4D-STEM-save-images-dialog.jpg" alt="Save images dialog" width="500">
    - Click on `Continuous` to streamline image
    - Click on `Single` to record and save
    - Note: `(name)_%00%` cannot be deleted, otherwise the file cannot be saved correctly.
@@ -57,7 +57,7 @@ Here is the Dectris Arina hardware within Spectra.
    - Go to `Beam Setting`, click on `MF-Y Convergence Angle`
    - This is used for tuning the convergence angle of the beam.
 
-     <img src="img/4D-STEM/04-beam-settings.jpg" alt="Beam settings" width="500">
+     <img src="img/4D-STEM/4D-STEM-beam-settings.jpg" alt="Beam settings" width="500">
 
 3. **Adjust aperture and convergence angle (FIXME: refined this step)**
 
@@ -65,7 +65,7 @@ Here is the Dectris Arina hardware within Spectra.
    - Convergence angle: Use Multifunction Y to adjust to 10 mrad (1/5 relationship with C2. If C2 is 70, convergence angle should be 14 mrad.)
    - Click on `MF-Y Convergence Angle` to close
 
-     <img src="img/4D-STEM/05-aperture-view.jpg" alt="Aperture view" width="500">
+     <img src="img/4D-STEM/4D-STEM-aperture-view.jpg" alt="Aperture view" width="500">
 
    - Remove other apertures
    - C3 aperture: Change from 1000 → 30 (you can use C2 at 50 to check if C3 is centered)
@@ -85,11 +85,11 @@ Here is the Dectris Arina hardware within Spectra.
 
     - Press the `Insert` button to insert the Detris Arina detector
 
-      <img src="img/4D-STEM/06-insert-detector.jpg" alt="Insert detector" width="500">
+      <img src="img/4D-STEM/4D-STEM-insert-detector.jpg" alt="Insert detector" width="500">
 
     - Press `EDS Scan` to see things (from `INT Scan`)
 
-      <img src="img/4D-STEM/07-eds-scan.jpg" alt="EDS scan" width="500">
+      <img src="img/4D-STEM/4D-STEM-eds-scan.jpg" alt="EDS scan" width="500">
 
     - Press the `R1` button so lift the flu screen
 
@@ -108,7 +108,7 @@ Here is the Dectris Arina hardware within Spectra.
 4. **Finish**
 
     - Retract the detector: Press `Retract` on the Detectris Arina handl panel
-      <img src="img/4D-STEM/08-detector-close.jpg" alt="Detector close" width="500">
+      <img src="img/4D-STEM/4D-STEM-detector-close.jpg" alt="Detector close" width="500">
     - Open the micfroscope Spectra box
     - Arina detector and press the button located under the the detector. (with blue light) for 10 seconds. It will close and the light will turn off.
 

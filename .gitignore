@@ -1,5 +1,9 @@
 # mdBook build output
 book/
+_build/
+
+# Backups
+PICTURES_ORIGINAL
 
 # macOS
 .DS_Store

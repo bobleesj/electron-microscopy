@@ -2,34 +2,40 @@
 
 This guide covers STEM alignment on the Spectra 300. The process has three parts: TEM alignment (column optics), STEM alignment (focused probe), and imaging your sample.
 
+![alt text](img/STEM/APP-tmp-7056.jpg)
+
 > **Prerequisite:** Complete the [Sample loading](README.md#sample-loading) procedure before starting.
+
+> FIXME: when do we want to save sample position when we load our own sample?
+> FIXME: tips on finding zone axis?
 
 **Acronyms:**
 
 - `mulXY` - Multifunction X/Y knobs on hand panel
-- `TEMUI` - TEM User Interface (softwrae)
+- `TEMUI` - TEM User Interface (software)
 
 ## Part 0: Safety check
 
-- [ ] Turn off `Turbo pump` 
-- [ ] Standard sample is loaded
 
+
+- [ ] Standard sample is loaded
 
 ## Part 1: Column optics alignment in TEM mode
 
 1. **Find beam**
 
-   - Click `Col Valves Open` on `TEMUI`
-   - `Tune` tab → `Apertures`, set 2000, 70, 1000 for Condenser 1, 2, 3
+   - Ensure column valve is closed and turbo pump is on. Verify `Col Valves Closed` and `Turbo On` are shown:
 
-     <img src="img/STEM/temui_aperature.jpg" alt="TEMUI Apertures settings for C1, C2, C3" width="500">
+     <img src="img/STEM/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves closed and turbo pump on" width="500">
 
-     > FIXME: another screenshot showing `70` instead of `50`.
+   - Set 2000, 70, 1000 for Condenser 1, 2, 3: Under `Tune` tab → `Apertures`
+
+     <img src="img/STEM/TEM-condenser-apertures-settings.jpg" alt="TEMUI aperture settings for C1, C2, C3" width="500">
 
    - Set ~500x magnification by adjusting magnification knob
    - Locate the gold (dark) and amorphous carbon boundary by driving joystick on hand panel
 
-     <img src="img/STEM/14-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary region" width="500">
+     <img src="img/STEM/TEM-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary" width="500">
 
 
 2. **Adjust eucentric height**
@@ -61,7 +67,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Jagged area visible like above image? Skip this section. Otherwise, continue.
    - `Mono` tab → `Monochromator Tune (Expert)`, click `Shift`
 
-     <img src="img/STEM/temui_mono.jpg" alt="TEMUI Monochromator Tune Expert panel" width="500">
+     <img src="img/STEM/TEM-mono.jpg" alt="Monochromator Tune Expert panel" width="500">
 
    - Adjust `mulXY` knob until the jagged area disappears.
 
@@ -69,7 +75,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Enter `TwoLens` mode. `Tune` tab → `Beam Settings`, click `Twolens`
 
-     <img src="img/STEM/two-lens-mode.jpg" alt="two lens mode" width="500">
+     <img src="img/STEM/TEM-two-lens-mode.jpg" alt="Two lens mode in TEMUI" width="500">
 
    - Notice beam shifted away from center.
    - Converge beam by varying intensity knob
@@ -90,7 +96,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Beam shifted from center? `Tune` tab → `Direct Alignment`, click `Beam Shift`, adjust `mulXY` knobs
    - Enlarge the beam by adjusting intensity knob
 
-     <img src="img/STEM/zoom-in.jpg" alt="Enlarged beam view" width="500">
+     <img src="img/STEM/TEM-zoom-in.jpg" alt="Enlarged beam view" width="500">
 
    - Still not concentric? `Stigmator` → `Condenser`, adjust `mulXY` knobs
 
@@ -112,7 +118,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Press `R1` to lift fluorescent screen. This enables the beam to be detected by the detector.
    - In `Velox`, click the play button to start seeing the image
 
-     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="Velox underfocus view showing 4-5 rings" width="500">
+     <img src="img/STEM/TEM-underfocus-4-5-rings.jpg" alt="Underfocus view showing 4-5 rings" width="500">
 
    - (Optional) Press `z-axis` buttons to see how focus can change image:
 
@@ -132,7 +138,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Press `Z-axis` down until you see 4-5 rings in FFT (slight underfocus)
 
-     <img src="img/STEM/4-5-rings.jpg" alt="4-5 rings" width="500">
+     <img src="img/STEM/TEM-4-5-rings.jpg" alt="FFT showing 4-5 rings" width="500">
 
    - Stop recording. In `Velox`, click play button again
    - Reset `Objective`, `Image A1` in `TEMUI/Stigmator`. Right-click each button to reset
@@ -175,7 +181,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
     - `TEMUI` → `Files` → `SBL FEG Registers`
     - Add name `300KV-TEM-<NAME>` and click `Add`
 
-      <img src="img/STEM/save-settings.jpg" alt="save settings" width="500">
+      <img src="img/STEM/TEM-save-settings.jpg" alt="Save optics settings in TEMUI" width="500">
 
     - Done! You are now ready for STEM probe alignment next.
     
@@ -186,12 +192,12 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - In `Velox`, click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
    - Drive around, set magnification to ~225 kx, find area with good distribution of feature sizes
 
-     <img src="img/STEM/08-temui-settings.jpg" alt="TEMUI settings showing C1, C2, C3 values" width="500">
+     <img src="img/STEM/STEM-settings.jpg" alt="Settings showing C1, C2, C3 values" width="500">
 
    - Adjust z-axis on hand panel until sharpest features
    - Verify convergence angle of 30 mrad, camera length 91 mm
 
-     <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
+     <img src="img/STEM/STEM-FOV-convergence-angle.jpg" alt="FOV length and probe convergence angle" width="500">
 
    - Current should be ~0.100 nA. Too low? `Mono` tab →  `Monochromator Tune (Expert)` → `Shift`, click `Focus`, use `Intensity` knob to adjust
 
@@ -213,6 +219,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
 
+
 3. **Fine-tune probe alignment**
 
    Ensure probe is aligned along the optical axis.
@@ -220,7 +227,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Press `Diffraction Mode` on hand panel
    - `Tune` tab, `Direct Alignment`, click `Diffraction Shift and Focus Alignment`, adjust `mulXY` knobs
 
-     <img src="img/STEM/diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment for preprobe correction" width="500">
+     <img src="img/STEM/STEM-diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment" width="500">
 
    - Click `Center C2 aperture`, adjust with `mulXY`
      > FIXME: where is `Center C2 aperture`?
@@ -231,11 +238,11 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Open `Probe Corrector` software, `Channels` → `Exported elements`, ensure all zero aberration values 
 
-     <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
+     <img src="img/STEM/STEM-probe-corrector-reset-aberration.jpg" alt="Probe corrector showing reset aberration values" width="500">
    
    - Set probe diameter 20 nm, semi-aperture 30 mrad
 
-     <img src="img/STEM/probe-corrector-edit-probe-semi-aperture-to-30.jpg" alt="Probe corrector edit probe semi aperture to 30" width="500">
+     <img src="img/STEM/STEM-probe-corrector-semi-aperture-30.jpg" alt="Probe corrector with semi-aperture set to 30 mrad" width="500">
 
    - Run `C1A1`, try to make values close to zero
 
@@ -291,15 +298,15 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Ensure column is open
    - Ensure pressure values are correct on Spectra instrument and TEMUI:
 
-     <img src="img/STEM/EXP-velox-tem-mode.jpg" alt="Velox TEM mode" width="500">
+     <img src="img/STEM/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
    
    - Ensure column valve is open
 
-     <img src="img/STEM/EXP-velox-tem-view.jpg" alt="Velox TEM view" width="500">
+     <img src="img/STEM/EXP-TEM-view.jpg" alt="TEM view" width="500">
 
    - In `Velox`, set `User`, `Sample ID`, `Auto save folder`, `File labels`, and `Selected labels` as shown below:
 
-     <img src="img/STEM/EXP-velox-filename-setup.jpg" alt="Velox filename and folder setup" width="500">
+     <img src="img/STEM/EXP-filename-setup.jpg" alt="Filename and folder setup" width="500">
 
 2. **Find sample region of interest**
 
@@ -316,7 +323,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - In `Velox`, click `STEM` and `HAADF` mode, and click the `play` button
 
-     <img src="img/STEM/EXP-stem-haadf-view.jpg" alt="STEM HAADF view" width="500">
+     <img src="img/STEM/EXP-STEM-haadf-view.jpg" alt="STEM HAADF view" width="500">
 
 3. **Fine-tune focus with piezo**
 
@@ -334,7 +341,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      In `Velox`, click `Auto-tune` and ensure the signal touches the dotted `blue` and `red` lines
 
-     <img src="img/STEM/EXP-velox-autotune.jpg" alt="Velox auto-tune signal adjustment" width="500">
+     <img src="img/STEM/EXP-autotune.jpg" alt="Auto-tune signal adjustment" width="500">
 
    - Now it should work. Run `B2/A2`, this will take a few minutes.
 
@@ -359,9 +366,18 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 1. **Finish**
 
    - `TEMUI` → press `Column Valves Closed` → press `Turbo Pump On`
-   - Follow unload procedure in [README.md](README.md#how-to-remove-and-insert-holder)
+   - Reset holder
+     ![alt text](img/STEM/APP-rest-holder.jpg)
+   - Unload sample as shown in in [sample-loading](sample-loading.md)
 
 ## Appendix
+
+### Save file to USB
+
+Plug your USB into the following computer:
+
+<img src="img/STEM/APP-usb-computer.jpg" alt="Computer for USB data transfer" width="500">
+
 
 **Underfocus vs overfocus:**
 
@@ -370,30 +386,30 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 Example of an underfocus image:
 
-<img src="img/STEM/underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
+<img src="img/STEM/APP-underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
 
 
 **Gray colors during C1A1 probe correction:**
 
 Seeing gray colors like below?
 
-<img src="img/STEM/09-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+<img src="img/STEM/APP-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
 
 `Velox`, click `Auto-tune`. Increase the signal until it touches the red and blue dotted lines:
 
-<img src="img/STEM/velox-auto-tune.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+<img src="img/STEM/APP-auto-tune.jpg" alt="Auto-tune signal adjustment" width="500">
 
 **Hand panel R1, R2, R3 values:**
 
-<img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
+<img src="img/STEM/APP-hand-panel-keys.jpg" alt="Hand panel keys" width="500">
 
 **Stage position and coordinates:**
 
-<img src="img/STEM/stage-position.jpg" alt="TEMUI stage position showing X, Y, Z coordinates" width="500">
+<img src="img/STEM/APP-stage-position.jpg" alt="TEMUI stage position showing X, Y, Z coordinates" width="500">
 
 **Dose rate and TEM mode display:**
 
-<img src="img/STEM/dose-rate-tem.jpg" alt="TEM interface showing dose rate and imaging mode information" width="500">
+<img src="img/STEM/APP-dose-rate-TEM.jpg" alt="TEM interface showing dose rate and imaging mode" width="500">
 
 ## FAQs
 
@@ -482,8 +498,7 @@ Seeing gray colors like below?
 
 ## Changelog
 
-- Dec 18, 2025 - Fix grammar and standardize image formatting by @bobleesj
-- Dec 15, 2025 - Add advanced pre-probe corrector with STEM Direct Alignment steps by @bobleesj
+- Dec 15, 2025 - Add pre-probe corrector with STEM Direct Alignment steps by @bobleesj
 - Dec 12, 2025 - Add STEM training images by Guoliang Hu
 - Dec 8, 2025 - First draft of SNSF Spectra training by @bobleesj
 
