@@ -67,7 +67,6 @@ scoop install mdbook
 cargo install mdbook
 ```bash
 
-```bash
 # Run local dev server
 mdbook serve --open
 ```
