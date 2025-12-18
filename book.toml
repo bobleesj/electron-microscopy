@@ -4,7 +4,7 @@ authors = ["Sangjoon Bob Lee"]
 language = "en"
 
 [output.html]
-default-theme = "coal"
-preferred-dark-theme = "coal"
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/bobleesj/electron-microscopy"
 edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
