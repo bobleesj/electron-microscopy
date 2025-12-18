@@ -55,8 +55,19 @@ Formatting consistency:
 ### Local development
 
 ```bash
-# Install mdBook (macOS)
+# Install mdBook
+
+# macOS
 brew install mdbook
+
+# Windows (with Chocolatey)
+choco install mdbook
+
+# Windows (with Scoop)
+scoop install mdbook
+
+# Any OS (with Cargo/Rust)
+cargo install mdbook
 
 # Run local dev server
 mdbook serve --open
