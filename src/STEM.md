@@ -4,107 +4,115 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 > **Prerequisite:** Complete the [Sample loading](README.md#sample-loading) procedure before starting.
 
-Acronyms
+**Acronyms:**
 
 - `mulXY` - Multifunction X/Y knobs on hand panel
+- `TEMUI` - TEM User Interface (softwrae)
 
 ## Part 0: Safety check
 
+- [ ] Turn off `Turbo pump` 
 - [ ] Standard sample is loaded
-- [ ] Turbo pump is off, verified on TEMUI
+
 
 ## Part 1: Column optics alignment in TEM mode
 
 1. **Find beam**
 
    - Click `Col Valves Open` on `TEMUI`
-   - Set C1 to 2000, C2 to 70, C3 to 1,000 µm
+   - `Tune` tab → `Apertures`, set 2000, 70, 1000 for Condenser 1, 2, 3
 
-     <img src="img/STEM/aperture-condenser.jpg" alt="aperture condenser" width="500">
+     <img src="img/STEM/temui_aperature.jpg" alt="TEMUI Apertures settings for C1, C2, C3" width="500">
 
-   - At 700x, locate the gold (dark) and carbon boundary
+     > FIXME: another screenshot showing `70` instead of `50`.
+
+   - Set ~500x magnification by adjusting magnification knob
+   - Locate the gold (dark) and amorphous carbon boundary by driving joystick on hand panel
 
      <img src="img/STEM/14-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary region" width="500">
 
+
 2. **Adjust eucentric height**
 
-   - Increase magnification to ~7,500x
-   - Press `Eucentric Focus` on hand panel
-
+   - Set ~7,500x mag by adjusting magnification knob
      <img src="img/STEM/TEM-alignment-eucentric-focus-handpanel.jpg" alt="Eucentric Focus on hand panel" width="500">
+
+   - Press `Eucentric Focus` on hand panel
 
    - Notice diffraction pattern. Roll mouse scroller to see greater contrast.
 
      <img src="img/STEM/TEM-alignment-diffraction-pattern.jpg" alt="Diffraction pattern with greater contrast" width="500">
 
-   - Converge the beam to a tiny dot with intensity knob
+   - Converge the beam to a tiny dot with intensity knob. Press `Z-axis` up or down until no diffraction pattern is visible.
 
      <img src="img/STEM/TEM-alignment-beam-tiny-dot.jpg" alt="Beam converged to tiny dot" width="500">
+     
 
-   - Increase intensity. Image shows approximately minimal contrast.
+   - Increase intensity. Notice image shows approximately minimal contrast between gold and amorphous carbon region.
 
      <img src="img/STEM/TEM-alignment-minimal-contrast.jpg" alt="Minimal contrast image" width="500">
 
-   - Press `z-axis` on hand panel to reduce contrast even further
+   - Press `z-axis` up or down on hand panel to reduce contrast even further
 
      <img src="img/STEM/TEM-alignment-reduced-contrast.jpg" alt="Reduced contrast" width="500">
 
 3. **Align monochromator** 
-   - Jagged area visible? Skip otherwise
-   - `Mono` tab → click `Shift`, use `mulXY`
+
+   - Jagged area visible like above image? Skip this section. Otherwise, continue.
+   - `Mono` tab → `Monochromator Tune (Expert)`, click `Shift`
+
+     <img src="img/STEM/temui_mono.jpg" alt="TEMUI Monochromator Tune Expert panel" width="500">
+
+   - Adjust `mulXY` knob until the jagged area disappears.
 
 4. **Align C2 aperture**
 
-   - `Tune` tab → click `Twolens`
+   - Enter `TwoLens` mode. `Tune` tab → `Beam Settings`, click `Twolens`
 
      <img src="img/STEM/two-lens-mode.jpg" alt="two lens mode" width="500">
 
-   - Notice beam shifted from center.
-   - Make beam tiny by varying intensity knob
-   - Center beam with hand panel ball
-   - Increase beam to baseball size, vary intensity. Notice not concentric.
-   - `Apertures` section → click `Adjust` next to `Condenser 2`, use `mulXY` to center beam
-
+   - Notice beam shifted away from center.
+   - Converge beam by varying intensity knob
+   - Center beam by rolling hand panel ball
+   - Vary beam size by turning intensity knob counterclockwise and clockwise. Notice beam size is not concentric.
+   - Make concentric beam: `Apertures` → click `Adjust` next to `Condenser 2`, adjust `mulXY` knob
      <img src="img/STEM/TEM-alignment-c2-aperture-adjust.jpg" alt="C2 aperture adjustment" width="500">
 
-   - `Beam Settings` tab → click `TEM` to return to three-lens mode
-   - Ensure beam centered and concentric.
+   - Go back to three-lens mode: `Beam Settings` tab → click `TEM`  
+     > FIXME: add screenshot
+   - Ensure beam is centered and concentric. Example:
 
      <img src="img/STEM/TEM-alignment-beam-centered-concentric.jpg" alt="Beam centered and concentric" width="500">
 
-5. **Fix condenser lens stigmation**
+5. **Fix condenser lens stigmatism**
 
-   - Go to ~200kx magnification using `Magnification` knob
-   - Go to `Direct Alignment` → `Beam Shift`
-   - Center beam with `mulXY`
+   - Set ~200kx magnification by adjusting magnification knob
+   - Beam shifted from center? `Tune` tab → `Direct Alignment`, click `Beam Shift`, adjust `mulXY` knobs
+   - Enlarge the beam by adjusting intensity knob
 
-     <img src="img/STEM/zoom-in.jpg" alt="zoom in" width="500">
+     <img src="img/STEM/zoom-in.jpg" alt="Enlarged beam view" width="500">
 
-   - Make beam baseball-size on fluorescent screen
-   - Not concentric? `Stigmator` → `Condenser`, adjust with `mulXY`
+   - Still not concentric? `Stigmator` → `Condenser`, adjust `mulXY` knobs
 
 6. **Fix beam tilt**
 
-   - Go to `Direct Alignment` section
-   - Click `Beam tilt pp X`, adjust `mulXY` to minimize jiggle
+   - Under `Direct Alignment`, click `Beam tilt pp X`, adjust `mulXY` knob to minimize jiggle
    - Repeat for `Beam tilt pp Y`
-   - Notice beam center shifted again.
-   - Click `Beam Shift`, use `mulXY` to center
+   - Beam center shifted again? Click `Beam Shift`, adjust `mulXY` knobs
 
 7. **Fix rotation center**
 
-   - Spread beam across entire fluorescent screen
-   - Click `Rotation Center`
-   - Notice the image is pulsing in and out.
-   - Adjust `mulXY` to minimize pulsing until image moves symmetrically in/out
+   - Under `Direct Alignment`, click `Rotation Center`
+   - Notice the image is pulsing in and out of the screen.
+   - Adjust `mulXY` knobs to minimize lateral movement, parallel to the screen
 
 8. **Capture image**
 
-   - Find a flat area with distribution of particle sizes, ensure no holes
-   - Press `R1` to lift fluorescent screen. This enables beam to be detected by detector.
-   - In `Velox`, click play to start seeing the image
+   - Find a flat area with a distribution of particle sizes and no holes
+   - Press `R1` to lift fluorescent screen. This enables the beam to be detected by the detector.
+   - In `Velox`, click the play button to start seeing the image
 
-     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="velox under focus 4-5 rings" width="500">
+     <img src="img/STEM/velox-under-focus-4-5rings.jpg" alt="Velox underfocus view showing 4-5 rings" width="500">
 
    - (Optional) Press `z-axis` buttons to see how focus can change image:
 
@@ -120,7 +128,7 @@ Acronyms
 
      <img src="img/STEM/TEM-alignment-over-focus.jpg" alt="Over focus" width="500">
 
-9. **Run image corrector**
+9.  **Run image corrector**
 
    - Press `Z-axis` down until you see 4-5 rings in FFT (slight underfocus)
 
@@ -185,7 +193,9 @@ Acronyms
 
      <img src="img/STEM/velox-FOV-length-probe-convergence-angle.jpg" alt="velox FOV length probe convergence angle" width="500">
 
-   - Current should be ~0.100 nA. Too low? `Monochromator Tune (Expert)` → `Shift`, `Focus`, use `Intensity` knob to adjust
+   - Current should be ~0.100 nA. Too low? `Mono` tab →  `Monochromator Tune (Expert)` → `Shift`, click `Focus`, use `Intensity` knob to adjust
+
+      > FIXME: press `Shift` or `Focus`?
 
      <img src="img/STEM/STEM-alignment-monochromator-tune.jpg" alt="Modify intensity using Monochromator Tune" width="500">
 
@@ -195,11 +205,11 @@ Acronyms
 
 > Why reset? The probe corrector software (Sherpa) measures the actual probe shape/ronchigram to calculate what corrections are needed. If manual stigmator corrections are already applied, the software can't distinguish between real aberrations from the optics and artificial corrections added.
 
-   - `TEMUI` → `STEM Auto Tune` click `Reset`.
+   - Select `STEM Auto Tuning` in quick dropdown, click `Reset`.
 
      <img src="img/STEM/STEM-alignment-stigmator-reset.jpg" alt="Reset stigmator in TEMUI" width="500">
 
-   - `TEMUI` → `Stigmator` Reset `Probe A1` and `Condenser` to zero (right click)
+   - Select `Stigmator` in quick dropdown, set `Probe A1` and `Condenser` to zero (right click)
 
      <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
 
@@ -208,17 +218,18 @@ Acronyms
    Ensure probe is aligned along the optical axis.
 
    - Press `Diffraction Mode` on hand panel
-   - `Direct Alignment` → `Diffraction Shift and Focus Alignment`
+   - `Tune` tab, `Direct Alignment`, click `Diffraction Shift and Focus Alignment`, adjust `mulXY` knobs
 
      <img src="img/STEM/diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment for preprobe correction" width="500">
 
    - Click `Center C2 aperture`, adjust with `mulXY`
-   - Press `Diffraction Mode` on hand panel again to exit
+     > FIXME: where is `Center C2 aperture`?
+   - Press `Diffraction Mode` on hand panel again
 
 
-4. **Run probe corrector** FIXME: which buttons to click?
+4. **Run probe corrector**
 
-   - Open `Probe Corrector` software, ensure all aberation values are reset under `Channels` → `Exported elements`.
+   - Open `Probe Corrector` software, `Channels` → `Exported elements`, ensure all zero aberration values 
 
      <img src="img/STEM/probe-corrector-reset-aberration.jpg" alt="Probe corrector reset aberration" width="500">
    
@@ -248,7 +259,7 @@ Acronyms
 
      <img src="img/STEM/STEM-alignment-a5-reevaluate.jpg" alt="A5 reevaluate in Tableau" width="500">
    
-   - Start `Tableau`, ensure to run `C1A1` again until you satisfy the target values below
+   - Start `Tableau`, run `C1A1` again until you satisfy the target values below
 
       **Target values (STEM Probe Corrector):**
 
@@ -277,29 +288,33 @@ Acronyms
 1. **Load your sample**
 
    - Follow load procedure in [README.md](README.md#how-to-remove-and-insert-holder)
-   - Ensure Column is open
+   - Ensure column is open
    - Ensure pressure values are correct on Spectra instrument and TEMUI:
 
      <img src="img/STEM/EXP-velox-tem-mode.jpg" alt="Velox TEM mode" width="500">
+   
+   - Ensure column valve is open
 
      <img src="img/STEM/EXP-velox-tem-view.jpg" alt="Velox TEM view" width="500">
 
-   - Ensure you have the filename and folder setup in `Velox`
+   - In `Velox`, set `User`, `Sample ID`, `Auto save folder`, `File labels`, and `Selected labels` as shown below:
 
      <img src="img/STEM/EXP-velox-filename-setup.jpg" alt="Velox filename and folder setup" width="500">
 
 2. **Find sample region of interest**
 
-   - Enter `TEM` mode in `Velox
-   - Go to lower magnification, below 1,000x to identify scan and region of interest
+   - `TEMUI` → `Beam Settings` → click `TEM` mode.
+   - Set mag ~1,000x
 
      <img src="img/STEM/EXP-low-mag-overview.jpg" alt="Low magnification overview" width="500">
 
-   - Use diffraction pattern to find high contrast areas. Use HDR to see diffraction pattern.
+   - Drive around with the joystick. You may use the diffraction pattern to identify contrast areas. Use HDR to see the diffraction pattern.
 
      <img src="img/STEM/EXP-diffraction-pattern-hdr.jpg" alt="Diffraction pattern in HDR mode" width="500">
 
-   - Go back to `STEM` and `HAADF` mode and click "play" button in Velox
+     > FIXME: How is DP used?
+
+   - In `Velox`, click `STEM` and `HAADF` mode, and click the `play` button
 
      <img src="img/STEM/EXP-stem-haadf-view.jpg" alt="STEM HAADF view" width="500">
 
@@ -325,7 +340,7 @@ Acronyms
 
      <img src="img/STEM/EXP-sherpa-b2a2-running.jpg" alt="Sherpa B2/A2 running" width="500">
 
-1. **After probe correction**
+5. **After probe correction**
 
    - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
    - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
@@ -333,7 +348,7 @@ Acronyms
 
      <img src="img/STEM/EXP-zoomed-view.jpg" alt="Zoomed view after correction" width="500">
 
-2. **Find zone-axis (optional)**
+6. **Find zone-axis (optional)**
 
    - In `Velox`, drag the red dot to move probe position
    - `TEMUI` → `Quick` tab → `Smart Tilt` for automatic alpha/beta adjustment
@@ -353,22 +368,22 @@ Acronyms
 - Underfocus: dark cores with bright Fresnel fringes on edges
 - Overfocus: bright cores with dark edge fringes
 
-Here is an example of underfocus image:
+Example of an underfocus image:
 
 <img src="img/STEM/underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
 
 
 **Gray colors during C1A1 probe correction:**
 
-Grey colors shown below?
+Seeing gray colors like below?
 
 <img src="img/STEM/09-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
 
-`Velox`, click `Auto-tune`. Increase signals touching the red and blue dotted lines:
+`Velox`, click `Auto-tune`. Increase the signal until it touches the red and blue dotted lines:
 
 <img src="img/STEM/velox-auto-tune.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
 
-Hand panel R1, R2, R3 values
+**Hand panel R1, R2, R3 values:**
 
 <img src="img/STEM/TEMUI-hand-panel-keys.jpg" alt="TEMUI hand panel keys" width="500">
 
@@ -384,7 +399,7 @@ Hand panel R1, R2, R3 values
 
 ### Software
 
-- **Convergence angle:** `Beam Setting` → `Probe`, use ``mulfYto`` adjust.
+- **Convergence angle:** `Beam Setting` → `Probe`, use `mulXY` to adjust.
 
 - **Tableau and C1A1:** Tableau shows aberrations visually. C1A1 corrects first-order aberrations (astigmatism and coma).
 
@@ -467,6 +482,7 @@ Hand panel R1, R2, R3 values
 
 ## Changelog
 
+- Dec 18, 2025 - Fix grammar and standardize image formatting by @bobleesj
 - Dec 15, 2025 - Add advanced pre-probe corrector with STEM Direct Alignment steps by @bobleesj
 - Dec 12, 2025 - Add STEM training images by Guoliang Hu
 - Dec 8, 2025 - First draft of SNSF Spectra training by @bobleesj
