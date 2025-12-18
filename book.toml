@@ -1,6 +1,6 @@
 [book]
 title = "Electron Microscopy Training"
-authors = ["Sangjoon Bob Lee"]
+authors = ["Sangjoon Bob Lee, Guoliang Hu"]
 language = "en"
 
 [output.html]
