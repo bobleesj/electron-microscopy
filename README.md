@@ -59,16 +59,15 @@ Formatting consistency:
 
 # macOS
 brew install mdbook
-
 # Windows (with Chocolatey)
 choco install mdbook
-
 # Windows (with Scoop)
 scoop install mdbook
-
 # Any OS (with Cargo/Rust)
 cargo install mdbook
+```bash
 
+```bash
 # Run local dev server
 mdbook serve --open
 ```
@@ -95,7 +94,7 @@ src/
 
 ### Deploy
 
-Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages.
+Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages. See `.github/deploy.yml`.
 
 ## Acknowledgments
 

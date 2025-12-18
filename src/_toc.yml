@@ -1,0 +1,15 @@
+# Table of contents
+format: jb-book
+root: index
+
+parts:
+  - caption: Techniques
+    chapters:
+      - file: sample-loading
+      - file: STEM
+      - file: 4D-STEM
+      - file: EELS
+      - file: EDS
+      - file: tomography
+      - file: ptychography
+      - file: PED
