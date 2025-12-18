@@ -1,0 +1,10 @@
+[book]
+title = "Electron Microscopy Training"
+authors = ["Sangjoon Bob Lee"]
+language = "en"
+
+[output.html]
+default-theme = "coal"
+preferred-dark-theme = "coal"
+git-repository-url = "https://github.com/bobleesj/electron-microscopy"
+edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
