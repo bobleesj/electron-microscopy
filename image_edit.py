@@ -19,13 +19,13 @@ Usage Examples:
     python scripts/process_new_images.py --max-width 1200 --delete-originals
 
     # Process a specific folder
-    python scripts/process_new_images.py images/photos --quality 90
+    python scripts/process_new_images.py src/img/STEM --quality 90
 
     # Include already staged files (not just untracked)
     python scripts/process_new_images.py --include-staged
 
 Options:
-    folder              Folder to process (default: img/)
+    folder              Folder to process (default: src/img/)
     --quality N         JPEG quality 1-100 (default: 85, higher = better quality)
     --max-width N       Resize images to max width in pixels (default: no resize)
     --delete-originals  Delete original HEIC/PNG files after successful conversion
@@ -392,8 +392,8 @@ def main():
     parser.add_argument(
         "folder",
         nargs="?",
-        default="img",
-        help="Folder to process (default: img/)",
+        default="src/img",
+        help="Folder to process (default: src/img/)",
     )
     parser.add_argument(
         "--quality",

@@ -4,6 +4,9 @@
 
 This guide covers Electron Energy Loss Spectroscopy (EELS) on the Spectra 300.
 
+
+
+
 ## Changelog
 
-- Dec 17, 2025 - Add placeholder
+- Dec 18, 2025 - tutorial drafted by Guoliang Hu and @bobleesj
