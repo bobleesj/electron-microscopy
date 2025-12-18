@@ -68,6 +68,7 @@ cargo install mdbook
 Run local dev server
 
 ```bash
+# Run local dev server
 mdbook serve --open
 ```
 
