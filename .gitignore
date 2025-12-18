@@ -1,25 +1,20 @@
+# mdBook build output
+book/
+
 # macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# VS Code
-.vscode/
-
-# Temporary files
-*.tmp
-*.temp
-*~
-
-# Word/Office exports
-*.fld/
-*.html
 
 # Python
 __pycache__/
 *.py[cod]
-*.egg-info/
-.ipynb_checkpoints/
+.venv/
+venv/
+.mypy_cache/
 
-# Logs
-*.log
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Temp files
+temp/
