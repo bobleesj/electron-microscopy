@@ -54,25 +54,26 @@ Formatting consistency:
 
 ### Local development
 
-```bash
-# Install mdBook
+Install mdBook
 
+```bash
 # macOS
 brew install mdbook
-# Windows (with Chocolatey)
-choco install mdbook
-# Windows (with Scoop)
-scoop install mdbook
-# Any OS (with Cargo/Rust)
+# Windows/Linux/macOS
 cargo install mdbook
-```bash
+```
+
+> No cargo? Download from https://doc.rust-lang.org/cargo/getting-started/installation.html
+
+Run local dev server
 
 ```bash
-# Run local dev server
 mdbook serve --open
 ```
 
 ### Process new images
+
+Convert `.HEIC/.HEIF/.png` to `.jpg`.
 
 ```bash
 pip install Pillow pillow-heif
@@ -92,7 +93,7 @@ src/
 └── img/           # Images
 ```
 
-### Deploy
+### Deployment
 
 Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages. See `.github/deploy.yml`.
 
