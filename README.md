@@ -25,18 +25,24 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 Other resources:
 
 - Simulate ronchigram: https://bobleesj.github.io/electron-microscopy-website/ronchigram
-
-## Immediate TODO
-
-- [ ] `4D-STEM.md` - use API to turn on/off 4D-STEM camera, generally better images/documentaiton needed
+- (S)TEM alignment diagrams: https://www.rodenburg.org/RODENBURg_STEM.pdf
 
 ## Sample loading
 
 **Contents:**
-- [Single-tilt holder](#single-tilt-holder)
-- [Double-tilt holder](#double-tilt-holder)
-- [Tomography holder](#tomography-holder)
-- [How to remove and insert holder](#how-to-remove-and-insert-holder)
+- [Electron Microscopy Training (WIP)](#electron-microscopy-training-wip)
+  - [Available guides](#available-guides)
+  - [Sample loading](#sample-loading)
+    - [Single-tilt holder](#single-tilt-holder)
+    - [Double-tilt holder](#double-tilt-holder)
+    - [Tomography holder](#tomography-holder)
+  - [How to remove and insert holder](#how-to-remove-and-insert-holder)
+  - [For maintainers and authors](#for-maintainers-and-authors)
+    - [Checklist](#checklist)
+    - [Writing conventions and principles](#writing-conventions-and-principles)
+    - [Scripts](#scripts)
+  - [Acknowledgments](#acknowledgments)
+  - [Changelog](#changelog)
 
 > Disclaimer: This guide is written for those who have already used single-tilt and double-tilt, tomography holders. If you are using this documentation for the first time, you should work with a supervisor.
 
