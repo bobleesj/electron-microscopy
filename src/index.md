@@ -14,6 +14,7 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 
 | Guide                           | Description                               | Status         |
 | ------------------------------- | ----------------------------------------- | -------------- |
+| [TEM](TEM.md)                   | Basic TEM alignment procedures            | 🚧 Coming soon |
 | [STEM](STEM.md)                 | Basic STEM alignment procedures           | Available      |
 | [4D-STEM](4D-STEM.md)           | 4D-STEM acquisition with Dectris detector | Available      |
 | [EELS](EELS.md)                 | Electron Energy Loss Spectroscopy         | 🚧 Coming soon |

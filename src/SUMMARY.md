@@ -5,6 +5,7 @@
 # Techniques
 
 - [Sample Loading](sample-loading.md)
+- [TEM](TEM.md)
 - [STEM](STEM.md)
 - [4D-STEM](4D-STEM.md)
 - [EELS](EELS.md)
