@@ -14,5 +14,5 @@
 - [Ptychography](ptychography.md)
 - [PED](PED.md)
 
-# Would You Like to Contribute?
+# Would you like to contribute?
 - [Share Your Procedure](share-your-procedure.md)
