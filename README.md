@@ -41,6 +41,10 @@ Formatting consistency:
   - Uppercase: TEM, STEM, 4D-STEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV
   - Uppercase: A1, A2, B2, C1, C2, C3, S3 (aberration parameters)
   - Lowercase: beam, aperture, intensity, magnification, etc.
+- Spacing rules for bullets and images:
+  - No blank line between consecutive sub-bullets
+  - Blank line before `<img>` tags (required for proper rendering)
+  - No extra blank lines after images before the next bullet
 - Place images after relevant steps with `alt` text and `width="500"`
 - Use `<img src="..." alt="..." width="500">` for all images
 - Use `.jpg` format for images (not `.png`)
@@ -105,6 +109,8 @@ Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages. See `.git
 Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF.
 
 ## Changelog
+
+Related to documentation, project settings, higher-level changes:
 
 - Dec 18, 2025 - Add contribution guide
 - Dec 17, 2025 - Migrate to mdBook, add GitHub Pages deployment

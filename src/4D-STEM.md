@@ -1,9 +1,7 @@
 # 4D-STEM
 
-
 > [!CAUTION]
 > **VERY ROUGH DRAFT** - @bobleesj and Guoliang Hu took notes and pictures during training. These documents will be updated massively once we conduct more 4D-STEM experiments in Jan 2026.
-
 
 This guide covers the setup and operation of 4D-STEM data acquisition using the Dectris Arina detector on the Spectra 300.
 
@@ -27,7 +25,7 @@ This guide covers the setup and operation of 4D-STEM data acquisition using the 
    - Click remote connection icon
 
      <img src="img/4D-STEM/4D-STEM-remote-connection.jpg" alt="Remote connection" width="500">
-   
+
    - Enter `192.168.12.73`
 
 3. **Software in remote computer**
@@ -42,7 +40,9 @@ This guide covers the setup and operation of 4D-STEM data acquisition using the 
 
    - Open NOVENA detector software
    - Click on `Save Images` and choose folder
-      <img src="img/4D-STEM/4D-STEM-save-images-dialog.jpg" alt="Save images dialog" width="500">
+
+     <img src="img/4D-STEM/4D-STEM-save-images-dialog.jpg" alt="Save images dialog" width="500">
+
    - Click on `Continuous` to streamline image
    - Click on `Single` to record and save
    - Note: `(name)_%00%` cannot be deleted, otherwise the file cannot be saved correctly.
