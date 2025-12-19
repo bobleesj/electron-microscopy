@@ -16,8 +16,6 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 ## Part 0: Safety check
 
-
-
 - [ ] Standard sample is loaded
 
 ## Part 1: Column optics alignment in TEM mode
@@ -268,18 +266,18 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    
    - Start `Tableau`, run `C1A1` again until you satisfy the target values below
 
-      **Target values (STEM Probe Corrector):**
+   **Target values (STEM Probe Corrector):**
 
-      > More or less identical as TEM
+   > More or less identical as TEM
 
-      | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
-      |-----------|-------------------------------|--------------------------------|
-      | A1        | < 5 nm                        | < 5 nm                         |
-      | A2        | < 100 nm                      | < 50 nm                        |
-      | B2        | < 100 nm                      | < 50 nm                        |
-      | C3        | ~ -8 μm                       | ~ -8 μm                        |
-      | A3        | < 5 μm                        | < 1.5 μm                       |
-      | S3        | < 5 μm                        | < 1 μm                         |
+   | Parameter | Resolution < 0.10 nm (20 mrad) | Resolution < 0.08 nm (24 mrad) |
+   |-----------|-------------------------------|--------------------------------|
+   | A1        | < 5 nm                        | < 5 nm                         |
+   | A2        | < 100 nm                      | < 50 nm                        |
+   | B2        | < 100 nm                      | < 50 nm                        |
+   | C3        | ~ -8 μm                       | ~ -8 μm                        |
+   | A3        | < 5 μm                        | < 1.5 μm                       |
+   | S3        | < 5 μm                        | < 1 μm                         |
 
    The Spectra microscope has reached about 48 pm. 49.9 pm is on the good side.
 
