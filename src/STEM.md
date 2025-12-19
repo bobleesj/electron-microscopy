@@ -4,7 +4,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 ![alt text](img/STEM/APP-tmp-7056.jpg)
 
-> **Prerequisite:** Complete the [Sample loading](README.md#sample-loading) procedure before starting.
+> **Prerequisite:** Complete the [sample loading](sample-loading.md) procedure before starting.
 
 > FIXME: when do we want to save sample position when we load our own sample?
 > FIXME: tips on finding zone axis?
@@ -14,15 +14,17 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 - `mulXY` - Multifunction X/Y knobs on hand panel
 - `TEMUI` - TEM User Interface (software)
 
-## Part 0: Safety check
+## Part 0: Check
 
-- [ ] Standard sample is loaded
+> [!CAUTION]
+> 1. Ensure Standard Sample is loaded
 
 ## Part 1: Column optics alignment in TEM mode
 
 1. **Find beam**
 
-   - Ensure column valve is closed and turbo pump is on. Verify `Col Valves Closed` and `Turbo On` are shown:
+   - Ensure column valve is closed and turbo pump is on.
+   - Verify `Col Valves Closed` and `Turbo On` are shown:
 
      <img src="img/STEM/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves closed and turbo pump on" width="500">
 
@@ -292,7 +294,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 1. **Load your sample**
 
-   - Follow load procedure in [README.md](README.md#how-to-remove-and-insert-holder)
+   - Follow load procedure in [sample loading](sample-loading.md)
    - Ensure column is open
    - Ensure pressure values are correct on Spectra instrument and TEMUI:
 

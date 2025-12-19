@@ -20,7 +20,7 @@ The content is meant to be used as a step-by-step tutorial focused on practice s
 | [EDS](EDS.md)                   | Energy Dispersive X-ray Spectroscopy      | 🚧 Coming soon |
 | [Tomography](tomography.md)     | Electron tomography                       | 🚧 Coming soon |
 | [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
-| [PED](ped.md)                   | -                                         | 🚧 Coming soon |
+| [PED](PED.md)                   | -                                         | 🚧 Coming soon |
 
 Other resources:
 
