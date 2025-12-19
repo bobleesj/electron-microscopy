@@ -50,7 +50,7 @@ Formatting consistency:
 
 - [ ] Is our writing the clearest yet most concise for decision-making for complete beginners?
 - [ ] Have we added a concise changelog entry?
-- [ ] Did you run `python image_edit.py --max-width 1200 --delete-originals` for new images?
+- [ ] Did you run `python image_edit.py` for new images?
 
 ### Local development
 
@@ -78,7 +78,7 @@ Convert `.HEIC/.HEIF/.png` to `.jpg`.
 
 ```bash
 pip install Pillow pillow-heif
-python image_edit.py --max-width 1200 --delete-originals
+python image_edit.py
 ```
 
 ### File structure

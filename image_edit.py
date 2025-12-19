@@ -404,13 +404,14 @@ def main():
     parser.add_argument(
         "--max-width",
         type=int,
-        default=None,
-        help="Max width in pixels (default: unchanged)",
+        default=1200,
+        help="Max width in pixels (default: 1200)",
     )
     parser.add_argument(
         "--delete-originals",
         action="store_true",
-        help="Delete original HEIC/PNG files after conversion",
+        default=True,
+        help="Delete original HEIC/PNG files after conversion (default: True)",
     )
     parser.add_argument(
         "--dry-run",
