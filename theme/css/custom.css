@@ -1,0 +1,4 @@
+/* Hide all subsections in the sidebar TOC */
+.chapter li > ol {
+    display: none !important;
+}

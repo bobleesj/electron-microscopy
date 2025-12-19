@@ -12,16 +12,16 @@ WIP:
 
 ## Available guides
 
-| Guide                           | Instrument   | Description                          | Status         |
-| ------------------------------- | ------------ | ------------------------------------ | -------------- |
-| [STEM](STEM.md)                 | Spectra | STEM alignment and imaging           | Available      |
-| [4D-STEM](4D-STEM.md)           | Spectra | 4D-STEM with Dectris detector        | Available      |
-| [EELS](EELS.md)                 | Spectra | Electron Energy Loss Spectroscopy    | Available      |
-| [TEM](TEM.md)                   | Titan        | TEM alignment and imaging            | 🚧 Coming soon |
-| [EDS](EDS.md)                   | Spectra | Energy Dispersive X-ray Spectroscopy | 🚧 Coming soon |
-| [Tomography](tomography.md)     | Spectra | Electron tomography                  | 🚧 Coming soon |
-| [Ptychography](ptychography.md) | Spectra | Ptychography imaging                 | 🚧 Coming soon |
-| [PED](PED.md)                   | Spectra        | Precession Electron Diffraction      | 🚧 Coming soon |
+| Guide                           | Instrument | Description                          | Readiness | Status         |
+| ------------------------------- | ---------- | ------------------------------------ | --------- | -------------- |
+| [STEM](STEM.md)                 | Spectra    | STEM alignment and imaging           | 5/10      | Available      |
+| [4D-STEM](4D-STEM.md)           | Spectra    | 4D-STEM with Dectris detector        | 2/10      | Available      |
+| [EELS](EELS.md)                 | Spectra    | Electron Energy Loss Spectroscopy    | 2/10      | Available      |
+| [EDS](EDS.md)                   | Spectra    | Energy Dispersive X-ray Spectroscopy | 2/10      | Available      |
+| [TEM](TEM.md)                   | Titan      | TEM alignment and imaging            | -         | 🚧 Coming soon |
+| [Tomography](tomography.md)     | Spectra    | Electron tomography                  | -         | 🚧 Coming soon |
+| [Ptychography](ptychography.md) | Spectra    | Ptychography imaging                 | -         | 🚧 Coming soon |
+| [PED](PED.md)                   | Spectra    | Precession Electron Diffraction      | -         | 🚧 Coming soon |
 
 
 **SNSF instruments:**
