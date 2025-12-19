@@ -1,7 +1,7 @@
 # EDS
 
 > [!CAUTION]
-> **VERY ROUGH DRAFT** - These notes were recorded during training. This document will be updated with more detailed steps and images.
+> **VERY ROUGH DRAFT** - @bobleesj and Guoliang Hu took notes and pictures during training. This document will be updated with more detailed steps and images.
 
 > TODO:
 > - [ ] Add step-by-step images for TEM mode

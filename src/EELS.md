@@ -1,7 +1,7 @@
 # EELS
 
 > [!CAUTION]
-> **VERY ROUGH DRAFT** - Steps 8-11 in Part 3 are incomplete and need better images/instructions.
+> **VERY ROUGH DRAFT** - @bobleesj and Guoliang Hu took notes and pictures during training. This document will be updated with more detailed steps and images.
 
 > TODO:
 > - [ ] Add image for "EELS Scan" button (Step 2, Part 3)

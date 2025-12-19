@@ -84,25 +84,25 @@ This guide covers the setup and operation of 4D-STEM data acquisition using the 
 
 1. **Insert detector**
 
-    - Press the `Insert` button to insert the Dectris Arina detector
+   - Press the `Insert` button to insert the Dectris Arina detector
 
-      <img src="img/4D-STEM/4D-STEM-insert-detector.jpg" alt="Insert detector" width="500">
+     <img src="img/4D-STEM/4D-STEM-insert-detector.jpg" alt="Insert detector" width="500">
 
-    - Press `EDS Scan` to see things (from `INT Scan`)
+   - Press `EDS Scan` to see things (from `INT Scan`)
 
-      <img src="img/4D-STEM/4D-STEM-eds-scan.jpg" alt="EDS scan" width="500">
+     <img src="img/4D-STEM/4D-STEM-eds-scan.jpg" alt="EDS scan" width="500">
 
-    - Press `R1` to lift the fluorescent screen
+   - Press `R1` to lift the fluorescent screen
 
 2. **Acquisition**
 
-    - Click `Scan` → `Continuous` to check
-    - Center the main spot
-    - If it is OK, click on `Stop`, then click on `Single Scan` to obtain data
+   - Click `Scan` → `Continuous` to check
+   - Center the main spot
+   - If it is OK, click on `Stop`, then click on `Single Scan` to obtain data
 
 3. **Analysis software (EIS)**
 
-    - Click on `Rebin`, `Reprocess` – you can use the software to do a simple analysis
+   - Click on `Rebin`, `Reprocess` – you can use the software to do a simple analysis
 
 ## Part 4: End session
 

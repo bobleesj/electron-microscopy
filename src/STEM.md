@@ -134,7 +134,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      <img src="img/STEM/TEM-alignment-over-focus.jpg" alt="Over focus" width="500">
 
-9.  **Run image corrector**
+9. **Run image corrector**
 
    - Press `Z-axis` down until you see 4-5 rings in FFT (slight underfocus)
 
@@ -178,12 +178,12 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 10. **Save optics settings**
 
-    - `TEMUI` → `Files` → `SBL FEG Registers`
-    - Add name `300KV-TEM-<NAME>` and click `Add`
+   - `TEMUI` → `Files` → `SBL FEG Registers`
+   - Add name `300KV-TEM-<NAME>` and click `Add`
 
-      <img src="img/STEM/TEM-save-settings.jpg" alt="Save optics settings in TEMUI" width="500">
+     <img src="img/STEM/TEM-save-settings.jpg" alt="Save optics settings in TEMUI" width="500">
 
-    - Done! You are now ready for STEM probe alignment next.
+   - Done! You are now ready for STEM probe alignment next.
     
 ## Part 2: Probe alignment in STEM
 

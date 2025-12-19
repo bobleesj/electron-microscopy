@@ -1,4 +1,20 @@
 /* Hide all subsections in the sidebar TOC */
-.chapter li > ol {
+.chapter li>ol {
     display: none !important;
+}
+
+/* Consistent list spacing - normalize loose and tight lists */
+.content li {
+    margin-top: 0.30em;
+    margin-bottom: 0.30em;
+}
+
+.content li>p {
+    margin-top: 0;
+    margin-bottom: 0.30em;
+}
+
+.content li>ul,
+.content li>ol {
+    margin-top: 0.30em;
 }
