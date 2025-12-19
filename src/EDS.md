@@ -89,6 +89,10 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
    - Use highest frequency and edge smoothing settings to obtain atomic resolution
 
+## Part 4: End session
+
+Follow the steps in [End session](sample-loading.md#end-session).
+
 ## Changelog
 
-- Dec 18, 2025 - Tutorial drafted by Guoliang Hu and @bobleesj
+- Dec 18, 2025 - initial rough draft by Guoliang Hu and @bobleesj

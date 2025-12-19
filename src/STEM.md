@@ -205,7 +205,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      <img src="img/STEM/STEM-alignment-monochromator-tune.jpg" alt="Modify intensity using Monochromator Tune" width="500">
 
-   - Center beam on HAADF detector by clicking the HAADF button on TEMUI
+   - Center beam on HAADF detector by clicking the HAADF button in `TEMUI`
 
 2. **Reset aberrations**
 
@@ -296,7 +296,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Follow load procedure in [sample loading](sample-loading.md)
    - Ensure column is open
-   - Ensure pressure values are correct on Spectra instrument and TEMUI:
+   - Ensure pressure values are correct on Spectra instrument and `TEMUI`:
 
      <img src="img/STEM/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
    
@@ -363,12 +363,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 ## Part 4: End session
 
-1. **Finish**
-
-   - `TEMUI` → press `Column Valves Closed` → press `Turbo Pump On`
-   - Reset holder
-     ![alt text](img/STEM/APP-rest-holder.jpg)
-   - Unload sample as shown in in [sample-loading](sample-loading.md)
+Follow the steps in [End session](sample-loading.md#end-session).
 
 ## Appendix
 

@@ -46,7 +46,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
      <img src="img/EELS/EELS-filter-control.jpg" alt="Filter Control window" width="500">
 
-   - Notice the green circle in TEMUI showing EELS detector is active
+   - Notice the green circle in `TEMUI` showing EELS detector is active
 
      <img src="img/EELS/EELS-temui-eels-open.jpg" alt="TEMUI showing EELS detector active" width="500">
 
@@ -122,7 +122,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
 1. **Set camera length**
 
-   - In Velox, change camera length to 29 mm or 37 mm
+   - In `Velox`, change camera length to 29 mm or 37 mm
    - Notice the beam size decreases
 
      <img src="img/EELS/EELS-velox-camera-length.jpg" alt="Velox camera length setting" width="500">
@@ -198,6 +198,10 @@ Use a vacuum or thin amorphous carbon area for calibration.
       <img src="img/EELS/EELS-capture-area-2d.jpg" alt="Select area for 2D EELS capture" width="500">
 
       > FIXME: add steps for analyzing 2D EELS data, expected output
+
+## Part 4: End session
+
+Follow the steps in [End session](sample-loading.md#end-session).
 
 ## Changelog
 
