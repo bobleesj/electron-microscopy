@@ -14,7 +14,6 @@ git-repository-url = "https://github.com/bobleesj/electron-microscopy"
 git-repository-icon = "fab-github"
 edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
 site-url = "/electron-microscopy/"
-input-404 = "404.md"
 sidebar-header-nav = true
 
 [output.html.fold]
