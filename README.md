@@ -33,7 +33,7 @@ Writing guides for humans and quality control:
 
 Formatting consistency:
 
-> You may check the following with 
+> You may check the following with your favorite AI tool:
 
 - Use sub-bullets (`-`) for details under each step, with 3-space indent
 - Use "in" for software references (e.g., `in TEMUI`, not `on TEMUI`)
