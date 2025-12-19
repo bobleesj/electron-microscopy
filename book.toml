@@ -8,6 +8,7 @@ default-theme = "ayu"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/bobleesj/electron-microscopy"
 edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
+sidebar-header-nav = true
 
 [output.html.fold]
 enable = true
