@@ -19,7 +19,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 > [!CAUTION]
 > 1. Ensure Standard Sample is loaded
 
-## Part 1: Column optics alignment in TEM mode
+## Part 1: Column optics alignment in TEM
 
 1. **Find beam**
 

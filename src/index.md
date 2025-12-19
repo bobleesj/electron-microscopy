@@ -1,29 +1,35 @@
-# Electron Microscopy Training (WIP)
+# Electron Microscopy (WIP)
+
+Step-by-step tutorials for electron microscopy at the [Stanford Nano Shared Facilities (SNSF)](https://snsf.stanford.edu/). Focused on practice sitting in front of the microscope with visual elements.
 
 WIP:
 
-- [ ] Use real screenshots instead of pictures.
+- [ ] Use real screenshots instead of pictures
 - [ ] Better pictures: proportion, focus, FOV
 - [ ] More visuals added to each session when needed
 
-Disclaimer: Always follow [https://barnum.su.domains/](https://barnum.su.domains/) for correctness. Only use this documentation if you are working with the authors of the document and you are looking for quick visual references.
-
-The content is meant to be used as a step-by-step tutorial focused on practice sitting in front of the microscope with a focus on visual elements.
+> **Disclaimer:** Always follow [https://barnum.su.domains/](https://barnum.su.domains/) for correctness. Only use this documentation if you are working with the authors and need quick visual references.
 
 ## Available guides
 
-| Guide                           | Description                               | Status         |
-| ------------------------------- | ----------------------------------------- | -------------- |
-| [TEM](TEM.md)                   | Basic TEM alignment procedures            | 🚧 Coming soon |
-| [STEM](STEM.md)                 | Basic STEM alignment procedures           | Available      |
-| [4D-STEM](4D-STEM.md)           | 4D-STEM acquisition with Dectris detector | Available      |
-| [EELS](EELS.md)                 | Electron Energy Loss Spectroscopy         | 🚧 Coming soon |
-| [EDS](EDS.md)                   | Energy Dispersive X-ray Spectroscopy      | 🚧 Coming soon |
-| [Tomography](tomography.md)     | Electron tomography                       | 🚧 Coming soon |
-| [Ptychography](ptychography.md) | Ptychography imaging                      | 🚧 Coming soon |
-| [PED](PED.md)                   | -                                         | 🚧 Coming soon |
+| Guide                           | Instrument   | Description                          | Status         |
+| ------------------------------- | ------------ | ------------------------------------ | -------------- |
+| [STEM](STEM.md)                 | Spectra | STEM alignment and imaging           | Available      |
+| [4D-STEM](4D-STEM.md)           | Spectra | 4D-STEM with Dectris detector        | Available      |
+| [EELS](EELS.md)                 | Spectra | Electron Energy Loss Spectroscopy    | Available      |
+| [TEM](TEM.md)                   | Titan        | TEM alignment and imaging            | 🚧 Coming soon |
+| [EDS](EDS.md)                   | Spectra | Energy Dispersive X-ray Spectroscopy | 🚧 Coming soon |
+| [Tomography](tomography.md)     | Spectra | Electron tomography                  | 🚧 Coming soon |
+| [Ptychography](ptychography.md) | Spectra | Ptychography imaging                 | 🚧 Coming soon |
+| [PED](PED.md)                   | Spectra        | Precession Electron Diffraction      | 🚧 Coming soon |
 
-Other resources:
+
+**SNSF instruments:**
+
+- [FEI Titan at SNSF](https://snsf.stanford.edu/facilities/eim/titan)
+- [Spectra 300 at SNSF](https://snsf.stanford.edu/facilities/eim/spectra)
+
+**Other resources:**
 
 - Simulate ronchigram: https://bobleesj.github.io/electron-microscopy-website/ronchigram
 - (S)TEM alignment diagrams: https://www.rodenburg.org/RODENBURg_STEM.pdf
