@@ -33,7 +33,10 @@ Writing guides for humans and quality control:
 
 Formatting consistency:
 
-- Use sub-bullets (`-`) for details under each step
+> You may check the following with 
+
+- Use sub-bullets (`-`) for details under each step, with 3-space indent
+- Use "in" for software references (e.g., `in TEMUI`, not `on TEMUI`)
 - No periods for action commands (e.g., `Click Col Valves Open in TEMUI`)
 - Use periods for observations/explanations (e.g., `Notice the image is pulsing in and out.`)
 - Wrap software names in backticks: `TEMUI`, `Velox`, `ImageCorrector`, `Sherpa`
@@ -45,11 +48,16 @@ Formatting consistency:
   - No blank line between consecutive sub-bullets
   - Blank line before `<img>` tags (required for proper rendering)
   - No extra blank lines after images before the next bullet
+- Image naming: `PREFIX-description.jpg` with `-` separator
+  - Use prefix to group images by document section (e.g., in STEM.md: `TEM-` for Part 1, `STEM-` for Part 2, `EXP-` for Part 3, `APP-` for Appendix)
+  - Example: `TEM-alignment-beam.jpg`, `STEM-probe-corrector.jpg`, `EXP-sample-view.jpg`
 - Place images after relevant steps with `alt` text and `width="500"`
 - Use `<img src="..." alt="..." width="500">` for all images
 - Use `.jpg` format for images (not `.png`)
+- Use `> [!CAUTION]` for warnings at the top of rough drafts
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
-- Keep a `## Changelog` section at the bottom with dated entries
+- Keep a `## Changelog` section at the bottom: `- Dec 18, 2025 - description by @username`
+- Link to shared sections instead of duplicating (e.g., `[End session](sample-loading.md#end-session)`)
 - Use `STEM.md` as the main reference document for formatting
 
 ### Checklist before submitting
