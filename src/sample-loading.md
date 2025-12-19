@@ -16,7 +16,7 @@ Sample loading can be done inside the Spectra room:
 
 <img src="img/sample-loading/SAMPLE-spectra-room.jpg" alt="Spectra room for sample loading" width="500">
 
-Sample holders are stored here at room temperature:
+Sample holders are stored here at room te
 
 <img src="img/sample-loading/SAMPLE-holder-storage.jpg" alt="Sample holder storage" width="500">
 
@@ -112,3 +112,10 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 - Press `Reset holder` in TEMUI.
 - Close column valves in TEMUI.
 - Pull the holder straight out up to the point shown above, turn clockwise, pull the rest out continuously.
+
+## Changelog
+
+- Dec 17, 2025 - Add sample loading region by @bobleesj
+- Dec 15, 2025 - Add tomography holder section by @bobleesj, with images taken by Guoliagn Hu
+- Dec 13, 2025 - Add single-tilt, double-tilt holder section by @bobleesj, with images taken by Guoliagn Hu
+
