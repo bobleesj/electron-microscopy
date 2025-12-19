@@ -2,7 +2,7 @@
 
 [Introduction](index.md)
 
-# Techniques
+# Stanford SNSF
 
 - [Sample Loading](sample-loading.md)
 - [TEM](TEM.md)
@@ -13,3 +13,6 @@
 - [Tomography](tomography.md)
 - [Ptychography](ptychography.md)
 - [PED](PED.md)
+
+# Want to Add Yours?
+- [Share Your Procedure](share-your-procedure.md)

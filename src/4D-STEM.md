@@ -1,9 +1,11 @@
 # 4D-STEM
 
-This guide covers the setup and operation of 4D-STEM data acquisition using the Arina detector.
 
-Here is the Dectris Arina hardware within Spectra.
+> [!CAUTION]
+> **VERY ROUGH DRAFT** - @bobleesj and Guoliang Hu took notes and pictures during training. These documents will be updated massively once we conduct more 4D-STEM experiments in Jan 2026.
 
+
+This guide covers the setup and operation of 4D-STEM data acquisition using the Dectris Arina detector on the Spectra 300.
 
 ## Part 1: Detector setup
 
@@ -31,8 +33,7 @@ Here is the Dectris Arina hardware within Spectra.
 3. **Software in remote computer**
 
    - Open the Firefox browser
-   - CETA detector needs to be out. 
-   - FIXME: Better resolutiion image
+   - CETA detector needs to be retracted
    - Click on the CETA icon to remove CETA
 
      <img src="img/4D-STEM/4D-STEM-detector-initialization.jpg" alt="Detector initialization" width="500">
@@ -83,7 +84,7 @@ Here is the Dectris Arina hardware within Spectra.
 
 1. **Insert detector**
 
-    - Press the `Insert` button to insert the Detris Arina detector
+    - Press the `Insert` button to insert the Dectris Arina detector
 
       <img src="img/4D-STEM/4D-STEM-insert-detector.jpg" alt="Insert detector" width="500">
 
@@ -91,7 +92,7 @@ Here is the Dectris Arina hardware within Spectra.
 
       <img src="img/4D-STEM/4D-STEM-eds-scan.jpg" alt="EDS scan" width="500">
 
-    - Press the `R1` button so lift the flu screen
+    - Press `R1` to lift the fluorescent screen
 
 2. **Acquisition**
 
@@ -107,10 +108,10 @@ Here is the Dectris Arina hardware within Spectra.
 
 4. **Finish**
 
-    - Retract the detector: Press `Retract` on the Detectris Arina handl panel
+    - Retract the detector: Press `Retract` on the Dectris Arina hand panel
       <img src="img/4D-STEM/4D-STEM-detector-close.jpg" alt="Detector close" width="500">
-    - Open the micfroscope Spectra box
-    - Arina detector and press the button located under the the detector. (with blue light) for 10 seconds. It will close and the light will turn off.
+    - Open the Spectra microscope box
+    - Press the button located under the Arina detector (with blue light) for 10 seconds. It will close and the light will turn off.
 
 ## FAQs
 

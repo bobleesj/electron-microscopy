@@ -36,7 +36,11 @@ WIP:
 
 ## 🙋 Looking for volunteers!
 
-We appreciate feedback, corrections, and contributions from the community! If you want to add your own SOP for your microscope, please contribute. See the [GitHub repo](https://github.com/bobleesj/electron-microscopy) for contribution guidelines.
+We appreciate feedback, corrections, and contributions from the community!
+
+- **Found an error?** Open an issue or submit a PR
+- **Want to add your institution's SOP?** Reach out to [@bobleesj](https://github.com/bobleesj) - we can help with writing and formatting as long as you have notes, Word docs, or rough drafts
+- **Have suggestions?** See the [GitHub repo](https://github.com/bobleesj/electron-microscopy) for contribution guidelines
 
 ## Acknowledgments
 
@@ -44,6 +48,7 @@ Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Sta
 
 ## Changelog
 
+- Dec 18, 2025 - Add rough draft of EELS
 - Dec 17, 2025 - Use mdBook to render static pages and host on GitHub
 - Dec 16, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
 - Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj.
