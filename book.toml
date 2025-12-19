@@ -15,6 +15,7 @@ git-repository-icon = "fab-github"
 edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
 site-url = "/electron-microscopy/"
 sidebar-header-nav = true
+additional-css = ["theme/css/custom.css"]
 
 [output.html.fold]
 enable = true
