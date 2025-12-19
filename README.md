@@ -34,11 +34,11 @@ Writing guides for humans and quality control:
 Formatting consistency:
 
 - Use sub-bullets (`-`) for details under each step
-- No periods for action commands (e.g., `Click Col Valves Open on TEMUI`)
+- No periods for action commands (e.g., `Click Col Valves Open in TEMUI`)
 - Use periods for observations/explanations (e.g., `Notice the image is pulsing in and out.`)
+- Wrap software names in backticks: `TEMUI`, `Velox`, `ImageCorrector`, `Sherpa`
 - Lowercase for general text, uppercase only for acronyms:
   - Uppercase: TEM, STEM, 4D-STEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV
-  - Uppercase: TEMUI, Velox (software names)
   - Uppercase: A1, A2, B2, C1, C2, C3, S3 (aberration parameters)
   - Lowercase: beam, aperture, intensity, magnification, etc.
 - Place images after relevant steps with `alt` text and `width="500"`

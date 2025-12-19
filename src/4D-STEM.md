@@ -106,12 +106,18 @@ This guide covers the setup and operation of 4D-STEM data acquisition using the 
 
 ## Part 4: End session
 
-4. **Finish**
+1. **Retract the Arina detector**
 
-    - Retract the detector: Press `Retract` on the Dectris Arina hand panel
-      <img src="img/4D-STEM/4D-STEM-detector-close.jpg" alt="Detector close" width="500">
-    - Open the Spectra microscope box
-    - Press the button located under the Arina detector (with blue light) for 10 seconds. It will close and the light will turn off.
+   - Press `Retract` on the Dectris Arina hand panel
+
+     <img src="img/4D-STEM/4D-STEM-detector-close.jpg" alt="Detector close" width="500">
+
+   - Open the Spectra microscope box
+   - Press the button located under the Arina detector (with blue light) for 10 seconds. It will close and the light will turn off.
+
+2. **Close session**
+
+   Follow the steps in [End session](sample-loading.md#end-session).
 
 ## FAQs
 

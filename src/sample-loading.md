@@ -95,26 +95,45 @@ Sample holders are stored here at room te
 
 Follow the process in reverse: load a new sample, pull the two strips closer together, and rotate the screws clockwise.
 
-## How to remove and insert holder
+## Start session
 
-**Insert holder**
+> Use this section when inserting a holder at the beginning of any session.
 
-- Push the holder in, feel resistance. This will start the turbo pump immediately.
+1. Push the holder in until you feel resistance. The turbo pump will start automatically.
 
-  <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+   <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
 
-- Wait 2 minutes, turn counter-clockwise until you feel gently stuck
-- Guide the holder to push in. Expect the holder to move in.
-- On TEMUI, turn off turbo pump
+2. Wait 2 minutes for pressure to stabilize. Notice the time in `TEMUI`.
 
-**Remove holder**
+3. Turn counter-clockwise until you feel gently stuck.
 
-- Press `Reset holder` in TEMUI.
-- Close column valves in TEMUI.
-- Pull the holder straight out up to the point shown above, turn clockwise, pull the rest out continuously.
+4. Guide the holder to push in. Expect the holder to move in smoothly.
+
+5. In `TEMUI`, turn off the turbo pump.
+
+## End session
+
+> Use this section when finishing any session (STEM, EELS, EDS, 4D-STEM, etc.).
+
+1. Set magnification to lower SA range (< 10,000×).
+
+2. For Titan, expand the beam to larger circle fluorescent screen.
+
+3. In `TEMUI`, press `Column Valves Closed`.
+
+4. In `TEMUI`, press `Reset Holder`.
+
+   <img src="img/STEM/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="500">
+
+5. Pull the holder straight out to the first resistance point.
+
+6. Turn clockwise, then pull the rest out continuously.
+
+7. Unload the sample from the holder using the appropriate section above (single-tilt, double-tilt, or tomography).
 
 ## Changelog
 
+- Dec 18, 2025 - Reorganize into Start/End session sections for use across all tutorials by @bobleesj
 - Dec 17, 2025 - Add sample loading region by @bobleesj
 - Dec 15, 2025 - Add tomography holder section by @bobleesj, with images taken by Guoliagn Hu
 - Dec 13, 2025 - Add single-tilt, double-tilt holder section by @bobleesj, with images taken by Guoliagn Hu
