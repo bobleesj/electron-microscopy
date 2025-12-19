@@ -2,7 +2,7 @@
 
 This guide covers STEM alignment on the Spectra 300. The process has three parts: TEM alignment (column optics), STEM alignment (focused probe), and imaging your sample.
 
-![alt text](img/STEM/APP-tmp-7056.jpg)
+<img src="img/STEM/APP-tmp-7056.jpg" alt="STEM overview" width="500">
 
 > **Prerequisite:** Complete the [sample loading](sample-loading.md) procedure before starting.
 
@@ -37,10 +37,10 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      <img src="img/STEM/TEM-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary" width="500">
 
-
 2. **Adjust eucentric height**
 
    - Set ~7,500x mag by adjusting magnification knob
+
      <img src="img/STEM/TEM-alignment-eucentric-focus-handpanel.jpg" alt="Eucentric Focus on hand panel" width="500">
 
    - Press `Eucentric Focus` on hand panel
@@ -52,7 +52,6 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Converge the beam to a tiny dot with intensity knob. Press `Z-axis` up or down until no diffraction pattern is visible.
 
      <img src="img/STEM/TEM-alignment-beam-tiny-dot.jpg" alt="Beam converged to tiny dot" width="500">
-     
 
    - Increase intensity. Notice image shows approximately minimal contrast between gold and amorphous carbon region.
 
@@ -82,6 +81,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Center beam by rolling hand panel ball
    - Vary beam size by turning intensity knob counterclockwise and clockwise. Notice beam size is not concentric.
    - Make concentric beam: `Apertures` → click `Adjust` next to `Condenser 2`, adjust `mulXY` knob
+
      <img src="img/STEM/TEM-alignment-c2-aperture-adjust.jpg" alt="C2 aperture adjustment" width="500">
 
    - Go back to three-lens mode: `Beam Settings` tab → click `TEM`  
@@ -203,7 +203,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
       > FIXME: press `Shift` or `Focus`?
 
-     <img src="img/STEM/STEM-alignment-monochromator-tune.jpg" alt="Modify intensity using Monochromator Tune" width="500">
+     <img src="img/STEM/TEM-mono.jpg" alt="Modify intensity using Monochromator Tune" width="500">
 
    - Center beam on HAADF detector by clicking the HAADF button in `TEMUI`
 
@@ -218,7 +218,6 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Select `Stigmator` in quick dropdown, set `Probe A1` and `Condenser` to zero (right click)
 
      <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
-
 
 3. **Fine-tune probe alignment**
 
@@ -236,10 +235,10 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 4. **Run probe corrector**
 
-   - Open `Probe Corrector` software, `Channels` → `Exported elements`, ensure all zero aberration values 
+   - Open `Probe Corrector` software, `Channels` → `Exported elements`, ensure all zero aberration values
 
      <img src="img/STEM/STEM-probe-corrector-reset-aberration.jpg" alt="Probe corrector showing reset aberration values" width="500">
-   
+
    - Set probe diameter 20 nm, semi-aperture 30 mrad
 
      <img src="img/STEM/STEM-probe-corrector-semi-aperture-30.jpg" alt="Probe corrector with semi-aperture set to 30 mrad" width="500">
@@ -299,7 +298,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Ensure pressure values are correct on Spectra instrument and `TEMUI`:
 
      <img src="img/STEM/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
-   
+
    - Ensure column valve is open
 
      <img src="img/STEM/EXP-TEM-view.jpg" alt="TEM view" width="500">
@@ -373,7 +372,6 @@ Plug your USB into the following computer:
 
 <img src="img/STEM/APP-usb-computer.jpg" alt="Computer for USB data transfer" width="500">
 
-
 **Underfocus vs overfocus:**
 
 - Underfocus: dark cores with bright Fresnel fringes on edges
@@ -382,7 +380,6 @@ Plug your USB into the following computer:
 Example of an underfocus image:
 
 <img src="img/STEM/APP-underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
-
 
 **Gray colors during C1A1 probe correction:**
 

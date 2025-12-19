@@ -2,6 +2,8 @@
 
 > Disclaimer: This guide is written for those who have already used single-tilt and double-tilt, tomography holders. If you are using this documentation for the first time, you should work with a supervisor.
 
+> ⚠️ **Always wear gloves.** Do not touch any part of the holder that gets inserted into the microscope, including the metal rod.
+
 ## Location
 
 **TITAN:**
@@ -19,7 +21,6 @@ Sample loading can be done inside the Spectra room:
 Sample holders are stored here at room te
 
 <img src="img/sample-loading/SAMPLE-holder-storage.jpg" alt="Sample holder storage" width="500">
-
 
 ## Single-tilt holder
 
@@ -71,25 +72,25 @@ Sample holders are stored here at room te
 
 1. The sample grid is held between the two "arms" of the metal strips.
 
-     <img src="img/sample-loading/tomography/01-sample-loaded.jpg" alt="Sample grid held by metal strips" width="500">
+   <img src="img/sample-loading/tomography/01-sample-loaded.jpg" alt="Sample grid held by metal strips" width="500">
 
 2. Rotate the screw counterclockwise about 90 degrees. Repeat for the other "arm".
 
-     <img src="img/sample-loading/tomography/02-rotate-screw.jpg" alt="Rotating screw counterclockwise" width="500">
+   <img src="img/sample-loading/tomography/02-rotate-screw.jpg" alt="Rotating screw counterclockwise" width="500">
 
 3. Move the two strips away from each other to free the sample
 
-     From:
+   From:
 
-     <img src="img/sample-loading/tomography/03-strips-closed.jpg" alt="Strips close together" width="500">
+   <img src="img/sample-loading/tomography/03-strips-closed.jpg" alt="Strips close together" width="500">
 
-     To:
+   To:
 
-     <img src="img/sample-loading/tomography/04-strips-open.jpg" alt="Strips moved apart" width="500">
+   <img src="img/sample-loading/tomography/04-strips-open.jpg" alt="Strips moved apart" width="500">
 
 4. Remove the sample
 
-     <img src="img/sample-loading/tomography/05-sample-removed.jpg" alt="Sample removed" width="500">
+   <img src="img/sample-loading/tomography/05-sample-removed.jpg" alt="Sample removed" width="500">
 
 **Load sample**
 
@@ -137,4 +138,3 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 - Dec 17, 2025 - Add sample loading region by @bobleesj
 - Dec 15, 2025 - Add tomography holder section by @bobleesj, with images taken by Guoliagn Hu
 - Dec 13, 2025 - Add single-tilt, double-tilt holder section by @bobleesj, with images taken by Guoliagn Hu
-

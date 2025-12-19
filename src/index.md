@@ -2,6 +2,8 @@
 
 Step-by-step tutorials for electron microscopy at the [Stanford Nano Shared Facilities (SNSF)](https://snsf.stanford.edu/). Focused on practice sitting in front of the microscope with visual elements.
 
+> **New to SNSF?** If you are affiliated with Stanford, follow the [internal access guide](https://nanolabs.stanford.edu/access/internal) to get started.
+
 WIP:
 
 - [ ] Use real screenshots instead of pictures
@@ -48,7 +50,7 @@ Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Sta
 
 ## Changelog
 
-- Dec 18, 2025 - Add rough draft of EELS
+- Dec 18, 2025 - Add drafts of EELS nad EDS
 - Dec 17, 2025 - Use mdBook to render static pages and host on GitHub
 - Dec 16, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
 - Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj.
