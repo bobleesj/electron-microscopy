@@ -4,10 +4,10 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
 <img src="img/STEM/APP-tmp-7056.jpg" alt="STEM overview" width="500">
 
-> **Prerequisite:** Complete the [sample loading](sample-loading.md) procedure before starting.
+**Prerequisite:** Follow the [Start session](sample-loading.md#start-session) procedure.
 
-> FIXME: when do we want to save sample position when we load our own sample?
-> FIXME: tips on finding zone axis?
+- [ ] Sample is loaded using the holder of choice (single-tilt, double-tilt, or tomography)
+- [ ] Holder is inserted into Spectra 300 instrument
 
 **Acronyms:**
 
@@ -19,14 +19,14 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 > [!CAUTION]
 > 1. Ensure Standard Sample is loaded
 
-## Part 1: Column optics alignment in TEM
+## Part 1: Column alignment in TEM
 
-1. **Find beam**
+1. **Open column valves**
 
-   - Ensure column valve is closed and turbo pump is on.
-   - Verify `Col Valves Closed` and `Turbo On` are shown:
+   - In `TEMUI`, click `Col Valves Open`
+   - Verify `Col Valves Open` and `Turbo Off` are shown:
 
-     <img src="img/STEM/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves closed and turbo pump on" width="500">
+     <img src="img/STEM/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves status" width="500">
 
    - Set 2000, 70, 1000 for Condenser 1, 2, 3: Under `Tune` tab → `Apertures`
 
@@ -185,7 +185,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
     - Done! You are now ready for STEM probe alignment next.
     
-## Part 2: Probe alignment in STEM mode
+## Part 2: Probe alignment in STEM
 
 1. **Switch to STEM**
 
