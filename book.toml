@@ -1,13 +1,20 @@
 [book]
 title = "Electron Microscopy Training"
-authors = ["Sangjoon Bob Lee, Guoliang Hu"]
+authors = ["Sangjoon Bob Lee", "Guoliang Hu"]
+description = "Step-by-step tutorials for electron microscopy with a focus on visual elements."
 language = "en"
 
 [output.html]
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
+smart-punctuation = true
+mathjax-support = false
+no-section-label = false
 git-repository-url = "https://github.com/bobleesj/electron-microscopy"
+git-repository-icon = "fab-github"
 edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{path}"
+site-url = "/electron-microscopy/"
+input-404 = "404.md"
 sidebar-header-nav = true
 
 [output.html.fold]
