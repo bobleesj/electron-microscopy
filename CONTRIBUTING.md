@@ -133,6 +133,35 @@ Before making new edits, sync your copy with the latest version:
    <img src="img/STEM/TEM-example.jpg" alt="<Description>" width="500">
    ```
 
+## Formatting conventions
+
+Follow these rules for consistent documentation:
+
+1. **No blank line** after the numbered step header (before first bullet)
+2. **Keep blank line** before images (so they render separately)
+3. **No blank lines** between consecutive text-only bullets
+
+**Example:**
+
+```markdown
+## Part 3: Image your sample
+
+1. **Load your sample**
+   - Follow load procedure in [sample loading](sample-loading.md)
+   - Ensure column is open
+   - Ensure pressure values are correct on Spectra instrument and `TEMUI`:
+
+     <img src="img/STEM/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
+
+   - Ensure column valve is open
+
+     <img src="img/STEM/EXP-TEM-view.jpg" alt="TEM view" width="500">
+
+   - In `Velox`, set `User`, `Sample ID`, `Auto save folder`:
+
+     <img src="img/STEM/EXP-filename-setup.jpg" alt="Filename and folder setup" width="500">
+```
+
 ## Local preview
 
 ```bash
