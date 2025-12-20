@@ -270,7 +270,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
      <img src="img/STEM/STEM-alignment-a5-reevaluate.jpg" alt="A5 reevaluate in Tableau" width="500">
 
-   - Go to `C1A1` taba and run the iteration again until you satisfy the target values below
+   - Go to `C1A1` tab and run the iteration again until you satisfy the target values below
 
    **Target values (STEM Probe Corrector):**
 
@@ -283,7 +283,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    | A3        | < 5 μm                        | < 1.5 μm                       |
    | S3        | < 5 μm                        | < 1 μm                         |
 
-   - Compare your `Total D50` values againt the image below. The Spectra microscope has reached about 48 pm. 49.9 pm is on the good side.
+   - Compare your `Total D50` values against the image below. The Spectra microscope has reached about 48 pm. 49.9 pm is on the good side.
 
      <img src="img/STEM/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
 
@@ -370,15 +370,6 @@ Plug your USB into the following computer:
 
 <details>
 <summary><strong>Reference images (click to expand)</strong></summary>
-
-**Underfocus vs overfocus:**
-
-- Underfocus: dark cores with bright Fresnel fringes on edges
-- Overfocus: bright cores with dark edge fringes
-
-Example of an underfocus image:
-
-<img src="img/STEM/APP-underfocus.jpg" alt="Underfocus example showing dark cores with bright Fresnel fringes" width="500">
 
 **Gray colors during C1A1 probe correction:**
 

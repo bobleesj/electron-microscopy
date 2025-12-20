@@ -8,15 +8,15 @@ This guide covers the setup and operation of 4D-STEM data acquisition using the 
 ## Part 1: Detector setup
 
 1. **Initialize detector**
+   - Open the instrument box
 
-   -  Open the instrument box
-      -  FIXME: attach image of opening the instrument box
+     > FIXME: attach image of opening the instrument box
 
-      <img src="img/4D-STEM/4D-STEM-spectra.jpg" alt="Spectra instrument" width="500">
+     <img src="img/4D-STEM/4D-STEM-spectra.jpg" alt="Spectra instrument" width="500">
 
-   -  Spot the Arina detector
+   - Spot the Arina detector
 
-      <img src="img/4D-STEM/4D-STEM-arina-hardware.jpg" alt="Dectris Arina hardware" width="500">
+     <img src="img/4D-STEM/4D-STEM-arina-hardware.jpg" alt="Dectris Arina hardware" width="500">
 
    - Press the button below the Arina detector (with blue light) for 10 seconds
 

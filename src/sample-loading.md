@@ -18,7 +18,7 @@ Sample loading can be done inside the Spectra room:
 
 <img src="img/sample-loading/SAMPLE-spectra-room.jpg" alt="Spectra room for sample loading" width="500">
 
-Sample holders are stored here at room te
+Sample holders are stored here at room temperature:
 
 <img src="img/sample-loading/SAMPLE-holder-storage.jpg" alt="Sample holder storage" width="500">
 
@@ -98,19 +98,32 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 
 ## Start session
 
-> Use this section when inserting a holder at the beginning of any session.
+**Holding the sample:**
 
-1. Push the holder in until you feel resistance. The turbo pump will start automatically.
+1. Ensure you do not touch the metal rod as it is inserted into the instrument:
 
-   <img src="img/sample-loading/holder-insert/01-holder-insertion.jpg" alt="Holder insertion to microscope" width="500">
+   <img src="img/sample-loading/holder-insert/01-holding-sample.jpg" alt="Holding the sample properly" width="500">
 
-2. Wait 2 minutes for pressure to stabilize. Notice the time in `TEMUI`.
+2. Notice the blue line below. Align accordingly.
 
-3. Turn counter-clockwise until you feel gently stuck.
+   <img src="img/sample-loading/holder-insert/02-holder-push-in.jpg" alt="Pushing holder into microscope" width="500">
 
-4. Guide the holder to push in. Expect the holder to move in smoothly.
+3. Push the holder in until you feel resistance. Do **NOT** push all the way in.
 
-5. In `TEMUI`, turn off the turbo pump.
+4. The turbo pump will start automatically.
+
+5. Wait ~2 minutes for pressure to stabilize. You can see the time in `TEMUI`, or on the screen attached to the Spectra instrument.
+
+   <img src="img/sample-loading/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing" width="500">
+
+   > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
+
+6. Turn the holder **COUNTER-CLOCKWISE** until you feel gently stuck, then guide the holder to push in. Expect the holder to move in smoothly.
+
+   <img src="img/sample-loading/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="500">
+
+7. In `TEMUI`, turn off the turbo pump. Confirm the holder type as you are prompted in `TEMUI`.
+
 
 ## End session
 
@@ -126,15 +139,17 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 
    <img src="img/STEM/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="500">
 
-5. Pull the holder straight out to the first resistance point.
+5. Pull the holder straight out to the first resistance point
 
-6. Turn clockwise, then pull the rest out continuously.
+6. Turn **CLOCKWISE**, then pull the rest out continuously
 
 7. Unload the sample from the holder using the appropriate section above (single-tilt, double-tilt, or tomography).
 
 ## Changelog
 
+
+- Dec 20, 2025 - Rnhance holder insersion process with visuals
 - Dec 18, 2025 - Reorganize into Start/End session sections for use across all tutorials by @bobleesj
 - Dec 17, 2025 - Add sample loading region by @bobleesj
-- Dec 15, 2025 - Add tomography holder section by @bobleesj, with images taken by Guoliagn Hu
-- Dec 13, 2025 - Add single-tilt, double-tilt holder section by @bobleesj, with images taken by Guoliagn Hu
+- Dec 15, 2025 - Add tomography holder section by @bobleesj, with images taken by Guoliang Hu
+- Dec 13, 2025 - Add single-tilt, double-tilt holder section by @bobleesj, with images taken by Guoliang Hu
