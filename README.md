@@ -85,6 +85,16 @@ Run local dev server
 # Run local dev server
 mdbook serve --open
 ```
+### Troubleshoot Rust for Windows users
+
+```bash
+This is for those who have `note: link.exe returned an unexpected error` while installing mdbook:
+
+1. Download `rustup-init.exe` from [here](https://rust-lang.github.io/rustup/installation/windows-msvc.html#walkthrough-installing-visual-studio-2022) and run `rustup-init.exe`.
+2. Install Visual Studio by following the tutorial provided [here](https://rust-lang.github.io/rustup/installation/windows-msvc.html#walkthrough-installing-visual-studio-2022). 
+3. On your computer, run `x64 Native Tools Command Prompt for VS 2022` file downloaded.
+4. Run `cargo install mdbook` and `mdbook serve --open`
+```
 
 ### Process new images
 
