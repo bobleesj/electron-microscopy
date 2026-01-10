@@ -2,7 +2,7 @@
 
 [Introduction](index.md)
 
-# Stanford SNSF
+# Guides
 
 - [Sample Loading](sample-loading.md)
 - [TEM](TEM.md)

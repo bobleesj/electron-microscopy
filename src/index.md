@@ -1,8 +1,6 @@
 # Electron Microscopy (WIP)
 
-Step-by-step tutorials for electron microscopy at the [Stanford Nano Shared Facilities (SNSF)](https://snsf.stanford.edu/). Focused on practice sitting in front of the microscope with visual elements.
-
-> **New to SNSF?** If you are affiliated with Stanford, follow the [internal access guide](https://nanolabs.stanford.edu/access/internal) to get started.
+Step-by-step visual guides for leaning TEM. Focused on practice sitting in front of the microscope with visual elements.
 
 WIP:
 
@@ -26,7 +24,7 @@ WIP:
 | [PED](PED.md)                   | Spectra    | Precession Electron Diffraction      | -         | 🚧 Coming soon |
 
 
-**SNSF instruments:**
+**Instrument links:**
 
 - [FEI Titan at SNSF](https://snsf.stanford.edu/facilities/eim/titan)
 - [Spectra 300 at SNSF](https://snsf.stanford.edu/facilities/eim/spectra)
