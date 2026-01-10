@@ -515,5 +515,5 @@ At eucentric height, tilting of the holder should induce minimal shift.
 
 - Dec 15, 2025 - Add pre-probe corrector with STEM Direct Alignment steps by @bobleesj
 - Dec 12, 2025 - Add STEM training images by Guoliang Hu
-- Dec 8, 2025 - First draft of SNSF Spectra training by @bobleesj
+- Dec 8, 2025 - First draft of Spectra training by @bobleesj
 
