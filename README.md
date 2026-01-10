@@ -68,7 +68,7 @@ Formatting consistency:
 
 ### Local development
 
-Install mdBook
+**Install mdBook**
 
 ```bash
 # macOS
@@ -77,9 +77,23 @@ brew install mdbook
 cargo install mdbook
 ```
 
-> No cargo? Download from https://doc.rust-lang.org/cargo/getting-started/installation.html
+<details>
+<summary>No cargo or trouble install mdbook? (Expand)</summary>
 
-Run local dev server
+  Download `cargo` from https://doc.rust-lang.org/cargo/getting-started/installation.html
+
+  Did you encounter `note: link.exe returned an unexpected error` while installing mdbook?:
+  
+  1. Download `rustup-init.exe` from [here](https://rust-lang.github.io/rustup/installation/windows-msvc.html#walkthrough-installing-visual-studio-2022) and run `rustup-init.exe`.
+
+  2. Install Visual Studio by following the tutorial provided [here](https://rust-lang.github.io/rustup/installation/windows-msvc.html#walkthrough-installing-visual-studio-2022). 
+
+  3. On your computer, run `x64 Native Tools Command Prompt for VS 2022` file downloaded.
+
+  4. Run `cargo install mdbook` and `mdbook serve --open`
+</details>
+
+**Run local dev server**
 
 ```bash
 # Run local dev server
