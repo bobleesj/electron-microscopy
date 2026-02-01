@@ -1,4 +1,4 @@
-# Titan Spectra 300 STEM Alignment Guide
+# Titan Spectra 300 STEM Alignment Guide (DRAFT)
 
 <img src="../STEM/img/APP-tmp-7056.jpg" alt="STEM overview">
 
@@ -263,7 +263,7 @@ Before proceeding to probe correction, check that the monochromator is properly 
 
 - [ ] **Center and adjust current**
 
-  1. Adjust the `mulXY` knobs to center the beam through the monochromator. A jagged edge on the beam indicates the monochromator is clipping the beam.
+  1. Adjust the `mulXY` knobs to center the beam through the monochromator.
 
      <img src="img/p1_s5_mono_03.jpg" alt="Monochromator at 17.5 nA" width="800">
 
