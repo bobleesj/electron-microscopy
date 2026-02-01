@@ -22,3 +22,6 @@ venv/
 
 # Temp files
 temp/
+
+# AI generated files
+CLAUDE.md

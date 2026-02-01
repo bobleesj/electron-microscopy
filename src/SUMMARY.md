@@ -4,15 +4,16 @@
 
 # Guides
 
-- [Sample Loading](sample-loading.md)
-- [TEM](TEM.md)
-- [STEM](STEM.md)
-- [4D-STEM](4D-STEM.md)
-- [EELS](EELS.md)
-- [EDS](EDS.md)
-- [Tomography](tomography.md)
-- [Ptychography](ptychography.md)
-- [PED](PED.md)
+- [Sample Loading](sample-loading/index.md)
+- [TEM](TEM/index.md)
+- [STEM](STEM/index.md)
+- [STEM (SNSF)](STEM_SNSF/index.md)
+- [4D-STEM](4D-STEM/index.md)
+- [EELS](EELS/index.md)
+- [EDS](EDS/index.md)
+- [Tomography](tomography/index.md)
+- [Ptychography](ptychography/index.md)
+- [PED](PED/index.md)
 
 # Would you like to contribute?
 - [Share Your Procedure](share-your-procedure.md)
