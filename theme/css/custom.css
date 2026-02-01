@@ -3,6 +3,23 @@
     display: none !important;
 }
 
+/* Hide bullet markers for checkbox/task list items */
+.content ul > li:has(input[type="checkbox"]) {
+    list-style-type: none !important;
+    margin-left: 0;
+}
+
+/* Alternative: target lists containing checkboxes */
+.content ul:has(input[type="checkbox"]) > li {
+    list-style-type: none !important;
+}
+
+/* Apple-style floating screenshot */
+.content img {
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
 /* Consistent list spacing - normalize loose and tight lists */
 /* .content li {
     margin-top: 0.25em;

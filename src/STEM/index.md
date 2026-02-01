@@ -1,8 +1,11 @@
 # STEM
 
+> NOTE: Seperate TEM/STEM guides. Q. Do people need TEM alignment? (Flowchart like). But, we can do everythign in STEM mode. Training starts in TEM mode but they are separate.
+> NOTE: verdict: we should separate STEM and TEM  eucentric height alignment, etc. those steps
+
 This guide covers STEM alignment on the Spectra 300. The process has three parts: TEM alignment (column optics), STEM alignment (focused probe), and imaging your sample.
 
-<img src="img/STEM/APP-tmp-7056.jpg" alt="STEM overview" width="500">
+<img src="img/APP-tmp-7056.jpg" alt="STEM overview" width="500">
 
 **Prerequisite:** Follow the [Start session](sample-loading.md#start-session) procedure.
 
@@ -17,7 +20,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 ## Part 0: Check
 
 > [!CAUTION]
-> 1. Ensure Standard Sample is loaded
+> Ensure Standard Sample is loaded
 
 ## Part 1: Column alignment in TEM
 
@@ -25,7 +28,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - In `TEMUI`, click `Col Valves Open`
    - This is what you see when the turbo pump is off, and the column value is open:
 
-     <img src="img/STEM/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves status" width="500">
+     <img src="img/TEM-col-valves-closed-turbo-on.jpg" alt="TEMUI showing column valves status" width="500">
 
    - Verify vacuum pressure values (log scale, lower = better vacuum):
 
@@ -40,48 +43,48 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Set 2000, 70, 1000 for Condenser 1, 2, 3: Under `Tune` tab → `Apertures`
 
-     <img src="img/STEM/TEM-condenser-apertures-settings.jpg" alt="TEMUI aperture settings for C1, C2, C3" width="500">
+     <img src="img/TEM-condenser-apertures-settings.jpg" alt="TEMUI aperture settings for C1, C2, C3" width="500">
 
    - Set ~500x magnification by adjusting magnification knob
    - Locate the gold (dark) and amorphous carbon boundary by driving joystick on hand panel
 
-     <img src="img/STEM/TEM-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary" width="500">
+     <img src="img/TEM-col-valves-open.jpg" alt="TEM view showing gold and carbon boundary" width="500">
 
 2. **Adjust eucentric height**
    - Set ~7,500x mag by adjusting magnification knob
 
-     <img src="img/STEM/TEM-alignment-eucentric-focus-handpanel.jpg" alt="Eucentric Focus on hand panel" width="500">
+     <img src="img/TEM-alignment-eucentric-focus-handpanel.jpg" alt="Eucentric Focus on hand panel" width="500">
 
    - Press `Eucentric Focus` on hand panel
 
    - Notice diffraction pattern. Roll mouse scroller to see greater contrast.
 
-     <img src="img/STEM/TEM-alignment-diffraction-pattern.jpg" alt="Diffraction pattern with greater contrast" width="500">
+     <img src="img/TEM-alignment-diffraction-pattern.jpg" alt="Diffraction pattern with greater contrast" width="500">
 
    - Converge the beam to a tiny dot with intensity knob. Press `Z-axis` up or down until no diffraction pattern is visible.
 
-     <img src="img/STEM/TEM-alignment-beam-tiny-dot.jpg" alt="Beam converged to tiny dot" width="500">
+     <img src="img/TEM-alignment-beam-tiny-dot.jpg" alt="Beam converged to tiny dot" width="500">
 
    - Turn intensity knob. Notice image shows approximately minimal contrast between gold and amorphous carbon region.
 
-     <img src="img/STEM/TEM-alignment-minimal-contrast.jpg" alt="Minimal contrast image" width="500">
+     <img src="img/TEM-alignment-minimal-contrast.jpg" alt="Minimal contrast image" width="500">
 
    - Press `z-axis` up or down on hand panel to reduce contrast even further
 
-     <img src="img/STEM/TEM-alignment-reduced-contrast.jpg" alt="Reduced contrast" width="500">
+     <img src="img/TEM-alignment-reduced-contrast.jpg" alt="Reduced contrast" width="500">
 
 3. **Align monochromator**
    - Jagged area visible like above image? Skip this section. Otherwise, continue.
    - `Mono` tab → `Monochromator Tune (Expert)`, click `Shift`
 
-     <img src="img/STEM/TEM-mono.jpg" alt="Monochromator Tune Expert panel" width="500">
+     <img src="img/TEM-mono.jpg" alt="Monochromator Tune Expert panel" width="500">
 
    - Adjust `mulXY` knobs until the jagged area disappears.
 
 4. **Align C2 aperture**
    - Enter `TwoLens` mode. `Tune` tab → `Beam Settings`, click `Twolens`
 
-     <img src="img/STEM/TEM-two-lens-mode.jpg" alt="Two lens mode in TEMUI" width="500">
+     <img src="img/TEM-two-lens-mode.jpg" alt="Two lens mode in TEMUI" width="500">
 
    - Notice beam shifted away from center.
    - Converge beam by varying intensity knob
@@ -89,22 +92,22 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Vary beam size by turning intensity knob counterclockwise and clockwise. Notice beam size is not concentric.
    - Make concentric beam: `Apertures` → click `Adjust` next to `Condenser 2`, adjust `mulXY` knob
 
-     <img src="img/STEM/TEM-alignment-c2-aperture-adjust.jpg" alt="C2 aperture adjustment" width="500">
+     <img src="img/TEM-alignment-c2-aperture-adjust.jpg" alt="C2 aperture adjustment" width="500">
 
    - Go back to three-lens mode: `Beam Settings` tab → click `TEM`  
 
-     <img src="img/STEM/APP-beam-settings-tab.jpg" alt="Beam Settings tab in TEMUI" width="500">
+     <img src="img/APP-beam-settings-tab.jpg" alt="Beam Settings tab in TEMUI" width="500">
 
    - Ensure beam is centered and concentric. Example:
 
-     <img src="img/STEM/TEM-alignment-beam-centered-concentric.jpg" alt="Beam centered and concentric" width="500">
+     <img src="img/TEM-alignment-beam-centered-concentric.jpg" alt="Beam centered and concentric" width="500">
 
 5. **Fix condenser lens stigmatism**
    - Set ~200kx magnification by adjusting magnification knob
    - Beam shifted from center? `Tune` tab → `Direct Alignment`, click `Beam Shift`, adjust `mulXY` knobs
    - Enlarge the beam by adjusting intensity knob
 
-     <img src="img/STEM/TEM-zoom-in.jpg" alt="Enlarged beam view" width="500">
+     <img src="img/TEM-zoom-in.jpg" alt="Enlarged beam view" width="500">
 
    - Still not concentric? `Stigmator` → `Condenser`, adjust `mulXY` knobs
 
@@ -123,25 +126,25 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Press `R1` to lift fluorescent screen. This enables the beam to be detected by the detector.
    - Open `Velox` software on the right monitor
    - Click the "play" button to start seeing the image
-     <img src="img/STEM/APP-velox-play-button.jpg" alt="Play button in Velox for live imaging" width="500">
+     <img src="img/APP-velox-play-button.jpg" alt="Play button in Velox for live imaging" width="500">
 
    - Notice gold nanoparticles shown
 
-     <img src="img/STEM/TEM-underfocus-4-5-rings.jpg" alt="Underfocus view showing 4-5 rings" width="500">
+     <img src="img/TEM-underfocus-4-5-rings.jpg" alt="Underfocus view showing 4-5 rings" width="500">
 
    - (Optional) Press `z-axis` buttons to see how focus can change image:
 
      Under focus:
 
-     <img src="img/STEM/TEM-alignment-under-focus.jpg" alt="Under focus" width="500">
+     <img src="img/TEM-alignment-under-focus.jpg" alt="Under focus" width="500">
 
      On focus:
 
-     <img src="img/STEM/TEM-alignment-on-focus.jpg" alt="On focus" width="500">
+     <img src="img/TEM-alignment-on-focus.jpg" alt="On focus" width="500">
 
      Over focus:
 
-     <img src="img/STEM/TEM-alignment-over-focus.jpg" alt="Over focus" width="500">
+     <img src="img/TEM-alignment-over-focus.jpg" alt="Over focus" width="500">
 
 9. **Run image corrector**
 
@@ -149,18 +152,18 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Press `Z-axis` down until you see 4-5 rings in FFT (slight underfocus)
 
-     <img src="img/STEM/TEM-4-5-rings.jpg" alt="FFT showing 4-5 rings" width="500">
+     <img src="img/TEM-4-5-rings.jpg" alt="FFT showing 4-5 rings" width="500">
 
    - Stop recording by clicking the "play" button in `Velox`
    - Reset `Objective` and `Image A1` in `TEMUI` → `Stigmator` quick tab. Right-click each button to reset.
 
-     <img src="img/STEM/TEM-stigmator-quick-tab.jpg" alt="Stigmator controls in TEMUI Quick tab" width="500">
+     <img src="img/TEM-stigmator-quick-tab.jpg" alt="Stigmator controls in TEMUI Quick tab" width="500">
 
    - Open `ImageCorrector` software
    - Click `C1A1` tab → `Start`. The microscope physically wobbles the focus up and down (changing objective lens current). The FFT is captured and its ring symmetry, angular distribution, and ring spacing are analyzed.
    - During the iteration, set intensity to 800–900 counts by adjusting the Intensity knob.
 
-     <img src="img/STEM/TEM-alignment-c1a1-result.jpg" alt="C1A1 result" width="500">
+     <img src="img/TEM-alignment-c1a1-result.jpg" alt="C1A1 result" width="500">
      
    - Under `Auto correct`, set to `75%`, then press `Focus` and `A1` during the iteration to apply corrections.
    - Aim for `A1` < 5 nm. If `C1` shows orange, manually adjust Z-axis during the iteration.
@@ -169,7 +172,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Now fix higher-order aberrations.
    - Go to `Tableau` tab → select `Standard` next to `Tableau type` → click `Start`
 
-     <img src="img/STEM/TEM-alignment-tableau-standard.jpg" alt="Tableau standard" width="500">
+     <img src="img/TEM-alignment-tableau-standard.jpg" alt="Tableau standard" width="500">
 
    - After the iteration completes, verify values match the targets below, then click `Accept`:
 
@@ -188,28 +191,28 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - `TEMUI` → `Files` → `SBL FEG Registers`
    - Add name `300KV-TEM-<NAME>` and click `Add`
 
-     <img src="img/STEM/TEM-save-settings.jpg" alt="Save optics settings in TEMUI" width="500">
+     <img src="img/TEM-save-settings.jpg" alt="Save optics settings in TEMUI" width="500">
 
    - Done! You are now ready for STEM probe alignment next.
-    
+
 ## Part 2: Probe alignment in STEM
 
 1. **Switch to STEM**
    - In `Velox`, click `STEM`, `HAADF`, set 1024×1024 / 250 ns dwell time
    - Drive around, set magnification to ~225 kx, find area with good distribution of feature sizes
 
-     <img src="img/STEM/STEM-settings.jpg" alt="Settings showing C1, C2, C3 values" width="500">
+     <img src="img/STEM-settings.jpg" alt="Settings showing C1, C2, C3 values" width="500">
 
    - Adjust z-axis on hand panel until sharpest features
    - Verify convergence angle of 30 mrad, camera length 91 mm
 
-     <img src="img/STEM/STEM-FOV-convergence-angle.jpg" alt="FOV length and probe convergence angle" width="500">
+     <img src="img/STEM-FOV-convergence-angle.jpg" alt="FOV length and probe convergence angle" width="500">
 
    - Current should be ~0.100 nA. Too low? `Mono` tab →  `Monochromator Tune (Expert)` → `Shift`, click `Focus`, use `Intensity` knob to adjust
 
       > FIXME: press `Shift` or `Focus`?
 
-     <img src="img/STEM/TEM-mono.jpg" alt="Modify intensity using Monochromator Tune" width="500">
+     <img src="img/TEM-mono.jpg" alt="Modify intensity using Monochromator Tune" width="500">
 
    - Center beam on HAADF detector by clicking the HAADF button in `TEMUI`
 
@@ -219,11 +222,11 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Select `STEM Auto Tuning` in quick dropdown, click `Reset`.
 
-     <img src="img/STEM/STEM-auto-tuning-quick-tab.jpg" alt="STEM Auto Tuning options in TEMUI Quick tab" width="500">
+     <img src="img/STEM-auto-tuning-quick-tab.jpg" alt="STEM Auto Tuning options in TEMUI Quick tab" width="500">
 
    - Select `Stigmator` in quick dropdown, set `Probe A1` and `Condenser` to zero (right click)
 
-     <img src="img/STEM/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
+     <img src="img/STEM-alignment-probe-a1-condenser-reset.jpg" alt="Reset Probe A1 and Condenser to zero" width="500">
 
 3. **Fine-tune probe alignment**
    Ensure probe is aligned along the optical axis.
@@ -231,7 +234,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Press `Diffraction Mode` on hand panel
    - `Tune` tab, `Direct Alignment`, click `Diffraction Shift and Focus Alignment`, adjust `mulXY` knobs
 
-     <img src="img/STEM/STEM-diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment" width="500">
+     <img src="img/STEM-diffraction-shift-alignment.jpg" alt="Direct Alignment Diffraction Shift and Focus Alignment" width="500">
 
    - Click `Center C2 aperture`, adjust with `mulXY`
      > FIXME: where is `Center C2 aperture`?
@@ -241,24 +244,24 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 4. **Run probe corrector**
    - Open `Probe Corrector` software, `Channels` → `Exported elements`, ensure all zero aberration values
 
-     <img src="img/STEM/STEM-probe-corrector-reset-aberration.jpg" alt="Probe corrector showing reset aberration values" width="500">
+     <img src="img/STEM-probe-corrector-reset-aberration.jpg" alt="Probe corrector showing reset aberration values" width="500">
 
    - Set probe diameter 20 nm, semi-aperture 30 mrad
 
-     <img src="img/STEM/STEM-probe-corrector-semi-aperture-30.jpg" alt="Probe corrector with semi-aperture set to 30 mrad" width="500">
+     <img src="img/STEM-probe-corrector-semi-aperture-30.jpg" alt="Probe corrector with semi-aperture set to 30 mrad" width="500">
 
    - Run `C1A1`, try to make values close to zero
 
-     <img src="img/STEM/STEM-alignment-c1a1-zero.jpg" alt="C1A1 values close to zero" width="500">
+     <img src="img/STEM-alignment-c1a1-zero.jpg" alt="C1A1 values close to zero" width="500">
 
    - Click `0th-2nd`, set `Auto correct` to 50%
 
-     <img src="img/STEM/STEM-alignment-0th-2nd-autocorrect.jpg" alt="0th-2nd autocorrect settings" width="500">
+     <img src="img/STEM-alignment-0th-2nd-autocorrect.jpg" alt="0th-2nd autocorrect settings" width="500">
 
    - Go to `Tableau` → `Fast` → `Start` to provide a rough map of the aberrations. This step only measures aberrations. The probe is tilted in a controlled pattern, the detector records the response, and aberrations are calculated. Corrector currents remain unchanged at this stage.
    - Notice the aberration surface image. The aberration value in purple (e.g., C3) is the limiting aberration that needs correction.
 
-     <img src="img/STEM/STEM-alignment-tableau-aberration-surface.jpg" alt="Tableau aberration surface" width="500">
+     <img src="img/STEM-alignment-tableau-aberration-surface.jpg" alt="Tableau aberration surface" width="500">
 
    - Press the button with aberration `C2`, etc. sequentially until you see `A4` on the purple label on aberration surface image.
    
@@ -268,7 +271,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Go back to `Tableau` tab, use `Standard`
    - Select `A5` under Tableau options and click `Reevaluate` as shown below:
 
-     <img src="img/STEM/STEM-alignment-a5-reevaluate.jpg" alt="A5 reevaluate in Tableau" width="500">
+     <img src="img/STEM-alignment-a5-reevaluate.jpg" alt="A5 reevaluate in Tableau" width="500">
 
    - Go to `C1A1` tab and run the iteration again until you satisfy the target values below
 
@@ -285,7 +288,7 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
 
    - Compare your `Total D50` values against the image below. The Spectra microscope has reached about 48 pm. 49.9 pm is on the good side.
 
-     <img src="img/STEM/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
+     <img src="img/STEM-alignment-final-resolution.jpg" alt="Final resolution result" width="500">
 
 5. **Verify aberration corrected image**
    - In `Velox`, click the `Play` button
@@ -298,58 +301,58 @@ This guide covers STEM alignment on the Spectra 300. The process has three parts
    - Ensure column is open
    - Ensure pressure values are correct on Spectra instrument and `TEMUI`:
 
-     <img src="img/STEM/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
+     <img src="img/EXP-TEM-mode.jpg" alt="TEM mode display" width="500">
 
    - Ensure column valve is open
 
-     <img src="img/STEM/EXP-TEM-view.jpg" alt="TEM view" width="500">
+     <img src="img/EXP-TEM-view.jpg" alt="TEM view" width="500">
 
    - In `Velox`, set `User`, `Sample ID`, `Auto save folder`, `File labels`, and `Selected labels` as shown below:
 
-     <img src="img/STEM/EXP-filename-setup.jpg" alt="Filename and folder setup" width="500">
+     <img src="img/EXP-filename-setup.jpg" alt="Filename and folder setup" width="500">
 
 2. **Find sample region of interest**
    - `TEMUI` → `Beam Settings` → click `TEM` mode.
    - Set mag ~1,000x
 
-     <img src="img/STEM/EXP-low-mag-overview.jpg" alt="Low magnification overview" width="500">
+     <img src="img/EXP-low-mag-overview.jpg" alt="Low magnification overview" width="500">
 
    - Drive around with the joystick. You may use the diffraction pattern to identify contrast areas. Use HDR to see the diffraction pattern.
 
-     <img src="img/STEM/EXP-diffraction-pattern-hdr.jpg" alt="Diffraction pattern in HDR mode" width="500">
+     <img src="img/EXP-diffraction-pattern-hdr.jpg" alt="Diffraction pattern in HDR mode" width="500">
 
      > FIXME: How is DP used?
 
    - In `Velox`, click `STEM` and `HAADF` mode, and click the `play` button
 
-     <img src="img/STEM/EXP-STEM-haadf-view.jpg" alt="STEM HAADF view" width="500">
+     <img src="img/EXP-STEM-haadf-view.jpg" alt="STEM HAADF view" width="500">
 
 3. **Fine-tune focus with piezo**
    - Once you've found a good region of interest, `TEMUI` → `Sample Piezo`
    - Use `mulXY` to focus z-axis more precisely
 
-     <img src="img/STEM/STEM-alignment-zone-axis.jpg" alt="Zone axis alignment" width="500">
+     <img src="img/STEM-alignment-zone-axis.jpg" alt="Zone axis alignment" width="500">
 
 4. **Run probe correction on sample**
    - Run `Sherpa` software, run `A1B1` then `B2/A2`
    - If you see the following error,
 
-     <img src="img/STEM/EXP-sherpa-error.jpg" alt="Sherpa error" width="500">
+     <img src="img/EXP-sherpa-error.jpg" alt="Sherpa error" width="500">
 
      In `Velox`, click `Auto-tune` and ensure the signal touches the dotted `blue` and `red` lines
 
-     <img src="img/STEM/EXP-autotune.jpg" alt="Auto-tune signal adjustment" width="500">
+     <img src="img/EXP-autotune.jpg" alt="Auto-tune signal adjustment" width="500">
 
    - Now it should work. Run `B2/A2`, this will take a few minutes.
 
-     <img src="img/STEM/EXP-sherpa-b2a2-running.jpg" alt="Sherpa B2/A2 running" width="500">
+     <img src="img/EXP-sherpa-b2a2-running.jpg" alt="Sherpa B2/A2 running" width="500">
 
 5. **After probe correction**
    - If aberrations persist: `TEMUI` → `Stigmator` → `Probe A1`, adjust focus
    - Alternative: `Stigmator` tab → `Probe B2`, uncheck focus
    - Zoom in to verify correction
 
-     <img src="img/STEM/EXP-zoomed-view.jpg" alt="Zoomed view after correction" width="500">
+     <img src="img/EXP-zoomed-view.jpg" alt="Zoomed view after correction" width="500">
 
 6. **Find zone-axis (optional)**
    - In `Velox`, drag the red dot to move probe position
@@ -366,7 +369,7 @@ Follow the steps in [End session](sample-loading.md#end-session).
 
 Plug your USB into the following computer:
 
-<img src="img/STEM/APP-usb-computer.jpg" alt="Computer for USB data transfer" width="500">
+<img src="img/APP-usb-computer.jpg" alt="Computer for USB data transfer" width="500">
 
 <details>
 <summary><strong>Reference images (click to expand)</strong></summary>
@@ -375,53 +378,53 @@ Plug your USB into the following computer:
 
 Seeing gray colors like below?
 
-<img src="img/STEM/APP-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
+<img src="img/APP-beam-setting-menu.jpg" alt="Beam Setting dropdown menu in TEMUI" width="500">
 
 `Velox`, click `Auto-tune`. Increase the signal until it touches the red and blue dotted lines:
 
-<img src="img/STEM/APP-auto-tune.jpg" alt="Auto-tune signal adjustment" width="500">
+<img src="img/APP-auto-tune.jpg" alt="Auto-tune signal adjustment" width="500">
 
 **Hand panel R1, R2, R3 values:**
 
-<img src="img/STEM/APP-hand-panel-keys.jpg" alt="Hand panel keys" width="500">
+<img src="img/APP-hand-panel-keys.jpg" alt="Hand panel keys" width="500">
 
 **Stage position and coordinates:**
 
-<img src="img/STEM/APP-stage-position.jpg" alt="TEMUI stage position showing X, Y, Z coordinates" width="500">
+<img src="img/APP-stage-position.jpg" alt="TEMUI stage position showing X, Y, Z coordinates" width="500">
 
 **Dose rate and TEM mode display:**
 
-<img src="img/STEM/APP-dose-rate-TEM.jpg" alt="TEM interface showing dose rate and imaging mode" width="500">
+<img src="img/APP-dose-rate-TEM.jpg" alt="TEM interface showing dose rate and imaging mode" width="500">
 
 **HAADF detector on TEMUI:**
 
-<img src="img/STEM/APP-haadf-detector-temui.jpg" alt="HAADF detector settings in TEMUI interface" width="500">
+<img src="img/APP-haadf-detector-temui.jpg" alt="HAADF detector settings in TEMUI interface" width="500">
 
 **Samples with holes:**
 
-<img src="img/STEM/APP-sample-with-holes.jpg" alt="Sample view showing holes in specimen" width="500">
+<img src="img/APP-sample-with-holes.jpg" alt="Sample view showing holes in specimen" width="500">
 
 **Wobbler to check eucentric height:**
 
 At eucentric height, tilting of the holder should induce minimal shift.
 
-<img src="img/STEM/APP-wobbler-eucentric-height.jpg" alt="Wobbler function for eucentric height verification" width="500">
+<img src="img/APP-wobbler-eucentric-height.jpg" alt="Wobbler function for eucentric height verification" width="500">
 
 **Smart tilt:**
 
-<img src="img/STEM/APP-smart-tilt.jpg" alt="Smart Tilt feature in TEMUI Quick tab" width="500">
+<img src="img/APP-smart-tilt.jpg" alt="Smart Tilt feature in TEMUI Quick tab" width="500">
 
 **Beam setting in Quick tab:**
 
-<img src="img/STEM/APP-beam-setting-quick-tab.jpg" alt="Beam Setting options in TEMUI Quick tab" width="500">
+<img src="img/APP-beam-setting-quick-tab.jpg" alt="Beam Setting options in TEMUI Quick tab" width="500">
 
 **Stage piezo in Quick tab:**
 
-<img src="img/STEM/APP-stage-piezo-quick-tab.jpg" alt="Stage Piezo controls in TEMUI Quick tab" width="500">
+<img src="img/APP-stage-piezo-quick-tab.jpg" alt="Stage Piezo controls in TEMUI Quick tab" width="500">
 
 **Stage tab:**
 
-<img src="img/STEM/APP-stage-tab.jpg" alt="Stage tab showing position and tilt controls" width="500">
+<img src="img/APP-stage-tab.jpg" alt="Stage tab showing position and tilt controls" width="500">
 
 
 </details>
