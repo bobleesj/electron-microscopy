@@ -304,7 +304,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
 - [ ] **Adjust detector signal**
 
-  1. The detector is saturated. In `Velox`, click `Scope tool` to enable signal adjustment.
+  1. In `Velox`, click `Scope tool` to enable signal adjustment.
   2. Adjust `Gain` and `Offset` so the signal does not go above the dotted red lines.
 
      > **Signal math:** Display = (Gain × Signal) + Offset
