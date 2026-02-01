@@ -208,7 +208,7 @@ The basic alignments center the electron beam and align it through the optical c
 
   1. Click on `Beam shift` in the Direct Alignments panel. The `mulXY` knobs now control alignment beam shift.
   2. Use the `mulXY` knobs to center the beam on the screen. The beam responds smoothly to knob movements. If the beam moves too quickly, press `Fine` on the hand panel to reduce sensitivity.
-  3. **Important:** If the beam is lost after clicking beam shift, reduce magnification until the beam is visible, center using the `mulXY` knobs, then increase magnification above 200kX and center again.
+  3. **Important:** If the beam is lost after clicking beam shift, reduce magnification until the beam is visible, center using the `mulXY` knobs.
   4. Click `Done` once the beam is properly centered.
 
      <img src="img/p1_s4_alignments_06.jpg" alt="Beam shift selected in Direct Alignments" width="800">
