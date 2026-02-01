@@ -1,10 +1,10 @@
-# Spectra 300 (SNSF)
+# Titan Spectra 300 STEM Alignment Guide
 
 <img src="../STEM/img/APP-tmp-7056.jpg" alt="STEM overview">
 
 This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). Based on Andrew Barnum's hands-on training with step-by-step screenshots.
 
-**Prerequisite:** A standard training sample (gold on carbon) is already loaded and the holder is inserted into the Spectra 300. For sample loading procedures, see [Start session](sample-loading.md#start-session).
+**Prerequisite:** A standard training sample (gold on carbon) is already loaded and the holder is inserted into the Spectra 300. For sample loading procedures, see [Start session](../sample-loading/index.md#start-session).
 
 **Acronyms:**
 
@@ -26,8 +26,8 @@ This guide covers three main phases:
 
 | Phase | Procedures | Time |
 | ----- | ---------- | ---- |
-| [Part 1: Setup & Alignment](#part-1-setup--alignment) | Vacuum check, eucentric height, STEM mode configuration, direct alignments, monochromator tune | 5-10 min |
-| [Part 2: Probe Correction](#part-2-probe-correction) | HAADF setup, C1A1 correction, Tableau measurement | 10-15 min |
+| [Part 1: Setup & Alignment](#part-1-setup--alignment) | Vacuum check, eucentric height, STEM mode configuration, direct alignments, monochromator tune, HAADF setup | 5-10 min |
+| [Part 2: Probe Correction](#part-2-probe-correction) | Correct aberrations (C1A1, Tableau) to achieve sub-angstrom probe | 10-15 min |
 | [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional) | varies |
 
 <br>
@@ -616,15 +616,11 @@ Sherpa provides rapid aberration correction that is faster than full Tableau mea
 
   1. Sherpa displays the initial image alongside the optimized image for comparison. The corrected image shows improved sharpness and resolution.
 
-  2. Check the improvement factor reported by the software. This value indicates how much the image quality improved.
-
-  3. If results are not satisfactory, re-run the corrections or return to the full Tableau measurement for more comprehensive correction.
-
      <img src="img/p3_s2_sherpa_08.jpg" alt="Sherpa B2/A2 final result" width="800">
 
 ### 3.3 End session
 
-Follow the steps in [End session](sample-loading.md#end-session).
+Follow the steps in [End session](../sample-loading/index.md#end-session).
 
 ## Troubleshooting
 

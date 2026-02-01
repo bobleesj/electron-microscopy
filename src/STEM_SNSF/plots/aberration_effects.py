@@ -30,7 +30,7 @@ DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 # Note: "Well corrected" uses small defocus to show sample structure realistically
 # Note: A1 needs small defocus to show elliptical/2-fold pattern
 ABERRATION_CONFIGS = [
-    {"name": "Well corrected\n(~0 aberrations)", "mags": {0: 1e-9}},
+    {"name": "Well corrected\n(~0 aberrations)", "mags": {0: 0.2e-9}},
     {"name": "C1 (Defocus)\n50 nm", "mags": {0: 50e-9}},
     {"name": "A1 (2-fold astig)\n50 nm", "mags": {0: 5e-9, 1: 50e-9, 4: 5e-6}},
     {"name": "B2 (Coma)\n100 nm", "mags": {2: 100e-9}},
