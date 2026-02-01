@@ -196,13 +196,13 @@ The basic alignments center the electron beam and align it through the optical c
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
 
      > **Diffraction mode vs. Probe image mode**
-    >
-    > | Mode             | Probe      | Display                                                   |
-    > |------------------|------------|-----------------------------------------------------------|
-    > | Diffraction mode | Stationary | Ronchigram - diffraction pattern from convergent probe    |
-    > | Probe image mode | Scanning   | STEM image - probe scans to build up image pixel by pixel |
-    >
-    > The `Diffraction` button on the hand panel toggles between these two modes.
+     >
+     > | Mode             | Probe      | Display                                                   |
+     > |------------------|------------|-----------------------------------------------------------|
+     > | Diffraction mode | Stationary | Ronchigram - diffraction pattern from convergent probe    |
+     > | Probe image mode | Scanning   | STEM image - probe scans to build up image pixel by pixel |
+     >
+     > The `Diffraction` button on the hand panel toggles between these two modes.
 
 - [ ] **Align beam shift**
 
@@ -509,6 +509,8 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   | A3 | < 1 μm |
   | S3 | < 500 nm |
 
+  > TODO: CONFIRM WITH ANDREW for IDEAL TOTAL D50
+
 - [ ] **Verify with C1A1**
 
   1. Tableau correction can sometimes introduce small first-order errors. After completing Tableau corrections, return to the `C1A1` tab in the Probe Corrector software.
@@ -519,6 +521,8 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   1. The `State of correction` panel displays resolution estimates on the right side: **Total D50** and **Optimum D50**. D50 represents the probe diameter containing 50% of the beam intensity (smaller = better resolution).
 
      <img src="img/p2_s3_tableau_10.jpg" alt="State of correction showing D50 resolution values on right panel" width="800">
+
+     > TODO: CONFIRM WITH ANDREW
 
   2. Target: Total D50 of 70-75 pm for high-resolution STEM imaging. The Optimum D50 shows the theoretical best achievable with current aberrations. If these values match closely, corrections are complete.
 
