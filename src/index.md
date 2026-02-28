@@ -1,6 +1,6 @@
 # Electron Microscopy (WIP)
 
-Step-by-step visual guides for leaning TEM. Focused on practice sitting in front of the microscope with visual elements.
+Step-by-step visual guides for learning TEM. Focused on practice sitting in front of the microscope with visual elements.
 
 WIP:
 
@@ -12,16 +12,17 @@ WIP:
 
 ## Available guides
 
-| Guide                           | Instrument | Description                          | Readiness | Status         |
-| ------------------------------- | ---------- | ------------------------------------ | --------- | -------------- |
-| [STEM](STEM.md)                 | Spectra    | STEM alignment and imaging           | 5/10      | Available      |
-| [4D-STEM](4D-STEM.md)           | Spectra    | 4D-STEM with Dectris detector        | 2/10      | Available      |
-| [EELS](EELS.md)                 | Spectra    | Electron Energy Loss Spectroscopy    | 2/10      | Available      |
-| [EDS](EDS.md)                   | Spectra    | Energy Dispersive X-ray Spectroscopy | 2/10      | Available      |
-| [TEM](TEM.md)                   | Titan      | TEM alignment and imaging            | -         | 🚧 Coming soon |
-| [Tomography](tomography.md)     | Spectra    | Electron tomography                  | -         | 🚧 Coming soon |
-| [Ptychography](ptychography.md) | Spectra    | Ptychography imaging                 | -         | 🚧 Coming soon |
-| [PED](PED.md)                   | Spectra    | Precession Electron Diffraction      | -         | 🚧 Coming soon |
+| Guide | Instrument | Description | Readiness | Status |
+| ----- | ---------- | ----------- | --------- | ------ |
+| [TEM (Titan)](titan_TEM/index.md) | Titan | TEM alignment and imaging | - | 🚧 Coming soon |
+| [TEM (Spectra)](spectra_TEM/index.md) | Spectra | TEM column setup, alignment, and sample finding | 5/10 | Available |
+| [STEM (Spectra)](spectra_STEM/index.md) | Spectra | STEM probe correction and imaging | 5/10 | Available |
+| [4DSTEM](4DSTEM/index.md) | Spectra | 4DSTEM with Dectris detector | 2/10 | Available |
+| [EELS](EELS/index.md) | Spectra | Electron Energy Loss Spectroscopy | 2/10 | Available |
+| [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
+| [Tomography](tomography/index.md) | Spectra | Electron tomography | - | 🚧 Coming soon |
+| [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | 🚧 Coming soon |
+| [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | 🚧 Coming soon |
 
 
 **Instrument links:**
@@ -48,7 +49,7 @@ Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Sta
 
 ## Changelog
 
-- Dec 18, 2025 - Add drafts of EELS nad EDS
+- Dec 18, 2025 - Add drafts of EELS and EDS
 - Dec 17, 2025 - Use mdBook to render static pages and host on GitHub
 - Dec 16, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
 - Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj.

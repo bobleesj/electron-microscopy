@@ -35,7 +35,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
    - Open `DigitalMicrograph` on the left monitor
    - If you see any dialog box, click `OK` to dismiss
 
-     <img src="img/EELS-digitalmicrograph-open.jpg" alt="DigitalMicrograph software opened" width="500">
+     <img src="img/digitalmicrograph-open.jpg" alt="DigitalMicrograph software opened" width="500">
 
    - Click `EFTEM` (Energy Filtered Transmission Electron Microscopy)
 
@@ -44,17 +44,17 @@ Use a vacuum or thin amorphous carbon area for calibration.
    - Go to `Help` → `User Mode` → `Power User`
    - Go to `Window` → `Floating Window` → `Filter Control`
 
-     <img src="img/EELS-filter-control.jpg" alt="Filter Control window" width="500">
+     <img src="img/filter-control.jpg" alt="Filter Control window" width="500">
 
    - Notice the green circle in `TEMUI` showing EELS detector is active
 
-     <img src="img/EELS-temui-eels-open.jpg" alt="TEMUI showing EELS detector active" width="500">
+     <img src="img/temui-eels-open.jpg" alt="TEMUI showing EELS detector active" width="500">
 
 4. **Set beam intensity**
 
    - Converge the beam by adjusting the intensity knob
 
-     <img src="img/EELS-beam-converged.jpg" alt="Beam converged to optimal intensity" width="500">
+     <img src="img/beam-converged.jpg" alt="Beam converged to optimal intensity" width="500">
 
    - Lift the fluorescent screen by pressing `R1`
    - Click `View` in DigitalMicrograph
@@ -62,18 +62,18 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
      Correct intensity:
 
-     <img src="img/EELS-filter-mask-good.jpg" alt="Correct beam intensity in filter mask" width="500">
+     <img src="img/filter-mask-good.jpg" alt="Correct beam intensity in filter mask" width="500">
 
      Too high intensity (oversaturated):
 
-     <img src="img/EELS-intensity-too-high.jpg" alt="Beam intensity too high - oversaturated" width="500">
+     <img src="img/intensity-too-high.jpg" alt="Beam intensity too high - oversaturated" width="500">
 
 5. **Center and tune the GIF**
 
    - Click `Center ZLP` in Filter Control
    - Click `Tune GIF`. Notice the message appears:
 
-     <img src="img/EELS-tune-gif-message.jpg" alt="Tune GIF confirmation message" width="500">
+     <img src="img/tune-gif-message.jpg" alt="Tune GIF confirmation message" width="500">
 
    - Click `OK` to confirm
 
@@ -85,27 +85,27 @@ Use a vacuum or thin amorphous carbon area for calibration.
    - Click `View` in DigitalMicrograph
    - Select `EF-CCD Camera` → `View` to see image real-time
 
-     <img src="img/EELS-ef-ccd-camera-view.jpg" alt="EF-CCD camera view selection" width="500">
+     <img src="img/ef-ccd-camera-view.jpg" alt="EF-CCD camera view selection" width="500">
 
-     <img src="img/EELS-sample-live-view.jpg" alt="Sample live view" width="500">
+     <img src="img/sample-live-view.jpg" alt="Sample live view" width="500">
 
 2. **Acquire zero loss image**
 
    - Go to `SingleMap` → click `Zero Loss Image`
 
-     <img src="img/EELS-single-map-zero-loss.jpg" alt="Single map zero loss image option" width="500">
+     <img src="img/single-map-zero-loss.jpg" alt="Single map zero loss image option" width="500">
 
 3. **Switch to EELS mode**
 
    - Click `EELS` button to switch modes
 
-     <img src="img/EELS-mode-switch.jpg" alt="EELS mode button" width="500">
+     <img src="img/mode-switch.jpg" alt="EELS mode button" width="500">
 
      > FIXME: use image where EELS is clicked
 
    - Notice the 2D EELS spectrum. Observe the plasma peak near the zero loss peak.
 
-     <img src="img/EELS-2d-spectrum-plasma-peak.jpg" alt="2D EELS spectrum showing plasma peak" width="500">
+     <img src="img/2d-spectrum-plasma-peak.jpg" alt="2D EELS spectrum showing plasma peak" width="500">
 
    > FIXME: what's plasma peak?
 
@@ -114,7 +114,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
    - Set exposure to 2e-4 in View mode
    - Click `Align ZLP`
 
-     <img src="img/EELS-align-zlp.jpg" alt="Align zero loss peak interface" width="500">
+     <img src="img/align-zlp.jpg" alt="Align zero loss peak interface" width="500">
 
      > FIXME: where is ZLP click?
 
@@ -125,7 +125,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
    - In `Velox`, change camera length to 29 mm or 37 mm
    - Notice the beam size decreases
 
-     <img src="img/EELS-velox-camera-length.jpg" alt="Velox camera length setting" width="500">
+     <img src="img/velox-camera-length.jpg" alt="Velox camera length setting" width="500">
 
 2. **Enable EELS scanning**
 
@@ -143,17 +143,17 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
      Before centering:
 
-     <img src="img/EELS-multifunction-xy-beam-center.jpg" alt="Beam before centering" width="500">
+     <img src="img/multifunction-xy-beam-center.jpg" alt="Beam before centering" width="500">
 
      After centering:
 
-     <img src="img/EELS-beam-shifted-correct.jpg" alt="Beam centered correctly" width="500">
+     <img src="img/beam-shifted-correct.jpg" alt="Beam centered correctly" width="500">
 
 5. **Switch to STEM SI mode**
 
    - Click `STEM SI` to switch to Spectrum Imaging mode
 
-     <img src="img/EELS-stem-si-button.jpg" alt="STEM SI button" width="500">
+     <img src="img/stem-si-button.jpg" alt="STEM SI button" width="500">
 
 6. **Find sample area**
 
@@ -163,7 +163,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
    - Click `Scan` → `View` to see the image
 
-     <img src="img/EELS-scan-view.jpg" alt="Scan view interface" width="500">
+     <img src="img/scan-view.jpg" alt="Scan view interface" width="500">
 
 8. **Adjust gain**
 
@@ -179,15 +179,15 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
     - Click `Capture` and draw a line across the region of interest
 
-      <img src="img/EELS-capture-line.jpg" alt="Draw line for 1D EELS capture" width="500">
+      <img src="img/capture-line.jpg" alt="Draw line for 1D EELS capture" width="500">
 
     - Go to `EELS` → `User Mode`
 
-      <img src="img/EELS-user-mode-menu.jpg" alt="EELS user mode menu" width="500">
+      <img src="img/user-mode-menu.jpg" alt="EELS user mode menu" width="500">
 
     - Go to `EELS` → `Zero Loss` → `Extract Zero Loss`
 
-      <img src="img/EELS-extract-zero-loss.jpg" alt="Extract zero loss option" width="500">
+      <img src="img/extract-zero-loss.jpg" alt="Extract zero loss option" width="500">
 
       > FIXME: clarify what "extract zero loss" does and expected result
 
@@ -195,7 +195,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
     - Click `Capture` and select a rectangular area for 2D spectrum imaging
 
-      <img src="img/EELS-capture-area-2d.jpg" alt="Select area for 2D EELS capture" width="500">
+      <img src="img/capture-area-2d.jpg" alt="Select area for 2D EELS capture" width="500">
 
       > FIXME: add steps for analyzing 2D EELS data, expected output
 

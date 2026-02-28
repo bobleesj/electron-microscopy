@@ -1,10 +1,12 @@
 # Titan Spectra 300 STEM Alignment Guide (DRAFT)
 
-<img src="../STEM/img/APP-tmp-7056.jpg" alt="STEM overview">
+<img src="../spectra_TEM/img/APP-tmp-7056.jpg" alt="STEM overview">
 
-This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). Based on Andrew Barnum's hands-on training with step-by-step screenshots.
+This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). Screenshots recorded by Andrew Barnum during hands-on training; instructions written by Sangjoon Bob Lee.
 
 **Prerequisite:** A standard training sample (gold on carbon) is already loaded and the holder is inserted into the Spectra 300. For sample loading procedures, see [Start session](../sample-loading/index.md#start-session).
+
+> **Tip:** If you have difficulty finding a sample region in STEM mode, switch to TEM for easier navigation with a wider field of view. See [TEM (Spectra)](../spectra_TEM/index.md) for TEM imaging setup.
 
 **Acronyms:**
 
@@ -158,6 +160,8 @@ Before performing alignments, configure the STEM imaging parameters and verify d
   4. Set spot number to 6.
 
      > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Lower spot numbers produce smaller probes with lower current; higher numbers produce larger probes with more current.
+     >
+     > TODO: Verify spot number convention for Spectra 300. On some Thermo Fisher systems, it is the opposite (spot 1 = most current).
 
      <img src="img/p1_s3_stem_mode_04.jpg" alt="Beam Settings panel" width="800">
 
@@ -297,6 +301,8 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
 - [ ] **Start live scanning**
 
+  Do **NOT** adjust the intensity knob while the fluorescent screen is raised. The beam is focused to a small point, and changing intensity can concentrate the full beam current onto the camera or detectors below, permanently damaging them.
+
   1. Click the play button in `Velox` to start live scanning.
   2. The image is saturated (all white) initially. Detector signal adjustment follows in the next step.
 
@@ -352,6 +358,10 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
   > **Distributed particles are important for aberration measurement.** Aberrations vary with position relative to the optical axis (e.g., coma increases further from center). The correction algorithm requires ronchigram data from multiple positions to accurately fit the aberration coefficients.
 
 ## Part 2: Probe Correction
+
+Before starting probe correction, retract the HAADF detector. C1A1 and Tableau both analyze the ronchigram, and the HAADF ring blocks high-angle electrons from reaching the camera below. In `TEMUI`, verify the HAADF detector shows "Retracted" status.
+
+> TODO: Confirm with staff whether HAADF must be retracted for C1A1/Tableau on Spectra 300 S-CORR.
 
 Aberrations distort the electron probe and degrade image resolution. The goal of probe correction is to achieve a flat, aberration-free ronchigram. The figure below shows how individual aberrations affect the ronchigram appearance:
 
@@ -638,6 +648,7 @@ Common problems encountered during STEM sessions.
 | C1A1 or Tableau shows no signal | Beam is blanked | Click `Beam Blank` button to unblank before running aberration measurements |
 | Good Tableau values but poor image resolution | Missing C1A1 verification step | After Tableau, always run C1A1 again to fine-tune defocus and astigmatism |
 | Beam disappears from view | Random adjustments displaced the beam | Go to lower magnification until beam is visible, use joystick to move sample to center, then go to `Diffraction Shift` and use `mulXY` to center the beam |
+| Lost beam or need to redo alignment | Column misalignment after extended session | Redo eucentric height ([1.2](#12-find-eucentric-height)) and monochromator tune ([1.5](#15-monochromator-tune)). If you cannot find the sample, switch to TEM mode for easier navigation ([TEM Spectra](../spectra_TEM/index.md)) |
 
 ## FAQ
 
@@ -667,4 +678,5 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Changelog
 
-- Jan 31, 2026 - Initial draft by Bob Lee based on Andrew Barnum Spectra 300 hands-on training
+- Feb 28, 2026 - Add prerequisite link to TEM Alignment guide; add lost-beam troubleshooting
+- Jan 31, 2026 - Initial draft: instructions by Sangjoon Bob Lee, screenshots by Andrew Barnum during Spectra 300 hands-on training

@@ -127,7 +127,7 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 
 ## End session
 
-> Use this section when finishing any session (STEM, EELS, EDS, 4D-STEM, etc.).
+> Use this section when finishing any session (STEM, EELS, EDS, 4DSTEM, etc.).
 
 1. Set magnification to lower SA range (< 10,000×).
 
@@ -137,7 +137,7 @@ Follow the process in reverse: load a new sample, pull the two strips closer tog
 
 4. In `TEMUI`, press `Reset Holder`.
 
-   <img src="img/STEM/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="500">
+   <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="500">
 
 5. Pull the holder straight out to the first resistance point
 

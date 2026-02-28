@@ -27,7 +27,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
    - Click on the EDS icon in Velox
 
-     <img src="img/EDS-velox-eds-spectrum.jpg" alt="Velox EDS spectrum view" width="500">
+     <img src="img/velox-eds-spectrum.jpg" alt="Velox EDS spectrum view" width="500">
 
 3. **Check experiment log**
 
@@ -47,7 +47,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
    - Click on the rectangle selection tool
    - Select an area on the sample
 
-     <img src="img/EDS-stem-area-scan.jpg" alt="STEM EDS area scan" width="500">
+     <img src="img/stem-area-scan.jpg" alt="STEM EDS area scan" width="500">
 
    - For nanoscale resolution, choose 20 microsecond dwell time
 
@@ -65,7 +65,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
    - Wait until pixel count stabilizes (watch for 8 pixel indicator)
 
-     <img src="img/EDS-pixel-wait.jpg" alt="Pixel count indicator" width="500">
+     <img src="img/pixel-wait.jpg" alt="Pixel count indicator" width="500">
 
    - Stop recording when complete
 
@@ -75,7 +75,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
    - Go to `Processing` to draw a line profile across features
 
-     <img src="img/EDS-processing-line.jpg" alt="EDS processing line profile" width="500">
+     <img src="img/processing-line.jpg" alt="EDS processing line profile" width="500">
 
 2. **Select arbitrary area**
 
@@ -85,7 +85,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
    - For atomic resolution mapping, use Average or Gaussian filtering
 
-     <img src="img/EDS-atomic-mapping.jpg" alt="EDS atomic mapping" width="500">
+     <img src="img/atomic-mapping.jpg" alt="EDS atomic mapping" width="500">
 
    - Use highest frequency and edge smoothing settings to obtain atomic resolution
 

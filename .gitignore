@@ -25,5 +25,10 @@ temp/
 
 # AI generated files
 CLAUDE.md
+.claude/
+.cursorrules
+.cursor/
+.aider*
+copilot-*
 src/andrew_spectra_sop.fld/
 src/STEM_backup_andrew.md

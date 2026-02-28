@@ -41,7 +41,7 @@ Formatting consistency:
 - Use periods for observations/explanations (e.g., `Notice the image is pulsing in and out.`)
 - Wrap software names in backticks: `TEMUI`, `Velox`, `ImageCorrector`, `Sherpa`
 - Lowercase for general text, uppercase only for acronyms:
-  - Uppercase: TEM, STEM, 4D-STEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV
+  - Uppercase: TEM, STEM, 4DSTEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV
   - Uppercase: A1, A2, B2, C1, C2, C3, S3 (aberration parameters)
   - Lowercase: beam, aperture, intensity, magnification, etc.
 - Spacing rules for bullets and images:
@@ -117,7 +117,7 @@ src/
 ├── SUMMARY.md     # Navigation/table of contents
 ├── index.md       # Home page
 ├── STEM.md        # Technique pages
-├── 4D-STEM.md
+├── 4DSTEM.md
 ├── ...
 └── img/           # Images
 ```
