@@ -45,13 +45,14 @@ We appreciate feedback, corrections, and contributions from the community!
 
 ## Acknowledgments
 
-Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF.
+Authors thank Dr. Pinaki Mukherjee and Andrew Barnum for training @bobleesj and Guoliang Hu at Stanford SNSF.
 
 ## Changelog
 
-- Dec 18, 2025 - Add drafts of EELS and EDS
+- Mar 1, 2026 - Restructure STEM and TEM guides, add pre-session checklist and end session procedures
+- Feb 28, 2026 - Reorganize guide structure, rename directories, add safety warnings
+- Jan 31, 2026 - Add STEM probe correction guide with screenshots from Andrew Barnum training
+- Jan 31, 2026 - Add draft Titan TEM guide
+- Dec 18, 2025 - Add EELS and EDS guides
 - Dec 17, 2025 - Use mdBook to render static pages and host on GitHub
-- Dec 16, 2025 - Add Python script, detect new images from `.git`, convert to `.jpg` and compress.
-- Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj.
-
-Separate changelog is provided for each tutorial page.
+- Dec 14, 2025 - Begin Electron Microscopy training documentation, led by @bobleesj
