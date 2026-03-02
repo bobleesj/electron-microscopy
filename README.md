@@ -14,7 +14,7 @@ We appreciate feedback, corrections, and contributions from the community!
 - **Want to add your own SOP for your microscope?** Fork the repo and contribute your guide
 - **Have suggestions?** We'd love to hear from you
 
-👉 See [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions on how to contribute.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions on how to contribute.
 
 ## Other resources
 
@@ -125,16 +125,3 @@ src/
 ### Deployment
 
 Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages. See `.github/deploy.yml`.
-
-## Acknowledgments
-
-Authors thank Dr. Pinaki Mukherjee for training @bobleesj and Guoliang Hu at Stanford SNSF.
-
-## Changelog
-
-Related to documentation, project settings, higher-level changes:
-
-- Dec 18, 2025 - Add contribution guide
-- Dec 17, 2025 - Migrate to mdBook, add GitHub Pages deployment
-- Dec 17, 2025 - Add Python script for image processing
-- Dec 14, 2025 - Begin Electron Microscopy training documentation
