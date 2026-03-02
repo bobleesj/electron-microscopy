@@ -1,12 +1,33 @@
-# Titan Spectra 300 STEM Alignment Guide (DRAFT)
+# Spectra 300 STEM Alignment Guide (DRAFT)
 
 <img src="../spectra_TEM/img/APP-tmp-7056.jpg" alt="STEM overview">
 
-This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). Screenshots recorded by Andrew Barnum during hands-on training; instructions written by Sangjoon Bob Lee.
+This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). **Screenshots and instructions are provided by Andrew Barnum**. Written instructions and images are organized by Sangjoon Bob Lee.
 
-**Prerequisite:** A standard training sample (gold on carbon) is already loaded and the holder is inserted into the Spectra 300. For sample loading procedures, see [Start session](../sample-loading/index.md#start-session).
 
-> **Tip:** If you have difficulty finding a sample region in STEM mode, switch to TEM for easier navigation with a wider field of view. See [TEM (Spectra)](../spectra_TEM/index.md) for TEM imaging setup.
+## Check before starting your session
+
+First, visually confirm the following from the previous user to ensure no damage has occurred.
+
+- [ ] Standard gold nanoparticle sample on a single-tilt holder is loaded.
+- [ ] Logbook is checked for any notes from the previous user.
+- [ ] Screen is inserted.
+- [ ] Beam is blanked.
+- [ ] Column valves are closed.
+- [ ] Turbo pump is off.
+- [ ] Stage tilt is at 0° (alpha and beta) and the stage has been reset.
+- [ ] Arina detector is retracted.
+- [ ] Arina detector is turned off.
+- [ ] All holders are capped and placed in the holder box.
+- [ ] No errors are found across all software programs including TEMUI.
+
+> Report **immediately** in the logbook if anything has occurred or contact supervisors.
+
+After you have checked the states,
+
+- [ ] Start your session on NEMO.
+- [ ] Follow any special instructions and warnings posted on NEMO.
+- [ ] Emergency contacts are available.
 
 **Acronyms:**
 
@@ -93,9 +114,7 @@ Complete eucentric height alignment after loading each sample and before imaging
 
 - [ ] **Adjust z-axis to find blow-up point**
 
-  1. Lower magnification to 5,000x.
-
-     > **NOTE:** A wider field of view makes ronchigram changes easier to observe.
+  1. Lower magnification to 5,000x. A wider field of view makes ronchigram changes easier to observe.
 
   2. Use z-axis buttons on hand panel to move stage up or down.
      - Buttons are pressure sensitive: press harder for faster movement.
@@ -167,11 +186,12 @@ Before performing alignments, configure the STEM imaging parameters and verify d
 
 ### 1.4 Direct alignments
 
-The basic alignments center the electron beam and align it through the optical column. Perform these alignments at a magnification between 200-300kX. Proper alignment is essential for optimal resolution and probe symmetry.
+The basic alignments center the electron beam and align it through the optical column. Proper alignment is essential for optimal resolution and probe symmetry.
 
-- [ ] **Open Direct Alignments**
+- [ ] **Set magnification and open Direct Alignments**
 
-  1. In `TEMUI`, navigate to `Tune` tab, then `Direct Alignments`. This panel provides access to all fundamental beam alignment procedures.
+  1. Set magnification to 200-300kX using the magnification knob.
+  2. In `TEMUI`, navigate to `Tune` tab, then `Direct Alignments`. This panel provides access to all fundamental beam alignment procedures.
   2. Select `Diffraction Shift and Focus alignment` to begin.
 
      <img src="img/p1_s4_alignments_01.jpg" alt="Direct Alignments panel" width="800">
@@ -431,17 +451,21 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_09.jpg" alt="Setup before C1A1: ronchigram visible on left, HAADF on right" width="1100">
 
-  2. Click `Start` to begin aberration measurement. The software continuously analyzes the ronchigram and displays measured aberration values (C1, A1, A2, B2, WD) in the table. For the first iteration, set Auto correct to 100%. Click `0th-2nd` to apply corrections for all first and second order aberrations:
+  2. Click `Start` to begin aberration measurement. The software continuously analyzes the ronchigram and displays measured aberration values (C1, A1, A2, B2, WD) in the table.
+  3. Set Auto correct to 100% for the first iteration.
+  4. Click `0th-2nd` to apply corrections for all first and second order aberrations.
 
      <img src="img/p2_s2_c1a1_10.jpg" alt="C1A1 measurement running with 100% Auto correct" width="400">
 
 - [ ] **Iterate C1A1**
 
-  1. Click `0th-2nd` repeatedly to apply corrections. The measurement runs continuously, with each row representing one measurement cycle. Watch the aberration values decrease with each iteration:
+  1. Click `0th-2nd` repeatedly to apply corrections. Each row represents one measurement cycle. Watch the aberration values decrease with each iteration.
 
      <img src="img/p2_s2_c1a1_12.jpg" alt="C1A1 showing multiple measurement iterations" width="400">
 
-  2. Reduce the Auto correct percentage to 75% after several iterations (typically 3 to 5) to prevent overcorrection. If A1 is still high but other values are good, click `A1` specifically to correct only astigmatism:
+  2. Reduce the Auto correct percentage to 75% after several iterations (typically 3 to 5) to prevent overcorrection.
+
+     > If A1 is still high but other values are good, click `A1` specifically to correct only astigmatism.
 
      <img src="img/p2_s2_c1a1_13.jpg" alt="C1A1 with Auto correct reduced to 75%" width="400">
 
@@ -523,8 +547,11 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
 - [ ] **Verify with C1A1**
 
-  1. Tableau correction can sometimes introduce small first-order errors. After completing Tableau corrections, return to the `C1A1` tab in the Probe Corrector software.
-  2. Click `Start` to begin C1A1 measurement again. Click `A1` to correct any residual astigmatism introduced by Tableau. Click `0th-2nd` if defocus also needs adjustment. Iterate between Tableau and C1A1 if necessary until all values are within specification.
+  1. Return to the `C1A1` tab in the Probe Corrector software. Tableau correction can sometimes introduce small first-order errors.
+  2. Click `Start` to begin C1A1 measurement again.
+  3. Click `A1` to correct any residual astigmatism introduced by Tableau.
+  4. Click `0th-2nd` if defocus also needs adjustment.
+  5. Iterate between Tableau and C1A1 if necessary until all values are within specification.
 
 - [ ] **Check resolution**
 
@@ -632,9 +659,88 @@ Sherpa provides rapid aberration correction that is faster than full Tableau mea
 
      <img src="img/p3_s2_sherpa_08.jpg" alt="Sherpa B2/A2 final result" width="800">
 
-### 3.3 End session
+### 3.3 Load your own sample
 
-Follow the steps in [End session](../sample-loading/index.md#end-session).
+After completing probe correction on the standard sample, load your own sample for imaging. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
+
+<img src="img/p3_s3_sample_loading_area.jpg" alt="Sample loading area at the Spectra 300 goniometer" width="500">
+
+- [ ] **Remove the standard sample**
+
+  1. Put on gloves before handling any holders or samples.
+  2. Blank the beam and verify the screen is inserted. The screen protects the detectors and cameras below from the beam.
+  3. Close the column valves by pressing `Column Valves Closed`.
+
+     > If a "VCP" error occurs, follow the instructions on the Spectra NEMO page.
+  3. Reset the holder by clicking `reset` on the `Stage` menu.
+
+     <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
+
+  4. Confirm the stage x, y, z values are returning to zero after you reset the holder stage.
+  5. Pull the holder straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+
+- [ ] **Load your sample and insert the holder**
+
+> **IMPORTANT:** Do **not** remove the standard sample from the single-tilt holder. Use a separate holder to load your sample.
+
+  1. For holder-specific loading instructions, see [Sample Loading](../sample-loading/index.md).
+  2. Align the holder with the blue line on the goniometer.
+
+     <img src="img/p3_s3_sample_loading_area.jpg" alt="Holder aligned with blue line on goniometer, gloved hand" width="400">
+
+  3. Push the holder in until you feel resistance. Do **not** push all the way in.
+  4. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize. You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
+
+     <img src="../sample-loading/img/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing readout" width="400">
+
+     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
+
+  5. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in. The holder should move in smoothly.
+
+     <img src="../sample-loading/img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="400">
+
+  6. In `TEMUI`, turn off the turbo pump. Confirm the holder type when prompted.
+
+- [ ] **Re-do eucentric height**
+
+  1. Open column valves and re-do eucentric height for your new sample ([1.2](#12-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
+  2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change.
+
+### 3.4 End session
+
+- [ ] **Reload the standard sample**
+
+  1. Put on gloves before handling any holders or samples.
+  2. Blank the beam and verify the screen is inserted.
+  3. In `TEMUI`, click `Column Valves Closed`.
+  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset after the button is pressed.
+
+     <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
+
+  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+  6. Set aside your holder and pick up the single-tilt holder with the standard sample.
+  7. Push the single-tilt holder with the standard sample in until you feel resistance. Do **not** push all the way in.
+  8. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize.
+  9. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
+  10. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
+
+#### Checklist before leaving the Spectra room
+
+- [ ] Beam is blanked.
+- [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
+- [ ] Stage is returned to 0° tilt (alpha and beta).
+- [ ] Arina detector is retracted, verified on the left hand panel.
+- [ ] Arina detector is turned off, verified on the local Firefox URL.
+- [ ] `INT SCAN` physical button is in pressed state.
+- [ ] Screen is inserted.
+- [ ] Column valve is closed.
+- [ ] Turbo pump is turned off.
+- [ ] Standard sample is loaded.
+- [ ] All holders are capped and stored in the holder box.
+- [ ] The sample loading area is tidy.
+- [ ] Spectra usage is terminated on NEMO.
+- [ ] Internet accounts (Google, Outlook, etc.) are signed off.
+- [ ] Fill out the logbook if anything unusual happened during the session.
 
 ## Troubleshooting
 
@@ -678,5 +784,6 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Changelog
 
+- Mar 1, 2026 - Add pre-session checklist, sample loading section with glove requirement, end session with explicit reload steps, fix image paths
 - Feb 28, 2026 - Add prerequisite link to TEM Alignment guide; add lost-beam troubleshooting
 - Jan 31, 2026 - Initial draft: instructions by Sangjoon Bob Lee, screenshots by Andrew Barnum during Spectra 300 hands-on training

@@ -14,15 +14,15 @@ WIP:
 
 | Guide | Instrument | Description | Readiness | Status |
 | ----- | ---------- | ----------- | --------- | ------ |
-| [TEM (Titan)](titan_TEM/index.md) | Titan | TEM alignment and imaging | - | 🚧 Coming soon |
-| [TEM (Spectra)](spectra_TEM/index.md) | Spectra | TEM column setup, alignment, and sample finding | 5/10 | Available |
-| [STEM (Spectra)](spectra_STEM/index.md) | Spectra | STEM probe correction and imaging | 5/10 | Available |
+| [STEM (Spectra)](spectra_STEM/index.md) | Spectra | STEM probe correction and imaging | 8/10 | Available |
+| [TEM (Spectra)](spectra_TEM/index.md) | Spectra | Optional TEM alignment and image correction | 5/10 | Available |
+| [TEM (Titan)](titan_TEM/index.md) | Titan | TEM alignment and imaging | - | Coming soon |
 | [4DSTEM](4DSTEM/index.md) | Spectra | 4DSTEM with Dectris detector | 2/10 | Available |
 | [EELS](EELS/index.md) | Spectra | Electron Energy Loss Spectroscopy | 2/10 | Available |
 | [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
-| [Tomography](tomography/index.md) | Spectra | Electron tomography | - | 🚧 Coming soon |
-| [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | 🚧 Coming soon |
-| [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | 🚧 Coming soon |
+| [Tomography](tomography/index.md) | Spectra | Electron tomography | - | Coming soon |
+| [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | Coming soon |
+| [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | Coming soon |
 
 
 **Instrument links:**
@@ -32,15 +32,15 @@ WIP:
 
 **Other resources:**
 
-- Simulate ronchigram: https://bobleesj.github.io/electron-microscopy-website/ronchigram
-- (S)TEM alignment diagrams: https://www.rodenburg.org/RODENBURg_STEM.pdf
+- [Ronchigram simulator](https://bobleesj.github.io/electron-microscopy-website/ronchigram)
+- [(S)TEM alignment diagrams](https://www.rodenburg.org/RODENBURg_STEM.pdf)
 
-## 🙋 Looking for volunteers!
+## Looking for volunteers!
 
 We appreciate feedback, corrections, and contributions from the community!
 
 - **Found an error?** Open an issue or submit a PR
-- **Want to add your institution's SOP?** Reach out to [@bobleesj](https://github.com/bobleesj) - we can help with writing and formatting as long as you have notes, Word docs, or rough drafts
+- **Want to add your institution's SOP?** Reach out to [@bobleesj](https://github.com/bobleesj) — we can help with writing and formatting as long as you have notes, Word docs, or rough drafts
 - **Have suggestions?** See the [GitHub repo](https://github.com/bobleesj/electron-microscopy) for contribution guidelines
 
 ## Acknowledgments

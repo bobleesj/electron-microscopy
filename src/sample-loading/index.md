@@ -1,8 +1,5 @@
-# Sample Loading
+# Sample loading
 
-> Disclaimer: This guide is written for those who have already used single-tilt and double-tilt, tomography holders. If you are using this documentation for the first time, you should work with a supervisor.
-
-> ⚠️ **Always wear gloves.** Do not touch any part of the holder that gets inserted into the microscope, including the metal rod.
 
 ## Location
 
@@ -96,54 +93,6 @@ Sample holders are stored here at room temperature:
 
 Follow the process in reverse: load a new sample, pull the two strips closer together, and rotate the screws clockwise.
 
-## Start session
-
-**Holding the sample:**
-
-1. Ensure you do not touch the metal rod as it is inserted into the instrument:
-
-   <img src="img/holder-insert/01-holding-sample.jpg" alt="Holding the sample properly" width="500">
-
-2. Notice the blue line below. Align accordingly.
-
-   <img src="img/holder-insert/02-holder-push-in.jpg" alt="Pushing holder into microscope" width="500">
-
-3. Push the holder in until you feel resistance. Do **NOT** push all the way in.
-
-4. The turbo pump will start automatically.
-
-5. Wait ~2 minutes for pressure to stabilize. You can see the time in `TEMUI`, or on the screen attached to the Spectra instrument.
-
-   <img src="img/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing" width="500">
-
-   > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
-
-6. Turn the holder **COUNTER-CLOCKWISE** until you feel gently stuck, then guide the holder to push in. Expect the holder to move in smoothly.
-
-   <img src="img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="500">
-
-7. In `TEMUI`, turn off the turbo pump. Confirm the holder type as you are prompted in `TEMUI`.
-
-
-## End session
-
-> Use this section when finishing any session (STEM, EELS, EDS, 4DSTEM, etc.).
-
-1. Set magnification to lower SA range (< 10,000×).
-
-2. For Titan, expand the beam to larger circle fluorescent screen.
-
-3. In `TEMUI`, press `Column Valves Closed`.
-
-4. In `TEMUI`, press `Reset Holder`.
-
-   <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="500">
-
-5. Pull the holder straight out to the first resistance point
-
-6. Turn **CLOCKWISE**, then pull the rest out continuously
-
-7. Unload the sample from the holder using the appropriate section above (single-tilt, double-tilt, or tomography).
 
 ## Changelog
 
