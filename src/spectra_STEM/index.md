@@ -661,9 +661,7 @@ Sherpa provides rapid aberration correction that is faster than full Tableau mea
 
 ### 3.3 Load your own sample
 
-After completing probe correction on the standard sample, load your own sample for imaging. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
-
-<img src="img/p3_s3_sample_loading_area.jpg" alt="Sample loading area at the Spectra 300 goniometer" width="500">
+After completing probe correction on the standard sample, follow the below steps unload the current sample standard and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
 
 - [ ] **Remove the standard sample**
 

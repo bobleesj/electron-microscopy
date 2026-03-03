@@ -17,3 +17,6 @@
 
 # Would you like to contribute?
 - [Share Your Procedure](share-your-procedure.md)
+
+# Notes
+- [Session Notes](notes.md)
