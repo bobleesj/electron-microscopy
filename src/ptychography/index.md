@@ -1,9 +1,23 @@
 # Ptychography
 
-> TODO: Add ptychography tutorial content
+For the experiment, record the global meta data:
 
-This guide covers ptychography imaging on the Spectra 300.
+- keV 300 keV
+- convergence angle
+- spot size
 
-## Changelog
+For region of interest, record the following
 
-- Dec 17, 2025 - Add placeholder by @bobleesj
+- Defocus (nm)
+- Mag (Mx)
+- Scan steps
+- dwell time (μm)
+- Camera length
+- Data collection notes
+- Mono
+- Current on flucam: 75 pA
+- Note (interesting shape? zone axis?)
+
+Random notes:
+
+- Why is it hard to find zone axis in nanoparticles? Small particles (1 - 10 nm) 

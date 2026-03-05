@@ -1,10 +1,31 @@
 # Session notes
 
+
 *by Sangjoon Bob Lee*
 
 This is a working scratchpad for raw notes taken during microscopy training visits and sessions. Notes here capture practical tips, questions, and observations from hands-on time at the instrument. Over time, useful content gets refined and incorporated into the proper guide sections.
 
 ---
+
+## Cobalt oxide nanoparticles STEM — Mar 3, 2026
+
+It was my first time staying in STEM mode and find samples after STEM probe correction and loading my own sample. The following notes were taken in my attempt to find the feature of interest right after the sample was loaded.
+
+### Finding the sample after the sample is loaded
+
+- Go to **5,000× magnification**. If there is no beam, it means the beam is blocked on the grid. Move the stage around with the joystick.
+- Move the stage until the **screen current increases to about 0.150 nA**. At this point, the beam has been found.
+- Notice thicker lines being formed. This is a a great sign! It means the beam is interacting with the sample.
+- Increase the magnification to **20,000× or higher**. The features will still look blurry since we are not yet at the correct focus.
+- Press the **Z-axis up and down** until the **Ronchigram blow-up point** appears. After this point, if you are lucky, you will see particles or features of interest. In this session, **cubes were found after the Ronchigram blow-up point**.
+- Stay at the blow-up point. We are now at the **eucentric height**.
+- Turn on the **HAADF camera in Velox** to observe those features.
+
+### Getting sharper features after you've found them
+
+- Use the **stage piezo** to move the sample around to ensure you have the sharpest features.
+- Use **Sharpa** to correct **C1A1**. You do not need to correct **B2A2**.
+- Take the image as usual.
 
 ## MAPED experience at NCEM, Mar 2, 2026
 
