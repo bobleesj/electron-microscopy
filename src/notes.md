@@ -27,6 +27,10 @@ It was my first time staying in STEM mode and find samples after STEM probe corr
 - Use **Sharpa** to correct **C1A1**. You do not need to correct **B2A2**.
 - Take the image as usual.
 
+### Notes on aberration correctinos
+
+- 
+
 ## MAPED experience at NCEM, Mar 2, 2026
 
 I had a chance to join TEAM MAPED session at NCEM with Stephanie Ribet and Henry Bell.

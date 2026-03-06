@@ -479,11 +479,12 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. Switch to the `Tableau` tab in the `Probe Corrector` software for full aberration measurement and correction.
   2. Select `Standard` for Tableau type. This acquires a sufficient number of tilt positions for accurate measurement without taking excessive time.
-  3. Set the Outer tableau tilt to 40 mrad. Larger tilts probe higher-order aberrations but require more time.
-  4. Verify the Probe semi aperture is set to 30 mrad to match the beam settings.
+  4. Set the Outer tableau tilt to 40 mrad. Larger tilts probe higher-order aberrations but require more time.
+  5. Verify the Probe semi aperture is set to 30 mrad to match the beam settings.
 
      <img src="img/p2_s3_tableau_01.jpg" alt="Tableau tab options" width="800">
 
+  6. Click `Options` and select the `A5` toggle. It measures up to 5th order aberrations.
 - [ ] **Run Tableau measurement**
 
   1. Click `Start` to begin the Tableau measurement. The software automatically tilts the beam to multiple angles and acquires ronchigram images at each position.
@@ -514,7 +515,9 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside acceptable limits. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
 
      <img src="img/p2_s3_tableau_05.jpg" alt="State of correction panel showing yellow highlighted aberrations" width="800">
-
+  
+   > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values. 
+   
   2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration**. Correct this one first. Click the button repeatedly until the value improves sufficiently, then move to the next limiting aberration.
   3. The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
      - S3: 1.167 μm → 72.93 nm
