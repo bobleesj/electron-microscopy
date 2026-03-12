@@ -7,6 +7,20 @@ This is a working scratchpad for raw notes taken during microscopy training visi
 
 ---
 
+## Ptychography reconstruction basics — Mar 9, 2026
+
+Notes from Arthur on reconstructing data collected from ARINA detector at Stanford.
+
+- **Sign convention:** in `quantem`, `C10 > 0` means underfocus. The beam focal point is below the sample, hence negative defocus.
+- **Aberrations:** SSB is somewhat an "eye test." One may use the aberrations from SSB or not. There are many degrees of freedom: batch size, the "dose" step size (finer can be better), probe size, center of mass/transpose, and initial aberrations.
+- **Cropping strategy:** in real space, it's fine to crop, encouraged since faster. In k space, we generally don't want to crop since we lose the max scattering angle, i.e. we lose fine details in real space.
+- **Probe:** aberrations should be identical across all scan regions in theory. However, for ptycho-tomo, defocus will change with tilt.
+- **CNN reconstruction:** reconstruction weight is different between reconstructions since these are weights being trained.
+- **Memory:** It's hard to manage memory well in Jupyter notebook but it's something we can work on.
+- **Virus samples:** there is no zone axis, so we can't do atomic resolution.
+- **Descan:** the beam is tilted from the source and then tilted back after a short travel perpendicular to the sample. During this second tilt, instability can be introduced and the diffraction pattern isn't perfectly aligned.
+- **Mixed probe:** mixed probe is good and orthogonality is imposed, so probes should look different from each other.
+
 ## Cobalt oxide nanoparticles STEM — Mar 3, 2026
 
 It was my first time staying in STEM mode and find samples after STEM probe correction and loading my own sample. The following notes were taken in my attempt to find the feature of interest right after the sample was loaded.
@@ -28,8 +42,6 @@ It was my first time staying in STEM mode and find samples after STEM probe corr
 - Take the image as usual.
 
 ### Notes on aberration correctinos
-
-- 
 
 ## MAPED experience at NCEM, Mar 2, 2026
 
