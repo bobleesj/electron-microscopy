@@ -15,7 +15,7 @@ First, visually confirm the following from the previous user to ensure no damage
 - [ ] Beam is blanked.
 - [ ] Column valves are closed.
 - [ ] Turbo pump is off.
-- [ ] Stage tilt is at 0° (alpha and beta) and the stage has been reset.
+- [ ] Stage tilt is at 0° (alpha and beta) and the stage X, Y, Z positions have been reset to 0.
 - [ ] Arina detector is retracted.
 - [ ] Arina detector is turned off.
 - [ ] All holders are capped and placed in the holder box.
@@ -31,7 +31,7 @@ After you have checked the states,
 
 **Acronyms:**
 
-- `mulXY` - Multifunction X/Y knobs on hand panel
+- `mulXY` - Multifunction X/Y knobs on hand panel (microscope control panel)
 - `TEMUI` - TEM User Interface (software)
 
 **Workstation layout:**
@@ -101,34 +101,32 @@ Before imaging, verify that the vacuum system is ready and the column valves can
 
 ### 1.2 Find eucentric height
 
-Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "blow-up" method provides a quick way to find this position.
+Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "infinite magnification" point provides a quick way to find this position.
 
 - [ ] **View ronchigram**
 
   1. In `TEMUI`, view the ronchigram in the main display.
-  2. Position probe on a sample region that scatters electrons (not over a hole or vacuum).
+  2. Move the stage to a sample region that scatters electrons (not over a hole or vacuum).
 
-     > **NOTE:** The ronchigram is the diffraction pattern formed when the convergent probe is stationary. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment.
+     > **NOTE:** The ronchigram is the diffraction pattern formed by a convergent electron beam. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment. Over an amorphous material, it shows aberration state of the lens.
 
      <img src="img/p1_s2_eucentric_01.jpg" alt="Ronchigram at 80kx showing diffraction pattern" width="400">
 
-- [ ] **Adjust z-axis to find blow-up point**
+- [ ] **Adjust z-axis to find the infinite magnification point**
 
-  1. Lower magnification to 5,000x. A wider field of view makes ronchigram changes easier to observe.
-
-  2. Use z-axis buttons on hand panel to move stage up or down.
-     - Buttons are pressure sensitive: press harder for faster movement.
+  1. Use z-axis buttons on hand panel to move stage up or down.
+     - Buttons are pressure sensitive: press harder for greater movement.
      - Start with gentle presses for fine control.
 
-  3. Watch the ronchigram while adjusting z-height. The pattern "zooms" in or out as the sample moves through focus.
+  2. Watch the ronchigram while adjusting z-height. The pattern "zooms" in or out as the sample moves through focus.
 
      <img src="img/p1_s2_eucentric_02.jpg" alt="Ronchigram at 5kx during z-axis adjustment" width="400">
 
-  4. Continue adjusting. The ronchigram expands when approaching eucentric height.
+  4. Continue adjusting. The features in the ronchigram expand when approaching eucentric height.
 
      <img src="img/p1_s2_eucentric_03.jpg" alt="Ronchigram showing approach to eucentric height" width="400">
 
-  5. Find the "blow-up" point where the ronchigram is largest.
+  5. Find the "infinite magnification" point where the ronchigram is flat and featureless.
      - Flat central region of ronchigram is maximized.
      - If ronchigram shrinks, reverse direction to find maximum expansion.
 
@@ -154,9 +152,9 @@ Before performing alignments, configure the STEM imaging parameters and verify d
      - BF-S (Bright Field): Retracted
      - DF-S (Dark Field): Retracted
      - HAADF: Retracted
-  3. Toggle `HAADF` checkbox on then off to confirm retracted state.
+  3. If the the box is toggled off, but the text says "Inserted," toggle `HAADF` checkbox on then off to confirm retracted state.
 
-     > **NOTE:** HAADF must be retracted during ronchigram alignment. The HAADF is a ring-shaped detector with a central hole. If inserted, high-angle electrons hit the ring instead of the camera below, blocking part of the ronchigram.
+     > **NOTE:** At this step, HAADF should be retracted as it can block the beam. The HAADF is a ring-shaped detector with a central hole. If inserted, you may find the detector blocking part of the beam.
 
      <img src="plots/detector_stack.png" alt="Side view showing HAADF ring blocking high-angle electrons from camera" width="600">
 
