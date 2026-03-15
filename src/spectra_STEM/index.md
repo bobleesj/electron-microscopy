@@ -108,8 +108,6 @@ For this guide, we use a convergence angle of 30.0 mrad.
 
 > **NOTE:** These aperture values determine the convergence angle. For example, setting Condenser 2 to `50` instead of `70` gives a convergence angle of 21.5 mrad. A smaller aperture restricts the beam to a narrower range of incident angles, blocking higher-angle electrons.
 
-TODO: add image for aperture panel.
-
 
 ### 1.2 Find eucentric height
 
@@ -118,13 +116,14 @@ Complete eucentric height alignment after loading each sample and before imaging
 - [ ] **View ronchigram**
 
   1. Verify the `Diffraction` button is pressed on the hand panel with the red light turned on.
+
+     > **NOTE:** The ronchigram is the diffraction pattern formed when the convergent probe is stationary. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment.
+
   2. In `TEMUI`, view the ronchigram in the main display.
 
      <img src="img/p1_s2_eucentric_01.jpg" alt="Ronchigram at 80kx showing diffraction pattern" width="400">
 
   3. Position probe on a sample region that scatters electrons (not over a hole or vacuum).
-
-     > **NOTE:** The ronchigram is the diffraction pattern formed when the convergent probe is stationary. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment.
 
 - [ ] **Adjust z-axis to find blow-up point**
 
@@ -141,13 +140,12 @@ Complete eucentric height alignment after loading each sample and before imaging
 
   4. Watch the ronchigram while adjusting z-height. The pattern "zooms" in or out as the sample moves through focus.
 
-  5. Continue adjusting. The ronchigram expands when approaching eucentric height.
+  5. Continue adjusting. The ronchigram expands when approaching eucentric height, also referred to as the "blow-up" point.
 
      <img src="img/p1_s2_eucentric_03.jpg" alt="Ronchigram showing approach to eucentric height" width="400">
 
-  6. Find the "blow-up" point where the ronchigram is largest.
-     - Flat central region of ronchigram is maximized.
-     - If ronchigram shrinks, reverse direction to find maximum expansion.
+  6. Find the "blow-up" point where the ronchigram appears infinitely magnified: shadow image features expand until they fill the entire display.
+     - If the ronchigram starts shrinking again, reverse direction.
 
      <img src="img/p1_s2_eucentric_05.jpg" alt="Ronchigram at eucentric height" width="400">
 
