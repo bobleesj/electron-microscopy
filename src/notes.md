@@ -7,19 +7,55 @@ This is a working scratchpad for raw notes taken during microscopy training visi
 
 ---
 
-## Ptychography reconstruction basics — Mar 9, 2026
+# Experiment notes
 
-Notes from Arthur on reconstructing data collected from ARINA detector at Stanford.
+---
 
-- **Sign convention:** in `quantem`, `C10 > 0` means underfocus. The beam focal point is below the sample, hence negative defocus.
-- **Aberrations:** SSB is somewhat an "eye test." One may use the aberrations from SSB or not. There are many degrees of freedom: batch size, the "dose" step size (finer can be better), probe size, center of mass/transpose, and initial aberrations.
-- **Cropping strategy:** in real space, it's fine to crop, encouraged since faster. In k space, we generally don't want to crop since we lose the max scattering angle, i.e. we lose fine details in real space.
-- **Probe:** aberrations should be identical across all scan regions in theory. However, for ptycho-tomo, defocus will change with tilt.
-- **CNN reconstruction:** reconstruction weight is different between reconstructions since these are weights being trained.
-- **Memory:** It's hard to manage memory well in Jupyter notebook but it's something we can work on.
-- **Virus samples:** there is no zone axis, so we can't do atomic resolution.
-- **Descan:** the beam is tilted from the source and then tilted back after a short travel perpendicular to the sample. During this second tilt, instability can be introduced and the diffraction pattern isn't perfectly aligned.
-- **Mixed probe:** mixed probe is good and orthogonality is imposed, so probes should look different from each other.
+## Gold standard SOP practice: Mar 14, 2026
+
+How to find the ronchigram again?
+- Move the joystick around and watch for a small screen current change.
+- Then use Diffraction Shift and Focus alignment to find the beam. You will see a faint bit of light.
+
+Remaining questions
+- [ ] When do you run Stigmator? During real space alignment?
+- [ ] For C1A1, during the first run, what are the target values? I started with C1 6 nm, A1 27 nm, B2 928 nm. My notes say C1 < 1 nm and A1 < 3 nm. Add target values to the table.
+- [ ] When do you do manual tuning? With real samples?
+- [ ] Add a table at the beginning with the target values for aberration corrections.
+
+Open questions
+- Ideal Velox play setting? 1024x1024 and 500 ns for gold standard sample.
+- When to change condenser stig?
+- Camera length and ronchigram size? Proportional: 91 mm to 115 mm, ronchigram size also increases.
+- When do you adjust Condenser?
+
+Lessons learned
+- Beam condition from FFT: 4-6 rings, each ring with discrete peaks, ~70 pm. Further rings (bigger k) correspond to sharper features resolved in real space.
+- Beam condition from Probe corrector: flatness around the "green" aberration surface is the key.
+- Overfocus means focal point above the sample; underfocus means below it.
+- Defocus change DP? Barely, but real-space probe size is changed (needed for ptycho overlaps).
+- Defocus on BF? Expect it to get worse. Ptycho will perform better.
+- Focus knob to sharpen? Minimize it. Don't add degrees of freedom. 20 nm max, use stage piezo and knobs.
+- Finding ptycho defocus step size: use ronchigram shadow image to determine feature size variations. Step size of 1 nm is too small.
+- Why drift? Inserting the holder itself induces aberrations. After stage movement, find ROI, then wait ~5 min for mechanical stabilization.
+
+Extra notes on aberrations
+- Practice getting atomic imaging without Sherpa. Example: Samsung sample, too beam-sensitive for Sherpa.
+- Tableau with A5 selected measures up to 5th order aberrations. The following screenshot shows a Tableau measurement result with A5 enabled.
+
+<img src="img/notes_tableau_a5_01.jpg" alt="Probe Corrector Tableau measurement with A5 selected showing aberration values and phase plate" width="800">
+
+Manual aberration correction without Sherpa (beam-sensitive samples)
+- [ ] Figure out the full workflow for correcting aberrations without Sherpa.
+- [ ] Where do you run C1A1 if you can't expose the sample?
+- [ ] How do you manually adjust A1 and B2?
+- [ ] What does "good" look like without Sherpa? Define criteria for the ronchigram, FFT, and probe shape.
+- [ ] What is the minimum correction quality needed for atomic resolution?
+
+Action steps for future practice sessions
+- [ ] Try going back to TEM and STEM, confirm aberrations getting worse.
+- [ ] Try going to LM and then back to regular STEM, confirm resolution getting worse.
+- [ ] Try correcting the probe without Sherpa, in the case of beam sensitivity.
 
 ## Cobalt oxide nanoparticles STEM — Mar 3, 2026
 
@@ -28,10 +64,19 @@ It was my first time staying in STEM mode and find samples after STEM probe corr
 ### Finding the sample after the sample is loaded
 
 - Go to **5,000× magnification**. If there is no beam, it means the beam is blocked on the grid. Move the stage around with the joystick.
-- Move the stage until the **screen current increases to about 0.150 nA**. At this point, the beam has been found.
-- Notice thicker lines being formed. This is a a great sign! It means the beam is interacting with the sample.
+- Move the stage until the **screen current increases to about 0.150 nA**. At this point, the beam has been found. Notice the Kikuchi bands: this is a good clue that you are in a good starting place.
+
+<img src="img/notes_sample_loaded_5k_01.jpg" alt="Right after sample loaded at 5kx showing screen current at 0.1 nA and Kikuchi bands" width="800">
+
 - Increase the magnification to **20,000× or higher**. The features will still look blurry since we are not yet at the correct focus.
-- Press the **Z-axis up and down** until the **Ronchigram blow-up point** appears. After this point, if you are lucky, you will see particles or features of interest. In this session, **cubes were found after the Ronchigram blow-up point**.
+- Press the **Z-axis up and down** until the **Ronchigram blow-up point** appears. Adjust z-axis from 5kx to 20kx to find the blow-up point.
+
+<img src="img/notes_5k_to_20k_blowup_01.jpg" alt="Ronchigram at 20kx during z-axis adjustment to find blow-up point" width="800">
+
+- After the blow-up point, you will see features. In this session, **cubes were found after the Ronchigram blow-up point**.
+
+<img src="img/notes_ronchigram_blowup_01.jpg" alt="After ronchigram blow-up point showing sample features at 115kx" width="800">
+
 - Stay at the blow-up point. We are now at the **eucentric height**.
 - Turn on the **HAADF camera in Velox** to observe those features.
 
@@ -75,7 +120,7 @@ I had a chance to join TEAM MAPED session at NCEM with Stephanie Ribet and Henry
 - Change the convergence angle by changing the aperture.
 - C2 for 70 µm aperture gives ~9 mrad max. For higher convergence, use another aperture.
 - If you change the C2 aperture, the software may still display the old value (e.g., "20") because it doesn't know how to get to the new position. Click **"Adjust"** to move to the new aperture where it has the intended aperature like 10 micrometer bull's eye aperture.
-- Then move C2 to ~30 (instead of 1,000) to block out other apertures. 
+- Then move C2 to ~30 (instead of 1,000) to block out other apertures.
 
 ### Arina at NCEM
 
@@ -97,3 +142,23 @@ I had a chance to join TEAM MAPED session at NCEM with Stephanie Ribet and Henry
 ### TODOs
 
 - [ ] Investigate the effect of descan when you integrate or sum across k-space
+
+---
+
+# Reconstruction notes
+
+---
+
+## Ptychography reconstruction basics — Mar 9, 2026
+
+Notes from Arthur on reconstructing data collected from ARINA detector at Stanford.
+
+- **Sign convention:** in `quantem`, `C10 > 0` means underfocus. The beam focal point is below the sample, hence negative defocus.
+- **Aberrations:** SSB is somewhat an "eye test." One may use the aberrations from SSB or not. There are many degrees of freedom: batch size, the "dose" step size (finer can be better), probe size, center of mass/transpose, and initial aberrations.
+- **Cropping strategy:** in real space, it's fine to crop, encouraged since faster. In k space, we generally don't want to crop since we lose the max scattering angle, i.e. we lose fine details in real space.
+- **Probe:** aberrations should be identical across all scan regions in theory. However, for ptycho-tomo, defocus will change with tilt.
+- **CNN reconstruction:** reconstruction weight is different between reconstructions since these are weights being trained.
+- **Memory:** It's hard to manage memory well in Jupyter notebook but it's something we can work on.
+- **Virus samples:** there is no zone axis, so we can't do atomic resolution.
+- **Descan:** the beam is tilted from the source and then tilted back after a short travel perpendicular to the sample. During this second tilt, instability can be introduced and the diffraction pattern isn't perfectly aligned.
+- **Mixed probe:** mixed probe is good and orthogonality is imposed, so probes should look different from each other.

@@ -11,6 +11,7 @@ First, visually confirm the following from the previous user to ensure no damage
 
 - [ ] Standard gold nanoparticle sample on a single-tilt holder is loaded.
 - [ ] Logbook is checked for any notes from the previous user.
+- [ ] Start your session on NEMO.
 - [ ] Screen is inserted.
 - [ ] Beam is blanked.
 - [ ] Column valves are closed.
@@ -25,7 +26,6 @@ First, visually confirm the following from the previous user to ensure no damage
 
 After you have checked the states,
 
-- [ ] Start your session on NEMO.
 - [ ] Follow any special instructions and warnings posted on NEMO.
 - [ ] Emergency contacts are available.
 
@@ -99,38 +99,53 @@ Before imaging, verify that the vacuum system is ready and the column valves can
 
      <img src="img/p1_s1_vacuum_02.jpg" alt="Vacuum status showing column valves opened" width="400">
 
+### 1.1 Check convergence angle
+
+For this guide, we use a convergence angle of 30.0 mrad.
+
+- [ ] In `TEMUI`, navigate to the `Tune` tab, then select `Aperture`.
+- [ ] Set Condenser 1, Condenser 2, and Condenser 3 to `2000`, `70`, and `1000`.
+
+> **NOTE:** These aperture values determine the convergence angle. For example, setting Condenser 2 to `50` instead of `70` gives a convergence angle of 21.5 mrad. A smaller aperture restricts the beam to a narrower range of incident angles, blocking higher-angle electrons.
+
+
 ### 1.2 Find eucentric height
 
 Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "blow-up" method provides a quick way to find this position.
 
 - [ ] **View ronchigram**
 
-  1. In `TEMUI`, view the ronchigram in the main display.
-  2. Position probe on a sample region that scatters electrons (not over a hole or vacuum).
+  1. Verify the `Diffraction` button is pressed on the hand panel with the red light turned on.
 
      > **NOTE:** The ronchigram is the diffraction pattern formed when the convergent probe is stationary. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment.
 
+  2. In `TEMUI`, view the ronchigram in the main display.
+
      <img src="img/p1_s2_eucentric_01.jpg" alt="Ronchigram at 80kx showing diffraction pattern" width="400">
+
+  3. Position probe on a sample region that scatters electrons (not over a hole or vacuum).
 
 - [ ] **Adjust z-axis to find blow-up point**
 
   1. Lower magnification to 5,000x. A wider field of view makes ronchigram changes easier to observe.
 
-  2. Use z-axis buttons on hand panel to move stage up or down.
-     - Buttons are pressure sensitive: press harder for faster movement.
-     - Start with gentle presses for fine control.
-
-  3. Watch the ronchigram while adjusting z-height. The pattern "zooms" in or out as the sample moves through focus.
+  2. Find a region where there is a sharp contrast at a boundary, as shown in the following image.
 
      <img src="img/p1_s2_eucentric_02.jpg" alt="Ronchigram at 5kx during z-axis adjustment" width="400">
 
-  4. Continue adjusting. The ronchigram expands when approaching eucentric height.
+  3. Use z-axis buttons on hand panel to move stage up or down.
+     - Buttons are pressure sensitive: press harder for faster movement.
+     - Start with gentle presses for fine control.
+     - Notice that as you adjust the z-axis, the ROI also shifts. Use the joystick to remain on the sharp contrast boundary region.
+
+  4. Watch the ronchigram while adjusting z-height. The pattern "zooms" in or out as the sample moves through focus.
+
+  5. Continue adjusting. The ronchigram expands when approaching eucentric height, also referred to as the "blow-up" point.
 
      <img src="img/p1_s2_eucentric_03.jpg" alt="Ronchigram showing approach to eucentric height" width="400">
 
-  5. Find the "blow-up" point where the ronchigram is largest.
-     - Flat central region of ronchigram is maximized.
-     - If ronchigram shrinks, reverse direction to find maximum expansion.
+  6. Find the "blow-up" point where the ronchigram appears infinitely magnified: shadow image features expand until they fill the entire display.
+     - If the ronchigram starts shrinking again, reverse direction.
 
      <img src="img/p1_s2_eucentric_05.jpg" alt="Ronchigram at eucentric height" width="400">
 
@@ -192,7 +207,7 @@ The basic alignments center the electron beam and align it through the optical c
 
   1. Set magnification to 200-300kX using the magnification knob.
   2. In `TEMUI`, navigate to `Tune` tab, then `Direct Alignments`. This panel provides access to all fundamental beam alignment procedures.
-  2. Select `Diffraction Shift and Focus alignment` to begin.
+  3. Select `Diffraction Shift and Focus alignment` to begin.
 
      <img src="img/p1_s4_alignments_01.jpg" alt="Direct Alignments panel" width="800">
 
@@ -215,7 +230,9 @@ The basic alignments center the electron beam and align it through the optical c
 
 - [ ] **Switch to probe image mode**
 
-  1. Press the `Diffraction` button on the hand panel to enter probe image mode (STEM scanning).
+  1. Press the `Diffraction` button on the hand panel to enter probe image mode (STEM scanning). The red light should turn off once pressed.
+
+     > **No beam found?** In the following step you will click `Beam Shift` and adjust the `mulXY` knobs. Watch the screen current: it changes from 0.000 nA to 0.001 nA, etc. This means you are shifting the beam position near the screen. You will see dim light coming from the edges. Press the `Fine` and `Coarse` buttons to adjust the sensitivity of the `mulXY` knobs.
 
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
 
@@ -257,7 +274,7 @@ The basic alignments center the electron beam and align it through the optical c
 
 - [ ] **Verify final diffraction shift**
 
-  1. Press the `Diffraction` button on the hand panel to switch back to diffraction mode (view the ronchigram).
+  1. Press the `Diffraction` button on the hand panel to switch back to diffraction mode (view the ronchigram). The red light should now be on.
   2. Return to `Diffraction Shift and Focus alignment` for a final centering check.
   3. Use `mulXY` to center the ronchigram precisely on the display. Centering confirms the beam is on the optical axis.
   4. Click `Done` to complete the direct alignments.
@@ -280,7 +297,10 @@ Before proceeding to probe correction, check that the monochromator is properly 
 - [ ] **Adjust focus**
 
   1. Adjust the intensity knob to bring the Focus value close to 0. As the monofocus approaches zero, the screen current increases because more electrons pass through the monochromator slit.
-  2. **Troubleshooting:** If no beam is shown, click `Linear` in the detector settings to switch from log to linear display mode.
+  2. While adjusting Focus toward 0, also adjust the `mulXY` knobs to ensure the beam isn't blocked. The screen current in `TEMUI` should be above 15 nA when focus is near zero.
+
+     > **No beam visible?** Click `Linear` in the detector settings to switch from log to linear display mode. If the beam is still missing, return to the initial focus value and slowly bring it back toward 0 while adjusting `mulXY`, as in the Beam Shift alignment.
+
   3. Watch the current readout while adjusting.
 
      <img src="img/p1_s5_mono_02.jpg" alt="Monochromator at high current 4.10 nA" width="800">
@@ -310,8 +330,9 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
 - [ ] **Switch to HAADF**
 
-  1. In the `Velox` acquisition software, click `STEM` to enter STEM mode, then click `HAADF`. This automatically inserts the HAADF detector.
-  2. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad).
+  1. In the `Velox` acquisition software, click `STEM` to enter STEM mode,
+  2. Click `HAADF`. This automatically inserts the HAADF detector.
+  3. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad).
 
      <img src="img/p2_s1_haadf_02.jpg" alt="TEMUI showing HAADF detector inserted" width="800">
 
@@ -321,9 +342,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
 - [ ] **Start live scanning**
 
-  Do **NOT** adjust the intensity knob while the fluorescent screen is raised. The beam is focused to a small point, and changing intensity can concentrate the full beam current onto the camera or detectors below, permanently damaging them.
-
-  1. Click the play button in `Velox` to start live scanning.
+  1. Click the play button in `Velox` to start live scanning. 
   2. The image is saturated (all white) initially. Detector signal adjustment follows in the next step.
 
      <img src="img/p2_s1_haadf_01.jpg" alt="Velox HAADF view" width="800">
@@ -437,7 +456,7 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
 - [ ] **Switch to diffraction mode**
 
-  1. Stop live scanning in `Velox` by clicking the play button, then press the `Diffraction` button on the hand panel. C1A1 analyzes the ronchigram, so diffraction mode (stationary probe) is required, not probe image mode (scanning):
+  1. Stop live scanning in `Velox` by clicking the play button, then ensure `Diffraction` mode is on on the hand panel. C1A1 analyzes the ronchigram, so diffraction mode (stationary probe) is required, not probe image mode (scanning):
 
      <img src="img/p2_s2_c1a1_07.jpg" alt="Split view before C1A1" width="1100">
 
@@ -489,7 +508,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. Click `Start` to begin the Tableau measurement. The software automatically tilts the beam to multiple angles and acquires ronchigram images at each position.
   2. Wait for measurement completion. The ronchigram shifts across the screen as the software captures patterns at different tilts and focus levels (under-focus and over-focus at each tilt). This movement is expected.
-  3. Do not touch the stage or optical table during measurement. If the beam is unstable, stop and ask staff.
+  3. Do not modify the stage position during measurement. If the beam is unstable, stop and ask staff.
 
      <img src="img/p2_s3_tableau_02.jpg" alt="Tableau measurement running" width="800">
 
