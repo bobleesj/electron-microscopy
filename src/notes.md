@@ -41,6 +41,9 @@ Lessons learned
 
 Extra notes on aberrations
 - Practice getting atomic imaging without Sherpa. Example: Samsung sample, too beam-sensitive for Sherpa.
+- Tableau with A5 selected measures up to 5th order aberrations. The following screenshot shows a Tableau measurement result with A5 enabled.
+
+<img src="img/notes_tableau_a5_01.jpg" alt="Probe Corrector Tableau measurement with A5 selected showing aberration values and phase plate" width="800">
 
 Manual aberration correction without Sherpa (beam-sensitive samples)
 - [ ] Figure out the full workflow for correcting aberrations without Sherpa.
