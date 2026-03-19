@@ -158,7 +158,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
 
      <img src="plots/detector_stack.png" alt="Side view showing HAADF ring blocking high-angle electrons from camera" width="600">
 
-- [ ] **Set detector layout in Velox**
+- [ ] **Set camera length in Velox**
 
   1. Open `Velox` acquisition software.
   2. Open detector layout display.
@@ -176,7 +176,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
   3. Select `NanoProbe` mode.
   4. Set spot number to 6.
 
-     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Lower spot numbers produce smaller probes with lower current; higher numbers produce larger probes with more current.
+     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Select the spot size according to the trade-off between spatial resolution and electron dose: higher spot numbers produce smaller probes (higher resolution) with lower current; lower numbers produce larger probes with more current. 
      >
      > TODO: Verify spot number convention for Spectra 300. On some Thermo Fisher systems, it is the opposite (spot 1 = most current).
 
@@ -184,7 +184,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
 
 ### 1.4 Direct alignments
 
-The basic alignments center the electron beam and align it through the optical column. Proper alignment is essential for optimal resolution and probe symmetry.
+The purpose of the basic alignments is to center the electron beam and align it along the optical axis of the column. Proper alignment is essential for optimal resolution and probe symmetry.
 
 - [ ] **Set magnification and open Direct Alignments**
 
@@ -204,6 +204,8 @@ The basic alignments center the electron beam and align it through the optical c
 
      <img src="img/p1_s4_alignments_03.jpg" alt="Ronchigram after centering" width="400">
 
+  3. Click `Done` under `Direct Alginments` so that `mulXY` is no longer tied to to the diffraction shift.
+
 - [ ] **Reset STEM AutoTuning**
 
   1. In the quick dropdown menu, select `STEM AutoTuning`. This panel stores automatic alignment adjustments from previous sessions.
@@ -213,23 +215,23 @@ The basic alignments center the electron beam and align it through the optical c
 
 - [ ] **Switch to probe image mode**
 
-  1. Press the `Diffraction` button on the hand panel to enter probe image mode (STEM scanning).
+  1. Press the `Diffraction` button on the hand panel to enter the real space probe image mode. (The red light below the `Diffraction` text on the hand control panel will turn off as you switch to the real space mode).
 
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
 
      > **Diffraction mode vs. Probe image mode**
      >
-     > | Mode             | Probe      | Display                                                   |
-     > |------------------|------------|-----------------------------------------------------------|
-     > | Diffraction mode | Stationary | Ronchigram - diffraction pattern from convergent probe    |
-     > | Probe image mode | Scanning   | STEM image - probe scans to build up image pixel by pixel |
+     > | Mode             | What is shown on the flucam                               |
+     > |------------------|-----------------------------------------------------------|
+     > | Diffraction mode | Ronchigram - diffraction pattern from convergent probe    |
+     > | Real space mode  | Probe image                                               |
      >
      > The `Diffraction` button on the hand panel toggles between these two modes.
 
 - [ ] **Align beam shift**
 
-  1. Click on `Beam shift` in the Direct Alignments panel. The `mulXY` knobs now control alignment beam shift.
-  2. Use the `mulXY` knobs to center the beam on the screen. The beam responds smoothly to knob movements. If the beam moves too quickly, press `Fine` on the hand panel to reduce sensitivity.
+  1. Click on `Beam shift` in the Direct Alignments panel. The `mulXY` knobs now control beam shift.
+  2. Use the `mulXY` knobs to center the probe on the screen. The probe responds smoothly to knob movements. If the probe moves too quickly, press `Fine` on the hand panel to reduce sensitivity.
   3. **Important:** If the beam is lost after clicking beam shift, reduce magnification until the beam is visible, center using the `mulXY` knobs.
   4. Click `Done` once the beam is properly centered.
 
@@ -237,7 +239,7 @@ The basic alignments center the electron beam and align it through the optical c
 
 - [ ] **Center C2 aperture**
 
-  1. Select `Center C2 aperture` from the alignment options. The system oscillates the C2 lens, causing the beam to expand and contract rhythmically.
+  1. Select `Center C2 aperture` from the alignment options. The system wobbles the C2 lens, causing the beam to expand and contract periodically.
   2. Watch the beam movement carefully. The beam pulses in and out. The goal is to make this expansion/contraction perfectly concentric (no lateral movement).
   3. Use the `mulXY` knobs to adjust the aperture position.
   4. Click `Done` when the movement is concentric.
@@ -300,7 +302,7 @@ Before proceeding to probe correction, check that the monochromator is properly 
 
 - [ ] **Re-verify eucentric height**
 
-  1. Use the z-axis controls to return to the "blow-up" point (eucentric height). Monochromator adjustments affect focus; re-verify eucentric height.
+  1. Use the z-axis controls to return to the "infinite magnification" point (eucentric height). Monochromator adjustments affect focus; re-verify eucentric height.
 
 ### 1.6 HAADF imaging setup
 
@@ -309,7 +311,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 - [ ] **Switch to HAADF**
 
   1. In the `Velox` acquisition software, click `STEM` to enter STEM mode, then click `HAADF`. This automatically inserts the HAADF detector.
-  2. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad).
+  2. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad at camera length of 91 mm at 300 kV).
 
      <img src="img/p2_s1_haadf_02.jpg" alt="TEMUI showing HAADF detector inserted" width="800">
 
@@ -322,7 +324,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
   Do **NOT** adjust the intensity knob while the fluorescent screen is raised. The beam is focused to a small point, and changing intensity can concentrate the full beam current onto the camera or detectors below, permanently damaging them.
 
   1. Click the play button in `Velox` to start live scanning.
-  2. The image is saturated (all white) initially. Detector signal adjustment follows in the next step.
+  2. The image can be saturated (all white) initially. Detector signal adjustment follows in the next step.
 
      <img src="img/p2_s1_haadf_01.jpg" alt="Velox HAADF view" width="800">
 
@@ -349,14 +351,14 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 - [ ] **Find sample boundary**
 
   1. Reduce magnification to ~10,000x and navigate with the joystick to find a suitable region.
-  2. Locate a boundary region with particles at the edge of a support film, with vacuum visible.
+  2. Locate a boundary region with particles at the edge of a support film, with the thin region (right side in the image) visible.
   3. This type of region provides excellent contrast for aberration correction.
 
      <img src="img/p2_s1_haadf_07.jpg" alt="Sample boundary region" width="800">
 
 - [ ] **Adjust focus**
 
-  1. Once a suitable boundary is found, increase magnification to ~160,000x. Alternate between magnification and z-axis adjustments until focus is sharp.
+  1. Once a suitable boundary is found, increase magnification to ~160,000x. Alternate between magnification and z-axis adjustments until you bring the sample to focus.
 
      <img src="img/p2_s1_haadf_08.jpg" alt="Split view: ronchigram and HAADF" width="800">
 
@@ -373,13 +375,9 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
      <img src="img/p2_s1_haadf_11.jpg" alt="HAADF with improved focus" width="800">
 
 
-  > **Distributed particles are important for aberration measurement.** Aberrations vary with position relative to the optical axis (e.g., coma increases further from center). The correction algorithm requires ronchigram data from multiple positions to accurately fit the aberration coefficients.
+  > **Distributed particles are important for aberration measurement.** Aberrations vary with position relative to the optical axis (e.g., coma increases further from center). The aberration correction algorithm requires ronchigram data from multiple positions to accurately fit the aberration coefficients.
 
 ## Part 2: Probe Correction
-
-Before starting probe correction, retract the HAADF detector. C1A1 and Tableau both analyze the ronchigram, and the HAADF ring blocks high-angle electrons from reaching the camera below. In `TEMUI`, verify the HAADF detector shows "Retracted" status.
-
-> TODO: Confirm with staff whether HAADF must be retracted for C1A1/Tableau on Spectra 300 S-CORR.
 
 Aberrations distort the electron probe and degrade image resolution. The goal of probe correction is to achieve a flat, aberration-free ronchigram. The figure below shows how individual aberrations affect the ronchigram appearance:
 
@@ -429,27 +427,22 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_05.jpg" alt="C1A1 options panel" width="800">
 
-  2. Set `Probe semi aperture` to 30 mrad:
+  2. Set `Probe semi aperture` to 30 mrad (if you're using 30 mrad convergence angle):
 
      <img src="img/p2_s2_c1a1_06.jpg" alt="C1A1 options configured" width="800">
 
-- [ ] **Switch to diffraction mode**
-
-  1. Stop live scanning in `Velox` by clicking the play button, then press the `Diffraction` button on the hand panel. C1A1 analyzes the ronchigram, so diffraction mode (stationary probe) is required, not probe image mode (scanning):
-
-     <img src="img/p2_s2_c1a1_07.jpg" alt="Split view before C1A1" width="1100">
-
-  2. Click the `Beam Blank` button to unblank the beam. Stopping the scan automatically blanks the beam. The Probe Corrector software requires an unblanked beam to read the ronchigram:
+  3. Click the `Beam Blank` button to unblank the beam. Stopping the scan from Velox automatically blanks the beam. The Probe Corrector software requires an unblanked beam to read the ronchigram:
 
      <img src="img/p2_s2_c1a1_08.jpg" alt="Ronchigram during C1A1" width="1100">
 
 - [ ] **Run C1A1**
 
-  1. Go to the `C1A1` tab in the `Probe Corrector` software. Before clicking Start, verify the ronchigram is visible on the left monitor:
+  1. Go to the `C1A1` tab in the `Probe Corrector` software. Before clicking Start, verify the ronchigram is visible on the fluscreen on the left monitor:
 
      <img src="img/p2_s2_c1a1_09.jpg" alt="Setup before C1A1: ronchigram visible on left, HAADF on right" width="1100">
 
   2. Click `Start` to begin aberration measurement. The software continuously analyzes the ronchigram and displays measured aberration values (C1, A1, A2, B2, WD) in the table.
+      > Before proceeding: Probe corrector may not perform well below certain dose. If the `mean` value is below 10,000 counts, increase the HAADF gain in small steps while monitoring the mean value to get ~10,000 counts.
   3. Set Auto correct to 100% for the first iteration.
   4. Click `0th-2nd` to apply corrections for all first and second order aberrations.
 
