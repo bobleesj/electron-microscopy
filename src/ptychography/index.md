@@ -14,7 +14,7 @@ For region of interest, record the following:
 - Camera length
 - dwell time (μs)
 - Scan size (pixels; e.g. 512x512)
-- Screen current from flucam (pA; e.g. 75 pA; you can change the mono to adjust the probe current, but you will have to fine tune the alignment each time you do. you can take notes on mono but it's optional)
+- Screen current from flucam (pA; e.g. 100 pA; you can change the mono to adjust the probe current, but you will have to fine tune the alignment each time you do. you can take notes on mono but it's optional)
 - Note (interesting shape? zone axis?)
 
 Random notes:
