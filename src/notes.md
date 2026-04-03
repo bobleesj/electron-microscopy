@@ -7,9 +7,12 @@ This is a working scratchpad for raw notes taken during microscopy training visi
 
 ---
 
-# Experiment notes
+## SNSF: Apr 3, 2026
 
----
+I implemented live SSB reconstruction and also learned to fill up nitrogen in Spectra. Today, I joined Parivash Moradifar's session to shadow.
+
+- We encountered a thick silicon nitride grid (~100 nm) that interacts with the incoming electrons. Silicon nitride grids are sinuous, so the resulting images look jiggly.
+- I also learned how to reduce contamination via beam shower. It is typically done in TEM. In STEM mode, go to really low defocus using z-axis and have current around 0.200 nA. It will reduce contamination.
 
 ## Gold standard SOP practice: Mar 14, 2026
 
@@ -64,6 +67,7 @@ It was my first time staying in STEM mode and find samples after STEM probe corr
 ### Finding the sample after the sample is loaded
 
 - Go to **5,000× magnification**. If there is no beam, it means the beam is blocked on the grid. Move the stage around with the joystick.
+- Notice thicker lines being formed. This is a great sign! It means the beam is interacting with the sample.
 - Move the stage until the **screen current increases to about 0.150 nA**. At this point, the beam has been found. Notice the Kikuchi bands: this is a good clue that you are in a good starting place.
 
 <img src="img/notes_sample_loaded_5k_01.jpg" alt="Right after sample loaded at 5kx showing screen current at 0.1 nA and Kikuchi bands" width="800">
@@ -86,7 +90,7 @@ It was my first time staying in STEM mode and find samples after STEM probe corr
 - Use **Sharpa** to correct **C1A1**. You do not need to correct **B2A2**.
 - Take the image as usual.
 
-### Notes on aberration correctinos
+### Notes on aberration corrections
 
 ## MAPED experience at NCEM, Mar 2, 2026
 
@@ -95,12 +99,12 @@ I had a chance to join TEAM MAPED session at NCEM with Stephanie Ribet and Henry
 ### General STEM notes for aberration
 
 - **LM mode warning:** In TEAM, LM mode isn't used generally. It turns off the aberration corrector, a set of multipole electromagnetic lenses (hexapoles, octupoles) that correct for spherical aberration. When switched back on, the corrector needs hours to restabilize both thermally (coils heat up, causing alignment drift from thermal expansion) and electromagnetically (currents must settle to precise values).
-- **aberration knobs:** in the probe corrector software, manually fix and it can be faster since software can take a while. For example, Correct A1 (twofold astigmatism) and B2 (axial coma) by hand. (@bobleesj, verifiy this)
+- **aberration knobs:** in the probe corrector software, manually fix and it can be faster since software can take a while. For example, Correct A1 (twofold astigmatism) and B2 (axial coma) by hand. (@bobleesj, verify this)
 - Use the **stigmator button** on the hand panel, it makes the beam round.
-- **C2 adjust** is used to make the beam concentric, by alinigng C2 aperture.
+- **C2 adjust** is used to make the beam concentric, by aligning C2 aperture.
 - **Rotation center:** don't care about the edges. Use a magnified image to see whether the features are pulsing out of the page.
 
-### Sample loading and vacumm
+### Sample loading and vacuum
 
 - After loading a sample, watch PPL. It should go down to low 10⁻³ or 10⁻⁴.
 - Octagon must be below 10 after sample loading.
