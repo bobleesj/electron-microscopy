@@ -673,12 +673,12 @@ After completing probe correction on the standard sample, follow the below steps
   3. Close the column valves by pressing `Column Valves Closed`.
 
      > If a "VCP" error occurs, follow the instructions on the Spectra NEMO page.
-  3. Reset the holder by clicking `reset` on the `Stage` menu.
+  4. Reset the holder by clicking `reset` on the `Stage` menu.
 
      <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
 
-  4. Confirm the stage x, y, z values are returning to zero after you reset the holder stage.
-  5. Pull the holder straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+  5. Confirm the stage x, y, z values are returning to zero after you reset the holder stage.
+  6. Pull the holder straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
 
 - [ ] **Load your sample and insert the holder**
 
@@ -705,7 +705,7 @@ After completing probe correction on the standard sample, follow the below steps
 - [ ] **Re-do eucentric height**
 
   1. Open column valves and re-do eucentric height for your new sample ([1.2](#12-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
-  2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change.
+  2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
 
 ### 3.4 End session
 
