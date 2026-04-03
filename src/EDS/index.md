@@ -3,96 +3,92 @@
 > [!CAUTION]
 > **VERY ROUGH DRAFT** - @bobleesj and Guoliang Hu took notes and pictures during training. This document will be updated with more detailed steps and images.
 
-> TODO:
-> - [ ] Add step-by-step images for TEM mode
-> - [ ] Clarify STEM mode beam settings
-> - [ ] Add screenshots for drift correction setup
+This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300. EDS identifies elements in a sample by detecting characteristic X-rays emitted when the electron beam knocks out inner-shell electrons. This guide uses the standard gold nanoparticle sample, so Au (gold) is the primary element expected in the elemental maps and spectra.
 
-This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
-
-> **Prerequisite:** Complete the [STEM alignment](STEM.md) procedure before starting.
+> **Prerequisite:** Complete the [STEM alignment](../spectra_STEM/index.md) procedure before starting.
 
 **Acronyms:**
 
 - `EDS` - Energy Dispersive X-ray Spectroscopy
 - `SI` - Spectrum Imaging
 
-## Part 1: TEM mode EDS
+## Overview
 
-1. **Select area**
+| Phase | Procedures | Time |
+| ----- | ---------- | ---- |
+| [Part 1: STEM mode EDS](#part-1-stem-mode-eds) | Set beam parameters, select imaging area, drift correction, acquire and process data | 15-30 min |
 
-   - Select the area of interest on your sample
+## Part 1: STEM mode EDS
 
-2. **Open EDS**
+### 1.1 Set beam parameters (optional)
 
-   - Click on the EDS icon in Velox
+- [ ] **Adjust convergence angle and beam current**
 
-     <img src="img/velox-eds-spectrum.jpg" alt="Velox EDS spectrum view" width="500">
+  1. In `TEMUI`, go to `Beam Settings`, select `Probe`, then click `MF-Y`
+  2. Change convergence angle to approximately 21.5 mrad for EDS. A larger convergence angle focuses more current onto the sample, increasing the X-ray count rate.
+  3. Increase screen current to ~0.4 nA. Higher beam current generates more X-rays but also increases sample damage. To adjust beam current, see [Monochromator tune](../spectra_STEM/index.md#15-monochromator-tune) in the STEM guide.
 
-3. **Check experiment log**
+### 1.2 Select spectrum imaging area
 
-   - Review the experiment log for acquisition parameters
+- [ ] **Define acquisition area**
 
-## Part 2: STEM mode EDS
+  1. In `Velox`, click `Spectrum Imaging Area` as shown below
 
-1. **Set beam parameters**
+     <img src="img/p2_s1_eds_toolbar_01.jpg" alt="Velox toolbar with Spectrum Imaging Area selected" width="800">
 
-   - Go to `Beam Setting` → `Probe` → click on `MF-Y`
-   - Change convergence angle to 10 mrad (larger area to focus)
-   - Increase screen current to 0.4 nA
+  2. Draw a rectangle on the HAADF image to define the area for EDS acquisition
 
-2. **Start spectrum imaging**
+     <img src="img/p2_s2_area_select_01.jpg" alt="Selecting spectrum imaging area on HAADF image" width="800">
 
-   - Go to `SI` (Spectrum Imaging)
-   - Click on the rectangle selection tool
-   - Select an area on the sample
+- [ ] **Set drift correction**
 
-     <img src="img/stem-area-scan.jpg" alt="STEM EDS area scan" width="500">
+  1. Click `Drift Area` in the toolbar. A tooltip appears: "Draw the drift measurement area."
 
-   - For nanoscale resolution, choose 20 microsecond dwell time
+     <img src="img/p2_s3_drift_area_01.jpg" alt="Drift Area tooltip in Velox" width="800">
 
-3. **Set drift correction**
+  2. Draw a small rectangle near a high-contrast feature. The system uses this region to track and correct specimen drift during acquisition.
 
-   - Click on `Drift Area` to enable drift correction
+     <img src="img/p2_s3_drift_draw_02.jpg" alt="Drawing drift measurement area on sample" width="800">
 
-   > FIXME: add image for drift area selection
+  3. Verify both the spectrum image area (green rectangle) and drift area (white rectangle) are visible on the HAADF image.
 
-4. **Adjust parameters**
+     <img src="img/p2_s3_drift_complete_03.jpg" alt="Spectrum image area and drift area both selected" width="800">
 
-   - Use `Object Properties` to change acquisition parameters
+### 1.3 Acquire and process data
 
-5. **Acquire data**
+- [ ] **Start acquisition**
 
-   - Wait until pixel count stabilizes (watch for 8 pixel indicator)
+  1. Click `Spectrum Imaging` to start acquisition. The tooltip shows the dwell time per pixel.
 
-     <img src="img/pixel-wait.jpg" alt="Pixel count indicator" width="500">
+     <img src="img/p2_s4_acquire_01.jpg" alt="Spectrum Imaging start button with dwell time 2.00 µs" width="800">
 
-   - Stop recording when complete
+  2. Let the acquisition run for several frames so the software accumulates enough signal. Then click `To Spectrum` and `Auto ID` in the `Periodic Table` panel to identify elements from the spectra collected so far. You may also select elements manually if auto detection does not work.
 
-## Part 3: Data processing
+     > **TODO:** Verify whether you need both `To Spectrum` and `Auto ID`, or just one of them.
 
-1. **Draw line profile**
+- [ ] **Review elemental maps**
 
-   - Go to `Processing` to draw a line profile across features
+  1. Select a rectangular area on the HAADF image for map processing
 
-     <img src="img/processing-line.jpg" alt="EDS processing line profile" width="500">
+     <img src="img/p3_s1_map_processing_02.jpg" alt="Selecting area for map processing in Velox" width="800">
 
-2. **Select arbitrary area**
+  2. The `Image Browser` panel displays elemental maps for each detected element. Use the `Display Settings` on the right to toggle between intensity (int), net counts (net), weight percent (wt%), and atomic percent (at%) views.
 
-   - You can also select an arbitrary area for analysis
+     <img src="img/p3_s3_elemental_maps_01.jpg" alt="Velox Image Browser with elemental maps and FFT display" width="800">
 
-3. **Atomic mapping**
+  3. The `Integrated Spectra` panel below shows the X-ray spectrum from the selected area. The `Periodic Table` panel identifies detected elements. Under `Object Properties`, verify the acquisition parameters (image size, pixel size, field of view, dwell time).
 
-   - For atomic resolution mapping, use Average or Gaussian filtering
+     <img src="img/p3_s2_spectrum_02.jpg" alt="Integrated spectrum with periodic table showing Au and Co elements" width="800">
 
-     <img src="img/atomic-mapping.jpg" alt="EDS atomic mapping" width="500">
+  4. Elemental maps show spatial distribution of each element. In this example, N (green/yellow), O (red), and Au (purple) maps are displayed.
 
-   - Use highest frequency and edge smoothing settings to obtain atomic resolution
+     <img src="img/p3_s3_elemental_maps_02.jpg" alt="Elemental maps showing N, O, and Au distributions" width="800">
 
-## Part 4: End session
+## Acknowledgments
 
-Follow the steps in [End session](sample-loading.md#end-session).
+Thank you to Cedric Lim for teaching @bobleesj the EDS workflow during his session. Images captured during his session.
 
 ## Changelog
 
-- Dec 18, 2025 - initial rough draft by Guoliang Hu and @bobleesj
+- Apr 3, 2026 - Replace images with new photos captured by @bobleesj during EDS training by Cedric Lim
+- Dec 18, 2025 - Initial rough draft by Guoliang Hu and @bobleesj
