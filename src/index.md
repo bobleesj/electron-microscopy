@@ -17,9 +17,10 @@ WIP:
 | [STEM (Spectra)](spectra_STEM/index.md) | Spectra | STEM probe correction and imaging | 8/10 | Available |
 | [TEM (Spectra)](spectra_TEM/index.md) | Spectra | Optional TEM alignment and image correction | 5/10 | Available |
 | [TEM (Titan)](titan_TEM/index.md) | Titan | TEM alignment and imaging | - | Coming soon |
-| [4DSTEM](4DSTEM/index.md) | Spectra | 4DSTEM with Dectris detector | 2/10 | Available |
+| [4DSTEM](4DSTEM/index.md) | Spectra | 4DSTEM with Dectris detector | 4/10 | Available |
 | [EELS](EELS/index.md) | Spectra | Electron Energy Loss Spectroscopy | 2/10 | Available |
 | [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
+| [Aberration Correction (Advanced)](aberration-correction/index.md) | Spectra | Manual aberration correction without Sherpa | 1/10 | Available |
 | [Tomography](tomography/index.md) | Spectra | Electron tomography | - | Coming soon |
 | [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | Coming soon |
 | [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | Coming soon |
