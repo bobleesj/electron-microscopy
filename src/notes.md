@@ -7,13 +7,14 @@ This is a working scratchpad for raw notes taken during microscopy training visi
 
 ---
 
-## SNSF - Arp 3, 2026 
+## SNSF: Apr 3, 2026
 
-I implemented live SSB reconstruction and also learned to fill up nitrogen in Spectra. Today, I joined PM session to shadow.
+I implemented live SSB reconstruction and also learned to fill up nitrogen in Spectra. Today, I joined Parivash Moradifar's session to shadow.
 
-- We also encountered a thick silicon grid maybe perhaps 100 nm that interct with the incomnig electrosn adn silicon tride grids are sinuatulros, the resulting images look jigly! 
-- I also learned how to reduce containitiaon via beam shower. It's typically done in TEM. In STEM mode, go to really low defocus using z-axis and have current around 0.200 nA. It will reduce contamination.
-hy reconstruction basics — Mar 9, 2026
+- We encountered a thick silicon nitride grid (~100 nm) that interacts with the incoming electrons. Silicon nitride grids are sinuous, so the resulting images look jiggly.
+- I also learned how to reduce contamination via beam shower. It is typically done in TEM. In STEM mode, go to really low defocus using z-axis and have current around 0.200 nA. It will reduce contamination.
+
+## Ptychography reconstruction basics — Mar 9, 2026
 
 Notes from Arthur on reconstructing data collected from ARINA detector at Stanford.
 
