@@ -99,7 +99,7 @@ Before imaging, verify that the vacuum system is ready and the column valves can
 
      <img src="img/p1_s1_vacuum_02.jpg" alt="Vacuum status showing column valves opened" width="400">
 
-### 1.1 Check convergence angle
+### 1.2 Check convergence angle
 
 For this guide, we use a convergence angle of 30.0 mrad.
 
@@ -109,7 +109,7 @@ For this guide, we use a convergence angle of 30.0 mrad.
 > **NOTE:** These aperture values determine the convergence angle. For example, setting Condenser 2 to `50` instead of `70` gives a convergence angle of 21.5 mrad. A smaller aperture restricts the beam to a narrower range of incident angles, blocking higher-angle electrons.
 
 
-### 1.2 Find eucentric height
+### 1.3 Find eucentric height
 
 Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "blow-up" method provides a quick way to find this position.
 
@@ -149,7 +149,7 @@ Complete eucentric height alignment after loading each sample and before imaging
 
      <img src="img/p1_s2_eucentric_05.jpg" alt="Ronchigram at eucentric height" width="400">
 
-### 1.3 STEM mode configuration
+### 1.4 STEM mode configuration
 
 Before performing alignments, configure the STEM imaging parameters and verify detector settings.
 
@@ -199,7 +199,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
 
      <img src="img/p1_s3_stem_mode_04.jpg" alt="Beam Settings panel" width="800">
 
-### 1.4 Direct alignments
+### 1.5 Direct alignments
 
 The basic alignments center the electron beam and align it through the optical column. Proper alignment is essential for optimal resolution and probe symmetry.
 
@@ -233,6 +233,8 @@ The basic alignments center the electron beam and align it through the optical c
   1. Press the `Diffraction` button on the hand panel to enter probe image mode (STEM scanning). The red light should turn off once pressed.
 
      > **No beam found?** In the following step you will click `Beam Shift` and adjust the `mulXY` knobs. Watch the screen current: it changes from 0.000 nA to 0.001 nA, etc. This means you are shifting the beam position near the screen. You will see dim light coming from the edges. Press the `Fine` and `Coarse` buttons to adjust the sensitivity of the `mulXY` knobs.
+     >
+     > **Still can't find the beam at all?** Try temporarily increasing the C2 aperture from `70` to `150` in the `Apertures` panel. The larger aperture lets more electrons through, making the beam much easier to locate. Once you find and center the beam, switch back to `70` before continuing.
 
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
 
@@ -283,7 +285,7 @@ The basic alignments center the electron beam and align it through the optical c
 
 > **Note:** Mode changes (diffraction ↔ probe image, TEM ↔ STEM) disable descan. Re-enable descan after each mode switch. If the image looks distorted, verify `Descan` is enabled in `STEM Imaging (Expert)`.
 
-### 1.5 Monochromator tune
+### 1.6 Monochromator tune
 
 Before proceeding to probe correction, check that the monochromator is properly aligned and not partially blocking the beam. The monochromator selects a narrow energy spread from the electron source, improving resolution but reducing beam current.
 
@@ -324,7 +326,7 @@ Before proceeding to probe correction, check that the monochromator is properly 
 
   1. Use the z-axis controls to return to the "blow-up" point (eucentric height). Monochromator adjustments affect focus; re-verify eucentric height.
 
-### 1.6 HAADF imaging setup
+### 1.7 HAADF imaging setup
 
 Before running aberration correction, set up HAADF (High-Angle Annular Dark Field) imaging to view the sample and find a suitable region. HAADF provides Z-contrast imaging where heavier atoms appear brighter.
 
@@ -723,7 +725,7 @@ After completing probe correction on the standard sample, follow the below steps
 
 - [ ] **Re-do eucentric height**
 
-  1. Open column valves and re-do eucentric height for your new sample ([1.2](#12-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
+  1. Open column valves and re-do eucentric height for your new sample ([1.3](#13-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
   2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
 
 ### 3.4 End session
@@ -774,7 +776,7 @@ Common problems encountered during STEM sessions.
 | C1A1 or Tableau shows no signal | Beam is blanked | Click `Beam Blank` button to unblank before running aberration measurements |
 | Good Tableau values but poor image resolution | Missing C1A1 verification step | After Tableau, always run C1A1 again to fine-tune defocus and astigmatism |
 | Beam disappears from view | Random adjustments displaced the beam | Go to lower magnification until beam is visible, use joystick to move sample to center, then go to `Diffraction Shift` and use `mulXY` to center the beam |
-| Lost beam or need to redo alignment | Column misalignment after extended session | Redo eucentric height ([1.2](#12-find-eucentric-height)) and monochromator tune ([1.5](#15-monochromator-tune)). If you cannot find the sample, switch to TEM mode for easier navigation ([TEM Spectra](../spectra_TEM/index.md)) |
+| Lost beam or need to redo alignment | Column misalignment after extended session | Redo eucentric height ([1.3](#13-find-eucentric-height)) and monochromator tune ([1.6](#16-monochromator-tune)). If you cannot find the sample, switch to TEM mode for easier navigation ([TEM Spectra](../spectra_TEM/index.md)) |
 
 ## FAQ
 
