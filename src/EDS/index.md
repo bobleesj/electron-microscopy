@@ -26,7 +26,7 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
   1. In `TEMUI`, go to `Beam Settings`, select `Probe`, then click `MF-Y`
   2. Change convergence angle to approximately 21.5 mrad for EDS. A larger convergence angle focuses more current onto the sample, increasing the X-ray count rate.
-  3. Increase screen current to ~0.4 nA. Higher beam current generates more X-rays but also increases sample damage. To adjust beam current, see [Monochromator tune](../spectra_STEM/index.md#15-monochromator-tune) in the STEM guide.
+  3. Increase screen current to ~0.4 nA. Higher beam current generates more X-rays but also increases sample damage. To adjust beam current, see [Monochromator tune](../spectra_STEM/index.md#16-monochromator-tune) in the STEM guide.
 
 ### 1.2 Select spectrum imaging area
 
