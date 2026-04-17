@@ -21,6 +21,7 @@ WIP:
 | [EELS](EELS/index.md) | Spectra | Electron Energy Loss Spectroscopy | 2/10 | Available |
 | [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
 | [Aberration Correction (Advanced)](aberration-correction/index.md) | Spectra | Manual aberration correction without Sherpa | 1/10 | Available |
+| [Phenom Pharos (Deep Lab)](deep-lab-sem/index.md) | Phenom Pharos G2 | Desktop SEM/STEM operation guide | 2/10 | Available |
 | [Tomography](tomography/index.md) | Spectra | Electron tomography | - | Coming soon |
 | [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | Coming soon |
 | [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | Coming soon |
