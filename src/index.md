@@ -22,6 +22,8 @@ WIP:
 | [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
 | [Aberration Correction (Advanced)](aberration-correction/index.md) | Spectra | Manual aberration correction without Sherpa | 1/10 | Available |
 | [Phenom Pharos (Deep Lab)](deep-lab-sem/index.md) | Phenom Pharos G2 | Desktop SEM/STEM operation guide | 2/10 | Available |
+| [Spot size and convergence angle](tem-lab-talos/index.md) | Talos | Class lab on beam parameters and C2 illumination | 3/10 | Available |
+| [Drop casting](drop-casting/index.md) | : | Grid preparation by drop casting nanoparticles | 2/10 | Available |
 | [Tomography](tomography/index.md) | Spectra | Electron tomography | - | Coming soon |
 | [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | Coming soon |
 | [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | Coming soon |
@@ -51,6 +53,9 @@ Authors thank Dr. Pinaki Mukherjee and Andrew Barnum for training @bobleesj and 
 
 ## Changelog
 
+- Apr 22, 2026 - Reorganize sidebar into SNSF Spectra 300, Techniques, Class labs, Grid preparation, Sample loading sections
+- Apr 22, 2026 - Add class lab guide on spot size and convergence angle (Talos)
+- Apr 22, 2026 - Add drop casting grid preparation guide
 - Mar 1, 2026 - Restructure STEM and TEM guides, add pre-session checklist and end session procedures
 - Feb 28, 2026 - Reorganize guide structure, rename directories, add safety warnings
 - Jan 31, 2026 - Add STEM probe correction guide with screenshots from Andrew Barnum training
