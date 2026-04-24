@@ -143,6 +143,16 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 2. If the beam is off-center, use the `mulXY` knobs with diffraction shift to center it.
 3. Once centered, click `Stop`, then click `Single Scan` to acquire and save the dataset.
 
+4. After every `Single Scan`, verify the dataset was actually saved in the destination folder before starting the next acquisition. `NOVENA` occasionally completes a scan without writing the file.
+
+   - [ ] **Confirm both `.h5` and `_master.h5` files are present**
+
+     1. Open the destination folder set in [Section 1.4](#14-configure-file-saving) and confirm both files for the latest scan are there.
+
+   - [ ] **Confirm file sizes are non-zero**
+
+     1. Check the file sizes in the folder. If either file is 0 KB, the save failed and the scan must be re-run.
+
    > **NOTE:** Each scan produces a 4D dataset: a CBED pattern at every pixel in the scan area. File sizes can be large depending on scan resolution and detector binning.
 
 ### 3.3 Quick analysis
