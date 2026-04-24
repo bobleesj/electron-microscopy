@@ -23,6 +23,11 @@ venv/
 # Temp files
 temp/
 
+# Raw images (only commit compressed JPGs)
+*.HEIC
+*.heic
+*.PNG
+
 # AI generated files
 CLAUDE.md
 .claude/
