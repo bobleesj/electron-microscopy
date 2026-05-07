@@ -19,6 +19,7 @@ Sample holders are stored here at room temperature:
 
 <img src="img/SAMPLE-holder-storage.jpg" alt="Sample holder storage" width="500">
 
+<a id="single-tilt"></a>
 ## Single-tilt holder
 
 **Load sample:**
@@ -41,6 +42,7 @@ Sample holders are stored here at room temperature:
 
    <img src="img/single-tilt/04-holder-inserted.jpg" alt="Holder inserted" width="500">
 
+<a id="double-tilt"></a>
 ## Double-tilt holder
 
 **Load sample:**
@@ -63,6 +65,7 @@ Sample holders are stored here at room temperature:
 
    <img src="img/double-tilt/05-holder-removal.jpg" alt="Holder removal" width="500">
 
+<a id="tomography"></a>
 ## Tomography holder
 
 **Unload sample**

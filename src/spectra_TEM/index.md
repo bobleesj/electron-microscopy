@@ -31,7 +31,7 @@ This guide covers two main phases:
 
 ## Part 0: Safety check
 
-Complete the pre-session checklist in [STEM (Spectra)](../spectra_STEM/index.md#check-before-starting-your-session) before proceeding. Do **not** skip this step.
+Complete the pre-session checklist in [STEM (Spectra)](../spectra_STEM/index.md#start-session) before proceeding. Do **not** skip this step.
 
 ## Part 1: Column alignment
 

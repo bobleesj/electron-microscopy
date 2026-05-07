@@ -174,7 +174,7 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
 ### 4.3 Close session
 
-Follow the steps in [End session](../sample-loading/index.md#end-session).
+Follow the steps in [End session](../spectra_STEM/index.md#end-session) from the Spectra STEM guide.
 
 ## Changelog
 

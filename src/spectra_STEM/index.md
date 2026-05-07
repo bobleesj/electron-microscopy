@@ -5,6 +5,7 @@
 This guide covers STEM alignment on the Spectra 300 at Stanford SNSF (Stanford Nano Shared Facilities). **Screenshots and instructions are provided by Andrew Barnum**. Written instructions and images are organized by Sangjoon Bob Lee.
 
 
+<a id="start-session"></a>
 ## Check before starting your session
 
 First, visually confirm the following from the previous user to ensure no damage has occurred.
@@ -58,6 +59,7 @@ This guide covers three main phases:
 
 ## Part 1: Setup & Alignment
 
+<a id="vacuum-check"></a>
 ### 1.1 Vacuum check
 
 Before imaging, verify that the vacuum system is ready and the column valves can be safely opened. Poor vacuum conditions can damage the electron source and contaminate the sample.
@@ -109,6 +111,7 @@ For this guide, we use a convergence angle of 30.0 mrad.
 > **NOTE:** These aperture values determine the convergence angle. For example, setting Condenser 2 to `50` instead of `70` gives a convergence angle of 21.5 mrad. A smaller aperture restricts the beam to a narrower range of incident angles, blocking higher-angle electrons.
 
 
+<a id="eucentric-height"></a>
 ### 1.3 Find eucentric height
 
 Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "blow-up" method provides a quick way to find this position.
@@ -728,6 +731,7 @@ After completing probe correction on the standard sample, follow the below steps
   1. Open column valves and re-do eucentric height for your new sample ([1.3](#13-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
   2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
 
+<a id="end-session"></a>
 ### 3.4 End session
 
 - [ ] **Reload the standard sample**
