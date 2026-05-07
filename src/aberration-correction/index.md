@@ -74,6 +74,10 @@ There are two independent methods to manually adjust aberrations. They use separ
 
      > **TODO:** What is the minimum correction quality needed for atomic resolution on beam-sensitive samples?
 
+## End session
+
+Follow the steps in [End session](../spectra_STEM/index.md#end-session) from the Spectra STEM guide.
+
 ## Acknowledgments
 
 Thank you to Parivash Moradifar for allowing @bobleesj to shadow her session and for teaching the manual correction workflow. Images captured during her session.

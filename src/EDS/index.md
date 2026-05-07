@@ -84,6 +84,10 @@ This guide covers Energy Dispersive X-ray Spectroscopy (EDS) on the Spectra 300.
 
      <img src="img/p3_s3_elemental_maps_02.jpg" alt="Elemental maps showing N, O, and Au distributions" width="800">
 
+## End session
+
+Follow the steps in [End session](../spectra_STEM/index.md#end-session) from the Spectra STEM guide.
+
 ## Acknowledgments
 
 Thank you to Cedric Lim for teaching @bobleesj the EDS workflow during his session. Images captured during his session.
