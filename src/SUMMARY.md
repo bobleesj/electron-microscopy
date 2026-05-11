@@ -7,6 +7,7 @@
 - [TEM (Spectra)](spectra_TEM/index.md)
 - [STEM (Spectra)](spectra_STEM/index.md)
 - [Aberration correction](aberration-correction/index.md)
+- [Maintenance (Spectra)](spectra-maintenance/index.md)
 - [TEM (Titan)](titan_TEM/index.md)
 
 # Techniques

@@ -30,6 +30,9 @@ temp/
 
 # AI generated files
 CLAUDE.md
+AGENT.md
+AGENTS.md
+GEMINI.md
 .claude/
 .cursorrules
 .cursor/
