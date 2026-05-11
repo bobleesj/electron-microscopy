@@ -378,9 +378,9 @@ STEM imaging requires swapping to the STEM holder, which has a segmented transmi
   1. Log the session in the booking/logbook as required by lab rules.
   2. Wipe down the bench and return gloves/tweezers to their locations.
 
-## Part 7: Lab observations from the Theme 1C session
+## Part 7: Lab observations from the Theme 1C session (MATSCI 322)
 
-This section captures the data and comparisons that came out of the Theme 1C class lab on the same Phenom Pharos: three full acquisition tables (Cu braid kV by detector, Cu braid kV by pressure, STEM cross-grating kV by detector) followed by discussion of BSE vs SED contrast, the kV impact, the pressure series, and the STEM transmission contrast.
+This section captures the data and comparisons that came out of the **Theme 1C** class lab from the **Stanford MATSCI 322 TEM Lab** (taught by **Andrew Barnum**, **Pinaki Mukherjee**, and **Ash**) on the same Phenom Pharos: three full acquisition tables (Cu braid kV by detector, Cu braid kV by pressure, STEM cross-grating kV by detector) followed by discussion of BSE vs SED contrast, the kV impact, the pressure series, and the STEM transmission contrast.
 
 ### Acquisition Table 1: Cu braid, kV by detector (low pressure)
 
