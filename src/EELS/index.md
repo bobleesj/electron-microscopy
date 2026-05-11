@@ -201,7 +201,7 @@ Use a vacuum or thin amorphous carbon area for calibration.
 
 ## Part 4: End session
 
-Follow the steps in [End session](../spectra_STEM/index.md#end-session) from the Spectra STEM guide.
+Follow the steps in [End session](../spectra_STEM/index.md#part-4-end-session).
 
 ## Changelog
 

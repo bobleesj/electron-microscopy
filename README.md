@@ -70,6 +70,15 @@ Formatting consistency:
 
 **Install mdBook**
 
+Option A: conda (cross-platform, also installs Python deps for `image_edit.py`):
+
+```bash
+conda env create -f environment.yml
+conda activate em-env
+```
+
+Option B: native install:
+
 ```bash
 # macOS
 brew install mdbook

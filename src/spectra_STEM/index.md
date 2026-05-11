@@ -52,7 +52,8 @@ This guide covers three main phases:
 | ----- | ---------- | ---- |
 | [Part 1: Setup & Alignment](#part-1-setup--alignment) | Vacuum check, eucentric height, STEM mode configuration, direct alignments, monochromator tune, HAADF setup | 5-10 min |
 | [Part 2: Probe Correction](#part-2-probe-correction) | Correct aberrations (C1A1, Tableau) to achieve sub-angstrom probe | 10-15 min |
-| [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional) | varies |
+| [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional), load your own sample | varies |
+| [Part 4: End session](#part-4-end-session) | Reload standard sample, pre-departure checklist | 5 min |
 
 <br>
 <img src="plots/workflow_overview.png" alt="STEM Training Workflow Overview" width="800">
@@ -732,7 +733,9 @@ After completing probe correction on the standard sample, follow the below steps
   2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
 
 <a id="end-session"></a>
-### 3.4 End session
+## Part 4: End session
+
+### 4.1 Reload the standard sample
 
 - [ ] **Reload the standard sample**
 
@@ -750,7 +753,7 @@ After completing probe correction on the standard sample, follow the below steps
   9. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
   10. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
 
-#### Checklist before leaving the Spectra room
+### 4.2 Checklist before leaving the Spectra room
 
 - [ ] Beam is blanked.
 - [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
@@ -810,6 +813,7 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Changelog
 
+- May 6, 2026 - Promote End session to Part 4 and add it to the overview table
 - Mar 1, 2026 - Add pre-session checklist, sample loading section with glove requirement, end session with explicit reload steps, fix image paths
 - Feb 28, 2026 - Add prerequisite link to TEM Alignment guide; add lost-beam troubleshooting
 - Jan 31, 2026 - Initial draft: instructions by Sangjoon Bob Lee, screenshots by Andrew Barnum during Spectra 300 hands-on training
