@@ -22,6 +22,7 @@
 # Class labs
 
 - [Spot size and convergence angle](tem-lab-talos/index.md)
+- [Talos bright-field and dark-field imaging](talos-bf-df/index.md)
 - [Phenom Pharos SEM/STEM (Deep Lab)](deep-lab-sem/index.md)
 
 # Grid preparation
