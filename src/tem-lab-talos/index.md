@@ -287,6 +287,84 @@ The Ceta has 14 µm physical pixels. With binning 4 the output frame is 1024 × 
 
 Higher kV gives a finer reciprocal-space sampling (more 1/nm per pixel) at the same camera length.
 
+### Camera length intuition: projector throw distance
+
+Camera length in a TEM behaves like the throw distance of a movie projector:
+
+- Move the projector **close** to the wall (short L): the image on the wall is **small**, but the whole picture fits.
+- Move the projector **far** from the wall (long L): the image on the wall is **huge**, but only the center fits in view.
+
+Diffraction mode works the same way. Every Bragg spot sits at a fixed angle 2θ from the center; on the camera it lands at `r_on_camera = 2θ × L`.
+
+- **Long L (2.20 m)**: each Bragg spot is far from center, the pattern is spread out, and the fixed-size camera only catches the central disk plus maybe one reflection (Ceta capture below at 1 nm⁻¹ scale).
+- **Short L (1.05 m)**: spots land closer to center, more spots squeeze inside the camera, and the gold (100) zone-axis spots start to appear (Ceta capture below at 5 nm⁻¹ scale).
+- **Very short L (350 mm, observed in 1B but not recorded with the Ceta)**: many Bragg orders fit at once, ideal for whole-pattern overviews.
+
+So long L means "magnify reciprocal space" (good for measuring α from the central disk against a screen marking); short L means "wide-angle reciprocal view" (good for seeing the whole pattern at once).
+
+<table>
+<thead><tr><th>L = 2.20 m (focused central disk)</th><th>L = 1.05 m (focused central disk with gold {200} spots in view)</th></tr></thead>
+<tbody><tr>
+<td><img src="img/1b-19.jpg" alt="Ceta diffraction image at camera length 2.2 m showing the focused central disk filling the inner screen ring at 1 per nanometer scale" width="380"></td>
+<td><img src="img/1b-20.jpg" alt="Ceta diffraction image at camera length 1.05 m showing the focused central disk plus three gold 200 Bragg spots at 5 per nanometer scale" width="380"></td>
+</tr></tbody>
+</table>
+
+### Ceta evidence for the over-focus / under-focus phase flip
+
+The two Ceta captures below were taken at L = 2.20 m on opposite sides of the focused crossover. The diagonal dark band inside the disk shifts/inverts between the two, while the outer disk geometry (set by the C2 aperture) is unchanged. This is the over/under-focus contrast inversion (sign change in the contrast transfer function), shown here in the central disk itself rather than in the real-space image.
+
+<table>
+<thead><tr><th>L = 2.20 m, defocused side A (#0016)</th><th>L = 2.20 m, defocused side B (#0017)</th></tr></thead>
+<tbody><tr>
+<td><img src="img/1b-21.jpg" alt="Ceta defocused diffraction disk at camera length 2.2 m, capture 0016: dark band inside the disk on one side of crossover" width="380"></td>
+<td><img src="img/1b-22.jpg" alt="Ceta defocused diffraction disk at camera length 2.2 m, capture 0017: dark band shifted or inverted relative to capture 0016, taken on the other side of crossover" width="380"></td>
+</tr></tbody>
+</table>
+
+### FluCam screenshots: C2 conditions mapped to image and diffraction modes
+
+The four C2 conditions from the lab table mapped to the FluCam captures (image mode and diffraction mode for each). Image/diffraction mode classification comes from the `.emi` ObjectInfo (`Real Space` vs `Reciprocal Space`); the four conditions were mapped to the eight tifs by combining the timestamp order of the `.emi` files (procedure flow: Parallel → Convergent → Defocused #1 → Defocused #2) with the visible scale bar and probe geometry in each tif. The Parallel and Convergent assignments are unambiguous from the beam diameter; the Defocused #1 vs #2 pairing is inferred from chronological order (the per-tif `.ser` metadata was not in the folder).
+
+<table>
+<thead><tr><th>C2 condition</th><th>Mag</th><th>C2 (%)</th><th>Beam diameter</th><th>Camera length</th><th>Image mode (FluCam)</th><th>Diffraction mode (FluCam)</th></tr></thead>
+<tbody>
+
+<tr>
+<td><b>Parallel</b></td><td>5,300×</td><td>42.01</td><td>5.25 µm</td><td>420 mm</td>
+<td><img src="img/1b-29.jpg" alt="Parallel beam image mode FluCam capture showing a roughly 5 micrometer probe on the screen at 2 micrometer scale" width="200"><br><sub>tif 3 · 2 µm scale</sub></td>
+<td><img src="img/1b-28.jpg" alt="Parallel beam diffraction mode FluCam capture showing the gold 100 zone-axis pattern with many Bragg spots at 10 per nanometer scale" width="200"><br><sub>tif 2 · 10.0 1/nm</sub></td>
+</tr>
+
+<tr>
+<td><b>Convergent</b> (focused crossover)</td><td>45,000×</td><td>39.396</td><td>73 nm</td><td>2.2 m</td>
+<td><img src="img/1b-34.jpg" alt="Convergent beam image mode FluCam capture showing a tiny focused probe at 2 micrometer scale" width="200"><br><sub>tif 8 · 2 µm scale</sub></td>
+<td><img src="img/1b-27.jpg" alt="Convergent beam diffraction mode FluCam capture showing the small focused central disk at 2 per nanometer scale" width="200"><br><sub>tif 1 · 2.00 1/nm</sub></td>
+</tr>
+
+<tr>
+<td><b>Defocused #1</b> (intensity knob clockwise from convergent, C2 up)</td><td>45,000×</td><td>40.06</td><td>1.28 µm</td><td>2.2 m</td>
+<td><img src="img/1b-32.jpg" alt="Defocused image mode FluCam capture showing the probe defocused on the sample at 200 nanometer scale" width="200"><br><sub>tif 6 · 200 nm scale</sub></td>
+<td><img src="img/1b-30.jpg" alt="Defocused diffraction mode FluCam capture showing the defocused central disk with first-order Bragg spots at 2 per nanometer scale" width="200"><br><sub>tif 4 · 2.00 1/nm</sub></td>
+</tr>
+
+<tr>
+<td><b>Defocused #2</b> (intensity knob counter-clockwise from convergent, C2 down)</td><td>45,000×</td><td>38.663</td><td>1.39 µm</td><td>2.2 m</td>
+<td><img src="img/1b-33.jpg" alt="Defocused image mode FluCam capture from the other side of crossover, contrast inverted relative to tif 6" width="200"><br><sub>tif 7 · 200 nm scale</sub></td>
+<td><img src="img/1b-31.jpg" alt="Defocused diffraction mode FluCam capture with multiple disks visible on the other side of crossover" width="200"><br><sub>tif 5 · 2.00 1/nm</sub></td>
+</tr>
+
+</tbody>
+</table>
+
+Stepping through Defocused #1 → Convergent → Defocused #2 sweeps the intensity knob through the focused crossover. The two defocused image-mode probes (tif 6 vs tif 7) cover the same sample area but show inverted internal contrast; the two defocused diffraction-mode disks (tif 4 vs tif 5) similarly flip their internal fringes. Whether the "C2 up" side corresponds to true overfocus or underfocus depends on whether the C2-lens perspective or the beam perspective is being used (these conventions are opposite).
+
+**Session observations:**
+
+- At **CL = 350 mm**, many gold Bragg peaks were visible on the screen at once (smaller L means more angular range fits in the camera).
+- At **CL = 2.2 m**, the central disk and only the nearest reflections fit; the higher-order spots were off-camera.
+- After defocus, "one disk is over focus, the other is under focus": confirmed by the contrast inversion between tif 6 / tif 7 (image mode) and tif 4 / tif 5 (diffraction mode), and by the Ceta defocus pair (#0016 vs #0017) shown above.
+
 ### Reference: hand-drawn whiteboard sketch (over- vs under-focus)
 
 The whiteboard sketch reproduced above (img 1b-15) is the geometric explanation for the CW-vs-CCW image flip: when the beam crossover sits above the sample plane (over-focus), the rays have already crossed by the time they reach the sample, so left/right is inverted. When the crossover sits below the sample plane (under-focus), the rays have not crossed yet, so the orientation is preserved. Stepping the intensity knob through crossover swaps over- and under-focus, hence the real-space flip.
