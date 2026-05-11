@@ -18,6 +18,30 @@
 .content img {
     border-radius: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    cursor: zoom-in;
+    transition: transform 0.15s ease-out;
+}
+
+.content img:hover {
+    transform: translateY(-2px);
+}
+
+/* No rounded corners / shadow on images inside tables (avoids the rounded-card look on every cell of an image grid) */
+.content table img {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.content table img:hover {
+    transform: none;
+}
+
+/* Wrapped image anchors should not pick up underline / blue link styling */
+.content a:has(> img) {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    display: inline-block;
 }
 
 /* Consistent list spacing - normalize loose and tight lists */
