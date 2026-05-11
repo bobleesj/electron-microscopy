@@ -69,6 +69,44 @@ Before inserting the Arina detector, a user must retract the CETA camera. Both d
 3. Set the filename format to `(name)_%00%`. The `%00%` placeholder auto-increments the frame number.
 4. Use `Continuous` for live streaming (preview) and `Single` to record and save a dataset.
 
+#### Folder and file naming convention
+
+A consistent naming convention saves hours of searching later when sharing data or revisiting a session months later. Use the patterns below.
+
+> **Use lowercase everywhere**: folder names, sample names, operator names, all tokens. Lowercase removes the question of whether a file should be `Gold` or `gold` or `GOLD`, keeps shell paths simple, and sorts cleanly.
+
+**Folder name:** `YYYYMMDD_{sample}_{experiment}[_{operators}]`
+
+Lead with the **most important keywords**: the sample first, then the experiment or focus. Adding the operators (initials or short names) at the end is optional but **highly recommended**: it captures who was in the room so the surrounding context (conversations, troubleshooting, follow-up questions) is easier to remember months later.
+
+| Example | Meaning |
+|---|---|
+| `20260428_gold_drift_ptycho` | Gold sample, drift study via ptychography on Apr 28, 2026 |
+| `20260428_gold_drift_ptycho_dasol_corrie` | Same session, with Dasol and Corrie noted |
+| `20260512_mos2_ptycho_bob` | MoS₂ sample, ptychography, solo session by Bob on May 12 |
+
+**File name:** `{voltage}_{convergence}_{scan-params}_{notes}.h5` (or `.mat`, `.raw`)
+
+Order tokens from the **largest concept (session-wide) to the smallest concept (per-scan)**. Voltage applies to the whole session, then convergence and camera length apply per-experiment, and scan dimensions and dwell time change per scan. Reading the filename left-to-right then reads like zooming in from the broadest setting to the most specific.
+
+| Token | Meaning | Example | Scope |
+|---|---|---|---|
+| `{n}kev` | Accelerating voltage | `300kev`, `120kev` | session-wide |
+| `{n}mrad` | Convergence angle | `30mrad`, `1.5mrad` | per-experiment |
+| `cl{n}m` | Camera length | `cl0.4m`, `cl1.05m` | per-experiment |
+| `{n}x{n}` | Scan dimensions | `128x128`, `512x512` | per-scan |
+| `{n}us` | Dwell time (usually µs on Arina) | `5us`, `200us` | per-scan |
+
+Only encode parameters that are **constant for the whole scan**. Skip things that drift or change over time (e.g., defocus): they are not informative as a fixed filename token, and there is no need to record them in the `h5` metadata either.
+
+| Example | Meaning |
+|---|---|
+| `300kev_30mrad_128x128_5us` | 300 kV, 30 mrad probe, 128 by 128 scan, 5 µs per pixel |
+| `300kev_1.5mrad_64x64_nbed` | 300 kV, nanobeam diffraction at 1.5 mrad |
+| `300kev_30mrad_256x256_drift1` | First scan in a drift series |
+
+Stick to these patterns from the start of every session so the names sort cleanly in the file browser and stay searchable.
+
 ## Part 2: Beam configuration (optional)
 
 The [STEM (Spectra)](../spectra_STEM/index.md) guide sets 30 mrad convergence angle by default. If that is suitable for your experiment (e.g., ptychography), skip this section and go directly to [Part 3: Acquisition](#part-3-acquisition). If you need a different convergence angle (e.g., nanobeam diffraction), follow the steps below.
