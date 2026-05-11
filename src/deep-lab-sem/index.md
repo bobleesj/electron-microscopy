@@ -380,7 +380,103 @@ STEM imaging requires swapping to the STEM holder, which has a segmented transmi
 
 ## Part 7: Lab observations from the Theme 1C session
 
-This section captures the comparisons that came out of the Theme 1C class lab on the same Phenom Pharos: BSE vs SED contrast, the kV impact on each detector, the pressure series and why SED fails at high pressure, and the STEM transmission contrast for low-Z thin features.
+This section captures the data and comparisons that came out of the Theme 1C class lab on the same Phenom Pharos: three full acquisition tables (Cu braid kV by detector, Cu braid kV by pressure, STEM cross-grating kV by detector) followed by discussion of BSE vs SED contrast, the kV impact, the pressure series, and the STEM transmission contrast.
+
+### Acquisition Table 1: Cu braid, kV by detector (low pressure)
+
+Acquired at low chamber pressure (~0.10 Pa). Each kV was retuned with autofocus / autoCB / autostigmate, so working distance and magnification drift slightly between columns; the actual values are listed in the captions.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>BSE Full</th>
+<td><img src="img/p7_obs_cu_5kv_bse.jpg" alt="Cu braid BSE Full at 5 kV, 380x magnification, working distance 1590 um, 0.10 Pa" width="280"><br><sub>380×, WD 1590 µm</sub></td>
+<td><img src="img/p7_t1_cu_10kv_bse.jpg" alt="Cu braid BSE Full at 10 kV, 410x magnification, working distance 1465 um, 0.10 Pa" width="280"><br><sub>410×, WD 1465 µm</sub></td>
+<td><img src="img/p7_t1_cu_15kv_bse.jpg" alt="Cu braid BSE Full at 15 kV, 610x magnification, working distance 972 um, 0.10 Pa" width="280"><br><sub>610×, WD 972 µm</sub></td>
+<td><img src="img/p7_obs_cu_20kv_bse.jpg" alt="Cu braid BSE Full at 20 kV, 810x magnification, working distance 733 um, 0.10 Pa" width="280"><br><sub>810×, WD 733 µm</sub></td>
+</tr>
+<tr><th>SED</th>
+<td><img src="img/p7_obs_cu_5kv_sed.jpg" alt="Cu braid SED at 5 kV, 380x magnification, working distance 1590 um, 0.10 Pa" width="280"><br><sub>380×, WD 1590 µm</sub></td>
+<td><img src="img/p7_t1_cu_10kv_sed.jpg" alt="Cu braid SED at 10 kV, 410x magnification, working distance 1465 um, 0.10 Pa" width="280"><br><sub>410×, WD 1465 µm</sub></td>
+<td><img src="img/p7_t1_cu_15kv_sed.jpg" alt="Cu braid SED at 15 kV, 610x magnification, working distance 972 um, 0.10 Pa" width="280"><br><sub>610×, WD 972 µm</sub></td>
+<td><img src="img/p7_obs_cu_20kv_sed.jpg" alt="Cu braid SED at 20 kV, 810x magnification, working distance 733 um, 0.10 Pa" width="280"><br><sub>810×, WD 733 µm</sub></td>
+</tr>
+</tbody>
+</table>
+
+### Acquisition Table 2: Cu braid, kV by pressure (BSE Full at 810x)
+
+Pressure series held at fixed magnification (810×) and BSE Full detector. The achievable chamber pressure depends on kV, so the qualitative tiers (Low / Medium / High) correspond to different absolute pressures across columns; actual values are listed in each cell. kV was retuned between columns; autoCB was left alone within a column.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>Low (~0.1 Pa)</th>
+<td><img src="img/p7_obs_cu_low_p.jpg" alt="Cu braid BSE Full at 5 kV and 0.10 Pa" width="280"><br><sub>0.10 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_low.jpg" alt="Cu braid BSE Full at 10 kV and 0.13 Pa" width="280"><br><sub>0.13 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_low.jpg" alt="Cu braid BSE Full at 15 kV and 0.81 Pa" width="280"><br><sub>0.81 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_low.jpg" alt="Cu braid BSE Full at 20 kV and 0.35 Pa" width="280"><br><sub>0.35 Pa</sub></td>
+</tr>
+<tr><th>Medium (~3 to 5 Pa)</th>
+<td><img src="img/p7_obs_cu_med_p.jpg" alt="Cu braid BSE Full at 5 kV and 4.0 Pa" width="280"><br><sub>4.0 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_med.jpg" alt="Cu braid BSE Full at 10 kV and 5.0 Pa" width="280"><br><sub>5.0 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_med.jpg" alt="Cu braid BSE Full at 15 kV and 2.8 Pa" width="280"><br><sub>2.8 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_med.jpg" alt="Cu braid BSE Full at 20 kV and 4.5 Pa" width="280"><br><sub>4.5 Pa</sub></td>
+</tr>
+<tr><th>High (~20 to 33 Pa)</th>
+<td><img src="img/p7_obs_cu_high_p.jpg" alt="Cu braid BSE Full at 5 kV and 27 Pa" width="280"><br><sub>27 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_high.jpg" alt="Cu braid BSE Full at 10 kV and 24 Pa" width="280"><br><sub>24 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_high.jpg" alt="Cu braid BSE Full at 15 kV and 33 Pa" width="280"><br><sub>33 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_high.jpg" alt="Cu braid BSE Full at 20 kV and 20 Pa" width="280"><br><sub>20 Pa</sub></td>
+</tr>
+</tbody>
+</table>
+
+### Acquisition Table 3: STEM cross-grating with latex spheres, kV by detector
+
+High-magnification series (16,000× at 5 kV, 17,500× elsewhere) at low pressure (0.10 Pa). All five detectors collected at each kV. The 12 mm / 28× overview shot used for navigation is shown below the table.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>BF STEM</th>
+<td><img src="img/p7_obs_stem_5kv_bf.jpg" alt="STEM BF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_bf.jpg" alt="STEM BF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_bf.jpg" alt="STEM BF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_bf.jpg" alt="STEM BF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>DF STEM</th>
+<td><img src="img/p7_t3_stem_5kv_df.jpg" alt="STEM DF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_df.jpg" alt="STEM DF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_df.jpg" alt="STEM DF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_df.jpg" alt="STEM DF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>HAADF STEM</th>
+<td><img src="img/p7_t3_stem_5kv_haadf.jpg" alt="STEM HAADF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_haadf.jpg" alt="STEM HAADF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_haadf.jpg" alt="STEM HAADF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_haadf.jpg" alt="STEM HAADF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>BSE Full</th>
+<td><img src="img/p7_obs_stem_5kv_bse.jpg" alt="STEM BSE Full at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_bse.jpg" alt="STEM BSE Full at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_bse.jpg" alt="STEM BSE Full at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_bse.jpg" alt="STEM BSE Full at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>SED</th>
+<td><img src="img/p7_obs_stem_5kv_sed.jpg" alt="STEM SED at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_sed.jpg" alt="STEM SED at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_sed.jpg" alt="STEM SED at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_sed.jpg" alt="STEM SED at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+</tbody>
+</table>
+
+#### Overview shot (used for navigation)
+
+<img src="img/p7_t3_stem_overview.jpg" alt="Low-magnification 28x overview of the STEM cross-grating mount used to locate a dark grid square before zooming in and switching to BF STEM mode" width="400">
+
+*28×, WD 12 mm, 0.10 Pa: low-magnification overview used to locate a dark grid square before zooming in and switching to BF STEM mode.*
 
 ### Why BSE and SED look different
 
