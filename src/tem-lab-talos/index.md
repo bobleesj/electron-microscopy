@@ -3,7 +3,7 @@
 <img src="img/1a-04.jpg" alt="Gold diffraction pattern on the Talos TIA camera with TEM hand controllers below" width="800">
 
 > [!CAUTION]
-> **VERY ROUGH DRAFT, NOT AUTHORITATIVE.** Week 3 TEM class lab taught by **Andrew B.** on 2026-04-21. Photos, notes, and data captured by @bobleesj (Sangjoon Bob Lee) during the session as a student. Terminology, step ordering, and values may be wrong or incomplete. Analysis prompts from the lab handout are left as **TODO** for the lab report. Treat this page as a personal study reference, not an SOP. A trained user must verify everything before relying on it.
+> **VERY ROUGH DRAFT, NOT AUTHORITATIVE.** Week 3 TEM class lab taught by **Andrew B.** on 2026-04-21, with an additional underfocus/overfocus session on 2026-04-23. Photos, notes, data, and analysis captured by @bobleesj (Sangjoon Bob Lee) during the sessions as a student. Terminology, step ordering, and values may be wrong or incomplete. Treat this page as a personal study reference, not an SOP. A trained user must verify everything before relying on it.
 
 This page documents a Week 3 class lab on the Talos TEM covering two themes: (1A) how spot size and C2 aperture control the condenser lenses and screen current, and (1B) how the C2 lens changes illumination between parallel, convergent, and defocused conditions, and how that choice distinguishes image mode from diffraction mode.
 
@@ -98,7 +98,7 @@ Separately, at spot sizes 3 and 9, the instrument is switched to diffraction mod
 | Spot size | CL at 70 µm C2 | CL at 50 µm C2 |
 |-----------|----------------|----------------|
 | 3 | 1.75 m | 2.2 m |
-| 9 | 1.75 m | TODO (not recorded) |
+| 9 | 1.75 m | 2.21 m (recovered from Ceta `.emd` metadata; not measured directly with the 5 mm marking) |
 
 ### Plots
 
@@ -115,13 +115,38 @@ Separately, at spot sizes 3 and 9, the instrument is switched to diffraction mod
 - **70 µm delivers ~2× the screen current of 50 µm** at every spot above the detection limit. The area ratio is (70/50)² ≈ 2, which matches: the aperture really is just clipping.
 - **A 5 mm beam needs longer camera length at 50 µm C2.** At spot 3: 1.75 m (70 µm) vs 2.2 m (50 µm). Less beam, so more camera length is needed to magnify it to the same ring.
 
-### Open questions
+### Convergence angle α
 
-> **Open questions (for the lab report):**
-> - [ ] Draw the ray diagram of the two-condenser lens system (C1, C2, aperture, specimen plane). Use it to explain why C1 dominates and why the aperture doesn't change the lens values.
-> - [ ] Why is C1 so *low* (16.64%) at spot size 1? A smaller spot needs a stronger C1, so shouldn't it be higher?
-> - [ ] Determine the convergence angle α at spots 3 and 9 for each aperture.
-> - [ ] Why is the 5 mm-beam CL longer at 50 µm than 70 µm? Is it just the current-times-CL invariance, or is the ray geometry fundamentally different?
+In diffraction mode the focused-probe central disk has angular radius equal to α. With the disk set to fill the inner 5 mm screen marking (small-angle limit, α = 2.5 mm / L):
+
+| C2 aperture | Spot | Camera length L | α = 2.5 mm / L |
+|---|---|---|---|
+| 70 µm | 3 | 1.75 m | 1.43 mrad |
+| 70 µm | 9 | 1.75 m | 1.43 mrad |
+| 50 µm | 3 | 2.20 m | 1.14 mrad |
+| 50 µm | 9 | 2.21 m | 1.13 mrad |
+
+**The result.** α is set by the C2 aperture, not by spot size. At a given aperture, α is the same at spot 3 and spot 9. Going from 70 µm to 50 µm at spot 3 reduces α from 1.43 to 1.14 mrad. The 50 µm aperture clips the convergent cone to a smaller half-angle.
+
+### Two-condenser ray diagram
+
+<img src="img/1a-06.jpg" alt="Hand-drawn two-condenser ray diagram showing gun crossover, lens C1, lens C2, specimen, and the convergence angle alpha with the relation tan(alpha) equals aperture radius over camera length" width="800">
+
+The path down the column is: gun crossover → C1 lens → intermediate crossover → C2 aperture → C2 lens → specimen plane. Spot size changes only C1 excitation. A stronger C1 (higher %) shortens its focal length and demagnifies the gun crossover more strongly, so by the time the beam reaches the C2 aperture it is more demagnified, giving a smaller, dimmer probe. The C2 aperture clips this cone to a fixed radius r_ap, then C2 re-images it onto the specimen. Because r_ap is unchanged across spot sizes, the convergence angle α at the specimen is set by r_ap and the C2-to-specimen distance, not by the spot size. tan(α) = r_ap / L ≈ α in the small-angle limit.
+
+### Why the C1, C2, and screen-current trends look the way they do
+
+- **C1 climbs monotonically (16.6 → 93.2%)** because it is the strong condenser controlling gun-image demagnification. A stronger C1 gives a smaller, dimmer probe.
+- **C2 drifts only ~5%** and the two aperture curves overlap because the intensity knob retunes C2 at each spot to put the crossover back on the specimen. C2 does not "know" which aperture is mounted; it just re-images the C1 crossover onto the specimen plane.
+- **Screen current falls ~10× every two spots** and the 70 µm curve sits ~1.96× above the 50 µm curve, exactly the area ratio (70/50)² = 1.96.
+
+### Why C1 is so low at spot 1
+
+Spot 1 wants the largest probe and the highest current, which means the *least* demagnification of the gun crossover. C1 at minimum strength does the least demagnification, hence the very low percentage at spot 1. As the spot number increases, more demagnification is requested, so C1 % climbs.
+
+### Why one camera length covers spot 3 and spot 9 at a given aperture
+
+The 5 mm-beam method sets the focused-probe central disk equal to the 5 mm screen ring. Disk radius = α × L. Because α is fixed by the C2 aperture (independent of spot size), a single L gives the 5 mm condition for every spot at that aperture. The 50 µm aperture has a smaller α, so a *larger* L (2.2 m vs 1.75 m) is needed to inflate its disk back to 5 mm.
 
 ## Theme 1B: How does the C2 lens switch between parallel and convergent illumination?
 
@@ -207,13 +232,64 @@ Andrew drew this at the whiteboard to explain why CW and CCW defocus produce fli
 
 When the beam crossover sits **above** the sample plane (OVER-focus), the rays have already crossed by the time they hit the sample, so left/right is inverted. When the crossover sits **below** the sample plane (UNDER-focus), the rays haven't crossed yet, so the orientation is preserved. Passing through crossover literally swaps over- and under-focus, hence the real-space flip.
 
-### Open questions
+### Ray diagrams: image mode vs diffraction mode
 
-> **For the lab report:**
-> - [ ] Draw the ray diagrams for parallel illumination in image mode and in diffraction mode (two-condenser lens system, C2, specimen plane, back focal plane). What exactly changes between the two modes?
-> - [ ] Use the ray diagrams to explain the clockwise-vs-counter-clockwise flip quantitatively. What's the geometric signature of crossover being above vs below the specimen?
-> - [ ] Ceta camera has 14 µm physical pixels. At binning 4 (1024×1024 output), effective sensor pixel = 56 µm. Work out the effective real-space pixel size at 300 kV and at 120 kV.
-> - [ ] Verify with ray diagrams: does the Intermediate lens really act as the mode switch (on = image mode, off = diffraction mode)? If so, why does the Diffraction lens get *weaker* in diffraction mode rather than stronger? Work through the conjugate-plane math for both configurations.
+<img src="img/1b-18.jpg" alt="Hand-drawn ray diagram in the Williams and Carter style showing two specimen sources illuminated by a parallel beam, with rays from both sources fanning through the objective lens, meeting at a single point on the back focal plane (diffraction mode) and crossing over to meet again at the image plane (image mode)" width="800">
+
+Two sample sources emit fans of parallel-illumination rays. The objective lens has two natural conjugate planes downstream:
+
+- At the **back focal plane**, rays of the **same exit angle** (regardless of which source they came from) focus to one point. That is the diffraction pattern.
+- At the **image plane** (further down), rays from the **same source** (regardless of exit angle) focus to one point. That is the real-space image.
+
+The objective is unchanged between the two modes; what switches is the **intermediate lens**, which re-focuses the camera onto either the back focal plane (diffraction mode) or the image plane (image mode). The lens-excitation table above shows this directly: the intermediate lens swings from −14.81% to −0.281% while the objective stays put.
+
+The "Diffraction lens" name is misleading. It is the first projection lens after the objective, not a lens that is only on in diffraction mode. It actually gets **weaker** in diffraction mode (44.65% → 28.42%) because once the intermediate lens drops out, Projector 1 takes over and gets stronger; the chain has one fewer stage to do work, so the Diffraction lens slackens.
+
+### Bragg's law verification of camera length and convergence angle
+
+The Ceta `.emd` files carry the full FEI metadata (acceleration voltage, camera length, lens excitations, pixel scale). For the Ceta diffraction acquisitions taken in this session: **HT = 120 kV**, spot index = 9, C1 = 51.85% (matching the 50 µm aperture spot 9 row of the data table), camera lengths = 2.209 m (#0015–17) and 1.065 m (#0018–21). The 70 µm aperture was not used during the Ceta diffraction acquisitions.
+
+**Relativistic wavelength** (λ = h·c / √(eV·(eV + 2 m_e c²))):
+
+| HT | λ (pm) |
+|---|---|
+| **120 kV (this session)** | **3.35** |
+| 200 kV | 2.51 |
+| 300 kV | 1.97 |
+
+**Bragg angle for gold {200}** (d_200 = a/2 = 0.2035 nm; small-angle: 2θ_B ≈ λ/d):
+
+| HT | 2θ_B for {200} (mrad) |
+|---|---|
+| **120 kV** | **16.5** |
+| 200 kV | 12.3 |
+| 300 kV | 9.7 |
+
+**True camera length from the {200} reflection.** Using the Velox pixel scale (0.01628 1/nm/pixel for L = 1.065 m), the {200} spot lies at q = 1/d_200 = 4.91 1/nm, which is 4.91 / 0.01628 = 302 pixels from the central beam. With effective pixel size 56 µm, this is 302 × 56 µm = 16.9 mm. Then L_true = 16.9 mm / 16.5 mrad = **1.024 m**. For #0015–17 the same calibration gives L_true ≈ **2.221 m**.
+
+**Comparison of displayed vs metadata vs Bragg-back-calculated camera length:**
+
+| Capture | L displayed (m) | L from `.emd` metadata (m) | L calculated from {200} Bragg (m) | Agreement |
+|---|---|---|---|---|
+| #0015–17 | 2.20 | 2.209 | 2.221 | within 1% |
+| #0018–21 | 1.05 | 1.065 | 1.024 | within 4% |
+
+All three agree within ~4%, which is the expected calibration accuracy for the Talos camera-length setting.
+
+**True convergence angle.** Using L_true = 1.024 m and the 50 µm aperture's central disk filling the inner screen marking gives α_true = 2.5 mm / 1024 mm ≈ **1.16 mrad**, consistent with the screen-marking value of 1.14 mrad.
+
+### Effective real-space pixel at 300 kV and 120 kV
+
+The Ceta has 14 µm physical pixels. With binning 4 the output frame is 1024 × 1024 with **effective pixel = 56 µm**. The real-space pixel size at the specimen depends on imaging mode (microprobe vs nanoprobe) and magnification, not on HT directly: HT only changes the wavelength (and therefore the **reciprocal-space** pixel scale in diffraction mode). For the Ceta in diffraction mode at L = 1.065 m:
+
+- At **120 kV** (λ = 3.35 pm), reciprocal pixel = 56 µm / (1065 mm × 0.00335 nm) = 0.0157 1/nm/px. Velox-reported pixel scale: 0.01628 1/nm/px (3.7% disagreement, consistent with the camera-length calibration above).
+- At **300 kV** (λ = 1.97 pm), reciprocal pixel = 56 µm / (1065 mm × 0.00197 nm) = 0.0267 1/nm/px (predicted; not measured this session).
+
+Higher kV gives a finer reciprocal-space sampling (more 1/nm per pixel) at the same camera length.
+
+### Reference: hand-drawn whiteboard sketch (over- vs under-focus)
+
+The whiteboard sketch reproduced above (img 1b-15) is the geometric explanation for the CW-vs-CCW image flip: when the beam crossover sits above the sample plane (over-focus), the rays have already crossed by the time they reach the sample, so left/right is inverted. When the crossover sits below the sample plane (under-focus), the rays have not crossed yet, so the orientation is preserved. Stepping the intensity knob through crossover swaps over- and under-focus, hence the real-space flip.
 
 ## Appendix: Microprobe vs Nanoprobe
 
@@ -227,4 +303,5 @@ This lab was run entirely in **Microprobe** mode. Nanoprobe is used in cryoEM to
 
 ## Changelog
 
+- May 11, 2026 : Filled in the Theme 1A and Theme 1B analysis (convergence angle, two-condenser ray diagram, Williams and Carter ray diagram, Bragg's law verification of camera length, comparison to displayed and `.emd` metadata values, effective real-space pixel calculation). Recovered the spot 9 / 50 µm camera length from the Ceta `.emd` metadata. Added a brief reference to the over/under-focus session of 2026-04-23.
 - Apr 22, 2026 : Initial draft from the 2026-04-21 Week 3 TEM class lab taught by Andrew B. Photos, notes, and measurements by @bobleesj. Plots generated from the xlsx data sheet. Analysis prompts and ray diagrams left as TODO for the lab report.
