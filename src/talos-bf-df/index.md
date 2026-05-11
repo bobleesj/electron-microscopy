@@ -1,7 +1,7 @@
 # Talos bright-field and dark-field imaging
 
 > [!CAUTION]
-> **VERY ROUGH DRAFT.** This guide is being expanded and refined as @bobleesj uses the Talos in future sessions. Steps and screenshots still need verification against the live instrument.
+> **VERY ROUGH DRAFT.** Notes from a **Stanford MATSCI 322 TEM Lab** session taught by **Andrew Barnum**, **Pinaki Mukherjee**, and **Ash**. This guide is being expanded and refined as @bobleesj uses the Talos in future sessions. Steps and screenshots still need verification against the live instrument.
 >
 > **TODO:** Add stage navigation, eucentric height alignment, selected-area aperture insertion, condenser aperture changes, dose-on-sample calibration, and end-of-session shutdown.
 
@@ -28,7 +28,6 @@ This guide covers the operational steps for bright-field (BF) and dark-field (DF
 | [Part 3: Configure acquisition parameters](#part-3-configure-acquisition-parameters) | Frame size, frame combining, shutter, recording mode | 3 min |
 | [Part 4: Bright-field imaging](#part-4-bright-field-imaging) | Open valves, navigate, set illumination, annotate | varies |
 | [Part 5: Dark-field imaging](#part-5-dark-field-imaging) | Beam tilt, dark-field toggle, BF/DF comparison | 10 min |
-| [Part 6: Underfocus vs overfocus reference](#part-6-underfocus-vs-overfocus-reference) | Visual signature of over- vs under-focus on the FluCam | reference |
 
 ## Part 1: Startup and orientation
 
@@ -212,46 +211,7 @@ This guide covers the operational steps for bright-field (BF) and dark-field (DF
 
      > **NOTE:** Contrast is inverted between BF and DF: grains that diffracted strongly into the selected reflection now appear bright against a dark background.
 
-## Part 6: Underfocus vs overfocus reference
-
-This part is a reference observation rather than an instrument operation step. It captures how under- and over-focused images look on the FluCam and explains the sign convention used during the lab.
-
-### 6.1 Underfocus
-
-- [ ] **Turn the intensity knob counter-clockwise from focused crossover**
-
-  1. Turn the intensity knob counter-clockwise. This strengthens the C2 lens (C2 current increases), which is **underfocus** from the C2 lens perspective: the C2 focal point moves upward relative to the eucentric height (negative defocus relative to eucentric).
-
-     <img src="img/p6_defocus_01.jpg" alt="Underfocus image of latex spheres on the Talos: a bright ring sits on the outside of each sphere" width="800">
-
-  2. Confirm the visual signature: a **bright ring on the outside** of each sphere.
-
-### 6.2 Overfocus
-
-- [ ] **Turn the intensity knob clockwise from focused crossover**
-
-  1. Turn the intensity knob clockwise. This weakens the C2 lens (C2 current decreases), which is **overfocus** from the C2 lens perspective (positive defocus relative to eucentric).
-
-     <img src="img/p6_defocus_02.jpg" alt="Overfocus image of latex spheres on the Talos: a bright ring sits on the inside of each sphere" width="800">
-
-  2. Confirm the visual signature: a **bright ring on the inside** of each sphere.
-
-### 6.3 Note the two sign conventions
-
-- [ ] **Be explicit about which perspective the defocus is reported in**
-
-  1. From the **C2 lens perspective**, "underfocus" means the lens is stronger (C2 current up); "overfocus" means weaker (C2 current down).
-  2. From the **beam perspective**, "over" means the focal plane is past the sample, so the "over" region sits below the sample.
-
-     > **NOTE:** These two conventions are opposite. Record which convention is in use when interpreting any defocus value during a session.
-
-### 6.4 Use a calibrated reference
-
-- [ ] **Refer all defocus values to the eucentric height**
-
-  1. Treat the eucentric height as the source of truth for any defocus measurement on the Talos.
-  2. Read calibrated defocus values relative to the eucentric position.
-
 ## Changelog
 
-- May 11, 2026 : Initial draft compiled from the April 2026 Talos sessions by @bobleesj. BF and DF procedure structure adapted from the existing Phenom Pharos SOP layout. Underfocus/overfocus reference added from the 2026-04-23 session.
+- May 11, 2026 : Moved the underfocus/overfocus reference into [Session notes](../notes.md) since it is session-specific rather than part of the general BF/DF procedure.
+- May 11, 2026 : Initial draft compiled from the April 2026 Talos sessions by @bobleesj. BF and DF procedure structure adapted from the existing Phenom Pharos SOP layout.
