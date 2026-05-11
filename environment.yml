@@ -1,0 +1,8 @@
+name: em-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - mdbook=0.5.2
+  - pillow
+  - pillow-heif
