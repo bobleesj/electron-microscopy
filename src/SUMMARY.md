@@ -19,10 +19,11 @@
 - [Ptychography](ptychography/index.md)
 - [MAPED](PED/index.md)
 
-# Class labs
+# MATSCI 322 TEM Lab (Stanford)
 
-- [Spot size and convergence angle](tem-lab-talos/index.md)
-- [Phenom Pharos SEM/STEM (Deep Lab)](deep-lab-sem/index.md)
+- [Theme 1A & 1B: Spot size and convergence angle (Talos)](tem-lab-talos/index.md)
+- [Theme 1C: SEM and STEM imaging (Phenom Pharos)](deep-lab-sem/index.md)
+- [Talos bright-field and dark-field imaging](talos-bf-df/index.md)
 
 # Grid preparation
 

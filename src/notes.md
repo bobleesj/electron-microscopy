@@ -29,6 +29,35 @@ This is a working scratchpad for raw notes taken during microscopy training visi
 
 ---
 
+## Apr 23, 2026: Underfocus vs overfocus on the Talos (MATSCI 322)
+
+A short follow-up session in the **Stanford MATSCI 322 TEM Lab** (with **Andrew Barnum**, **Pinaki Mukherjee**, and **Ash**) to nail down what under- and over-focused images actually look like on the Talos FluCam, using latex spheres as the test object.
+
+### Underfocus
+
+Turn the intensity knob **counter-clockwise** from focused crossover. This strengthens the C2 lens (C2 current increases), which is **underfocus** from the C2 lens perspective: the C2 focal point moves upward relative to the eucentric height (negative defocus relative to eucentric).
+
+<img src="img/notes_talos_underfocus.jpg" alt="Underfocus image of latex spheres on the Talos: a bright ring sits on the outside of each sphere" width="800">
+
+Visual signature: a **bright ring on the outside** of each sphere.
+
+### Overfocus
+
+Turn the intensity knob **clockwise** from focused crossover. This weakens the C2 lens (C2 current decreases), which is **overfocus** from the C2 lens perspective (positive defocus relative to eucentric).
+
+<img src="img/notes_talos_overfocus.jpg" alt="Overfocus image of latex spheres on the Talos: a bright ring sits on the inside of each sphere" width="800">
+
+Visual signature: a **bright ring on the inside** of each sphere.
+
+### The two sign conventions are opposite
+
+- From the **C2 lens perspective**, "underfocus" means the lens is stronger (C2 current up); "overfocus" means weaker (C2 current down).
+- From the **beam perspective**, "over" means the focal plane is past the sample, so the "over" region sits below the sample.
+
+Record which convention is in use when interpreting a defocus value during a session. Treat the eucentric height as the source of truth: a calibrated defocus reading on the instrument is given relative to the eucentric position.
+
+---
+
 ## Apr 3, 2026: Time-series for beam sensitive and low contrast at SNSF
 
 I implemented live SSB reconstruction and also learned to fill up nitrogen in Spectra. Today, I joined Parivash Moradifar's session to shadow for manual aberration correction, and Dasol's session for beam-sensitive sample imaging.

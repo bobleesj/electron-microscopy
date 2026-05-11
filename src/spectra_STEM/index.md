@@ -721,11 +721,17 @@ After completing probe correction on the standard sample, follow the below steps
 
      > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
 
-  5. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in. The holder should move in smoothly.
+  5. Wait until the **PPII gauge** drops into the **high 10⁻⁶ mbar to low 10⁻⁷ mbar** range before continuing. PPII reads the load lock / projection chamber pressure; the holder insertion path is only safe to advance once PPII has reached this range.
+
+     <img src="img/p3_s3_vacuum_ppii.jpg" alt="TEMUI vacuum status panel after sample insertion, with PPII reading 7.39 by 10 to the minus 6 mbar in the pressures list" width="600">
+
+     > **NOTE:** In the example above PPII reads 7.39 × 10⁻⁶ mbar (high 10⁻⁶ range), which is right at the threshold. Wait until it drops further (low 10⁻⁶ or into 10⁻⁷) for a more conservative margin before the next step.
+
+  6. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in. The holder should move in smoothly.
 
      <img src="../sample-loading/img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="400">
 
-  6. In `TEMUI`, turn off the turbo pump. Confirm the holder type when prompted.
+  7. In `TEMUI`, turn off the turbo pump. Confirm the holder type when prompted.
 
 - [ ] **Re-do eucentric height**
 
