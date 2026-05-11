@@ -378,10 +378,157 @@ STEM imaging requires swapping to the STEM holder, which has a segmented transmi
   1. Log the session in the booking/logbook as required by lab rules.
   2. Wipe down the bench and return gloves/tweezers to their locations.
 
+## Part 7: Lab observations from the Theme 1C session (MATSCI 322)
+
+This section captures the data and comparisons that came out of the **Theme 1C** class lab from the **Stanford MATSCI 322 TEM Lab** (taught by **Andrew Barnum**, **Pinaki Mukherjee**, and **Ash**) on the same Phenom Pharos: three full acquisition tables (Cu braid kV by detector, Cu braid kV by pressure, STEM cross-grating kV by detector) followed by discussion of BSE vs SED contrast, the kV impact, the pressure series, and the STEM transmission contrast.
+
+### Acquisition Table 1: Cu braid, kV by detector (low pressure)
+
+Acquired at low chamber pressure (~0.10 Pa). Each kV was retuned with autofocus / autoCB / autostigmate, so working distance and magnification drift slightly between columns; the actual values are listed in the captions.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>BSE Full</th>
+<td><img src="img/p7_obs_cu_5kv_bse.jpg" alt="Cu braid BSE Full at 5 kV, 380x magnification, working distance 1590 um, 0.10 Pa" width="280"><br><sub>380×, WD 1590 µm</sub></td>
+<td><img src="img/p7_t1_cu_10kv_bse.jpg" alt="Cu braid BSE Full at 10 kV, 410x magnification, working distance 1465 um, 0.10 Pa" width="280"><br><sub>410×, WD 1465 µm</sub></td>
+<td><img src="img/p7_t1_cu_15kv_bse.jpg" alt="Cu braid BSE Full at 15 kV, 610x magnification, working distance 972 um, 0.10 Pa" width="280"><br><sub>610×, WD 972 µm</sub></td>
+<td><img src="img/p7_obs_cu_20kv_bse.jpg" alt="Cu braid BSE Full at 20 kV, 810x magnification, working distance 733 um, 0.10 Pa" width="280"><br><sub>810×, WD 733 µm</sub></td>
+</tr>
+<tr><th>SED</th>
+<td><img src="img/p7_obs_cu_5kv_sed.jpg" alt="Cu braid SED at 5 kV, 380x magnification, working distance 1590 um, 0.10 Pa" width="280"><br><sub>380×, WD 1590 µm</sub></td>
+<td><img src="img/p7_t1_cu_10kv_sed.jpg" alt="Cu braid SED at 10 kV, 410x magnification, working distance 1465 um, 0.10 Pa" width="280"><br><sub>410×, WD 1465 µm</sub></td>
+<td><img src="img/p7_t1_cu_15kv_sed.jpg" alt="Cu braid SED at 15 kV, 610x magnification, working distance 972 um, 0.10 Pa" width="280"><br><sub>610×, WD 972 µm</sub></td>
+<td><img src="img/p7_obs_cu_20kv_sed.jpg" alt="Cu braid SED at 20 kV, 810x magnification, working distance 733 um, 0.10 Pa" width="280"><br><sub>810×, WD 733 µm</sub></td>
+</tr>
+</tbody>
+</table>
+
+### Acquisition Table 2: Cu braid, kV by pressure (BSE Full at 810x)
+
+Pressure series held at fixed magnification (810×) and BSE Full detector. The achievable chamber pressure depends on kV, so the qualitative tiers (Low / Medium / High) correspond to different absolute pressures across columns; actual values are listed in each cell. kV was retuned between columns; autoCB was left alone within a column.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>Low (~0.1 Pa)</th>
+<td><img src="img/p7_obs_cu_low_p.jpg" alt="Cu braid BSE Full at 5 kV and 0.10 Pa" width="280"><br><sub>0.10 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_low.jpg" alt="Cu braid BSE Full at 10 kV and 0.13 Pa" width="280"><br><sub>0.13 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_low.jpg" alt="Cu braid BSE Full at 15 kV and 0.81 Pa" width="280"><br><sub>0.81 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_low.jpg" alt="Cu braid BSE Full at 20 kV and 0.35 Pa" width="280"><br><sub>0.35 Pa</sub></td>
+</tr>
+<tr><th>Medium (~3 to 5 Pa)</th>
+<td><img src="img/p7_obs_cu_med_p.jpg" alt="Cu braid BSE Full at 5 kV and 4.0 Pa" width="280"><br><sub>4.0 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_med.jpg" alt="Cu braid BSE Full at 10 kV and 5.0 Pa" width="280"><br><sub>5.0 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_med.jpg" alt="Cu braid BSE Full at 15 kV and 2.8 Pa" width="280"><br><sub>2.8 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_med.jpg" alt="Cu braid BSE Full at 20 kV and 4.5 Pa" width="280"><br><sub>4.5 Pa</sub></td>
+</tr>
+<tr><th>High (~20 to 33 Pa)</th>
+<td><img src="img/p7_obs_cu_high_p.jpg" alt="Cu braid BSE Full at 5 kV and 27 Pa" width="280"><br><sub>27 Pa</sub></td>
+<td><img src="img/p7_t2_cu_10kv_high.jpg" alt="Cu braid BSE Full at 10 kV and 24 Pa" width="280"><br><sub>24 Pa</sub></td>
+<td><img src="img/p7_t2_cu_15kv_high.jpg" alt="Cu braid BSE Full at 15 kV and 33 Pa" width="280"><br><sub>33 Pa</sub></td>
+<td><img src="img/p7_t2_cu_20kv_high.jpg" alt="Cu braid BSE Full at 20 kV and 20 Pa" width="280"><br><sub>20 Pa</sub></td>
+</tr>
+</tbody>
+</table>
+
+### Acquisition Table 3: STEM cross-grating with latex spheres, kV by detector
+
+High-magnification series (16,000× at 5 kV, 17,500× elsewhere) at low pressure (0.10 Pa). All five detectors collected at each kV. The 12 mm / 28× overview shot used for navigation is shown below the table.
+
+<table>
+<thead><tr><th></th><th>5 kV</th><th>10 kV</th><th>15 kV</th><th>20 kV</th></tr></thead>
+<tbody>
+<tr><th>BF STEM</th>
+<td><img src="img/p7_obs_stem_5kv_bf.jpg" alt="STEM BF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_bf.jpg" alt="STEM BF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_bf.jpg" alt="STEM BF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_bf.jpg" alt="STEM BF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>DF STEM</th>
+<td><img src="img/p7_t3_stem_5kv_df.jpg" alt="STEM DF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_df.jpg" alt="STEM DF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_df.jpg" alt="STEM DF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_df.jpg" alt="STEM DF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>HAADF STEM</th>
+<td><img src="img/p7_t3_stem_5kv_haadf.jpg" alt="STEM HAADF at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_haadf.jpg" alt="STEM HAADF at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_haadf.jpg" alt="STEM HAADF at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_haadf.jpg" alt="STEM HAADF at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>BSE Full</th>
+<td><img src="img/p7_obs_stem_5kv_bse.jpg" alt="STEM BSE Full at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_bse.jpg" alt="STEM BSE Full at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_bse.jpg" alt="STEM BSE Full at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_bse.jpg" alt="STEM BSE Full at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+<tr><th>SED</th>
+<td><img src="img/p7_obs_stem_5kv_sed.jpg" alt="STEM SED at 5 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_10kv_sed.jpg" alt="STEM SED at 10 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_15kv_sed.jpg" alt="STEM SED at 15 kV on the latex sphere cross grating" width="240"></td>
+<td><img src="img/p7_t3_stem_20kv_sed.jpg" alt="STEM SED at 20 kV on the latex sphere cross grating" width="240"></td>
+</tr>
+</tbody>
+</table>
+
+#### Overview shot (used for navigation)
+
+<img src="img/p7_t3_stem_overview.jpg" alt="Low-magnification 28x overview of the STEM cross-grating mount used to locate a dark grid square before zooming in and switching to BF STEM mode" width="400">
+
+*28×, WD 12 mm, 0.10 Pa: low-magnification overview used to locate a dark grid square before zooming in and switching to BF STEM mode.*
+
+### Why BSE and SED look different
+
+SED collects low-energy secondary electrons from the top ~5 nm and shows surface topography. BSE collects high-energy backscattered electrons from deeper in the interaction volume and shows composition (heavier elements brighter). At 20 kV on an ion-polished Cu braid, the contrast difference is striking:
+
+<table>
+<tr>
+<td><img src="img/p7_obs_cu_20kv_bse.jpg" alt="BSE Full image of Cu braid at 20 kV showing strong composition contrast between Cu strands and the solder fill" width="500"><br><sub>20 kV BSE Full: composition contrast (heavier elements brighter)</sub></td>
+<td><img src="img/p7_obs_cu_20kv_sed.jpg" alt="SED image of Cu braid at 20 kV showing surface scratches and raised strand edges" width="500"><br><sub>20 kV SED: surface topography (scratches and edges)</sub></td>
+</tr>
+</table>
+
+### kV impact, and the kV regime where BSE looks like SED
+
+Higher kV grows the interaction volume, so BSE picks up more Z contrast but blurs surface detail, and SED loses surface fidelity to "SE2/SE3" electrons generated by exiting backscatter. At very low kV (~1 to 3 kV) the interaction volume is shallow enough that BSE and SED sample essentially the same near-surface region and the two images converge.
+
+<table>
+<tr>
+<td><img src="img/p7_obs_cu_5kv_bse.jpg" alt="BSE Full image of Cu braid at 5 kV showing surface relief mixed with weak composition contrast" width="500"><br><sub>5 kV BSE Full: shallow pear, surface bleeds into BSE</sub></td>
+<td><img src="img/p7_obs_cu_5kv_sed.jpg" alt="SED image of Cu braid at 5 kV showing sharp surface topography close to the 5 kV BSE image" width="500"><br><sub>5 kV SED: surface topography, close to the 5 kV BSE image</sub></td>
+</tr>
+</table>
+
+### Pressure: contrast washout, autoCB, and why SED fails at high pressure
+
+Gas in the chamber scatters the primary beam into a diffuse "skirt" that raises the background and washes out contrast. autoCB rescales the histogram but cannot bring back lost spatial detail. SED fails at high pressure because the +10 kV grid would arc, and the low-energy electrons get absorbed by the gas before reaching the detector. High-pressure imaging therefore relies on BSE or a dedicated GSED.
+
+<table>
+<tr>
+<td><img src="img/p7_obs_cu_low_p.jpg" alt="Cu braid BSE Full at 5 kV and 0.10 Pa: sharp, full contrast" width="350"><br><sub>0.10 Pa: sharp, full contrast</sub></td>
+<td><img src="img/p7_obs_cu_med_p.jpg" alt="Cu braid BSE Full at 5 kV and 4 Pa: contrast already softening" width="350"><br><sub>4.0 Pa: contrast softening</sub></td>
+<td><img src="img/p7_obs_cu_high_p.jpg" alt="Cu braid BSE Full at 5 kV and 27 Pa: washed out, fine features lost" width="350"><br><sub>27 Pa: washed out, fine features lost</sub></td>
+</tr>
+</table>
+
+### Why STEM is clearer than BSE/SED for the latex spheres
+
+STEM uses transmitted electrons, so the full thickness of each sphere contributes to the signal. Low-Z thin objects barely register in BSE or SED but pop in STEM via mass-thickness contrast (BF darkens, DF/HAADF brightens). Low kV (5 kV) gives strong contrast but noisier images; high kV gives weaker contrast but sharper images.
+
+<table>
+<tr>
+<td><img src="img/p7_obs_stem_5kv_bf.jpg" alt="5 kV BF STEM image of latex spheres on the cross grating: spheres dark on bright background" width="350"><br><sub>5 kV BF STEM: spheres dark on bright background</sub></td>
+<td><img src="img/p7_obs_stem_5kv_bse.jpg" alt="5 kV BSE Full image of the same latex sphere area: low-Z spheres barely visible" width="350"><br><sub>5 kV BSE Full: low-Z spheres barely visible</sub></td>
+<td><img src="img/p7_obs_stem_5kv_sed.jpg" alt="5 kV SED image of the same latex sphere area: flat, no surface to light up" width="350"><br><sub>5 kV SED: flat, no surface to light up</sub></td>
+</tr>
+</table>
+
 ## Acknowledgments
 
 Thank you to TA Ash for running the Phenom Pharos lab walkthrough on Apr 16, 2026. Photos captured during the session by @bobleesj.
 
 ## Changelog
 
+- May 11, 2026 - Added Part 7 (lab observations from the Theme 1C session) covering BSE vs SED, kV impact, pressure series, and STEM transmission contrast on the latex sphere cross grating, with comparison thumbnails by @bobleesj.
 - Apr 16, 2026 - Initial rough draft from Ash TA session and Theme 1C lab PDF by @bobleesj
