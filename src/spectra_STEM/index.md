@@ -427,7 +427,7 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_05.jpg" alt="C1A1 options panel" width="800">
 
-  2. Set `Probe semi aperture` to 30 mrad (if you're using 30 mrad convergence angle):
+  2. Set `Probe semi aperture` to match the C2 aperture currently in use (e.g., 30 mrad):
 
      <img src="img/p2_s2_c1a1_06.jpg" alt="C1A1 options configured" width="800">
 
@@ -460,18 +460,18 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_13.jpg" alt="C1A1 with Auto correct reduced to 75%" width="400">
 
-  3. **When to stop:** C1A1 values are stable when they no longer decrease significantly between iterations. Target: C1 (defocus) < 1 nm and A1 (astigmatism) < 3 nm. Click `Stop` when values are stable.
+  3. **When to stop:** C1A1 values are stable when they no longer decrease significantly between iterations. Target: C1 (defocus) < 1 nm and A1 (astigmatism) < 3 nm. Click `Stop` when values are stable. A white background indicates that the measured aberration is within the confidence interval. Values outside the confidence interval are highlighted in yellow, with the shade increasing continuously from light to dark as the aberration magnitude increases. Darker yellow therefore indicates larger aberrations and should be prioritized during tuning.
 
 ### 2.2 Tableau measurement
 
-Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronchigram patterns at multiple beam tilt angles. The software analyzes how the ronchigram changes with tilt to extract the full aberration function. Tableau is more comprehensive than C1A1 and necessary for highest resolution.
+Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronchigram patterns at multiple beam tilt angles. The software analyzes how the ronchigram changes with tilt to extract the full aberration function. Tableau is more comprehensive than C1A1 and necessary to correct higher-order aberrations when aiming for the best achievable resolution.
 
 - [ ] **Open Tableau tab**
 
   1. Switch to the `Tableau` tab in the `Probe Corrector` software for full aberration measurement and correction.
   2. Select `Standard` for Tableau type. This acquires a sufficient number of tilt positions for accurate measurement without taking excessive time.
   4. Set the Outer tableau tilt to 40 mrad. Larger tilts probe higher-order aberrations but require more time.
-  5. Verify the Probe semi aperture is set to 30 mrad to match the beam settings.
+  5. Verify the `Probe semi aperture` matches the C2 aperture currently in use (e.g., 30 mrad).
 
      <img src="img/p2_s3_tableau_01.jpg" alt="Tableau tab options" width="800">
 
@@ -492,7 +492,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. Click the `State of correction` tab. This shows all measured aberration coefficients in three columns:
      - **Estimation**: Just measured values
-     - **Latest accepted measurements**: Previously applied corrections (yellow = outside limits)
+     - **Latest accepted measurements**: Previously applied corrections (yellow = outside measurement confidence interval)
      - **Estimation in image coordinate system**: Values transformed to image coordinates
 
      <img src="img/p2_s3_tableau_03.jpg" alt="State of correction panel showing Estimation and Latest accepted columns" width="800">
@@ -503,13 +503,13 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
 - [ ] **Apply corrections**
 
-  1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside acceptable limits. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
+  1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside measurement confidence interval. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
 
      <img src="img/p2_s3_tableau_05.jpg" alt="State of correction panel showing yellow highlighted aberrations" width="800">
   
    > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values. 
    
-  2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration**. Correct this one first. Click the button repeatedly until the value improves sufficiently, then move to the next limiting aberration.
+  2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration** at the top; use this as the main target. If lower-order aberrations are large, correct them first because they can affect the higher-order terms. Click the corresponding button repeatedly, then move to the next limiting aberration (upto total ~5 clicks). After ~5 correction steps, rerun Tableau to acquire a new snapshot of the aberration state and update the correction targets.
   3. The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
      - S3: 1.167 μm → 72.93 nm
      - C3: -2.553 μm → -159.6 nm
