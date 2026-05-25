@@ -197,6 +197,10 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
 1. In the NOVENA software, use `Rebin` and `Reprocess` for a quick check of the acquired data. For detailed analysis, export the data for processing with external software (py4DSTEM, etc.).
 
+### 3.4 Transfer data to your USB
+
+See [how to transfer data to your USB](../data-transfer/index.md) for getting the Arina 4DSTEM datasets and HAADF images off the microscope computers.
+
 ## Part 4: End session
 
 ### 4.1 Retract the Arina detector

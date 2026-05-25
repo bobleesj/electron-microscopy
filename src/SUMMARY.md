@@ -19,6 +19,10 @@
 - [Ptychography](ptychography/index.md)
 - [MAPED](PED/index.md)
 
+# Data transfer
+
+- [Data transfer: Arina and Velox](data-transfer/index.md)
+
 # MATSCI 322 TEM Lab (Stanford)
 
 - [Theme 1A & 1B: Spot size and convergence angle (Talos)](tem-lab-talos/index.md)
