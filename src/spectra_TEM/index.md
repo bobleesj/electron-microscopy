@@ -289,12 +289,6 @@ Tableau measures higher-order aberrations by acquiring images at multiple beam t
 
 ## Appendix
 
-### Save file to USB
-
-Plug your USB into the following computer:
-
-<img src="img/APP-usb-computer.jpg" alt="Computer for USB data transfer" width="400">
-
 <details>
 <summary><strong>Reference images (click to expand)</strong></summary>
 
