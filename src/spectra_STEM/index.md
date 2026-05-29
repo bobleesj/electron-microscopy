@@ -562,10 +562,6 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
      <img src="img/p2_s3_tableau_12.jpg" alt="C1A1 iterations after Tableau showing converged aberration values" width="800">
 
-- [ ] **Return to probe image mode**
-
-  1. Once correction is complete, press the `Diffraction` button on the hand panel to switch back to probe image mode (STEM scanning).
-  2. The system is now ready for high-resolution image acquisition.
 
 ## Part 3: Imaging
 
