@@ -510,9 +510,9 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
    > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values. 
    
   2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration** at the top; use this as the main target. If lower-order aberrations are large, correct them first because they can affect the higher-order terms. Click the corresponding button repeatedly, then move to the next limiting aberration (upto total ~5 clicks). After ~5 correction steps, rerun Tableau to acquire a new snapshot of the aberration state and update the correction targets.
-  3. The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
-     - S3: 1.167 μm → 72.93 nm
-     - C3: -2.553 μm → -159.6 nm
+  > Note: The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
+  > - S3: 1.167 μm → 72.93 nm
+  > - C3: -2.553 μm → -159.6 nm
 
      <img src="img/p2_s3_tableau_06.jpg" alt="State of correction after applying some corrections" width="800">
 
@@ -520,7 +520,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. After applying corrections, run another complete Tableau measurement to verify the improvements.
   2. Check the aberration surface and phase plate displays. A well-corrected probe shows:
-     - Flat aberration surface with green in the center (minimal phase variation across the aperture)
+     - Flat aberration surface within the central green circle (minimal phase variation across the aperture). 
      - Symmetric phase plates without strong directional features
 
      <img src="img/p2_s3_tableau_07.jpg" alt="Full Tableau with phase plates" width="1100">
@@ -534,18 +534,17 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   | A2 | < 40 nm |
   | B2 | < 25 nm |
   | C3 | < 1.5 μm |
-  | A3 | < 1 μm |
-  | S3 | < 500 nm |
+  | A3 | < 300 nm |
+  | S3 | < 300 nm |
 
   > TODO: CONFIRM WITH ANDREW for IDEAL TOTAL D50
 
 - [ ] **Verify with C1A1**
 
-  1. Return to the `C1A1` tab in the Probe Corrector software. Tableau correction can sometimes introduce small first-order errors.
+  1. Return to the `C1A1` tab in the Probe Corrector software. Tableau is less accurate for first-order aberrations, so use `C1A1` as the reference for aberrations upto B2.
   2. Click `Start` to begin C1A1 measurement again.
-  3. Click `A1` to correct any residual astigmatism introduced by Tableau.
-  4. Click `0th-2nd` if defocus also needs adjustment.
-  5. Iterate between Tableau and C1A1 if necessary until all values are within specification.
+  3. Click `0th-2nd` or individual buttons (e.g. `A1`, `B2`, ...) as needed.
+  4. Iterate between `Tableau` and `C1A1` if necessary until all values are within specification.
 
 - [ ] **Check resolution**
 
@@ -555,7 +554,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
      > TODO: CONFIRM WITH ANDREW
 
-  2. Target: Total D50 of 70-75 pm for high-resolution STEM imaging. The Optimum D50 shows the theoretical best achievable with current aberrations. If these values match closely, corrections are complete.
+  2. Target: Total D50 of 70-75 pm for high-resolution STEM imaging (at 300 kV). The Optimum D50 shows the theoretical best achievable with current aberrations. If these values match closely, corrections are complete.
 
      <img src="img/p2_s3_tableau_11.jpg" alt="State of correction with Total D50 matching Optimum D50" width="800">
 
