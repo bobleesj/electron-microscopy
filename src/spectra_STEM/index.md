@@ -572,7 +572,7 @@ With aberration correction complete, the system is ready for high-resolution STE
 - [ ] **Acquire HAADF image**
 
   1. In `Velox`, click `STEM` to enter STEM mode, then click `HAADF` to select the HAADF detector.
-  2. Click the play button to start live scanning. Image quality is noticeably improved compared to before correction. A well-corrected probe produces sharper, more detailed images.
+  2. Click the play button to start live scanning. You may observe improved image quality after correction, potentially reaching atomic resolution. Further fine alignment (e.g., focus, stigmation, and scan settings) may still be required. A well-corrected probe produces sharper, more detailed images.
   3. For initial survey imaging, set resolution to 1024×1024 and dwell time to 500 ns. Fast scanning enables navigation while maintaining image quality.
 
      <img src="img/p3_s1_acquire_01.jpg" alt="Velox STEM Imaging settings" width="800">
@@ -583,18 +583,18 @@ With aberration correction complete, the system is ready for high-resolution STE
 
      <img src="img/p3_s1_acquire_02.jpg" alt="Atomic resolution HAADF image" width="800">
 
-  2. Adjust focus using the z-height controls if needed. Small focus changes can significantly affect atomic-resolution contrast.
+  2. Adjust the specimen Z height (stage height) to bring the area of interest into focus if needed. Use the focus knob for fine adjustment. At atomic resolution, small Z-height/focus offsets can noticeably change image contrast.
 
-     <img src="img/p3_s1_acquire_03.jpg" alt="STEM Imaging acquisition settings" width="800">
 
 - [ ] **Capture high-resolution scan**
 
-  1. Increase the resolution to 2048×2048 or higher. Check the Velox toolbar to verify resolution and dwell time settings before starting the acquisition.
+  1. Increase the image size to 2048×2048 pixels or higher. Check the Velox toolbar to verify image size and dwell time settings before starting the acquisition. Increase the dwell time to 5 µs for better signal-to-noise ratio. Longer dwell times collect more electrons per pixel, reducing noise but increasing total scan time and potential for drift artifacts.
+     <img src="img/p3_s1_acquire_03.jpg" alt="STEM Imaging acquisition settings" width="800">
 
+  2. Acquire an image.
      <img src="img/p3_s1_acquire_04.jpg" alt="Velox toolbar with 2048x2048 and 5 µs settings" width="800">
-
-  2. Increase the dwell time to 5 µs for better signal-to-noise ratio. Longer dwell times collect more electrons per pixel, reducing noise but increasing total scan time and potential for drift artifacts. After acquisition completes, the beam is blanked automatically to prevent sample damage.
-
+     
+  3.  After acquisition completes, the beam is blanked automatically to prevent sample damage/contamination buildup.
      <img src="img/p3_s1_acquire_06.jpg" alt="Atomic resolution with lattice visible" width="800">
 
 ### 3.2 Fine-tuning with Sherpa
