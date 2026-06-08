@@ -599,12 +599,12 @@ With aberration correction complete, the system is ready for high-resolution STE
 
 ### 3.2 Fine-tuning with Sherpa
 
-Sherpa provides rapid aberration correction that is faster than full Tableau measurement. Use Sherpa for quick refinements after the main alignment, or when aberrations drift during extended imaging sessions.
+Sherpa provides rapid low-order aberration correction (up to B2) based on real space images. Use Sherpa for quick refinements after the main alignment, or when aberrations drift during extended imaging sessions.
 
 - [ ] **Prepare for Sherpa**
 
-  1. Before running Sherpa, verify the ronchigram is centered. Press the `Diffraction` button on the hand panel to switch to diffraction mode (view the ronchigram).
-  2. In `TEMUI`, go to `Direct Alignments` and select `Diffraction Shift and Focus alignment`:
+  1. Before running Sherpa, verify the ronchigram is centered.
+  2. If not centered, in `TEMUI`, go to `Direct Alignments` and select `Diffraction Shift and Focus alignment`:
 
      <img src="img/p3_s2_sherpa_01.jpg" alt="Direct Alignments for Sherpa prep" width="800">
 
