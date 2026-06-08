@@ -608,7 +608,7 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
      <img src="img/p3_s2_sherpa_01.jpg" alt="Direct Alignments for Sherpa prep" width="800">
 
-  3. Use the `mulXY` knobs to center the ronchigram on the display. A centered ronchigram ensures Sherpa measurements are accurate.
+  3. Use the `mulXY` knobs to center the ronchigram on the display. A centered ronchigram ensures Sherpa measurements are accurate. Click `Done` to save the alignment and disconnect `mulXY` from diffraction shift.
 
      <img src="img/p3_s2_sherpa_02.jpg" alt="Centered ronchigram" width="400">
 
@@ -618,15 +618,13 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
      <img src="img/p3_s2_sherpa_03.jpg" alt="C2 aperture set to 50" width="800">
 
-  2. Click `Adjust` to center the new aperture. The beam remains centered when changing aperture sizes. If not centered, use the adjustment controls to re-center.
+  2. Click `Adjust` to center the new aperture. The beam should remain centered when changing aperture sizes. If not centered, use the adjustment controls to re-center.
 
      <img src="img/p3_s2_sherpa_04.jpg" alt="C2 aperture adjustment" width="800">
 
 - [ ] **Open Sherpa**
 
   1. Open the `Sherpa` software. Sherpa displays the HAADF image with a crosshair marker indicating the measurement region.
-
-     <img src="img/p3_s2_sherpa_05.jpg" alt="Velox HAADF view during Sherpa tuning" width="800">
 
   2. Click `C1/A1` to run first-order correction (defocus and 2-fold astigmatism).
 
