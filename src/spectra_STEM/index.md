@@ -652,7 +652,7 @@ After completing probe correction on the standard sample, follow the steps below
 
 - [ ] **Remove the standard sample**
 
-  1. Put on gloves before handling any holders or samples.
+  1. Put on gloves before handling any holders or samples. Do not touch the holder beyond o-ring.
   2. Blank the beam and verify the screen is inserted. The screen protects the detectors and cameras below from the beam.
   3. Close the column valves by pressing `Column Valves Closed`.
 
@@ -669,18 +669,18 @@ After completing probe correction on the standard sample, follow the steps below
 > **IMPORTANT:** Do **not** remove the standard sample from the single-tilt holder. Use a separate holder to load your sample.
 
   1. For holder-specific loading instructions, see [Sample Loading](../sample-loading/index.md).
-  2. Align the holder guide pin with the notch/guide slot on the goniometer (holder port). 
+  2. Align the holder guide pin with the notch/guide slot on the goniometer (at the ~5 o'clock position in the holder port). 
 
      <img src="img/p3_s3_sample_loading_area.jpg" alt="Holder aligned with blue line on goniometer, gloved hand" width="400">
 
   3. Push the holder in until you feel resistance. Do **not** push all the way in.
-  4. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize. You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
+  4. The turbo pump starts automatically. Wait for the airlock cycle (~2 minutes). You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
 
      <img src="../sample-loading/img/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing readout" width="400">
 
-     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
+     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, damaging the electron gun and contaminating the system.
 
-  5. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in. The holder should move in smoothly.
+  5. Turn the holder **counter-clockwise** until you feel gently stuck (5 o'clock -> 12 o'clock). Guide the holder in smoothly. Do not force or push it in quickly.
 
      <img src="../sample-loading/img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="400">
 
