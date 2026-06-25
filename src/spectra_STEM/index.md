@@ -476,6 +476,8 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
      <img src="img/p2_s3_tableau_01.jpg" alt="Tableau tab options" width="800">
 
   6. Click `Options` and select the `A5` toggle. It measures up to 5th order aberrations.
+  7. Click `Properties` to check Nyquist limit. Choose the magnification that gives about 0.6-0.8 Nyquist limit. (e.g. 225-320 kx @ 300 kV)
+
 - [ ] **Run Tableau measurement**
 
   1. Click `Start` to begin the Tableau measurement. The software automatically tilts the beam to multiple angles and acquires ronchigram images at each position.
@@ -688,7 +690,7 @@ After completing probe correction on the standard sample, follow the steps below
 
 - [ ] **Re-do eucentric height**
 
-  1. Open column valves and re-do eucentric height for your new sample ([1.2](#12-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
+  1. Check the Octagon value. The lower, the better. When it's <10, open column valves and re-do eucentric height for your new sample ([1.2](#12-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "infinite magnification" point again so the sample stays centered when tilted and the probe is properly focused.
   2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change.
 
 ### 3.4 End session
@@ -698,14 +700,14 @@ After completing probe correction on the standard sample, follow the steps below
   1. Put on gloves before handling any holders or samples.
   2. Blank the beam and verify the screen is inserted.
   3. In `TEMUI`, click `Column Valves Closed`.
-  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset after the button is pressed.
+  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset to 0 after the button is pressed.
 
      <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
 
-  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise** (12 o'clock -> 5 o'clock), then pull the rest of the holder out continuously.
   6. Set aside your holder and pick up the single-tilt holder with the standard sample.
   7. Push the single-tilt holder with the standard sample in until you feel resistance. Do **not** push all the way in.
-  8. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize.
+  8. The turbo pump starts automatically. Wait for the airlock cycle to complete (~2 minutes).
   9. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
   10. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
 
@@ -715,8 +717,8 @@ After completing probe correction on the standard sample, follow the steps below
 - [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
 - [ ] Stage is returned to 0° tilt (alpha and beta).
 - [ ] Arina detector is retracted, verified on the left hand panel.
-- [ ] Arina detector is turned off, verified on the local Firefox URL.
-- [ ] `INT SCAN` physical button is in pressed state.
+- [ ] Arina detector is turned off, verified on the local Firefox URL and check the hardware button.
+- [ ] Scan coil box: `INT SCAN` physical button is in pressed state.
 - [ ] Screen is inserted.
 - [ ] Column valve is closed.
 - [ ] Turbo pump is turned off.
@@ -734,9 +736,9 @@ Common problems encountered during STEM sessions.
 | Problem | Cause | Solution |
 | ------- | ----- | -------- |
 | Image drifts when tilting | Eucentric height not set | Re-do eucentric height after loading a new sample |
-| C1A1 measurements unstable or fail | Velox is still scanning | Stop live scanning in Velox before running C1A1, then verify the beam is unblanked |
+| C1A1 measurements won't start | Velox is still scanning | Stop live scanning in Velox before running C1A1, then verify the beam is unblanked |
 | Aberration values oscillate instead of converging | Overcorrection percentage too high | Start with 100% Auto correct, reduce to 75% as values approach target |
-| C1A1 or Tableau shows no signal | Beam is blanked | Click `Beam Blank` button to unblank before running aberration measurements |
+| C1A1 or Tableau shows no signal/grayed out | Beam is blanked or convergence angle is different | Click `Beam Blank` button to unblank before running aberration measurements, or check the convergence angle |
 | Good Tableau values but poor image resolution | Missing C1A1 verification step | After Tableau, always run C1A1 again to fine-tune defocus and astigmatism |
 | Beam disappears from view | Random adjustments displaced the beam | Go to lower magnification until beam is visible, use joystick to move sample to center, then go to `Diffraction Shift` and use `mulXY` to center the beam |
 | Lost beam or need to redo alignment | Column misalignment after extended session | Redo eucentric height ([1.2](#12-find-eucentric-height)) and monochromator tune ([1.5](#15-monochromator-tune)). If you cannot find the sample, switch to TEM mode for easier navigation ([TEM Spectra](../spectra_TEM/index.md)) |
@@ -745,7 +747,7 @@ Common problems encountered during STEM sessions.
 
 **Beam blanking**
 
-When the beam is blanked, the electron beam is deflected away from the sample so no electrons hit it. This prevents unnecessary radiation damage to the sample when not actively imaging. The beam is automatically blanked when scanning stops or after taking a picture. Manual blank/unblank is available via the `Beam Blank` button on the hand panel or in the software.
+When the beam is blanked, the electron beam is deflected away from the sample so no electrons hit it. This prevents unnecessary radiation damage to the sample when not actively imaging. The beam is automatically blanked when scanning stops or after acquiring an image. Manual blank/unblank is available via the `Beam Blank` button (`R2`) on the hand panel or in the software.
 
 **Monochromator focus adjustment**
 
