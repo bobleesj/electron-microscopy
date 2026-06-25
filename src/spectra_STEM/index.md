@@ -624,7 +624,7 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
 - [ ] **Open Sherpa**
 
-  1. Open the `Sherpa` software. Sherpa displays the HAADF image with a crosshair marker indicating the measurement region.
+  1. Open the `Sherpa` software.
 
   2. Click `C1/A1` to run first-order correction (defocus and 2-fold astigmatism).
 
@@ -642,13 +642,13 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
 - [ ] **Review results**
 
-  1. Sherpa displays the initial image alongside the optimized image for comparison. The corrected image shows improved sharpness and resolution.
+  1. Sherpa displays the initial image alongside the optimized image for comparison. The optmized image may show improved sharpness and resolution.
 
      <img src="img/p3_s2_sherpa_08.jpg" alt="Sherpa B2/A2 final result" width="800">
 
 ### 3.3 Load your own sample
 
-After completing probe correction on the standard sample, follow the below steps unload the current sample standard and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
+After completing probe correction on the standard sample, follow the steps below to unload the standard sample and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
 
 - [ ] **Remove the standard sample**
 
@@ -669,7 +669,7 @@ After completing probe correction on the standard sample, follow the below steps
 > **IMPORTANT:** Do **not** remove the standard sample from the single-tilt holder. Use a separate holder to load your sample.
 
   1. For holder-specific loading instructions, see [Sample Loading](../sample-loading/index.md).
-  2. Align the holder with the blue line on the goniometer.
+  2. Align the holder guide pin with the notch/guide slot on the goniometer (holder port). 
 
      <img src="img/p3_s3_sample_loading_area.jpg" alt="Holder aligned with blue line on goniometer, gloved hand" width="400">
 
