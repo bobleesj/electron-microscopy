@@ -10,17 +10,9 @@ This page covers how to get your data off the Spectra computers at Stanford SNSF
 | [Save HAADF images to USB](#save-haadf-images-to-usb) | Copy Velox `CaptureData` folder to USB |
 | [Mount the Mallard network share](#mount-the-mallard-network-share) | Map the lab share as a network drive |
 
-## Save Arina 4DSTEM data to USB
+Plug your USB into the Arina PC (the TVIPS scan generator PC, USB port circled below), then copy your dataset to it.
 
-- [ ] **Plug your USB into the Arina PC**
-
-  1. Plug your USB drive into the computer below (the TVIPS scan generator PC). The USB port is circled.
-
-     <img src="img/IO-arina-pc-usb-port.jpg" alt="Arina TVIPS PC with USB port circled" width="400">
-
-- [ ] **Copy your dataset to USB**
-
-  1. Open the NOVENA destination folder set during acquisition, find your session's `.h5` and `_master.h5` files, and copy them to your USB drive.
+<img src="img/IO-arina-pc-usb-port.jpg" alt="Arina TVIPS PC with USB port circled" width="400">
 
 ## Save HAADF images to USB
 
@@ -51,8 +43,10 @@ For remote access to the lab data server, map the Mallard share as a network dri
 
 - [ ] **Enter the share path**
 
-  1. Set `Drive` to `Z:` and `Folder` to `\\mallard.stanford.edu\mallard_arina`.
+  1. Set `Drive` to `W:` and `Folder` to `\\wigeon\streaming`.
   2. Check `Reconnect at sign-in`, then click `Finish`.
-  3. Enter the Mallard password when prompted. The password is in the pinned channel of the Colin Ophus group internal Slack.
+  3. Enter the password when prompted. The password is in the pinned message of the `colab-compute` Slack channel.
+
+     > **Placeholder** — REPLACE with wigeon.
 
      <img src="img/IO-map-network-drive-dialog.jpg" alt="Map Network Drive dialog with mallard_arina path and drive Z" width="500">
