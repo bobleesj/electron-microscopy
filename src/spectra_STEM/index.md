@@ -17,7 +17,7 @@ First, visually confirm the following from the previous user to ensure no damage
 - [ ] Beam is blanked.
 - [ ] Column valves are closed.
 - [ ] Turbo pump is off.
-- [ ] Stage tilt is at 0° (alpha and beta) and the stage has been reset.
+- [ ] Stage tilt is at 0° (alpha and beta) and the stage X, Y, Z positions have been reset to 0.
 - [ ] Arina detector is retracted.
 - [ ] Arina detector is turned off.
 - [ ] All holders are capped and placed in the holder box.
@@ -32,7 +32,7 @@ After you have checked the states,
 
 **Acronyms:**
 
-- `mulXY` - Multifunction X/Y knobs on hand panel
+- `mulXY` - Multifunction X/Y knobs on hand panel (microscope control panel)
 - `TEMUI` - TEM User Interface (software)
 
 **Workstation layout:**
@@ -115,19 +115,19 @@ For this guide, we use a convergence angle of 30.0 mrad.
 <a id="eucentric-height"></a>
 ### 1.3 Find eucentric height
 
-Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "blow-up" method provides a quick way to find this position.
+Complete eucentric height alignment after loading each sample and before imaging. Do **not** skip this step. At eucentric height, the sample remains stationary when tilted. This is essential for accurate imaging and tomography. The ronchigram "infinite magnification" point provides a quick way to find this position.
 
 - [ ] **View ronchigram**
 
   1. Verify the `Diffraction` button is pressed on the hand panel with the red light turned on.
 
-     > **NOTE:** The ronchigram is the diffraction pattern formed when the convergent probe is stationary. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment.
+     > **NOTE:** The ronchigram is the diffraction pattern formed by a convergent electron beam. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment. Over an amorphous material, it shows aberration state of the lens.
 
   2. In `TEMUI`, view the ronchigram in the main display.
 
      <img src="img/p1_s2_eucentric_01.jpg" alt="Ronchigram at 80kx showing diffraction pattern" width="400">
 
-  3. Position probe on a sample region that scatters electrons (not over a hole or vacuum).
+  3. Move the stage to a sample region that scatters electrons (not over a hole or vacuum).
 
 - [ ] **Adjust z-axis to find blow-up point**
 
@@ -148,7 +148,7 @@ Complete eucentric height alignment after loading each sample and before imaging
 
      <img src="img/p1_s2_eucentric_03.jpg" alt="Ronchigram showing approach to eucentric height" width="400">
 
-  6. Find the "blow-up" point where the ronchigram appears infinitely magnified: shadow image features expand until they fill the entire display.
+  6. Find the "blow-up" point (also called the "infinite magnification" point) where the ronchigram appears infinitely magnified: shadow image features expand until they fill the entire display.
      - If the ronchigram starts shrinking again, reverse direction.
 
      <img src="img/p1_s2_eucentric_05.jpg" alt="Ronchigram at eucentric height" width="400">
@@ -173,13 +173,13 @@ Before performing alignments, configure the STEM imaging parameters and verify d
      - BF-S (Bright Field): Retracted
      - DF-S (Dark Field): Retracted
      - HAADF: Retracted
-  3. Toggle `HAADF` checkbox on then off to confirm retracted state.
+  3. If the box is toggled off, but the text says "Inserted," toggle `HAADF` checkbox on then off to confirm retracted state.
 
-     > **NOTE:** HAADF must be retracted during ronchigram alignment. The HAADF is a ring-shaped detector with a central hole. If inserted, high-angle electrons hit the ring instead of the camera below, blocking part of the ronchigram.
+     > **NOTE:** At this step, HAADF should be retracted as it can block the beam. The HAADF is a ring-shaped detector with a central hole. If inserted, you may find the detector blocking part of the beam.
 
      <img src="plots/detector_stack.png" alt="Side view showing HAADF ring blocking high-angle electrons from camera" width="600">
 
-- [ ] **Set detector layout in Velox**
+- [ ] **Set camera length in Velox**
 
   1. Open `Velox` acquisition software.
   2. Open detector layout display.
@@ -197,7 +197,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
   3. Select `NanoProbe` mode.
   4. Set spot number to 6.
 
-     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Lower spot numbers produce smaller probes with lower current; higher numbers produce larger probes with more current.
+     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Select the spot size according to the trade-off between spatial resolution and electron dose: higher spot numbers produce smaller probes (higher resolution) with lower current; lower numbers produce larger probes with more current. 
      >
      > TODO: Verify spot number convention for Spectra 300. On some Thermo Fisher systems, it is the opposite (spot 1 = most current).
 
@@ -205,7 +205,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
 
 ### 1.5 Direct alignments
 
-The basic alignments center the electron beam and align it through the optical column. Proper alignment is essential for optimal resolution and probe symmetry.
+The purpose of the basic alignments is to center the electron beam and align it along the optical axis of the column. Proper alignment is essential for optimal resolution and probe symmetry.
 
 - [ ] **Set magnification and open Direct Alignments**
 
@@ -224,6 +224,8 @@ The basic alignments center the electron beam and align it through the optical c
   2. The `mulXY` knobs now control diffraction shift. Adjust until the ronchigram is centered.
 
      <img src="img/p1_s4_alignments_03.jpg" alt="Ronchigram after centering" width="400">
+
+  3. Click `Done` under `Direct Alignments` so that `mulXY` is no longer tied to the diffraction shift.
 
 - [ ] **Reset STEM AutoTuning**
 
@@ -244,17 +246,17 @@ The basic alignments center the electron beam and align it through the optical c
 
      > **Diffraction mode vs. Probe image mode**
      >
-     > | Mode             | Probe      | Display                                                   |
-     > |------------------|------------|-----------------------------------------------------------|
-     > | Diffraction mode | Stationary | Ronchigram - diffraction pattern from convergent probe    |
-     > | Probe image mode | Scanning   | STEM image - probe scans to build up image pixel by pixel |
+     > | Mode             | What is shown on the flucam                               |
+     > |------------------|-----------------------------------------------------------|
+     > | Diffraction mode | Ronchigram - diffraction pattern from convergent probe    |
+     > | Real space mode  | Probe image                                               |
      >
      > The `Diffraction` button on the hand panel toggles between these two modes.
 
 - [ ] **Align beam shift**
 
-  1. Click on `Beam shift` in the Direct Alignments panel. The `mulXY` knobs now control alignment beam shift.
-  2. Use the `mulXY` knobs to center the beam on the screen. The beam responds smoothly to knob movements. If the beam moves too quickly, press `Fine` on the hand panel to reduce sensitivity.
+  1. Click on `Beam shift` in the Direct Alignments panel. The `mulXY` knobs now control beam shift.
+  2. Use the `mulXY` knobs to center the probe on the screen. The probe responds smoothly to knob movements. If the probe moves too quickly, press `Fine` on the hand panel to reduce sensitivity.
   3. **Important:** If the beam is lost after clicking beam shift, reduce magnification until the beam is visible, center using the `mulXY` knobs.
   4. Click `Done` once the beam is properly centered.
 
@@ -262,7 +264,7 @@ The basic alignments center the electron beam and align it through the optical c
 
 - [ ] **Center C2 aperture**
 
-  1. Select `Center C2 aperture` from the alignment options. The system oscillates the C2 lens, causing the beam to expand and contract rhythmically.
+  1. Select `Center C2 aperture` from the alignment options. The system wobbles the C2 lens, causing the beam to expand and contract periodically.
   2. Watch the beam movement carefully. The beam pulses in and out. The goal is to make this expansion/contraction perfectly concentric (no lateral movement).
   3. Use the `mulXY` knobs to adjust the aperture position.
   4. Click `Done` when the movement is concentric.
@@ -328,7 +330,7 @@ Before proceeding to probe correction, check that the monochromator is properly 
 
 - [ ] **Re-verify eucentric height**
 
-  1. Use the z-axis controls to return to the "blow-up" point (eucentric height). Monochromator adjustments affect focus; re-verify eucentric height.
+  1. Use the z-axis controls to return to the "infinite magnification" point (eucentric height). Monochromator adjustments affect focus; re-verify eucentric height.
 
 ### 1.7 HAADF imaging setup
 
@@ -338,7 +340,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
   1. In the `Velox` acquisition software, click `STEM` to enter STEM mode,
   2. Click `HAADF`. This automatically inserts the HAADF detector.
-  3. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad).
+  3. Verify in `TEMUI` that the HAADF detector shows "Inserted" status with the correct collection angle (63-200 mrad at camera length of 91 mm at 300 kV).
 
      <img src="img/p2_s1_haadf_02.jpg" alt="TEMUI showing HAADF detector inserted" width="800">
 
@@ -349,7 +351,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 - [ ] **Start live scanning**
 
   1. Click the play button in `Velox` to start live scanning. 
-  2. The image is saturated (all white) initially. Detector signal adjustment follows in the next step.
+  2. The image can be saturated (all white) initially. Detector signal adjustment follows in the next step.
 
      <img src="img/p2_s1_haadf_01.jpg" alt="Velox HAADF view" width="800">
 
@@ -376,14 +378,14 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 - [ ] **Find sample boundary**
 
   1. Reduce magnification to ~10,000x and navigate with the joystick to find a suitable region.
-  2. Locate a boundary region with particles at the edge of a support film, with vacuum visible.
+  2. Locate a boundary region with particles at the edge of a support film, with the thin region (right side in the image) visible.
   3. This type of region provides excellent contrast for aberration correction.
 
      <img src="img/p2_s1_haadf_07.jpg" alt="Sample boundary region" width="800">
 
 - [ ] **Adjust focus**
 
-  1. Once a suitable boundary is found, increase magnification to ~160,000x. Alternate between magnification and z-axis adjustments until focus is sharp.
+  1. Once a suitable boundary is found, increase magnification to ~160,000x. Alternate between magnification and z-axis adjustments until you bring the sample to focus.
 
      <img src="img/p2_s1_haadf_08.jpg" alt="Split view: ronchigram and HAADF" width="800">
 
@@ -400,13 +402,9 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
      <img src="img/p2_s1_haadf_11.jpg" alt="HAADF with improved focus" width="800">
 
 
-  > **Distributed particles are important for aberration measurement.** Aberrations vary with position relative to the optical axis (e.g., coma increases further from center). The correction algorithm requires ronchigram data from multiple positions to accurately fit the aberration coefficients.
+  > **Distributed particles are important for aberration measurement.** Aberrations vary with position relative to the optical axis (e.g., coma increases further from center). The aberration correction algorithm requires ronchigram data from multiple positions to accurately fit the aberration coefficients.
 
 ## Part 2: Probe Correction
-
-Before starting probe correction, retract the HAADF detector. C1A1 and Tableau both analyze the ronchigram, and the HAADF ring blocks high-angle electrons from reaching the camera below. In `TEMUI`, verify the HAADF detector shows "Retracted" status.
-
-> TODO: Confirm with staff whether HAADF must be retracted for C1A1/Tableau on Spectra 300 S-CORR.
 
 Aberrations distort the electron probe and degrade image resolution. The goal of probe correction is to achieve a flat, aberration-free ronchigram. The figure below shows how individual aberrations affect the ronchigram appearance:
 
@@ -456,7 +454,7 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_05.jpg" alt="C1A1 options panel" width="800">
 
-  2. Set `Probe semi aperture` to 30 mrad:
+  2. Set `Probe semi aperture` to match the C2 aperture currently in use (e.g., 30 mrad):
 
      <img src="img/p2_s2_c1a1_06.jpg" alt="C1A1 options configured" width="800">
 
@@ -466,17 +464,18 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_07.jpg" alt="Split view before C1A1" width="1100">
 
-  2. Click the `Beam Blank` button to unblank the beam. Stopping the scan automatically blanks the beam. The Probe Corrector software requires an unblanked beam to read the ronchigram:
+  2. Click the `Beam Blank` button to unblank the beam. Stopping the scan from Velox automatically blanks the beam. The Probe Corrector software requires an unblanked beam to read the ronchigram:
 
      <img src="img/p2_s2_c1a1_08.jpg" alt="Ronchigram during C1A1" width="1100">
 
 - [ ] **Run C1A1**
 
-  1. Go to the `C1A1` tab in the `Probe Corrector` software. Before clicking Start, verify the ronchigram is visible on the left monitor:
+  1. Go to the `C1A1` tab in the `Probe Corrector` software. Before clicking Start, verify the ronchigram is visible on the fluorescent screen on the left monitor:
 
      <img src="img/p2_s2_c1a1_09.jpg" alt="Setup before C1A1: ronchigram visible on left, HAADF on right" width="1100">
 
   2. Click `Start` to begin aberration measurement. The software continuously analyzes the ronchigram and displays measured aberration values (C1, A1, A2, B2, WD) in the table.
+      > Before proceeding: Probe corrector may not perform well below certain dose. If the `mean` value is below 10,000 counts, increase the HAADF gain in small steps while monitoring the mean value to get ~10,000 counts.
   3. Set Auto correct to 100% for the first iteration.
   4. Click `0th-2nd` to apply corrections for all first and second order aberrations.
 
@@ -494,22 +493,24 @@ C1A1 corrects first-order aberrations: defocus (C1) and 2-fold astigmatism (A1).
 
      <img src="img/p2_s2_c1a1_13.jpg" alt="C1A1 with Auto correct reduced to 75%" width="400">
 
-  3. **When to stop:** C1A1 values are stable when they no longer decrease significantly between iterations. Target: C1 (defocus) < 1 nm and A1 (astigmatism) < 3 nm. Click `Stop` when values are stable.
+  3. **When to stop:** C1A1 values are stable when they no longer decrease significantly between iterations. Target: C1 (defocus) < 1 nm and A1 (astigmatism) < 3 nm. Click `Stop` when values are stable. A white background indicates that the measured aberration is within the confidence interval. Values outside the confidence interval are highlighted in yellow, with the shade increasing continuously from light to dark as the aberration magnitude increases. Darker yellow therefore indicates larger aberrations and should be prioritized during tuning.
 
 ### 2.2 Tableau measurement
 
-Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronchigram patterns at multiple beam tilt angles. The software analyzes how the ronchigram changes with tilt to extract the full aberration function. Tableau is more comprehensive than C1A1 and necessary for highest resolution.
+Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronchigram patterns at multiple beam tilt angles. The software analyzes how the ronchigram changes with tilt to extract the full aberration function. Tableau is more comprehensive than C1A1 and necessary to correct higher-order aberrations when aiming for the best achievable resolution.
 
 - [ ] **Open Tableau tab**
 
   1. Switch to the `Tableau` tab in the `Probe Corrector` software for full aberration measurement and correction.
   2. Select `Standard` for Tableau type. This acquires a sufficient number of tilt positions for accurate measurement without taking excessive time.
   4. Set the Outer tableau tilt to 40 mrad. Larger tilts probe higher-order aberrations but require more time.
-  5. Verify the Probe semi aperture is set to 30 mrad to match the beam settings.
+  5. Verify the `Probe semi aperture` matches the C2 aperture currently in use (e.g., 30 mrad).
 
      <img src="img/p2_s3_tableau_01.jpg" alt="Tableau tab options" width="800">
 
   6. Click `Options` and select the `A5` toggle. It measures up to 5th order aberrations.
+  7. Click `Properties` to check Nyquist limit. Choose the magnification that gives about 0.6-0.8 Nyquist limit. (e.g. 225-320 kx @ 300 kV)
+
 - [ ] **Run Tableau measurement**
 
   1. Click `Start` to begin the Tableau measurement. The software automatically tilts the beam to multiple angles and acquires ronchigram images at each position.
@@ -526,7 +527,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. Click the `State of correction` tab. This shows all measured aberration coefficients in three columns:
      - **Estimation**: Just measured values
-     - **Latest accepted measurements**: Previously applied corrections (yellow = outside limits)
+     - **Latest accepted measurements**: Previously applied corrections (yellow = outside measurement confidence interval)
      - **Estimation in image coordinate system**: Values transformed to image coordinates
 
      <img src="img/p2_s3_tableau_03.jpg" alt="State of correction panel showing Estimation and Latest accepted columns" width="800">
@@ -537,16 +538,16 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
 - [ ] **Apply corrections**
 
-  1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside acceptable limits. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
+  1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside measurement confidence interval. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
 
      <img src="img/p2_s3_tableau_05.jpg" alt="State of correction panel showing yellow highlighted aberrations" width="800">
   
    > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values. 
    
-  2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration**. Correct this one first. Click the button repeatedly until the value improves sufficiently, then move to the next limiting aberration.
-  3. The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
-     - S3: 1.167 μm → 72.93 nm
-     - C3: -2.553 μm → -159.6 nm
+  2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration** at the top; use this as the main target. If lower-order aberrations are large, correct them first because they can affect the higher-order terms. Click the corresponding button repeatedly, then move to the next limiting aberration (up to ~5 total clicks). After ~5 correction steps, rerun Tableau to acquire a new snapshot of the aberration state and update the correction targets.
+  > Note: The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
+  > - S3: 1.167 μm → 72.93 nm
+  > - C3: -2.553 μm → -159.6 nm
 
      <img src="img/p2_s3_tableau_06.jpg" alt="State of correction after applying some corrections" width="800">
 
@@ -554,7 +555,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. After applying corrections, run another complete Tableau measurement to verify the improvements.
   2. Check the aberration surface and phase plate displays. A well-corrected probe shows:
-     - Flat aberration surface with green in the center (minimal phase variation across the aperture)
+     - Flat aberration surface within the central green circle (minimal phase variation across the aperture). 
      - Symmetric phase plates without strong directional features
 
      <img src="img/p2_s3_tableau_07.jpg" alt="Full Tableau with phase plates" width="1100">
@@ -568,18 +569,17 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   | A2 | < 40 nm |
   | B2 | < 25 nm |
   | C3 | < 1.5 μm |
-  | A3 | < 1 μm |
-  | S3 | < 500 nm |
+  | A3 | < 300 nm |
+  | S3 | < 300 nm |
 
   > TODO: CONFIRM WITH ANDREW for IDEAL TOTAL D50
 
 - [ ] **Verify with C1A1**
 
-  1. Return to the `C1A1` tab in the Probe Corrector software. Tableau correction can sometimes introduce small first-order errors.
+  1. Return to the `C1A1` tab in the Probe Corrector software. Tableau is less accurate for first-order aberrations, so use `C1A1` as the reference for aberrations up to B2.
   2. Click `Start` to begin C1A1 measurement again.
-  3. Click `A1` to correct any residual astigmatism introduced by Tableau.
-  4. Click `0th-2nd` if defocus also needs adjustment.
-  5. Iterate between Tableau and C1A1 if necessary until all values are within specification.
+  3. Click `0th-2nd` or individual buttons (e.g. `A1`, `B2`, ...) as needed.
+  4. Iterate between `Tableau` and `C1A1` if necessary until all values are within specification.
 
 - [ ] **Check resolution**
 
@@ -589,7 +589,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
      > TODO: CONFIRM WITH ANDREW
 
-  2. Target: Total D50 of 70-75 pm for high-resolution STEM imaging. The Optimum D50 shows the theoretical best achievable with current aberrations. If these values match closely, corrections are complete.
+  2. Target: Total D50 of 70-75 pm for high-resolution STEM imaging (at 300 kV). The Optimum D50 shows the theoretical best achievable with current aberrations. If these values match closely, corrections are complete.
 
      <img src="img/p2_s3_tableau_11.jpg" alt="State of correction with Total D50 matching Optimum D50" width="800">
 
@@ -597,10 +597,6 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
      <img src="img/p2_s3_tableau_12.jpg" alt="C1A1 iterations after Tableau showing converged aberration values" width="800">
 
-- [ ] **Return to probe image mode**
-
-  1. Once correction is complete, press the `Diffraction` button on the hand panel to switch back to probe image mode (STEM scanning).
-  2. The system is now ready for high-resolution image acquisition.
 
 ## Part 3: Imaging
 
@@ -611,7 +607,7 @@ With aberration correction complete, the system is ready for high-resolution STE
 - [ ] **Acquire HAADF image**
 
   1. In `Velox`, click `STEM` to enter STEM mode, then click `HAADF` to select the HAADF detector.
-  2. Click the play button to start live scanning. Image quality is noticeably improved compared to before correction. A well-corrected probe produces sharper, more detailed images.
+  2. Click the play button to start live scanning. You may observe improved image quality after correction, potentially reaching atomic resolution. Further fine alignment (e.g., focus, stigmation, and scan settings) may still be required. A well-corrected probe produces sharper, more detailed images.
   3. For initial survey imaging, set resolution to 1024×1024 and dwell time to 500 ns. Fast scanning enables navigation while maintaining image quality.
 
      <img src="img/p3_s1_acquire_01.jpg" alt="Velox STEM Imaging settings" width="800">
@@ -622,32 +618,32 @@ With aberration correction complete, the system is ready for high-resolution STE
 
      <img src="img/p3_s1_acquire_02.jpg" alt="Atomic resolution HAADF image" width="800">
 
-  2. Adjust focus using the z-height controls if needed. Small focus changes can significantly affect atomic-resolution contrast.
+  2. Adjust the specimen Z height (stage height) to bring the area of interest into focus if needed. Use the focus knob for fine adjustment. At atomic resolution, small Z-height/focus offsets can noticeably change image contrast.
 
-     <img src="img/p3_s1_acquire_03.jpg" alt="STEM Imaging acquisition settings" width="800">
 
 - [ ] **Capture high-resolution scan**
 
-  1. Increase the resolution to 2048×2048 or higher. Check the Velox toolbar to verify resolution and dwell time settings before starting the acquisition.
+  1. Increase the image size to 2048×2048 pixels or higher. Check the Velox toolbar to verify image size and dwell time settings before starting the acquisition. Increase the dwell time to 5 µs for better signal-to-noise ratio. Longer dwell times collect more electrons per pixel, reducing noise but increasing total scan time and potential for drift artifacts.
+     <img src="img/p3_s1_acquire_03.jpg" alt="STEM Imaging acquisition settings" width="800">
 
+  2. Acquire an image.
      <img src="img/p3_s1_acquire_04.jpg" alt="Velox toolbar with 2048x2048 and 5 µs settings" width="800">
-
-  2. Increase the dwell time to 5 µs for better signal-to-noise ratio. Longer dwell times collect more electrons per pixel, reducing noise but increasing total scan time and potential for drift artifacts. After acquisition completes, the beam is blanked automatically to prevent sample damage.
-
+     
+  3.  After acquisition completes, the beam is blanked automatically to prevent sample damage/contamination buildup.
      <img src="img/p3_s1_acquire_06.jpg" alt="Atomic resolution with lattice visible" width="800">
 
 ### 3.2 Fine-tuning with Sherpa
 
-Sherpa provides rapid aberration correction that is faster than full Tableau measurement. Use Sherpa for quick refinements after the main alignment, or when aberrations drift during extended imaging sessions.
+Sherpa provides rapid low-order aberration correction (up to B2) based on real space images. Use Sherpa for quick refinements after the main alignment, or when aberrations drift during extended imaging sessions.
 
 - [ ] **Prepare for Sherpa**
 
-  1. Before running Sherpa, verify the ronchigram is centered. Press the `Diffraction` button on the hand panel to switch to diffraction mode (view the ronchigram).
-  2. In `TEMUI`, go to `Direct Alignments` and select `Diffraction Shift and Focus alignment`:
+  1. Before running Sherpa, verify the ronchigram is centered.
+  2. If not centered, in `TEMUI`, go to `Direct Alignments` and select `Diffraction Shift and Focus alignment`:
 
      <img src="img/p3_s2_sherpa_01.jpg" alt="Direct Alignments for Sherpa prep" width="800">
 
-  3. Use the `mulXY` knobs to center the ronchigram on the display. A centered ronchigram ensures Sherpa measurements are accurate.
+  3. Use the `mulXY` knobs to center the ronchigram on the display. A centered ronchigram ensures Sherpa measurements are accurate. Click `Done` to save the alignment and disconnect `mulXY` from diffraction shift.
 
      <img src="img/p3_s2_sherpa_02.jpg" alt="Centered ronchigram" width="400">
 
@@ -657,15 +653,13 @@ Sherpa provides rapid aberration correction that is faster than full Tableau mea
 
      <img src="img/p3_s2_sherpa_03.jpg" alt="C2 aperture set to 50" width="800">
 
-  2. Click `Adjust` to center the new aperture. The beam remains centered when changing aperture sizes. If not centered, use the adjustment controls to re-center.
+  2. Click `Adjust` to center the new aperture. The beam should remain centered when changing aperture sizes. If not centered, use the adjustment controls to re-center.
 
      <img src="img/p3_s2_sherpa_04.jpg" alt="C2 aperture adjustment" width="800">
 
 - [ ] **Open Sherpa**
 
-  1. Open the `Sherpa` software. Sherpa displays the HAADF image with a crosshair marker indicating the measurement region.
-
-     <img src="img/p3_s2_sherpa_05.jpg" alt="Velox HAADF view during Sherpa tuning" width="800">
+  1. Open the `Sherpa` software.
 
   2. Click `C1/A1` to run first-order correction (defocus and 2-fold astigmatism).
 
@@ -683,17 +677,17 @@ Sherpa provides rapid aberration correction that is faster than full Tableau mea
 
 - [ ] **Review results**
 
-  1. Sherpa displays the initial image alongside the optimized image for comparison. The corrected image shows improved sharpness and resolution.
+  1. Sherpa displays the initial image alongside the optimized image for comparison. The optimized image may show improved sharpness and resolution.
 
      <img src="img/p3_s2_sherpa_08.jpg" alt="Sherpa B2/A2 final result" width="800">
 
 ### 3.3 Load your own sample
 
-After completing probe correction on the standard sample, follow the below steps unload the current sample standard and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
+After completing probe correction on the standard sample, follow the steps below to unload the standard sample and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
 
 - [ ] **Remove the standard sample**
 
-  1. Put on gloves before handling any holders or samples.
+  1. Put on gloves before handling any holders or samples. Do not touch the holder beyond o-ring.
   2. Blank the beam and verify the screen is inserted. The screen protects the detectors and cameras below from the beam.
   3. Close the column valves by pressing `Column Valves Closed`.
 
@@ -710,16 +704,16 @@ After completing probe correction on the standard sample, follow the below steps
 > **IMPORTANT:** Do **not** remove the standard sample from the single-tilt holder. Use a separate holder to load your sample.
 
   1. For holder-specific loading instructions, see [Sample Loading](../sample-loading/index.md).
-  2. Align the holder with the blue line on the goniometer.
+  2. Align the holder guide pin with the notch/guide slot on the goniometer (at the ~5 o'clock position in the holder port). 
 
      <img src="img/p3_s3_sample_loading_area.jpg" alt="Holder aligned with blue line on goniometer, gloved hand" width="400">
 
   3. Push the holder in until you feel resistance. Do **not** push all the way in.
-  4. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize. You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
+  4. The turbo pump starts automatically. Wait for the airlock cycle (~2 minutes). You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
 
      <img src="../sample-loading/img/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing readout" width="400">
 
-     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, potentially damaging the electron gun and contaminating the system.
+     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, damaging the electron gun and contaminating the system.
 
   5. Wait until the **PPII gauge** drops into the **high 10⁻⁶ mbar to low 10⁻⁷ mbar** range before continuing. PPII reads the load lock / projection chamber pressure; the holder insertion path is only safe to advance once PPII has reached this range.
 
@@ -727,7 +721,7 @@ After completing probe correction on the standard sample, follow the below steps
 
      > **NOTE:** In the example above PPII reads 7.39 × 10⁻⁶ mbar (high 10⁻⁶ range), which is right at the threshold. Wait until it drops further (low 10⁻⁶ or into 10⁻⁷) for a more conservative margin before the next step.
 
-  6. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in. The holder should move in smoothly.
+  6. Turn the holder **counter-clockwise** until you feel gently stuck (5 o'clock -> 12 o'clock), then guide the holder in smoothly. Do not force or push it in quickly.
 
      <img src="../sample-loading/img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="400">
 
@@ -735,7 +729,7 @@ After completing probe correction on the standard sample, follow the below steps
 
 - [ ] **Re-do eucentric height**
 
-  1. Open column valves and re-do eucentric height for your new sample ([1.3](#13-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
+  1. Check the Octagon value. The lower, the better. When it's <10, open column valves and re-do eucentric height for your new sample ([1.3](#13-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
   2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
 
 <a id="end-session"></a>
@@ -748,14 +742,14 @@ After completing probe correction on the standard sample, follow the below steps
   1. Put on gloves before handling any holders or samples.
   2. Blank the beam and verify the screen is inserted.
   3. In `TEMUI`, click `Column Valves Closed`.
-  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset after the button is pressed.
+  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset to 0 after the button is pressed.
 
      <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
 
-  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise** (12 o'clock -> 5 o'clock), then pull the rest of the holder out continuously.
   6. Set aside your holder and pick up the single-tilt holder with the standard sample.
   7. Push the single-tilt holder with the standard sample in until you feel resistance. Do **not** push all the way in.
-  8. The turbo pump starts automatically. Wait ~2 minutes for pressure to stabilize.
+  8. The turbo pump starts automatically. Wait for the airlock cycle to complete (~2 minutes).
   9. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
   10. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
 
@@ -765,8 +759,8 @@ After completing probe correction on the standard sample, follow the below steps
 - [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
 - [ ] Stage is returned to 0° tilt (alpha and beta).
 - [ ] Arina detector is retracted, verified on the left hand panel.
-- [ ] Arina detector is turned off, verified on the local Firefox URL.
-- [ ] `INT SCAN` physical button is in pressed state.
+- [ ] Arina detector is turned off, verified on the local Firefox URL and check the hardware button.
+- [ ] Scan coil box: `INT SCAN` physical button is in pressed state.
 - [ ] Screen is inserted.
 - [ ] Column valve is closed.
 - [ ] Turbo pump is turned off.
@@ -784,9 +778,9 @@ Common problems encountered during STEM sessions.
 | Problem | Cause | Solution |
 | ------- | ----- | -------- |
 | Image drifts when tilting | Eucentric height not set | Re-do eucentric height after loading a new sample |
-| C1A1 measurements unstable or fail | Velox is still scanning | Stop live scanning in Velox before running C1A1, then verify the beam is unblanked |
+| C1A1 measurements won't start | Velox is still scanning | Stop live scanning in Velox before running C1A1, then verify the beam is unblanked |
 | Aberration values oscillate instead of converging | Overcorrection percentage too high | Start with 100% Auto correct, reduce to 75% as values approach target |
-| C1A1 or Tableau shows no signal | Beam is blanked | Click `Beam Blank` button to unblank before running aberration measurements |
+| C1A1 or Tableau shows no signal/grayed out | Beam is blanked or convergence angle is different | Click `Beam Blank` button to unblank before running aberration measurements, or check the convergence angle |
 | Good Tableau values but poor image resolution | Missing C1A1 verification step | After Tableau, always run C1A1 again to fine-tune defocus and astigmatism |
 | Beam disappears from view | Random adjustments displaced the beam | Go to lower magnification until beam is visible, use joystick to move sample to center, then go to `Diffraction Shift` and use `mulXY` to center the beam |
 | Lost beam or need to redo alignment | Column misalignment after extended session | Redo eucentric height ([1.3](#13-find-eucentric-height)) and monochromator tune ([1.6](#16-monochromator-tune)). If you cannot find the sample, switch to TEM mode for easier navigation ([TEM Spectra](../spectra_TEM/index.md)) |
@@ -795,7 +789,7 @@ Common problems encountered during STEM sessions.
 
 **Beam blanking**
 
-When the beam is blanked, the electron beam is deflected away from the sample so no electrons hit it. This prevents unnecessary radiation damage to the sample when not actively imaging. The beam is automatically blanked when scanning stops or after taking a picture. Manual blank/unblank is available via the `Beam Blank` button on the hand panel or in the software.
+When the beam is blanked, the electron beam is deflected away from the sample so no electrons hit it. This prevents unnecessary radiation damage to the sample when not actively imaging. The beam is automatically blanked when scanning stops or after acquiring an image. Manual blank/unblank is available via the `Beam Blank` button (`R2`) on the hand panel or in the software.
 
 **Monochromator focus adjustment**
 
