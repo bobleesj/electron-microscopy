@@ -240,7 +240,10 @@ The purpose of the basic alignments is to center the electron beam and align it 
 
      > **No beam found?** In the following step you will click `Beam Shift` and adjust the `mulXY` knobs. Watch the screen current: it changes from 0.000 nA to 0.001 nA, etc. This means you are shifting the beam position near the screen. You will see dim light coming from the edges. Press the `Fine` and `Coarse` buttons to adjust the sensitivity of the `mulXY` knobs.
      >
-     > **Still can't find the beam at all?** Try temporarily increasing the C2 aperture from `70` to `150` in the `Apertures` panel. The larger aperture lets more electrons through, making the beam much easier to locate. Once you find and center the beam, switch back to `70` before continuing.
+     > **Still can't find the beam at all?** Try one of these two methods:
+     >
+     > 1. **Open the C2 aperture.** Temporarily increase the C2 aperture from `70` to `150` in the `Apertures` panel. The larger aperture lets more electrons through, making the beam much easier to locate. Once you find and center the beam, switch back to `70` before continuing.
+     > 2. **Lower the magnification, then search again.** Reduce magnification and drive around with the `mulXY` knobs again. At lower magnification the screen shows a much larger area of the specimen plane, so a beam that was shifted far off-axis (outside the small field of view at high magnification) now falls somewhere on the screen. Each turn of the knobs also moves the beam a shorter distance on screen, so it is easier to bring it to the center. Once centered, go back up in magnification and re-center as needed.
 
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
 
