@@ -19,7 +19,7 @@ First, visually confirm the following from the previous user to ensure no damage
 - [ ] Turbo pump is off.
 - [ ] Stage tilt is at 0° (alpha and beta) and the stage X, Y, Z positions have been reset to 0.
 - [ ] Arina detector is retracted.
-- [ ] Arina detector is turned off.
+- [ ] If the Arina was used, `HV` is `OFF` in NOVENA Acquire. The Arina detector is no longer turned off.
 - [ ] All holders are capped and placed in the holder box.
 - [ ] No errors are found across all software programs including TEMUI.
 
