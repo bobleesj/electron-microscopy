@@ -2,7 +2,7 @@
 
 This guide covers 4DSTEM data acquisition using the Dectris Arina detector on the Spectra 300 at Stanford SNSF. 4DSTEM records a full convergent beam electron diffraction (CBED) pattern at every scan position, producing a 4-dimensional dataset (2D scan x 2D diffraction). Images recorded by Sangjoon Bob Lee during training by Andrew Barnum; instructions written by Sangjoon Bob Lee.
 
-**Prerequisite:** Complete [TEM (Spectra)](../spectra_TEM/index.md) column alignment and [STEM (Spectra)](../spectra_STEM/index.md) probe correction before starting this guide.
+**Prerequisite:** Complete [STEM (Spectra)](../spectra_STEM/index.md) probe correction before starting this guide.
 
 **Acronyms:**
 
