@@ -141,7 +141,7 @@ Starting each session with these patterns keeps my names sorted in the file brow
 ### 1.6 Turn on the detector high voltage
 
 > [!CAUTION]
-> **IMPORTANT:** Turn on the high voltage before acquiring. With `HV` set to `OFF`, the detector records no data.
+> **IMPORTANT:** Turn on the high voltage before acquiring. With `HV` set to `OFF`, the detector records no data. `HV` must be `OFF` by the end of the session ([4.2](#42-turn-off-the-detector-high-voltage)).
 
 - [ ] **Turn on HV**
 
@@ -232,6 +232,9 @@ For the source code, message @bobleesj on Slack or email Sangjoon Bob Lee.
      <img src="img/press_retract.jpg" alt="Arina hand panel with Retract button pressed" width="500">
 
 ### 4.2 Turn off the detector high voltage
+
+> [!CAUTION]
+> **IMPORTANT:** `HV` must be `OFF` by the end of the session.
 
 - [ ] **Turn off HV**
 
