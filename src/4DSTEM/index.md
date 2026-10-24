@@ -77,7 +77,7 @@ The Electron Microscope Gateway links the microscope computer to the Arina PC.
 
 - [ ] **Initialize the detector**
 
-  1. On the Arina PC, click `Chrome` in the taskbar. The `DECTRIS Configuration Interface` opens.
+  1. On the Arina PC, click the DECTRIS icon (blue `D`) in the taskbar. The `DECTRIS Configuration Interface` opens.
   2. Go to `System`, then `Detector`. Click `Initialize detector`.
   3. Wait until `State` reads `idle`.
 
@@ -87,7 +87,7 @@ The Electron Microscope Gateway links the microscope computer to the Arina PC.
 
 - [ ] **Open NOVENA Acquire**
 
-  1. On the Arina PC, click the `DECTRIS Novena Acquire` icon (black square next to Chrome).
+  1. On the Arina PC, click the `DECTRIS Novena Acquire` icon (black square, left of the blue `D`).
 
      <img src="img/novena-acquire-icon.jpg" alt="DECTRIS Novena Acquire icon in the Arina PC taskbar" width="400">
 
