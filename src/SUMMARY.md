@@ -13,6 +13,7 @@
 # Techniques
 
 - [4DSTEM](4DSTEM/index.md)
+- [Nanobeam diffraction](4DSTEM/nanobeam.md)
 - [EELS](EELS/index.md)
 - [EDS](EDS/index.md)
 - [Tomography](tomography/index.md)

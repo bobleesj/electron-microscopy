@@ -1,6 +1,6 @@
 # 4DSTEM
 
-This guide covers 4DSTEM data acquisition using the Dectris Arina detector on the Spectra 300 at Stanford SNSF. 4DSTEM records a full convergent beam electron diffraction (CBED) pattern at every scan position, producing a 4-dimensional dataset (2D scan x 2D diffraction). Screenshots recorded by Guoliang Hu during training; instructions written by Sangjoon Bob Lee.
+This guide covers 4DSTEM data acquisition using the Dectris Arina detector on the Spectra 300 at Stanford SNSF. 4DSTEM records a full convergent beam electron diffraction (CBED) pattern at every scan position, producing a 4-dimensional dataset (2D scan x 2D diffraction). Images recorded by Sangjoon Bob Lee during training by Andrew Barnum; instructions written by Sangjoon Bob Lee.
 
 **Prerequisite:** Complete [TEM (Spectra)](../spectra_TEM/index.md) column alignment and [STEM (Spectra)](../spectra_STEM/index.md) probe correction before starting this guide.
 
@@ -14,21 +14,24 @@ This guide covers 4DSTEM data acquisition using the Dectris Arina detector on th
 
 | Phase | Procedures | Time |
 | ----- | ---------- | ---- |
-| [Part 1: Detector setup](#part-1-detector-setup) | Retract CETA, initialize Arina, connect remote software | 5 min |
-| [Part 2: Beam configuration](#part-2-beam-configuration-optional) | Set convergence angle, apertures, camera length (optional) | 5 min |
+| [Part 1: Detector setup](#part-1-detector-setup) | Retract CETA, remote into the Arina PC, initialize Arina, set data path, turn on HV | 5 min |
+| [Part 2: Beam setup](#part-2-beam-setup) | Enable descan, retract HAADF | 2 min |
 | [Part 3: Acquisition](#part-3-acquisition) | Insert detector, acquire diffraction data | varies |
-| [Part 4: End session](#part-4-end-session) | Retract and power off the Arina detector | 2 min |
+| [Part 4: End session](#part-4-end-session) | Retract the Arina detector, turn HV off, 4DSTEM checklist before leaving | 2 min |
 
 ## Part 1: Detector setup
 
 ### 1.1 Retract CETA detector
 
-Before inserting the Arina detector, a user must retract the CETA camera. Both detectors occupy the same physical space below the column. If the CETA is not retracted, inserting the Arina will crash both detectors. Do **not** skip this step.
+> [!CAUTION]
+> **IMPORTANT:** Retract the CETA camera before inserting the Arina detector. Both detectors occupy the same physical space below the column. If the CETA is not retracted, inserting the Arina will crash both detectors. Do **not** skip this step.
 
 1. On the bottom left computer, open the blanker/shutter software (red square icon with white T).
 2. Click the CETA icon to retract the CETA detector.
 
-   <img src="img/detector-initialization.jpg" alt="Blanker/shutter software showing detector positions" width="500">
+   <img src="img/ceta-retract-blanker.jpg" alt="Blanker/shutter software Microscope View with the CETA camera retracted" width="400">
+
+   The photo above shows the CETA retracted.
 
 3. Visually verify the CETA camera position is retracted from the diagram.
 4. In `TEMUI`, locate the `STEM Detector (User)` panel and verify all detectors are retracted:
@@ -36,48 +39,76 @@ Before inserting the Arina detector, a user must retract the CETA camera. Both d
    - BF-S (Bright Field): Retracted
    - DF-S (Dark Field): Retracted
 
-### 1.2 Initialize the Arina detector
+### 1.2 Connect to the Arina PC
 
-1. Open the instrument enclosure on the Spectra 300.
+The Arina PC controls the detector. Reach it from the microscope computer through Remote Desktop.
 
-   <img src="img/spectra.jpg" alt="Spectra 300 instrument enclosure" width="500">
+- [ ] **Open Remote Desktop**
 
-2. Locate the Dectris Arina detector unit inside the enclosure.
+  1. On the microscope computer, click the `Remote Desktop Connection` icon in the taskbar.
 
-   <img src="img/arina-hardware.jpg" alt="Dectris Arina detector hardware with blue indicator light" width="500">
+     <img src="img/rdp-connect.jpg" alt="Remote Desktop Connection icon in the microscope taskbar and connection dialog" width="400">
 
-3. Press and hold the button below the Arina detector (blue indicator light) for 10 seconds. When powered on, the button stays pressed in and the blue light is illuminated.
+  2. Confirm `Computer` is `192.168.12.71` and `User name` is `WS-9KKR4J4\dectris`. Click `Connect`.
 
-### 1.3 Connect remote software
+- [ ] **Log in**
 
-1. On the control workstation, open Firefox and click the remote connection bookmark.
+  1. Enter the password and click `OK`.
 
-   <img src="img/remote-connection.jpg" alt="Firefox remote connection to Arina detector" width="500">
+     <img src="img/rdp-credentials.jpg" alt="Windows Security dialog asking for the dectris credentials" width="400">
 
-2. Enter the detector IP address: `192.168.12.73`.
-3. Click `Initialize detector`. Wait for initialization to complete before proceeding. The interface shows a progress bar while the detector initializes.
+     > **NOTE:** Ask SNSF staff for the password, or message @bobleesj if you are an authorized previous Arina user.
 
-   <img src="img/init_detector.jpg" alt="DECTRIS web interface showing Initializing detector progress bar" width="500">
+### 1.3 Check the Electron Microscope Gateway
 
-### 1.4 Configure file saving
+The Electron Microscope Gateway links the microscope computer to the Arina PC.
 
-1. Open the NOVENA detector software.
-2. Click `Save Images` and select the destination folder.
+- [ ] **Open the Gateway**
 
-   <img src="img/save-images-dialog.jpg" alt="NOVENA save images dialog with folder selection" width="500">
+  1. On the microscope computer, click the `Electron Microscope Gateway` icon in the taskbar tray (bottom right).
 
-3. Set the filename format to `(name)_%00%`. The `%00%` placeholder auto-increments the frame number.
-4. Use `Continuous` for live streaming (preview) and `Single` to record and save a dataset.
+     <img src="img/gateway-tray.jpg" alt="Electron Microscope Gateway icon in the microscope taskbar tray" width="400">
+
+  2. Confirm the Gateway window opens, then close it.
+
+     <img src="img/gateway-dialog.jpg" alt="Electron Microscope Gateway window showing version 2.2.12.0" width="400">
+
+### 1.4 Initialize the Arina detector
+
+- [ ] **Initialize the detector**
+
+  1. On the Arina PC, click `Chrome` in the taskbar. The `DECTRIS Configuration Interface` opens.
+  2. Go to `System`, then `Detector`. Click `Initialize detector`.
+  3. Wait until `State` reads `idle`.
+
+     <img src="img/dectris-initialize.jpg" alt="DECTRIS Configuration Interface initializing the ARINA Si detector" width="400">
+
+### 1.5 Open NOVENA Acquire and set the data path
+
+- [ ] **Open NOVENA Acquire**
+
+  1. On the Arina PC, click the `DECTRIS Novena Acquire` icon (black square next to Chrome).
+
+     <img src="img/novena-acquire-icon.jpg" alt="DECTRIS Novena Acquire icon in the Arina PC taskbar" width="400">
+
+  2. Wait until the log at the bottom reads `initialization OK`.
+
+- [ ] **Set the data path**
+
+  1. In `Data Path`, click `...` next to `Dir` and choose a folder on `D:`.
+  2. Type a file name in `Prefix`. See [folder and file naming convention](#folder-and-file-naming-convention).
+
+     <img src="img/novena-data-path.jpg" alt="NOVENA Acquire Data Path panel with Dir and Prefix fields" width="400">
 
 #### Folder and file naming convention
 
-A consistent naming convention saves hours of searching later when sharing data or revisiting a session months later. Use the patterns below.
+I use the following patterns to help me remember what each dataset is when I share data or revisit a session months later.
 
-> **Use lowercase everywhere**: folder names, sample names, operator names, all tokens. Lowercase removes the question of whether a file should be `Gold` or `gold` or `GOLD`, keeps shell paths simple, and sorts cleanly.
+> I keep everything lowercase: folder names, sample names, operator names, all tokens. That way I never wonder whether a file is `Gold`, `gold`, or `GOLD`, shell paths stay simple, and names sort cleanly.
 
 **Folder name:** `YYYYMMDD_{sample}_{experiment}[_{operators}]`
 
-Lead with the **most important keywords**: the sample first, then the experiment or focus. Adding the operators (initials or short names) at the end is optional but **highly recommended**: it captures who was in the room so the surrounding context (conversations, troubleshooting, follow-up questions) is easier to remember months later.
+I lead with the most important keywords: the sample first, then the experiment or focus. I also add the operators (initials or short names) at the end. It records who was in the room, which helps me remember the surrounding context (conversations, troubleshooting, follow-up questions) months later.
 
 | Example | Meaning |
 |---|---|
@@ -87,7 +118,7 @@ Lead with the **most important keywords**: the sample first, then the experiment
 
 **File name:** `{voltage}_{convergence}_{scan-params}_{notes}.h5` (or `.mat`, `.raw`)
 
-Order tokens from the **largest concept (session-wide) to the smallest concept (per-scan)**. Voltage applies to the whole session, then convergence and camera length apply per-experiment, and scan dimensions and dwell time change per scan. Reading the filename left-to-right then reads like zooming in from the broadest setting to the most specific.
+I order tokens from the largest concept (session-wide) to the smallest (per-scan). Voltage applies to the whole session, convergence and camera length apply per experiment, and scan dimensions and dwell time change per scan. Read left to right, the filename zooms in from the broadest setting to the most specific.
 
 | Token | Meaning | Example | Scope |
 |---|---|---|---|
@@ -97,7 +128,7 @@ Order tokens from the **largest concept (session-wide) to the smallest concept (
 | `{n}x{n}` | Scan dimensions | `128x128`, `512x512` | per-scan |
 | `{n}us` | Dwell time (usually µs on Arina) | `5us`, `200us` | per-scan |
 
-Only encode parameters that are **constant for the whole scan**. Skip things that drift or change over time (e.g., defocus): they are not informative as a fixed filename token, and there is no need to record them in the `h5` metadata either.
+I only encode parameters that stay constant for the whole scan. I skip things that drift or change over time (e.g., defocus), since a fixed filename token says little about them, and I do not record them in the `h5` metadata either.
 
 | Example | Meaning |
 |---|---|
@@ -105,59 +136,30 @@ Only encode parameters that are **constant for the whole scan**. Skip things tha
 | `300kev_1.5mrad_64x64_nbed` | 300 kV, nanobeam diffraction at 1.5 mrad |
 | `300kev_30mrad_256x256_drift1` | First scan in a drift series |
 
-Stick to these patterns from the start of every session so the names sort cleanly in the file browser and stay searchable.
+Starting each session with these patterns keeps my names sorted in the file browser and easy to search.
 
-## Part 2: Beam configuration (optional)
+### 1.6 Turn on the detector high voltage
 
-The [STEM (Spectra)](../spectra_STEM/index.md) guide sets 30 mrad convergence angle by default. If that is suitable for your experiment (e.g., ptychography), skip this section and go directly to [Part 3: Acquisition](#part-3-acquisition). If you need a different convergence angle (e.g., nanobeam diffraction), follow the steps below.
+> [!CAUTION]
+> **IMPORTANT:** Turn on the high voltage before acquiring. With `HV` set to `OFF`, the detector records no data.
 
-<details>
-<summary><strong>Why change the convergence angle for 4DSTEM?</strong></summary>
+- [ ] **Turn on HV**
 
-The convergence angle depends on the type of 4DSTEM experiment. For ptychography, 30 mrad (the same as standard STEM) works well because overlapping disks are part of the reconstruction. For nanobeam diffraction, where separated Bragg disks are needed to index reflections, a much smaller angle is used, typically 1 to 10 mrad depending on the material and the required disk separation.
+  1. In NOVENA Acquire `Detector Status`, turn `HV` on. Click `Yes` to confirm.
 
-**Interactive demo:** Explore how convergence angle affects the CBED pattern at [bobleesj.github.io/electron-microscopy-website/cbed](https://bobleesj.github.io/electron-microscopy-website/cbed)
+     <img src="img/novena-hv-on.jpg" alt="NOVENA Acquire asking to confirm turning high voltage ON" width="400">
 
-</details>
+  2. Confirm `HV` reads `READY`.
+
+## Part 2: Beam setup
+
+The [STEM (Spectra)](../spectra_STEM/index.md) guide sets a 30 mrad convergence angle by default, which suits most 4DSTEM experiments (e.g., ptychography). If you need a smaller convergence angle for separated Bragg disks, see [Nanobeam diffraction](nanobeam.md) before continuing.
 
 ### 2.1 Enable descan
 
 1. In `TEMUI`, locate the `STEM Imaging (Expert)` panel and enable `Descan`.
 
-### 2.2 Configure beam for nanobeam diffraction
-
-The default STEM setup uses C2 = 70 and 30 mrad convergence angle. For nanobeam diffraction, reduce both to get separated Bragg disks. The table below shows typical values:
-
-| Parameter | STEM default | Nanobeam diffraction |
-|-----------|-------------|---------------------|
-| C2 aperture | 70 | 50 |
-| C3 aperture | 1000 | 30 |
-| Convergence angle | 30 mrad | ~10 mrad |
-| Beam current | ~0.150 nA | ~0.032 nA |
-| Camera length | 91 mm | 230 mm |
-
-<details>
-<summary><strong>Why change the C2 aperture?</strong></summary>
-
-The C2 aperture limits the angular range of electrons entering the probe-forming optics. A smaller aperture (50 vs 70) blocks more off-axis electrons, producing a more coherent beam with cleaner diffraction patterns at each probe position. The C2 aperture size and convergence angle are proportional (approximately 7:1 ratio, e.g. C2 = 70 gives ~10 mrad).
-
-> TODO: Confirm the C2 aperture to convergence angle ratio with staff
-
-</details>
-
-1. In `TEMUI`, go to `Tune` tab, then `Apertures`. Change C2 from 70 to 50, and C3 from 1000 to 30.
-
-   <img src="img/aperture-view.jpg" alt="Aperture settings after adjustment" width="500">
-
-2. In `Beam Setting`, click `MF-Y Convergence Angle`. Use the `mulY` knob to adjust the convergence angle to 10 mrad, then click `MF-Y Convergence Angle` again to deselect.
-
-   <img src="img/beam-settings.jpg" alt="Beam Settings panel with MF-Y Convergence Angle selected" width="500">
-
-3. Adjust beam current: in `TEMUI`, go to `Mono`, click `Focus`, and use the intensity knob to set the current to ~0.032 nA.
-
-4. Set the camera length to 230 mm (or 285 mm depending on the required angular range for your material).
-
-### 2.5 Retract HAADF
+### 2.2 Retract HAADF
 
 1. In `TEMUI`, retract the HAADF detector. The HAADF ring would block electrons from reaching the Arina detector below.
 
@@ -171,27 +173,37 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
    <img src="img/press_EDS.jpg" alt="Scan control box with INT SCAN, EELS SCAN, and EDS SCAN buttons" width="500">
 
-3. Press `R1` on the hand panel to lift the fluorescent screen. The Arina detector sits below the screen.
+3. When you are ready to take a picture, press `R1` on the hand panel to lift the fluorescent screen. The Arina detector sits below the screen.
 
 ### 3.2 Acquire data
 
-<img src="img/tvips.jpg" alt="TVIPS NOVENA software showing 4DSTEM scan with virtual images and CBED patterns" width="800">
+NOVENA Acquire has two panels with the same buttons: green ▶ previews without saving, red ○ records and saves.
 
-1. In the NOVENA software, click `Scan`, then `Continuous` to start a live preview. Verify the central beam is centered on the detector.
-2. If the beam is off-center, use the `mulXY` knobs with diffraction shift to center it.
-3. Once centered, click `Stop`, then click `Single Scan` to acquire and save the dataset.
+- `Image Preview / Acquire`: one diffraction pattern, beam parked.
+- `Scan Preview / Acquire`: the 4DSTEM scan, one pattern per scan position.
 
-4. After every `Single Scan`, verify the dataset was actually saved in the destination folder before starting the next acquisition. `NOVENA` occasionally completes a scan without writing the file.
+<img src="img/novena-preview-acquire.jpg" alt="NOVENA Acquire Image Preview and Scan Preview panels with green preview and red record buttons" width="400">
 
-   - [ ] **Confirm both `.h5` and `_master.h5` files are present**
+- [ ] **Center the beam**
 
-     1. Open the destination folder set in [Section 1.4](#14-configure-file-saving) and confirm both files for the latest scan are there.
+  1. In `Image Preview / Acquire`, click green ▶.
+  2. Verify the central beam is centered on the detector. If not, center it with `mulXY` in diffraction shift.
 
-   - [ ] **Confirm file sizes are non-zero**
+- [ ] **Preview the scan**
 
-     1. Check the file sizes in the folder. If either file is 0 KB, the save failed and the scan must be re-run.
+  1. In `Scan Preview / Acquire`, set `Scan` (e.g., `64 x 64`) and `Time` (dwell time per position).
+  2. Click green ▶. Nothing is saved.
 
-   > **NOTE:** Each scan produces a 4D dataset: a CBED pattern at every pixel in the scan area. File sizes can be large depending on scan resolution and detector binning.
+- [ ] **Record**
+
+  1. Click red ○ in `Scan Preview / Acquire`. The dataset saves to the `Data Path`.
+
+- [ ] **Verify the files saved**
+
+  1. Open the `Data Path` folder. Confirm both `.h5` and `_master.h5` files are present for the latest scan.
+  2. Confirm neither file is 0 KB. If one is, re-run the scan.
+
+  > **NOTE:** NOVENA occasionally finishes a scan without writing the file. Check after every recording.
 
 ### 3.3 Quick analysis
 
@@ -201,24 +213,71 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
 See [how to transfer data to your USB](../data-transfer/index.md) for getting the Arina 4DSTEM datasets and HAADF images off the microscope computers.
 
+### 3.5 View your data on a Mac with Live4DSTEM
+
+`Live4DSTEM` is a macOS app for browsing Arina data at 60 fps on a MacBook. It shows the diffraction pattern, virtual image, derived images (BF, ABF, ADF, CoM, DPC, iDPC), and acquisition metadata.
+
+<img src="img/live4dstem.jpg" alt="Live4DSTEM macOS app showing a diffraction pattern, virtual image, and derived images for an Arina dataset" width="800">
+
+For the source code, message @bobleesj on Slack or email Sangjoon Bob Lee.
+
 ## Part 4: End session
 
 ### 4.1 Retract the Arina detector
 
-1. On the Arina hand panel, press `Retract` to move the detector out of the beam path. The green "Retracted" light confirms the detector is clear.
+- [ ] **Retract the detector**
 
-   <img src="img/press_retract.jpg" alt="Arina hand panel with Retract button pressed" width="500">
+  1. On the Arina hand panel, press `Retract`. The green "Retracted" light turns on.
 
-### 4.2 Power off the detector
+     <img src="img/press_retract.jpg" alt="Arina hand panel with Retract button pressed" width="500">
 
-1. Open the Spectra 300 instrument enclosure.
-2. Press and hold the button below the Arina detector for 10 seconds. The button releases and the blue indicator light turns off.
+### 4.2 Turn off the detector high voltage
 
-### 4.3 Close session
+- [ ] **Turn off HV**
+
+  1. In NOVENA Acquire `Detector Status`, turn `HV` off.
+  2. Confirm `HV` reads `OFF`.
+
+  > **NOTE:** Leave the Arina detector powered on. Do **not** power it off at the end of a session.
+
+### 4.3 4DSTEM checklist before leaving
+
+- [ ] Arina detector is retracted, verified by the green "Retracted" light on the hand panel.
+- [ ] `HV` reads `OFF` in NOVENA Acquire.
+- [ ] Your datasets are saved: both `.h5` and `_master.h5` files are present with non-zero sizes.
+- [ ] Your data is copied off the Arina PC ([data transfer](../data-transfer/index.md)).
+- [ ] The Arina detector is left powered on (blue light on).
+
+### 4.4 Close session
 
 Follow the steps in [End session](../spectra_STEM/index.md#part-4-end-session).
 
+## Appendix: Manually power the detector on or off
+
+The Arina detector stays on between sessions. Use these steps only if it is off (e.g., after a power outage) or SNSF staff ask you to power it down.
+
+> [!CAUTION]
+> If you are doing this for the first time, work with a trainer supervising.
+
+- [ ] **Power on**
+
+  1. Open the Spectra 300 instrument enclosure.
+
+     <img src="img/spectra.jpg" alt="Spectra 300 instrument enclosure" width="500">
+
+  2. Locate the Dectris Arina detector unit.
+
+     <img src="img/arina-hardware.jpg" alt="Dectris Arina detector hardware with blue indicator light" width="500">
+
+  3. Press and hold the button below the detector. The button stays pressed in and the blue light turns on.
+
+- [ ] **Power off**
+
+  1. Open the Spectra 300 instrument enclosure.
+  2. Press and hold the button below the detector. The button releases and the blue light turns off.
+
 ## Changelog
 
+- Oct 23, 2026 - Update for the new Arina PC: Remote Desktop login, Electron Microscope Gateway, DECTRIS Configuration Interface, NOVENA Acquire data path, HV on and off, preview vs. record, 4DSTEM checklist before leaving, and Live4DSTEM. Move nanobeam diffraction to its own page and manual detector power on/off to the appendix
 - Feb 28, 2026 - Rewrite SOP by Sangjoon Bob Lee with full procedural instructions, inline FAQ dropdowns, and new images
 - Dec 10, 2025 - First draft and images shared by Guoliang Hu

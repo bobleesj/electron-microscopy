@@ -1,6 +1,8 @@
 # Data transfer: Arina and Velox
 
-This page covers how to get your data off the Spectra computers at Stanford SNSF: Arina 4DSTEM datasets and Velox HAADF `.emd` images to a USB drive, plus how to mount the lab Mallard network share for remote access. Drafted by Sangjoon Bob Lee from staff notes and images.
+This page covers how to get your data off the Spectra computers at Stanford SNSF: Arina 4DSTEM datasets and Velox HAADF `.emd` images to a USB drive, plus how to mount the Wigeon network share (Colin Ophus group only) for remote access. Drafted by Sangjoon Bob Lee from staff notes and images. Arina PC photo by Guoliang Hu.
+
+> **TODO:** The Arina PC was replaced with a new computer (Oct 2026). Verify the copy steps on the new PC, then update the Arina section below.
 
 ## Overview
 
@@ -8,11 +10,13 @@ This page covers how to get your data off the Spectra computers at Stanford SNSF
 | ---- | --- |
 | [Save Arina 4DSTEM data to USB](#save-arina-4dstem-data-to-usb) | Plug USB into the Arina PC, copy the dataset |
 | [Save HAADF images to USB](#save-haadf-images-to-usb) | Copy Velox `CaptureData` folder to USB |
-| [Mount the Mallard network share](#mount-the-mallard-network-share) | Map the lab share as a network drive |
+| [Mount the Wigeon network share](#mount-the-wigeon-network-share) | Map the Wigeon share as a network drive (Colin Ophus group only) |
 
-Plug your USB into the Arina PC (the TVIPS scan generator PC, USB port circled below), then copy your dataset to it.
+## Save Arina 4DSTEM data to USB
 
-<img src="img/IO-arina-pc-usb-port.jpg" alt="Arina TVIPS PC with USB port circled" width="400">
+Plug your USB into the Arina PC (the Dell labeled "NOVENA ARINA", USB ports circled below), then copy your dataset to it.
+
+<img src="img/IO-arina-pc-usb-port.jpg" alt="Dell Arina PC labeled NOVENA ARINA with front USB ports circled" width="400">
 
 ## Save HAADF images to USB
 
@@ -31,9 +35,11 @@ Velox saves HAADF images and other `.emd` files locally on the control workstati
 
      <img src="img/IO-capturedata-folder.jpg" alt="CaptureData folder with Velox emd files" width="500">
 
-## Mount the Mallard network share
+## Mount the Wigeon network share
 
-For remote access to the lab data server, map the Mallard share as a network drive instead of copying to USB.
+> **NOTE:** For Colin Ophus group members only.
+
+For remote access to the lab data server, map the Wigeon share as a network drive instead of copying to USB.
 
 - [ ] **Open Map network drive**
 
@@ -49,4 +55,4 @@ For remote access to the lab data server, map the Mallard share as a network dri
 
      > **Placeholder** — REPLACE with wigeon.
 
-     <img src="img/IO-map-network-drive-dialog.jpg" alt="Map Network Drive dialog with mallard_arina path and drive Z" width="500">
+     <img src="img/IO-map-network-drive-dialog.jpg" alt="Map Network Drive dialog (old screenshot, to be replaced with the Wigeon W: path)" width="500">

@@ -761,8 +761,6 @@ After completing probe correction on the standard sample, follow the steps below
 - [ ] Beam is blanked.
 - [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
 - [ ] Stage is returned to 0° tilt (alpha and beta).
-- [ ] Arina detector is retracted, verified on the left hand panel.
-- [ ] Arina detector is turned off, verified on the local Firefox URL and check the hardware button.
 - [ ] Scan coil box: `INT SCAN` physical button is in pressed state.
 - [ ] Screen is inserted.
 - [ ] Column valve is closed.
@@ -773,6 +771,14 @@ After completing probe correction on the standard sample, follow the steps below
 - [ ] Spectra usage is terminated on NEMO.
 - [ ] Internet accounts (Google, Outlook, etc.) are signed off.
 - [ ] Fill out the logbook if anything unusual happened during the session.
+
+**4DSTEM checklist before leaving** (if you used the Arina detector, see [4DSTEM](../4DSTEM/index.md#43-4dstem-checklist-before-leaving)):
+
+- [ ] Arina detector is retracted, verified by the green "Retracted" light on the hand panel.
+- [ ] `HV` reads `OFF` in NOVENA Acquire.
+- [ ] Your datasets are saved: both `.h5` and `_master.h5` files are present with non-zero sizes.
+- [ ] Your data is copied off the Arina PC ([data transfer](../data-transfer/index.md)).
+- [ ] The Arina detector is left powered on (blue light on).
 
 ## Troubleshooting
 
