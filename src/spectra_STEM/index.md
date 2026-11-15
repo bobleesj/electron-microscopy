@@ -19,7 +19,7 @@ First, visually confirm the following from the previous user to ensure no damage
 - [ ] Turbo pump is off.
 - [ ] Stage tilt is at 0° (alpha and beta) and the stage X, Y, Z positions have been reset to 0.
 - [ ] Arina detector is retracted.
-- [ ] If the Arina was used, `HV` is `OFF` in NOVENA Acquire. The Arina detector is no longer turned off.
+- [ ] If the Arina was used, verify that `HV` is `OFF` in `NOVENA Acquire`. Leave the Arina detector powered on.
 - [ ] All holders are capped and placed in the holder box.
 - [ ] No errors are found across all software programs including TEMUI.
 
@@ -46,14 +46,15 @@ After you have checked the states,
 
 ## Overview
 
-This guide covers three main phases:
+This guide covers five main phases:
 
 | Phase | Procedures | Time |
 | ----- | ---------- | ---- |
 | [Part 1: Setup & Alignment](#part-1-setup--alignment) | Vacuum check, eucentric height, STEM mode configuration, direct alignments, monochromator tune, HAADF setup | 5-10 min |
 | [Part 2: Probe Correction](#part-2-probe-correction) | Correct aberrations (C1A1, Tableau) to achieve sub-angstrom probe | 10-15 min |
-| [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional), load your own sample | varies |
-| [Part 4: End session](#part-4-end-session) | Reload standard sample, pre-departure checklist | 5 min |
+| [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional) | varies |
+| [Part 4: Load your own sample](#part-4-load-your-own-sample) | Exchange samples, re-do eucentric height, verify probe correction | varies |
+| [Part 5: End session](#part-5-end-session) | Reload standard sample, pre-departure checklist | 5 min |
 
 <br>
 <img src="plots/workflow_overview.png" alt="STEM Training Workflow Overview" width="800">
@@ -119,9 +120,45 @@ Complete eucentric height alignment after loading each sample and before imaging
 
 - [ ] **View ronchigram**
 
-  1. Verify the `Diffraction` button is pressed on the hand panel with the red light turned on.
+  1. **Confirm that the hand-panel `Diffraction` button is ON and its red indicator is lit.** This selects diffraction mode for viewing the ronchigram.
 
      > **NOTE:** The ronchigram is the diffraction pattern formed by a convergent electron beam. When defocused, it contains shadow images of sample features, making structure visible during z-height adjustment. Over an amorphous material, it shows aberration state of the lens.
+
+  <details class="beam-help" id="cant-find-the-beam">
+  <summary>Can’t find the beam?</summary>
+
+  If the viewing screen is dark, follow these steps to find and center the beam.
+
+  <img src="img/beam-missing.jpg" alt="Initial STEM viewing screen with no visible beam" width="600" loading="lazy">
+
+  1. In `TEM BlankerShutter Monitor`, verify that the beam is unblanked and the column valves are open.
+
+     <img src="img/blanker-shutter-monitor.jpg" alt="TEM BlankerShutter Monitor showing COLUMN VALVES OPEN and Gun Deflector UnBlanked" width="600" loading="lazy">
+
+  2. In `Velox`, switch to `TEM` mode. Set the magnification to `LM 40×`.
+  3. In `TEMUI`, open the `Mono` tab and locate the `Monochromator (Expert)` panel.
+  4. Click `Find Beam` (red box). The beam moves automatically while the system searches for it.
+
+     > **NOTE:** The monochromator alignment may be far off, making the beam difficult to find.
+
+  <figure class="beam-photo">
+  <a class="beam-photo-highlight" href="img/find-beam-tem.jpg" target="_blank" rel="noopener">
+  <img src="img/find-beam-tem.jpg" alt="TEM at LM 40× with an illuminated grid; Find Beam is in the Monochromator (Expert) panel on the left" width="800" loading="lazy">
+  <span class="find-beam-box" aria-hidden="true"></span>
+  </a>
+  </figure>
+
+  5. Once the beam is visible, return to `STEM` mode in `Velox`.
+
+     The beam may appear near the edge of the screen.
+
+     <img src="img/beam-off-screen.jpg" alt="STEM viewing screen with a bright beam partly visible along the top edge" width="800" loading="lazy">
+
+  6. In `TEMUI`, open the `Tune` tab, then `Direct Alignments`. Select `Diffraction Shift and Focus alignment` and use the `mulXY` knobs to center the beam on the screen.
+
+     <img src="img/beam-visible-stem.jpg" alt="A bright circular beam centered on the STEM viewing screen" width="600" loading="lazy">
+
+  </details>
 
   2. In `TEMUI`, view the ronchigram in the main display.
 
@@ -197,7 +234,7 @@ Before performing alignments, configure the STEM imaging parameters and verify d
   3. Select `NanoProbe` mode.
   4. Set spot number to 6.
 
-     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Select the spot size according to the trade-off between spatial resolution and electron dose: higher spot numbers produce smaller probes (higher resolution) with lower current; lower numbers produce larger probes with more current. 
+     > **NOTE:** NanoProbe provides a smaller, more coherent probe than MicroProbe. Select the spot size according to the trade-off between spatial resolution and electron dose: higher spot numbers produce smaller probes (higher resolution) with lower current; lower numbers produce larger probes with more current.
      >
      > TODO: Verify spot number convention for Spectra 300. On some Thermo Fisher systems, it is the opposite (spot 1 = most current).
 
@@ -353,7 +390,7 @@ Before running aberration correction, set up HAADF (High-Angle Annular Dark Fiel
 
 - [ ] **Start live scanning**
 
-  1. Click the play button in `Velox` to start live scanning. 
+  1. Click the play button in `Velox` to start live scanning.
   2. The image can be saturated (all white) initially. Detector signal adjustment follows in the next step.
 
      <img src="img/p2_s1_haadf_01.jpg" alt="Velox HAADF view" width="800">
@@ -544,9 +581,9 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
   1. Set Auto correct to 75% to prevent overcorrection. Yellow highlighted values in the "Latest accepted measurements" column indicate aberrations outside measurement confidence interval. Correct these first. In this example, S3 (1.167 μm) and C3 (-2.553 μm) are highlighted yellow:
 
      <img src="img/p2_s3_tableau_05.jpg" alt="State of correction panel showing yellow highlighted aberrations" width="800">
-  
-   > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values. 
-   
+
+   > Note: either clicking `B4` or `D4` can have a significant impact on `C1` and `A1` values.
+
   2. Click the aberration buttons at the bottom to apply corrections. The phase plate visualization shows the **limiting aberration** at the top; use this as the main target. If lower-order aberrations are large, correct them first because they can affect the higher-order terms. Click the corresponding button repeatedly, then move to the next limiting aberration (up to ~5 total clicks). After ~5 correction steps, rerun Tableau to acquire a new snapshot of the aberration state and update the correction targets.
   > Note: The "Changes" column tracks how many corrections have been applied. After correcting S3 and C3, the values improve significantly:
   > - S3: 1.167 μm → 72.93 nm
@@ -558,7 +595,7 @@ Tableau measures higher-order aberrations (A2, B2, C3, S3, A3) by acquiring ronc
 
   1. After applying corrections, run another complete Tableau measurement to verify the improvements.
   2. Check the aberration surface and phase plate displays. A well-corrected probe shows:
-     - Flat aberration surface within the central green circle (minimal phase variation across the aperture). 
+     - Flat aberration surface within the central green circle (minimal phase variation across the aperture).
      - Symmetric phase plates without strong directional features
 
      <img src="img/p2_s3_tableau_07.jpg" alt="Full Tableau with phase plates" width="1100">
@@ -631,7 +668,7 @@ With aberration correction complete, the system is ready for high-resolution STE
 
   2. Acquire an image.
      <img src="img/p3_s1_acquire_04.jpg" alt="Velox toolbar with 2048x2048 and 5 µs settings" width="800">
-     
+
   3.  After acquisition completes, the beam is blanked automatically to prevent sample damage/contamination buildup.
      <img src="img/p3_s1_acquire_06.jpg" alt="Atomic resolution with lattice visible" width="800">
 
@@ -684,79 +721,85 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
      <img src="img/p3_s2_sherpa_08.jpg" alt="Sherpa B2/A2 final result" width="800">
 
-### 3.3 Load your own sample
+<a id="33-load-your-own-sample"></a>
+## Part 4: Load your own sample
 
-After completing probe correction on the standard sample, follow the steps below to unload the standard sample and load your own. For holder-specific instructions (single-tilt, double-tilt, tomography), see [Sample Loading](../sample-loading/index.md).
+After probe correction, exchange the standard sample for your own.
 
 - [ ] **Remove the standard sample**
 
-  1. Put on gloves before handling any holders or samples. Do not touch the holder beyond o-ring.
-  2. Blank the beam and verify the screen is inserted. The screen protects the detectors and cameras below from the beam.
-  3. Close the column valves by pressing `Column Valves Closed`.
+  1. Put on gloves. Do not touch the holder beyond the O-ring.
+  2. Blank the beam using `Blank` in `Velox` if needed.
+  3. Verify the screen is inserted. Press `R1` (`Screen lift`) if retracted.
+  4. Close the column valves using `TEMUI` → `Setup` → `Vacuum` → `Col. Valves Closed`. Verify `All Vacuum (Closed)`.
 
      > If a "VCP" error occurs, follow the instructions on the Spectra NEMO page.
-  4. Reset the holder by clicking `reset` on the `Stage` menu.
+  5. Reset the holder: `TEMUI` → `Stage` → `Control` → `Reset` → `Holder`.
 
      <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
 
-  5. Confirm the stage x, y, z values are returning to zero after you reset the holder stage.
-  6. Pull the holder straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise**, then pull the rest of the holder out continuously.
+  6. Verify stage X, Y, and Z have returned to 0.
+  7. Pull straight out to the first resistance point. Do not force. Turn **clockwise**, then withdraw the holder.
 
 - [ ] **Load your sample and insert the holder**
 
 > **IMPORTANT:** Do **not** remove the standard sample from the single-tilt holder. Use a separate holder to load your sample.
 
-  1. For holder-specific loading instructions, see [Sample Loading](../sample-loading/index.md).
-  2. Align the holder guide pin with the notch/guide slot on the goniometer (at the ~5 o'clock position in the holder port). 
+  1. Load your sample in a separate holder; follow [Sample Loading](../sample-loading/index.md).
+  2. Align the guide pin with the holder-port notch (~5 o’clock).
 
      <img src="img/p3_s3_sample_loading_area.jpg" alt="Holder aligned with blue line on goniometer, gloved hand" width="400">
 
   3. Push the holder in until you feel resistance. Do **not** push all the way in.
-  4. The turbo pump starts automatically. Wait for the airlock cycle (~2 minutes). You can monitor the time in `TEMUI` or on the screen attached to the Spectra instrument.
+  4. Wait for the airlock cycle (~2 minutes). Monitor it in `TEMUI`; the turbo pump starts automatically.
 
      <img src="../sample-loading/img/holder-insert/03-pressure-stabilizing.jpg" alt="Pressure stabilizing readout" width="400">
 
-     > Why wait? The holder insertion opens a small chamber to atmosphere. The turbo pump must evacuate this air before you can insert the holder into the main column. Rushing this step would introduce air into the ultra-high vacuum column, damaging the electron gun and contaminating the system.
-
-  5. Wait until the **PPII gauge** drops into the **high 10⁻⁶ mbar to low 10⁻⁷ mbar** range before continuing. PPII reads the load lock / projection chamber pressure; the holder insertion path is only safe to advance once PPII has reached this range.
+  5. Wait for **PPII** to reach **high 10⁻⁶ to low 10⁻⁷ mbar** before proceeding.
 
      <img src="img/p3_s3_vacuum_ppii.jpg" alt="TEMUI vacuum status panel after sample insertion, with PPII reading 7.39 by 10 to the minus 6 mbar in the pressures list" width="600">
 
-     > **NOTE:** In the example above PPII reads 7.39 × 10⁻⁶ mbar (high 10⁻⁶ range), which is right at the threshold. Wait until it drops further (low 10⁻⁶ or into 10⁻⁷) for a more conservative margin before the next step.
+     > **NOTE:** The photo shows 7.39 × 10⁻⁶ mbar. Wait for a further drop before proceeding.
 
-  6. Turn the holder **counter-clockwise** until you feel gently stuck (5 o'clock -> 12 o'clock), then guide the holder in smoothly. Do not force or push it in quickly.
+  6. Turn **counter-clockwise** (5 → 12 o’clock) until it stops gently, then guide the holder in slowly. Do not force.
 
      <img src="../sample-loading/img/holder-insert/05-holder-rotate-insert.jpg" alt="Rotating holder counter-clockwise and inserting" width="400">
 
-  7. In `TEMUI`, turn off the turbo pump. Confirm the holder type when prompted.
+  7. Turn off the turbo pump in `TEMUI`. Confirm the holder type when prompted.
 
 - [ ] **Re-do eucentric height**
 
-  1. Check the Octagon value. The lower, the better. When it's <10, open column valves and re-do eucentric height for your new sample ([1.3](#13-find-eucentric-height)). Each sample sits at a different physical height in the holder. Find the ronchigram "blow-up" point again so the sample stays centered when tilted and the probe is properly focused.
-  2. Run a quick C1A1 or Sherpa to verify probe correction still holds after the sample change. For beam-sensitive or low-contrast samples where Sherpa cannot be used, see [Manual Aberration Correction (Advanced)](../aberration-correction/index.md).
+  1. Verify Octagon is <10 before opening the column valves.
+  2. Open the column valves and [re-do eucentric height](#13-find-eucentric-height).
+  3. Verify probe correction with C1A1 or Sherpa. If Sherpa is unsuitable, use [manual correction](../aberration-correction/index.md).
 
 <a id="end-session"></a>
-## Part 4: End session
+<a id="part-4-end-session"></a>
+## Part 5: End session
 
-### 4.1 Reload the standard sample
+<a id="41-reload-the-standard-sample"></a>
+### 5.1 Reload the standard sample
 
 - [ ] **Reload the standard sample**
 
   1. Put on gloves before handling any holders or samples.
-  2. Blank the beam and verify the screen is inserted.
-  3. In `TEMUI`, click `Column Valves Closed`.
-  4. Click `Reset Holder` under the `Stage` menu. Visually verify that the X, Y, and Z stage coordinates are reset to 0 after the button is pressed.
+  2. In `Velox`, click `Blank` if the beam is unblanked. Alternatively, press `R2` (`Beam Blank`) on the hand panel. Verify that the beam is blanked.
+  3. If the screen is retracted, press `R1` (`Screen lift`) on the hand panel to insert it. Verify that the screen is inserted.
+  4. In `TEMUI`, open `Setup` → `Vacuum`. If the column valves are open, click `Col. Valves Closed`. Verify that the status reads `All Vacuum (Closed)`.
+  5. In `TEMUI`, open `Stage` → `Control`. Under `Reset`, click `Holder`.
+  6. Verify that the stage X, Y, and Z coordinates have returned to 0 before removing the holder.
 
      <img src="../spectra_TEM/img/APP-rest-holder.jpg" alt="Reset holder button in TEMUI" width="400">
 
-  5. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise** (12 o'clock -> 5 o'clock), then pull the rest of the holder out continuously.
-  6. Set aside your holder and pick up the single-tilt holder with the standard sample.
-  7. Push the single-tilt holder with the standard sample in until you feel resistance. Do **not** push all the way in.
-  8. The turbo pump starts automatically. Wait for the airlock cycle to complete (~2 minutes).
-  9. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
-  10. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
+  7. Pull the holder with your sample straight out to the first resistance point. Do **not** force beyond this point. Turn **clockwise** (12 o'clock -> 5 o'clock), then pull the rest of the holder out continuously.
+  8. Set aside your holder and pick up the single-tilt holder with the standard sample.
+  9. Push the single-tilt holder with the standard sample in until you feel resistance. Do **not** push all the way in.
+  10. The turbo pump starts automatically. Wait for the airlock cycle to complete (~2 minutes).
+  11. Turn the holder **counter-clockwise** until you feel gently stuck, then guide the holder to push in.
+  12. In `TEMUI`, turn off the turbo pump. Confirm `Single tilt` on TEMUI.
 
-### 4.2 Checklist before leaving the Spectra room
+<a id="42-checklist-before-leaving-the-spectra-room"></a>
+### 5.2 Checklist before leaving the Spectra room
 
 - [ ] Beam is blanked.
 - [ ] `Reset Holder` has been pressed and X, Y, Z stage coordinates are verified reset.
@@ -822,6 +865,9 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Changelog
 
+- Nov 15, 2026 - Add [beam finding](#cant-find-the-beam), split sample loading and end session into Parts 4 and 5, and clarify controls and Arina shutdown
+- Oct 23, 2026 - Update the pre-session checklist: leave the Arina detector powered on and verify HV is off
+- Oct 8, 2026 - Add the low-magnification beam-search tip in [Direct alignments](#15-direct-alignments)
 - May 6, 2026 - Promote End session to Part 4 and add it to the overview table
 - Mar 1, 2026 - Add pre-session checklist, sample loading section with glove requirement, end session with explicit reload steps, fix image paths
 - Feb 28, 2026 - Add prerequisite link to TEM Alignment guide; add lost-beam troubleshooting

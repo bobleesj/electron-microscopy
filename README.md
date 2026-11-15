@@ -31,14 +31,30 @@ Writing guides for humans and quality control:
 - We want to serve "IKEA manual" of microscopes.
 - The adage "A picture is worth a thousand words" should be judiciously applied. Balance richness vs. cognitive overload.
 
+### SOP language style
+
+Use short natural-language instructions: **action first, control second, verification when needed**.
+
+- Start each step with an action verb and keep it focused on one action.
+- Name the exact control; use arrows for longer menu paths, not as a replacement for the instruction.
+- Keep necessary state checks, waiting conditions, and precautions. Check the current state before using a toggle.
+- Remove repeated directions and captions. Place each photo after the step it illustrates.
+
+Examples:
+
+- Blank the beam by clicking `Blank` in `Velox` if it is unblanked.
+- Insert the screen by pressing `R1` if it is retracted.
+- Open `Tune` → `Direct Alignments` in `TEMUI`.
+- Select `Diffraction Shift and Focus alignment`.
+- Center the beam using the `mulXY` knobs.
+
 Formatting consistency:
 
 > You may check the following with your favorite AI tool:
 
 - Use sub-bullets (`-`) for details under each step, with 3-space indent
 - Use "in" for software references (e.g., `in TEMUI`, not `on TEMUI`)
-- No periods for action commands (e.g., `Click Col Valves Open in TEMUI`)
-- Use periods for observations/explanations (e.g., `Notice the image is pulsing in and out.`)
+- Use periods for complete instructions and explanations.
 - Wrap software names in backticks: `TEMUI`, `Velox`, `ImageCorrector`, `Sherpa`
 - Lowercase for general text, uppercase only for acronyms:
   - Uppercase: TEM, STEM, 4DSTEM, EELS, EDS, HAADF, ABF, BF, FFT, FOV
@@ -58,7 +74,7 @@ Formatting consistency:
 - Keep TODO items at the top of each document (e.g., `> TODO: ...`)
 - Keep a `## Changelog` section at the bottom: `- Dec 18, 2025 - description by @username`
 - Link to shared sections instead of duplicating (e.g., `[End session](sample-loading.md#end-session)`)
-- Use `STEM.md` as the main reference document for formatting
+- Use `src/spectra_STEM/index.md` as the main reference document for formatting
 
 ### Checklist before submitting
 
@@ -103,6 +119,8 @@ cargo install mdbook
 </details>
 
 **Run local dev server**
+
+Keep `mdbook serve` running while editing. It rebuilds on changes and refreshes the browser automatically; reuse the existing preview server when one is running.
 
 ```bash
 # Run local dev server

@@ -53,6 +53,7 @@ Authors thank Dr. Pinaki Mukherjee and Andrew Barnum for training @bobleesj and 
 
 ## Changelog
 
+- Nov 15, 2026 - Add Spectra [beam finding](spectra_STEM/index.md#cant-find-the-beam), reorganize sample loading and end session, and clarify Arina shutdown
 - Apr 22, 2026 - Reorganize sidebar into SNSF Spectra 300, Techniques, Class labs, Grid preparation, Sample loading sections
 - Apr 22, 2026 - Add class lab guide on spot size and convergence angle (Talos)
 - Apr 22, 2026 - Add drop casting grid preparation guide

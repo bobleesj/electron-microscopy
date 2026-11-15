@@ -59,3 +59,53 @@
 .content li>ol {
     margin-top: 0.25em;
 } */
+
+/* Collapsible beam recovery instructions in the Spectra guide. */
+.beam-help {
+    border: 2px solid #d94040;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 20px 0;
+}
+
+.beam-help > summary {
+    color: #e54848;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.beam-help > summary:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.beam-photo {
+    margin: 16px 0;
+}
+
+.beam-photo-highlight {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.beam-photo-highlight img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content .beam-photo-highlight img:hover {
+    transform: none;
+}
+
+.find-beam-box {
+    position: absolute;
+    left: 10%;
+    top: 52.8%;
+    width: 4%;
+    height: 2.5%;
+    border: 3px solid #ff2020;
+    box-sizing: border-box;
+    pointer-events: none;
+}

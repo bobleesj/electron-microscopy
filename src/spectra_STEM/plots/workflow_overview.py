@@ -1,7 +1,7 @@
 """
 Generate STEM training workflow overview diagram.
 
-Shows the three-part structure in a 3x1 vertical layout.
+Shows the five-part structure in two rows.
 
 Usage:
     python workflow_overview.py
@@ -10,9 +10,9 @@ Usage:
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-fig, ax = plt.subplots(figsize=(16, 6.5))
+fig, ax = plt.subplots(figsize=(16, 10))
 ax.set_xlim(0, 16)
-ax.set_ylim(1.5, 10.5)
+ax.set_ylim(-4, 10.5)
 ax.set_aspect('equal')
 ax.axis('off')
 
@@ -47,7 +47,7 @@ def draw_part_header(x, y, width, text, color):
     )
     ax.add_patch(box)
     ax.text(x + width/2, y + 0.5, text,
-            ha='center', va='center', fontsize=20, fontweight='bold')
+            ha='center', va='center', fontsize=16, fontweight='bold')
 
 def draw_arrow_down(x, y1, y2):
     """Draw a downward arrow."""
@@ -83,8 +83,8 @@ step_gap = 0.15
 
 # Part 1: Setup & Alignment
 draw_part_header(col1_x, 8.2, col_width, 'Part 1: Setup', COLOR_PART1)
-steps_part1 = ['1.1 Vacuum', '1.2 Eucentric Height', '1.3 STEM Config',
-               '1.4 Alignments', '1.5 Mono Tune', '1.6 HAADF Setup']
+steps_part1 = ['1.1 Vacuum', '1.2 Convergence Angle', '1.3 Eucentric Height',
+               '1.4 STEM Config', '1.5 Alignments', '1.6 Mono Tune', '1.7 HAADF Setup']
 y = 7.2
 for i, step in enumerate(steps_part1):
     draw_step_box(col1_x, y, col_width, step_height, step, COLOR_PART1)
@@ -116,6 +116,15 @@ for i, step in enumerate(steps_part3):
 arrow_y = 8.7
 draw_arrow_right(col1_x + col_width + 0.1, col2_x - 0.1, arrow_y)
 draw_arrow_right(col2_x + col_width + 0.1, col3_x - 0.1, arrow_y)
+
+# Continue with sample exchange and end-of-session procedures.
+draw_part_header(col2_x, -1.0, col_width, 'Part 4: Load Sample', COLOR_PART2)
+draw_step_box(col2_x, -2.0, col_width, step_height, 'Exchange Samples', COLOR_PART2)
+draw_step_box(col2_x, -2.95, col_width, step_height, 'Recheck Alignment', COLOR_PART2)
+draw_part_header(col3_x, -1.0, col_width, 'Part 5: End Session', COLOR_PART3)
+draw_step_box(col3_x, -2.0, col_width, step_height, '5.1 Reload Standard', COLOR_PART3)
+draw_step_box(col3_x, -2.95, col_width, step_height, '5.2 Final Checklist', COLOR_PART3)
+draw_arrow_right(col2_x + col_width + 0.1, col3_x - 0.1, -0.5)
 
 plt.tight_layout()
 plt.savefig('workflow_overview.png', dpi=150, bbox_inches='tight', facecolor='white')

@@ -4,6 +4,8 @@ This guide covers 4DSTEM data acquisition using the Dectris Arina detector on th
 
 **Prerequisite:** Complete [STEM (Spectra)](../spectra_STEM/index.md) probe correction before starting this guide.
 
+> **NOTE:** Leave the Arina detector powered on between sessions. At the end of your session, turn `HV` off in `NOVENA Acquire` and verify that it reads `OFF`.
+
 **Acronyms:**
 
 - `mulXY` - Multifunction X/Y knobs on hand panel
@@ -234,14 +236,12 @@ For the source code, message @bobleesj on Slack or email Sangjoon Bob Lee.
 ### 4.2 Turn off the detector high voltage
 
 > [!CAUTION]
-> **IMPORTANT:** `HV` must be `OFF` by the end of the session.
+> **IMPORTANT:** At the end of the session, verify that `HV` is `OFF` in `NOVENA Acquire`. Leave the Arina detector powered on.
 
 - [ ] **Turn off HV**
 
   1. In NOVENA Acquire `Detector Status`, turn `HV` off.
   2. Confirm `HV` reads `OFF`.
-
-  > **NOTE:** Leave the Arina detector powered on. Do **not** power it off at the end of a session.
 
 ### 4.3 4DSTEM checklist before leaving
 
@@ -253,7 +253,7 @@ For the source code, message @bobleesj on Slack or email Sangjoon Bob Lee.
 
 ### 4.4 Close session
 
-Follow the steps in [End session](../spectra_STEM/index.md#part-4-end-session).
+Follow the steps in [End session](../spectra_STEM/index.md#part-5-end-session).
 
 ## Appendix: Manually power the detector on or off
 
@@ -281,6 +281,8 @@ The Arina detector stays on between sessions. Use these steps only if it is off 
 
 ## Changelog
 
+- Nov 15, 2026 - Clarify [shutdown](#part-4-end-session): HV off, detector powered on. Update the Spectra end-session link
+- Oct 24, 2026 - Clarify that the prerequisite is STEM probe correction
 - Oct 23, 2026 - Update for the new Arina PC: Remote Desktop login, Electron Microscope Gateway, DECTRIS Configuration Interface, NOVENA Acquire data path, HV on and off, preview vs. record, 4DSTEM checklist before leaving, and Live4DSTEM. Move nanobeam diffraction to its own page and manual detector power on/off to the appendix
 - Feb 28, 2026 - Rewrite SOP by Sangjoon Bob Lee with full procedural instructions, inline FAQ dropdowns, and new images
 - Dec 10, 2025 - First draft and images shared by Guoliang Hu
