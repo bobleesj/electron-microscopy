@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edit chapter · Electron Microscopy Training</title>
+<style>
+:root {color-scheme:light dark;font:16px/1.5 system-ui}
+body {margin:0 auto;padding:0 20px;max-width:980px;background:Canvas;color:CanvasText}
+header {display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+h1 {font-size:1.1rem;margin:0;margin-right:auto}
+button {font:inherit;padding:4px 12px;cursor:pointer}
+textarea {box-sizing:border-box;width:100%;height:calc(100dvh - 96px);min-height:220px;padding:18px;font:15px/1.65 ui-monospace,monospace;tab-size:4;resize:vertical}
+footer {display:flex;justify-content:space-between;gap:10px;font-size:.8rem}
+</style>
+<header><h1>Edit Markdown</h1><button id="preview" disabled>Preview chapter</button></header>
+<textarea id="source" aria-label="Chapter Markdown" spellcheck="false" disabled></textarea>
+<footer><span id="filename"></span><span role="status" id="state">Loading…</span></footer>
+<script>
+const chapter = new URLSearchParams(location.search).get("chapter");
+const endpoint = "/source?" + new URLSearchParams({chapter});
+const input = document.querySelector("#source");
+const state = document.querySelector("#state");
+const preview = document.querySelector("#preview");
+document.querySelector("#filename").textContent = "src/" + chapter;
+let version, saved, timer, pending;
+
+async function saveChanges() {
+    while (input.value !== saved) {
+        const text = input.value;
+        const response = await fetch(endpoint, {
+            method: "POST", headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({text, revision: version})
+        });
+        if (!response.ok) throw new Error(await response.text());
+        version = await response.text();
+        saved = text;
+    }
+    state.textContent = "Saved locally";
+}
+function flush() {
+    if (!pending) pending = saveChanges().finally(() => { pending = null; });
+    return pending;
+}
+function report(error) { state.textContent = error.message; }
+input.addEventListener("input", () => {
+    state.textContent = "Saving…";
+    clearTimeout(timer);
+    timer = setTimeout(() => flush().catch(report), 350);
+});
+window.addEventListener("beforeunload", e => {
+    if (version && saved !== input.value) { e.preventDefault(); e.returnValue = ""; }
+});
+preview.addEventListener("click", async () => {
+    clearTimeout(timer);
+    try {
+        await flush();
+        location.assign("http://127.0.0.1:8765/" + chapter.replace(/\.md$/, ".html"));
+    } catch (e) { report(e); }
+});
+(async () => {
+    const response = await fetch(endpoint);
+    if (!response.ok) throw new Error(await response.text());
+    const data = await response.json();
+    saved = input.value = data.text;
+    version = data.revision;
+    input.disabled = preview.disabled = false;
+    document.querySelector("h1").textContent = saved.split("\n")[0].replace(/^#+\s*/, "");
+    state.textContent = "Saved locally";
+    input.focus();
+    input.setSelectionRange(0, 0);
+})().catch(report);
+</script>
+</html>

@@ -21,13 +21,6 @@ WIP:
 | [EELS](EELS/index.md) | Spectra | Electron Energy Loss Spectroscopy | 2/10 | Available |
 | [EDS](EDS/index.md) | Spectra | Energy Dispersive X-ray Spectroscopy | 2/10 | Available |
 | [Aberration Correction (Advanced)](aberration-correction/index.md) | Spectra | Manual aberration correction without Sherpa | 1/10 | Available |
-| [Phenom Pharos (Deep Lab)](deep-lab-sem/index.md) | Phenom Pharos G2 | Desktop SEM/STEM operation guide | 2/10 | Available |
-| [Spot size and convergence angle](tem-lab-talos/index.md) | Talos | Class lab on beam parameters and C2 illumination | 3/10 | Available |
-| [Drop casting](drop-casting/index.md) | : | Grid preparation by drop casting nanoparticles | 2/10 | Available |
-| [Tomography](tomography/index.md) | Spectra | Electron tomography | - | Coming soon |
-| [Ptychography](ptychography/index.md) | Spectra | Ptychography imaging | - | Coming soon |
-| [MAPED](PED/index.md) | Spectra | Precession Electron Diffraction | - | Coming soon |
-
 
 **Instrument links:**
 
@@ -38,14 +31,6 @@ WIP:
 
 - [Ronchigram simulator](https://bobleesj.github.io/electron-microscopy-website/ronchigram)
 - [(S)TEM alignment diagrams](https://www.rodenburg.org/RODENBURg_STEM.pdf)
-
-## Looking for volunteers!
-
-We appreciate feedback, corrections, and contributions from the community!
-
-- **Found an error?** Open an issue or submit a PR
-- **Want to add your institution's SOP?** Reach out to [@bobleesj](https://github.com/bobleesj) — we can help with writing and formatting as long as you have notes, Word docs, or rough drafts
-- **Have suggestions?** See the [GitHub repo](https://github.com/bobleesj/electron-microscopy) for contribution guidelines
 
 ## Acknowledgments
 

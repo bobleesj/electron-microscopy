@@ -17,11 +17,7 @@ We want to bring electron microscopy techniques and SOPs together across institu
 
 ## How to contribute
 
-We can help with writing, formatting, and organizing your content. You don't need to be a programmer!
-
-1. **Prepare your notes** - Word docs, Google Docs, handwritten notes, photos from your phone - anything works
-2. **Reach out** - Contact [@bobleesj](https://github.com/bobleesj) or open an issue on the [GitHub repo](https://github.com/bobleesj/electron-microscopy)
-3. **We'll handle the rest** - We'll format your content and add it to the site under your institution's section
+To propose a procedure or correction, open an issue or submit a pull request in the [GitHub repository](https://github.com/bobleesj/electron-microscopy).
 
 ## Institutions we'd love to hear from
 

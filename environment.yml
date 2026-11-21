@@ -4,5 +4,6 @@ channels:
 dependencies:
   - python=3.13
   - mdbook=0.5.2
+  - markdown
   - pillow
   - pillow-heif

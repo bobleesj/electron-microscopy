@@ -152,3 +152,26 @@ src/
 ### Deployment
 
 Push to `main` branch → GitHub Actions auto-deploys to GitHub Pages. See `.github/deploy.yml`.
+
+### Edit a local chapter in the browser
+
+Run `./edit` in the book directory to start the preview
+and editor together. If the preview is already running on port 8765, start only
+the editor with `python3 tools/edit_book.py`. Open the book at
+<http://127.0.0.1:8765>, then choose **Edit page**. Click a step, paragraph, heading, or table cell to
+edit its text alongside the chapter photos. Select a word and press the backtick
+key to toggle inline code formatting. Press Enter in a numbered step to split it
+at the cursor. Press Backspace or Delete in an empty step to remove its number.
+Hover or focus a step to reveal its controls. Use **+** to add a
+step, drag the dotted grip to reorder it, or focus the grip and use the arrow
+keys. Drop JPEG, PNG, or WebP files onto a step or choose **Add photo**.
+Step numbers update automatically, and photos travel with their step.
+Changes save to the chapter in
+`src/`. Choose **Done** to return to reading or **Markdown** to edit the full
+source, including images and list structure.
+
+Choose **Changes** from any chapter to scroll through all edited pages in one
+review. Each section compares the last Git commit with the saved draft. Use the
+chapter links to jump within the review. It updates as you edit. Install Python
+Markdown (included in `em-env`) for formatted excerpts and photos. Without it,
+the panel shows the changed Markdown source.

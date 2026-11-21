@@ -13,7 +13,7 @@ The convergence angle depends on the type of 4DSTEM experiment. For ptychography
 
 </details>
 
-## Configure beam for nanobeam diffraction
+## Step 1. Set the nanobeam apertures and convergence angle {#configure-beam-for-nanobeam-diffraction}
 
 The default STEM setup uses C2 = 70 and 30 mrad convergence angle. For nanobeam diffraction, reduce both to get separated Bragg disks. The table below shows typical values:
 
@@ -30,11 +30,11 @@ The default STEM setup uses C2 = 70 and 30 mrad convergence angle. For nanobeam 
 
 The C2 aperture limits the angular range of electrons entering the probe-forming optics. A smaller aperture (50 vs 70) blocks more off-axis electrons, producing a more coherent beam with cleaner diffraction patterns at each probe position. The C2 aperture size and convergence angle are proportional (approximately 7:1 ratio, e.g. C2 = 70 gives ~10 mrad).
 
-> TODO: Confirm the C2 aperture to convergence angle ratio with staff
+> Confirm the C2 aperture to convergence angle ratio with staff.
 
 </details>
 
-1. In `TEMUI`, go to `Tune` tab, then `Apertures`. Change C2 from 70 to 50, and C3 from 1000 to 30.
+1. In `TEMUI`, open `Tune` → `Apertures`. Change C2 from 70 to 50, and C3 from 1000 to 30.
 
    <img src="img/aperture-view.jpg" alt="Aperture settings after adjustment" width="500">
 
@@ -42,6 +42,33 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
    <img src="img/beam-settings.jpg" alt="Beam Settings panel with MF-Y Convergence Angle selected" width="500">
 
-3. Adjust beam current: in `TEMUI`, go to `Mono`, click `Focus`, and use the intensity knob to set the current to ~0.032 nA.
+## Step 2. Find the sample in LM and set eucentric height {#find-the-sample-and-set-eucentric-height}
 
-4. Set the camera length to 230 mm (or 285 mm depending on the required angular range for your material).
+1. Stay in `STEM`. Enable `LM` mode next to the `Descan` checkbox.
+2. Use the stage joystick to find the region of interest in X and Y. Center a recognizable feature in that region.
+
+3. To check eucentric height at this location, open `Stage²` → `Control` in `TEMUI` and turn on `Wobbler` under `Alpha wobbler`.
+
+   <img src="../spectra_TEM/img/APP-wobbler-eucentric-height.jpg" alt="Stage² Control tab with the Wobbler button at lower right under Alpha wobbler" width="400">
+4. Watch the centered feature as the holder tilts back and forth. If it shifts across the image with each tilt, use the `Z-axis` up/down buttons on the hand panel to minimize that shift.
+5. Turn off Wobbler. Recenter the feature if needed, then click Add beneath the position list in Stage² to save the position at this height.
+
+## Step 3. Repeat the alignment at higher magnification {#repeat-alignment-in-nanobeam-mode}
+
+You aligned the beam during the initial STEM setup. With the nanobeam apertures and convergence angle in place, repeat the alignment checks below, then tune the monochromator. For the full procedures, see the Spectra guide’s [Direct alignments](../spectra_STEM/index.md#15-direct-alignments) and [Monochromator tune](../spectra_STEM/index.md#16-monochromator-tune).
+
+1. After saving the stage position, stay in `STEM` and turn the magnification knob to leave `LM`.
+2. Align the C2 aperture. In `TEMUI` → `Tune` → `Direct Alignments`, select `Center C2 aperture`. Use `mulXY` until the beam pulses in place, then click `Done`.
+
+   <img src="../spectra_STEM/img/p1_s4_alignments_07.jpg" alt="Center C2 aperture in the Spectra Direct Alignments panel" width="500">
+
+3. Center the beam.
+4. Adjust `Beam shift` in `Probe Corrector S-CORR`.
+5. Check beam tilt.
+
+   > Confirm whether the arrow keys were used to adjust beam tilt in `Probe Corrector S-CORR` and which control was selected.
+
+6. Return to the diffraction view and select `Diffraction Shift and Focus alignment`. Check that the ronchigram is centered, adjust with `mulXY` if needed, then click `Done`.
+7. Open `Mono` → `Monochromator Tune (Expert)` in `TEMUI` and center the beam through the slit. With `Focus` active, use the intensity knob to set the nanobeam current to ~0.032 nA.
+8. Recheck eucentric height after adjusting the monochromator.
+9. Set the camera length to 230 mm (or 285 mm depending on the required angular range for your material).

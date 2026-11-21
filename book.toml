@@ -16,7 +16,7 @@ edit-url-template = "https://github.com/bobleesj/electron-microscopy/edit/main/{
 site-url = "/electron-microscopy/"
 sidebar-header-nav = true
 additional-css = ["theme/css/custom.css"]
-additional-js = ["theme/js/img-zoom.js"]
+additional-js = ["theme/js/img-zoom.js", "theme/js/local-edit.js"]
 
 [output.html.fold]
 enable = true

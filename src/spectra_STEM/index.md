@@ -17,9 +17,9 @@ First, visually confirm the following from the previous user to ensure no damage
 - [ ] Beam is blanked.
 - [ ] Column valves are closed.
 - [ ] Turbo pump is off.
-- [ ] Stage tilt is at 0° (alpha and beta) and the stage X, Y, Z positions have been reset to 0.
+- [ ] Stage is reset. Alpha and beta are at 0°. X, Y, and Z are at 0.
 - [ ] Arina detector is retracted.
-- [ ] If the Arina was used, verify that `HV` is `OFF` in `NOVENA Acquire`. Leave the Arina detector powered on.
+- [ ] Arina `HV` is `OFF`.
 - [ ] All holders are capped and placed in the holder box.
 - [ ] No errors are found across all software programs including TEMUI.
 
