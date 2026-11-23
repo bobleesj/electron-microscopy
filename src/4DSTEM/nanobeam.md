@@ -1,29 +1,48 @@
 # Nanobeam diffraction
 
+<p class="draft-notice"><strong>DRAFT</strong> — Nanobeam procedure under review.</p>
+
 Nanobeam diffraction (NBED) is a 4DSTEM experiment that uses a small convergence angle so the Bragg disks in each diffraction pattern stay separated and can be indexed. This page covers the beam settings that differ from the 30 mrad STEM default. For detector setup, acquisition, and end of session, follow [4DSTEM](index.md).
 
-**Prerequisite:** Complete [4DSTEM Part 1: Detector setup](index.md#part-1-detector-setup) and [Part 2: Beam setup](index.md#part-2-beam-setup) first. Then return to [Part 3: Acquisition](index.md#part-3-acquisition) after these steps.
+**Start on gold.** [Align the beam](../spectra_STEM/index.md#15-direct-alignments) and [tune the mono](../spectra_STEM/index.md#16-monochromator-tune).
+
+## Step 1. Check and correct beam tilt {#repeat-alignment-in-nanobeam-mode}
+
+1. In `Probe Corrector S-CORR`, open `Channels` → `Exported element`. Check whether `Beam Tilt` reads zero.
+2. Open `Manual Correction` → `BeamTilt`. Set `Multiplier` to 6 and use the arrow keys to center the beam.
+
+## Step 2. Align the diffraction pattern and fine-tune C2 {#step-4-align-the-diffraction-pattern-and-fine-tune-c2}
+
+1. Switch to diffraction pattern (DP) mode. In `TEMUI`, select `Diffraction Shift and Focus alignment`. Center the pattern with `mulXY`, then click `Done`.
+2. In `Apertures`, select `5` for C2. Click `Adjust`, center the aperture, then click `Adjust` again to exit.
+3. Check for additional diffraction patterns or an off-center C2 aperture.
+4. Leave DP mode. In real space, select `Center C2 aperture`. Adjust `mulXY` until the beam pulses in place, then click `Done`.
+
+## Step 3. Retune the monochromator and check C3 {#step-5-retune-the-monochromator-and-check-c3}
+
+1. Return to DP mode. Check the beam current. If it’s low, fine-tune `Shift` and `Focus` in `Monochromator Tune (Expert)`. Watch the current as you adjust.
+2. Select the 20 µm C3 aperture. Check that only the selected aperture is visible. The beam current should be about 50 pA (0.050 nA).
+
+See [Spectra monochromator tune](../spectra_STEM/index.md#16-monochromator-tune).
+
+After the C3 check, [exchange the gold standard for your sample](../spectra_STEM/index.md#part-4-load-your-own-sample). See [finding your sample in LM](#find-the-sample-and-set-eucentric-height).
+
+## Archive
+
+Earlier draft and setup values.
 
 <details>
 <summary><strong>Why change the convergence angle for 4DSTEM?</strong></summary>
 
 The convergence angle depends on the type of 4DSTEM experiment. For ptychography, 30 mrad (the same as standard STEM) works well because overlapping disks are part of the reconstruction. For nanobeam diffraction, where separated Bragg disks are needed to index reflections, a much smaller angle is used, typically 1 to 10 mrad depending on the material and the required disk separation.
 
-**Interactive demo:** Explore how convergence angle affects the CBED pattern at [bobleesj.github.io/electron-microscopy-website/cbed](https://bobleesj.github.io/electron-microscopy-website/cbed)
+Open [Electron microscopy tools](https://bobleesj.github.io/electron-microscopy-website/) and choose **Diffraction** to explore how convergence angle affects the CBED pattern.
 
 </details>
 
-## Step 1. Set the nanobeam apertures and convergence angle {#configure-beam-for-nanobeam-diffraction}
+### Nanobeam apertures and convergence angle on gold {#configure-beam-for-nanobeam-diffraction}
 
-The default STEM setup uses C2 = 70 and 30 mrad convergence angle. For nanobeam diffraction, reduce both to get separated Bragg disks. The table below shows typical values:
-
-| Parameter | STEM default | Nanobeam diffraction |
-|-----------|-------------|---------------------|
-| C2 aperture | 70 | 50 |
-| C3 aperture | 1000 | 30 |
-| Convergence angle | 30 mrad | ~10 mrad |
-| Beam current | ~0.150 nA | ~0.032 nA |
-| Camera length | 91 mm | 230 mm |
+The default STEM setup uses C2 = 70 and 30 mrad convergence angle. For nanobeam diffraction, reduce both to get separated Bragg disks. See [setup values](#setup-values).
 
 <details>
 <summary><strong>Why change the C2 aperture?</strong></summary>
@@ -42,7 +61,22 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
 
    <img src="img/beam-settings.jpg" alt="Beam Settings panel with MF-Y Convergence Angle selected" width="500">
 
-## Step 2. Find the sample in LM and set eucentric height {#find-the-sample-and-set-eucentric-height}
+### Earlier alignment checks
+
+Repeat the [Spectra direct alignments](../spectra_STEM/index.md#15-direct-alignments) at higher magnification with the nanobeam settings.
+
+1. Stay in `STEM` on the gold standard. If `LM` is enabled, turn the magnification knob to leave it.
+2. Align the C2 aperture. In `TEMUI` → `Tune` → `Direct Alignments`, select `Center C2 aperture`. Use `mulXY` until the beam pulses in place, then click `Done`.
+
+   <img src="../spectra_STEM/img/p1_s4_alignments_07.jpg" alt="Center C2 aperture in the Spectra Direct Alignments panel" width="500">
+
+3. Center the beam.
+4. Adjust `Beam shift` in `Probe Corrector S-CORR`.
+
+5. After monochromator tuning, recheck eucentric height on the gold standard.
+6. Set the camera length to 230 mm (or 285 mm for a different angular range).
+
+### Find your sample in LM and set eucentric height {#find-the-sample-and-set-eucentric-height}
 
 1. Stay in `STEM`. Enable `LM` mode next to the `Descan` checkbox.
 2. Use the stage joystick to find the region of interest in X and Y. Center a recognizable feature in that region.
@@ -52,23 +86,14 @@ The C2 aperture limits the angular range of electrons entering the probe-forming
    <img src="../spectra_TEM/img/APP-wobbler-eucentric-height.jpg" alt="Stage² Control tab with the Wobbler button at lower right under Alpha wobbler" width="400">
 4. Watch the centered feature as the holder tilts back and forth. If it shifts across the image with each tilt, use the `Z-axis` up/down buttons on the hand panel to minimize that shift.
 5. Turn off Wobbler. Recenter the feature if needed, then click Add beneath the position list in Stage² to save the position at this height.
+6. Turn the magnification knob to leave `LM`. Continue to [4DSTEM Part 3: Acquisition](index.md#part-3-acquisition).
 
-## Step 3. Repeat the alignment at higher magnification {#repeat-alignment-in-nanobeam-mode}
+### STEM and nanobeam setup values {#setup-values}
 
-You aligned the beam during the initial STEM setup. With the nanobeam apertures and convergence angle in place, repeat the alignment checks below, then tune the monochromator. For the full procedures, see the Spectra guide’s [Direct alignments](../spectra_STEM/index.md#15-direct-alignments) and [Monochromator tune](../spectra_STEM/index.md#16-monochromator-tune).
-
-1. After saving the stage position, stay in `STEM` and turn the magnification knob to leave `LM`.
-2. Align the C2 aperture. In `TEMUI` → `Tune` → `Direct Alignments`, select `Center C2 aperture`. Use `mulXY` until the beam pulses in place, then click `Done`.
-
-   <img src="../spectra_STEM/img/p1_s4_alignments_07.jpg" alt="Center C2 aperture in the Spectra Direct Alignments panel" width="500">
-
-3. Center the beam.
-4. Adjust `Beam shift` in `Probe Corrector S-CORR`.
-5. Check beam tilt.
-
-   > Confirm whether the arrow keys were used to adjust beam tilt in `Probe Corrector S-CORR` and which control was selected.
-
-6. Return to the diffraction view and select `Diffraction Shift and Focus alignment`. Check that the ronchigram is centered, adjust with `mulXY` if needed, then click `Done`.
-7. Open `Mono` → `Monochromator Tune (Expert)` in `TEMUI` and center the beam through the slit. With `Focus` active, use the intensity knob to set the nanobeam current to ~0.032 nA.
-8. Recheck eucentric height after adjusting the monochromator.
-9. Set the camera length to 230 mm (or 285 mm depending on the required angular range for your material).
+| Parameter | STEM default | Initial nanobeam setup |
+|-----------|-------------|---------------------|
+| C2 aperture | 70 | 50 |
+| C3 aperture | 1000 | 30 |
+| Convergence angle | 30 mrad | ~10 mrad |
+| Beam current | ~0.150 nA | ~0.032 nA |
+| Camera length | 91 mm | 230 mm |
