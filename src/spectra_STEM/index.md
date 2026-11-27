@@ -882,7 +882,7 @@ If the holder needs cleaning, use the Fischione 1020 before loading your sample.
 8. Replace the TEM holder with the blanking plug.
 9. Press `PUMP` and verify `HIGH VACUUM` before leaving.
 
-Thanks to Christoph for demonstrating the procedure on November 26, 2026. [Fischione 1020 operating instructions](https://www.uvic.ca/research/advancedmicroscopy/about/preparation/plasma-cleaner/index.php)
+Thanks to Christoph Flathmann for demonstrating the procedure on November 26, 2026. [Fischione 1020 operating instructions](https://www.uvic.ca/research/advancedmicroscopy/about/preparation/plasma-cleaner/index.php)
 
 ### Aberration notation
 
