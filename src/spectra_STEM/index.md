@@ -882,7 +882,7 @@ If the holder needs cleaning, use the Fischione 1020 before loading your sample.
 8. Replace the TEM holder with the blanking plug.
 9. Press `PUMP` and verify `HIGH VACUUM` before leaving.
 
-Thanks to Christoph Flathmann for demonstrating the procedure on November 26, 2026. [Fischione 1020 operating instructions](https://www.uvic.ca/research/advancedmicroscopy/about/preparation/plasma-cleaner/index.php)
+[Fischione 1020 operating instructions](https://www.uvic.ca/research/advancedmicroscopy/about/preparation/plasma-cleaner/index.php)
 
 ### Aberration notation
 
@@ -897,6 +897,10 @@ Different notations exist for aberrations in the literature. The table below sho
 | \\(C_{30}\\) | \\(C_3\\)/\\(C_s\\) | Spherical | \\(C_{52}\\) | \\(S_5\\) | 5th order star |
 | \\(C_{32}\\) | \\(S_3\\) | Star aberration | \\(C_{54}\\) | \\(R_5\\) | Rosette |
 | \\(C_{34}\\) | \\(A_3\\) | 4-fold astigmatism | \\(C_{56}\\) | \\(A_5\\) | 6-fold astigmatism |
+
+## Acknowledgments
+
+Thank you to Christoph Flathmann for demonstrating how to plasma clean a TEM holder on November 26, 2026, and to Dasol Yoon for helping improve this guide.
 
 ## Changelog
 
