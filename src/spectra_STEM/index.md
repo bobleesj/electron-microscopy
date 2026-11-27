@@ -900,7 +900,7 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Acknowledgments
 
-Thank you to Christoph Flathmann for demonstrating how to plasma clean a TEM holder on November 26, 2026, and to Dasol Yoon for helping improve this guide.
+Thank you to Andrew Barnum for providing hands-on Spectra training and tutorial materials. Thanks to Christoph Flathmann for demonstrating how to plasma clean a TEM holder on November 26, 2026, and to Dasol Yoon for helping improve this guide.
 
 ## Changelog
 
