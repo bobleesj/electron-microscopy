@@ -53,7 +53,7 @@ This guide covers five main phases:
 | [Part 1: Setup & Alignment](#part-1-setup--alignment) | Vacuum check, eucentric height, STEM mode configuration, direct alignments, monochromator tune, HAADF setup | 5-10 min |
 | [Part 2: Probe Correction](#part-2-probe-correction) | Correct aberrations (C1A1, Tableau) to achieve sub-angstrom probe | 10-15 min |
 | [Part 3: Imaging](#part-3-imaging) | Image acquisition, Sherpa fine-tuning (optional) | varies |
-| [Part 4: Load your own sample](#part-4-load-your-own-sample) | Exchange samples, re-do eucentric height, verify probe correction | varies |
+| [Part 4: Load your own sample](#part-4-load-your-own-sample) | Plasma clean the holder if needed, exchange samples, re-do eucentric height, verify probe correction | varies |
 | [Part 5: End session](#part-5-end-session) | Reload standard sample, pre-departure checklist | 5 min |
 
 <br>
@@ -154,7 +154,15 @@ Complete eucentric height alignment after loading each sample and before imaging
 
      <img src="img/beam-off-screen.jpg" alt="STEM viewing screen with a bright beam partly visible along the top edge" width="800" loading="lazy">
 
-  6. In `TEMUI`, open the `Tune` tab, then `Direct Alignments`. Select `Diffraction Shift and Focus alignment` and use the `mulXY` knobs to center the beam on the screen.
+  6. If the beam was visible in `TEM` but is still missing in `STEM` at C2 `70`, recover it in probe image mode.
+
+     1. Set C2 to `150` in `Apertures`.
+     2. Increase the convergence angle temporarily.
+     3. Roughly [tune the mono](#16-monochromator-tune) to recover beam current.
+     4. In `Direct Alignments`, use `Center C2 aperture` and then `Beam shift` to roughly center the aperture and beam.
+     5. Return C2 to `70` and restore the original convergence angle. Confirm the beam is visible again.
+
+  7. Switch to diffraction mode if needed. In `TEMUI`, open `Tune` → `Direct Alignments` and select `Diffraction Shift and Focus alignment`. Center the ronchigram with `mulXY`, then click `Done`.
 
      <img src="img/beam-visible-stem.jpg" alt="A bright circular beam centered on the STEM viewing screen" width="600" loading="lazy">
 
@@ -279,7 +287,7 @@ The purpose of the basic alignments is to center the electron beam and align it 
      >
      > **Still can't find the beam at all?** Try one of these two methods:
      >
-     > 1. **Open the C2 aperture.** Temporarily increase the C2 aperture from `70` to `150` in the `Apertures` panel. The larger aperture lets more electrons through, making the beam much easier to locate. Once you find and center the beam, switch back to `70` before continuing.
+     > 1. **Recover the beam at C2 `150`.** Follow [Can’t find the beam?](#cant-find-the-beam) for the rough alignment and return to C2 `70`.
      > 2. **Lower the magnification, then search again.** The screen then covers a wider area, so a beam shifted far off-axis lands back in view. Center it with `mulXY`, then return to the original magnification.
 
      <img src="img/p1_s4_alignments_05.jpg" alt="Probe image mode" width="800">
@@ -726,6 +734,11 @@ Sherpa provides rapid low-order aberration correction (up to B2) based on real s
 
 After probe correction, exchange the standard sample for your own.
 
+> [!NOTE]
+> **Why plasma clean the holder?** Cleaning removes hydrocarbons that can build up on your sample under the electron beam. If needed, [plasma clean the empty holder](#plasma-clean-the-tem-holder) before loading your sample.
+
+### Exchange samples
+
 - [ ] **Remove the standard sample**
 
   1. Put on gloves. Do not touch the holder beyond the O-ring.
@@ -849,6 +862,28 @@ The monochromator filters the energy spread of the electron beam by passing it t
 
 ## Appendix
 
+### Plasma clean the TEM holder
+
+If the holder needs cleaning, use the Fischione 1020 before loading your sample. Wear gloves and handle the holder by its grip. Check the gas supply as shown in your training.
+
+1. Press `VENT` and wait for `ATMOSPHERE`.
+2. Replace the blanking plug with the TEM holder.
+
+   <img src="img/plasma-cleaner-blanking-plug.jpg" alt="Gloved hand holding the blanking plug at the plasma cleaner port" width="344">
+
+3. Press `PUMP` and wait for `HIGH VACUUM`.
+
+   <img src="img/plasma-cleaner-panel.jpg" alt="Fischione 1020 control panel with the Pump button and the Pumping light on" width="344">
+
+4. Enter the cleaning time approved for your holder (for example, `02:00`).
+5. Press `SET` to start cleaning.
+6. Wait for the timer to reach `00:00`.
+7. Press `VENT` and wait for `ATMOSPHERE`.
+8. Replace the TEM holder with the blanking plug.
+9. Press `PUMP` and verify `HIGH VACUUM` before leaving.
+
+Thanks to Christoph for demonstrating the procedure on November 26, 2026. [Fischione 1020 operating instructions](https://www.uvic.ca/research/advancedmicroscopy/about/preparation/plasma-cleaner/index.php)
+
 ### Aberration notation
 
 Different notations exist for aberrations in the literature. The table below shows the Krivanek notation (used in Probe Corrector software), the alternative notation (used in this guide), and descriptions.
@@ -865,6 +900,7 @@ Different notations exist for aberrations in the literature. The table below sho
 
 ## Changelog
 
+- Nov 26, 2026 - Add [TEM holder plasma cleaning](#plasma-clean-the-tem-holder) and expand [beam recovery](#cant-find-the-beam)
 - Nov 15, 2026 - Add [beam finding](#cant-find-the-beam), split sample loading and end session into Parts 4 and 5, and clarify controls and Arina shutdown
 - Oct 23, 2026 - Update the pre-session checklist: leave the Arina detector powered on and verify HV is off
 - Oct 8, 2026 - Add the low-magnification beam-search tip in [Direct alignments](#15-direct-alignments)

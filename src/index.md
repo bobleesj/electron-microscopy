@@ -10,6 +10,15 @@ WIP:
 
 > **Disclaimer:** Always follow [https://barnum.su.domains/](https://barnum.su.domains/) for correctness. Only use this documentation if you are working with the authors and need quick visual references.
 
+## FAQ
+
+- [How do I plasma clean my TEM holder?](spectra_STEM/index.md#plasma-clean-the-tem-holder)
+- [How do I load a double-tilt holder?](sample-loading/index.md#double-tilt)
+- [What if I can’t find the beam?](spectra_STEM/index.md#cant-find-the-beam)
+- [How do I transfer Arina 4D-STEM data to USB?](data-transfer/index.md#save-arina-4dstem-data-to-usb)
+- [What should I check before leaving the Spectra room?](spectra_STEM/index.md#52-checklist-before-leaving-the-spectra-room)
+- [What should I check after using the Arina detector?](4DSTEM/index.md#43-4dstem-checklist-before-leaving)
+
 ## Available guides
 
 | Guide | Instrument | Description | Readiness | Status |
@@ -38,6 +47,7 @@ Authors thank Dr. Pinaki Mukherjee and Andrew Barnum for training @bobleesj and 
 
 ## Changelog
 
+- Nov 26, 2026 - Add the [homepage FAQ](#faq) and [Spectra TEM holder plasma cleaning](spectra_STEM/index.md#plasma-clean-the-tem-holder)
 - Nov 15, 2026 - Add Spectra [beam finding](spectra_STEM/index.md#cant-find-the-beam), reorganize sample loading and end session, and clarify Arina shutdown
 - Apr 22, 2026 - Reorganize sidebar into SNSF Spectra 300, Techniques, Class labs, Grid preparation, Sample loading sections
 - Apr 22, 2026 - Add class lab guide on spot size and convergence angle (Talos)
